@@ -1,4 +1,4 @@
-# **Grupo 3** 
+# **:metal:Grupo 3:metal:** 
 
 ## **E-Commerce: _Nombre a definir_**
 - La tematica del sitio de este grupo es _venta de productos gastronomicos descartables_, apuntando al rubro gastronomico en general, ya sean restaurantes, bares, cafes, etc. La idea es construir un sitio en donde el usuario pueda consultar productos, precios, contactos y demas. Pero a su vez que se sienta comodo y disfrute de una interfaz limpia e intuitiva.
@@ -10,7 +10,10 @@
 
 ## **Referencias en las que nos basamos:**
 
-Nombre: | Descripcon:
---------|-------------
-[Francisco Moya](http://www.franciscomoya.com.ar/) | -Empresa familiar dedicada a la venta de insumos gastronómicos, envases descartables y productos de higiene institucional.
-[Chapini](https://www.chapini.com/) | -Experiencia de compra e insumos alimenticios, descartables e higiene.
+Nombre: | Descripcon: | Tipo de empresa:
+--------|-------------|-------------
+[Francisco Moya](http://www.franciscomoya.com.ar/) | -Empresa familiar dedicada a la venta de insumos gastronómicos, envases descartables y productos de higiene institucional. | Informacional
+[Flexipack](https://www.flexipack.com.ar/) | -Flexipack de Ampack S.R.L es una empresa dedicada a la comercialización y distribución de envases descartables de uso gastronómico, contenedores plásticos, bolsas, material para embalajes y mucho más. | e-commerce
+[Chapini](https://www.chapini.com/) | -Experiencia de compra e insumos alimenticios, descartables e higiene. | e-commerce
+[Envases Descartables](http://www.envasesdescartables.com/) | -Dedicada a la comercialización y distribución de envases y artículos de embalaje. | e-commerce
+[Planeta Descartable](https://www.planetadescartable.com.ar/) | - N/A | Informacional
