@@ -8,6 +8,8 @@
 
 - Marcelo Giaccaglia: Estudie diseño industrial y comercio exterior, ambos inconclusos. Es mi primera vez en el mundo de la programacion, de chiquito tire algunos comandos en DOS con algun Windows viejo si mal no recuendo 95, pero nada mas. Soy muy creativo y me gusta crear herramientas que generen soluciones.
 
+- Alejandro Rios: Soy analista de sistemas, ademas de pragmatico y autodidacta. Llevo unos meses en el desarrollo web, donde descubri un mundo increible y fascinante.
+
 ## **Referencias en las que nos basamos:**
 
 Nombre: | Descripcon: | Tipo de empresa:
