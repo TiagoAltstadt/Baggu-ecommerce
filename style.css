@@ -1,0 +1,14 @@
+p {
+    color : red;
+}
+
+#acerca-de{
+    color: blue;
+}
+.subrayado{
+    text-decoration: underline;
+}
+
+.arial{
+    font-family:Arial, Helvetica, sans-serif;
+}
