@@ -5,6 +5,17 @@ p {
 #acerca-de{
     color: blue;
 }
+
+header {
+    background-color: teal;
+    color: white;
+    font-size: 48px;
+    text-align: center;
+    border-bottom: solid 3px blue;
+    padding:22px;
+    box-sizing: border-box;
+}
+
 .subrayado{
     text-decoration: underline;
 }

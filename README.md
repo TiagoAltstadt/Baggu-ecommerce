@@ -1,7 +1,7 @@
 # **:metal: Grupo 3 :metal:** 
 
 ## **E-Commerce: Baggu :dragon:**
-- La tematica del sitio de este grupo es _venta de productos gastronomicos descartables_, apuntando al rubro gastronomico en general, ya sean restaurantes, bares, cafes, etc. La idea es construir un sitio en donde el usuario pueda consultar productos, precios, contactos y demas. Pero a su vez que se sienta comodo y disfrute de una interfaz limpia e intuitiva.
+- La **tematica del sitio** de este grupo es _venta de productos gastronomicos descartables_, apuntando al rubro gastronomico en general, ya sean restaurantes, bares, cafes, etc. La idea es construir un sitio en donde el usuario pueda consultar productos, precios, contactos y demas. Pero a su vez que se sienta comodo y disfrute de una interfaz limpia e intuitiva.
 
 ## **Un poco de los Programadores: :walking: :walking: :walking:**
 - Tiago Altstadt: Mejor conocido como Goia, estudie unos años ingenieria en sistemas, y tengo locura por la programacion en general, juego mucho a la computadora y como por dos personas. ;)
