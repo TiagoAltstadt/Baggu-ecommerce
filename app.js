@@ -31,7 +31,7 @@ app.get('/boom', function(req, res){
 } )
 
 app.get('/style', function(req, res){
-    res.sendFile(__dirname + '/style.css');
+    res.sendFile(__dirname + '/css/style.css');
 } )
 
 //crear ruta de _inexistente_

@@ -1,0 +1,73 @@
+header {
+    box-sizing: border-box;
+    border-bottom: solid 2px gray;
+}
+
+.general {
+    margin: 10px 5px
+    width: 1500;
+    height: 150px;
+}
+
+.caja1 {
+    float: left;
+    border: black 2px solid;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    display: block;
+    margin: 1px;
+}
+
+.caja2 {
+    float: left;
+    border: black 2px solid;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    display: block;
+    margin-top: 1px;
+    margin-left: 700px;
+}
+
+.caja3 {
+    float: left;
+    border: black 2px solid;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    display: block;
+    margin-top: 1px;
+    margin-left: 850px;
+}
+.caja4 {
+    display: block;
+    box-sizing: border-box;
+    background-color: lightgray;
+    margin-top: 10px;
+    height: 150px;
+    width: 1500;
+
+}
+
+.producto {
+    float: left;
+    display: block;
+    box-sizing: border-box;
+    background-color: lime;
+    border-radius: 12px;
+    width: 530px;
+    height: 300px;
+    margin: 10px 30px
+}
+
+
+.footer {
+    display: block;
+    box-sizing: border-box;
+    background-color: lightgoldenrodyellow  ;
+    margin-top: 10px;
+    height: 250px;
+    width: 1500;
+
+}
