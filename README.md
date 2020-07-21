@@ -10,6 +10,9 @@
 
 - Alejandro Rios: Soy analista de sistemas, ademas de pragmatico y autodidacta. Llevo unos meses en el desarrollo web, donde descubri un mundo increible y fascinante.
 
+## **Tablero de trabajo: **
+[Trello](https://trello.com/b/W3MyCaCi/baggu-grupo-3)
+
 ## **Referencias en las que nos basamos:**
 
 Nombre: | Descripcon: | Tipo de empresa:
