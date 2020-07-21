@@ -30,6 +30,11 @@ app.get('/boom', function(req, res){
     res.sendFile(__dirname + '/views/boom.html');
 });
 
+/*ruta header, luego borrar*/
+app.get('/header', function(req, res){
+    res.sendFile(__dirname + '/views/header.html');
+});
+
 //crear ruta de _inexistente_
 app.get('*', function(req, res){
     res.status(404).sendFile(__dirname + '/views/404.html');
