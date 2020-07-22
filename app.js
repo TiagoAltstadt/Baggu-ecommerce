@@ -25,6 +25,16 @@ app.get('/contacto', function(req, res){
     res.sendFile(__dirname + '/views/contacto.html');
 });
 
+//crear ruta '/carrito'
+app.get('/carrito', function(req, res){
+    res.sendFile(__dirname + '/views/carrito.html');
+});
+
+//crear ruta '/detalle'
+app.get('/detalle', function(req, res){
+    res.sendFile(__dirname + '/views/detalle.html');
+});
+
 //crear ruta '/boom' 
 app.get('/boom', function(req, res){
     res.sendFile(__dirname + '/views/boom.html');
