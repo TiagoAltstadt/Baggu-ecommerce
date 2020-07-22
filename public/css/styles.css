@@ -164,7 +164,6 @@ h4{
 
 }
 
-
 /*----------Dedicado a carrito.html----------*/
 
 .container_carrito {
@@ -190,7 +189,7 @@ h4{
 .producto_carrito {
 	display: flex;
 	flex-wrap: wrap;
-	margin: 12px 24px;
+	margin: 12px 50px;
 }
 
 .imagen_prueba {
@@ -211,4 +210,50 @@ h4{
 	width: 70%;
 	height: auto;
 
+}
+
+/*----------Dedicado a detalle.html----------*/
+
+.tipo_envase {
+	display: block;
+	box-sizing: border-box;
+	background-color: green;
+	border-radius: 20px;
+	text-align: center;
+	padding: 15px;
+	color: white;
+	margin: auto 40px;
+
+}
+
+.container_detalle {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 30px 40px;
+}
+
+.imagen_prueba_detalle {
+	display: block;
+	box-sizing: border-box;
+	width: 40%;
+	height: 380px;
+	margin-right: 5%;
+	text-align: center;
+	padding-top: 40px;
+	font-size: 60px;
+	background-color: grey;
+}
+
+.info_producto_detalle {
+	display: block;
+	padding-left: 4px;
+	box-sizing: border-box;
+	width: 50%;
+	height: auto;
+
+}
+
+.cantidad_detalle {
+	font-size: larger;
+	margin-left: 15%;
 }
