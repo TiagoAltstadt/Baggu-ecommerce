@@ -35,7 +35,7 @@ h4{
 	margin-left: auto;
 	margin-bottom: auto;
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: row nowrap;
 }
 /*Logo*/
 .logoHeader{
