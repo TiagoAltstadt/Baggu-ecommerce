@@ -40,6 +40,11 @@ app.get('/boom', function(req, res){
     res.sendFile(__dirname + '/views/boom.html');
 });
 
+//crear ruta '/login' 
+app.get('/login', function(req, res){
+    res.sendFile(__dirname + '/views/login.html');
+});
+
 /*ruta header, luego borrar*/
 app.get('/header', function(req, res){
     res.sendFile(__dirname + '/views/header.html');

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		<meta name="autor" content="">
+
+		<title></title>
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+		<link href="font/css/fontawesome.css" rel="stylesheet">
+   		<link href="font/css/brands.css" rel="stylesheet">
+        <link href="font/css/solid.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
+    	
+    	
+    </head>
+
+    <body>
+    	<header class="headerTotal">
+            <div class="logoHeader">
+                <img src="media/logos/logo.png" alt="Logo Baggu">
+            </div>
+            <div class="usuarioHeader">
+                <span><i class="fas fa-user"></i></span> <h3><a href="#">Login</a> o <a href="#">Registrarse</a></h3> 
+
+				<div class="busqueda">
+					<input type="search" id="search" placeholder="Search..." />
+					<span class="icon"><i class="fa fa-search"></i></span>
+				</div>
+            </div>
+		</header>
+		<hr>
+
+        <main class="cuentaLogin"><!--General-->
+			<div class="tituloLogin"><!--Titulo-->
+				<i class="fas fa-user"></i><h1>Login</h1>
+			</div>
+			<form action="#" method="POST" class="campoLogin"><!--FormularioLogin-->
+				<div class="subCampoLogin">
+					<label for="email">Usuario / Email:</label>
+					<input type="text" id="email" name="email" placeholder="Your name">
+				</div>
+				<div class="subCampoLogin">
+					<label for="contrasena">Contraseña:</label>
+					<input type="password" id="contrasena" name="contrasena" placeholder="Your password">
+				</div>
+				<div class="recordarmeLogin">
+					<div class="animado">
+						<input type="checkbox" name="check" id="check" required="">
+						<label class="beta" for="check">Recordarme</label>
+					</div>
+				</div>
+			</form>
+			<div class="botonLogin"><!--Botones-->
+				<button type="submit">Recuperar Contraseña</button>
+				<div>
+					<button type="submit">Ingresar</button><i class="fas fa-sign-in-alt"></i>
+				</div>
+			</div>
+		</main>
+    	
+		<script src="js/bootstrap.min.js"></script>
+    </body>
+
+</html>
