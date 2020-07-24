@@ -1,3 +1,14 @@
+
+/*Paletas de Colores*****https://coolors.co/00916e-5386e4-525998-141e29-826754*/
+
+/*Paleta de Colores para Login - Registro - Carrito **** #826754 */
+/*Paleta de Colores para Envases Descartables **** #5386E4 */
+/*Paleta de Colores para Papeleria **** #00916E */
+/*Paleta de Colores para Higiene **** #525998 */
+/*Paleta de Colores para Footer- Contacto- Empresa **** #141E29 */
+
+/****Tipografia ??????*****/
+
 html{
 	font-size: 62.5%; /**reset para rems -62.5% =10px de 16... esta cuenta es para hacer que un rem valga 10px**/
 	box-sizing: border-box;
@@ -46,6 +57,9 @@ h4{
 	height: 15rem;
 }
 /*Login y registro*/
+
+/*Paleta de Colores para Login - Registro - Carrito **** #826754 */
+
 .usuarioHeader{
 	width: 65vw;
 	height: 20rem;
@@ -77,6 +91,9 @@ h4{
 	}
 
 	/*Login y registro*/
+
+	/*Paleta de Colores para Login - Registro - Carrito **** #826754 */
+
 	.usuarioHeader{
 		display: flex;
 		flex-flow: row-reverse nowrap;
@@ -166,6 +183,8 @@ h4{
 
 /*----------Dedicado a carrito.html----------*/
 
+/*Paleta de Colores para Login - Registro - Carrito **** #826754 */
+
 .container_carrito {
 	display: flex;
 	flex-wrap: wrap;
@@ -213,6 +232,10 @@ h4{
 }
 
 /*----------Dedicado a detalle.html----------*/
+
+/*Paleta de Colores para Envases Descartables **** #5386E4 */
+/*Paleta de Colores para Papeleria **** #00916E */
+/*Paleta de Colores para Higiene **** #525998 */
 
 .tipo_envase {
 	display: block;
@@ -262,6 +285,8 @@ h4{
 
 /*******Estilos para footer******/
 
+/*Paleta de Colores para Footer- Contacto- Empresa **** #141E29 */
+
 footer {
 	display: flex;
 	flex-wrap: wrap;
@@ -288,6 +313,9 @@ footer {
 }
 
 /**********************LOGIN************************/
+
+/*Paleta de Colores para Login - Registro - Carrito **** #826754 */
+
 /*General*/
 .cuentaLogin{
 	background-color: #d2ff28;
