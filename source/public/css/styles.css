@@ -181,6 +181,88 @@ h4{
 
 }
 
+/*----------Dedicado a boom.html----------*/
+
+.bodyBoom {
+	background-image:url("/media/gray.jpg");
+	background-repeat: round;
+}
+
+.headerBoom {
+	display: flex;
+	flex-wrap: wrap;
+	width: auto;
+	margin: auto 80px;
+	height: 100px;
+	border-bottom: black solid 2px;
+	align-items: center;
+}
+
+.middleContentHeaderBoom {
+	display: block;
+	box-sizing: border-box;
+	width: 80%;
+	padding-left: 30%;
+}
+
+.lastContentHeaderBoom {
+	display: block;
+	box-sizing: border-box;
+	width: 10%;
+}
+
+.mainBoxBoom {
+	width: auto;
+	height: 700px;
+	margin: 60px 80px;
+	border: black 2px solid;
+}
+
+.logoBoom {
+	width: 10%;
+}
+
+.logoPostaBoom {
+	font-size: 95px;
+	margin: 2px auto;
+}
+
+.logoSearchBoom {
+	font-size: 30px;
+	margin-top: 2px;
+}
+
+.buscarBoom {
+	border: #63717f;
+	border-radius: 12px;
+	background-color: darkgray;
+	border-bottom: black 2px solid;
+	border-right: black 2px solid;
+}
+
+.logoUserBoom {
+	font-size: 80px;
+	margin-top: 10px;
+	margin-left: 100px;
+}
+
+.footerBoom {
+	display: flex;
+	flex-wrap: wrap;
+	width: auto;
+	margin: 5px 60px;
+	height: 100px;
+	border-top: black solid 2px;
+}
+
+.footerBoxBoom {
+	display: block;
+	box-sizing: border-box;
+	margin: 5px auto;
+	width: 33%;
+	border: black 1px solid;
+}
+
 /*----------Dedicado a carrito.html----------*/
 
 /*Paleta de Colores para Login - Registro - Carrito **** #826754 */
