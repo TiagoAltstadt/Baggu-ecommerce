@@ -56,9 +56,7 @@ h4{
 .logoHeader img{
 	height: 15rem;
 }
-<<<<<<< HEAD
 /*Login y registro del header*/
-=======
 
 /*******************  Index ********************/
 
@@ -78,8 +76,23 @@ h4{
 }
 
 .carrousel1, .carrousel2, .carrousel3 {       /* 3 columnas de Carrousel*/
+	display: flex;
 	width: 33%;
 	flex-grow: 1;
+}
+
+.imgCarrousel { width: 100%; }
+
+@media (max-width: 768px) {
+	.carrousel1, .carrousel3 { display: none; }
+	.carrousel2 { 
+		display: flex;
+		flex-grow: 1;
+		justify-content: center;
+		border: 2px solid red;
+	}
+	.imgCarrousel { width: 100%;}
+
 }
 
 .mainGrupProduct {                  /* Container principal de grupos productos*/
@@ -106,6 +119,13 @@ h4{
 .boxProduct1 { background-color: #5386E4; }
 .boxProduct2 { background-color: #00916E; }
 .boxProduct3 { background-color: #525998; }
+
+@media (max-width: 768px) {
+	.mainGrupProduct { flex-direction: column; }
+	.boxProduct1, .boxProduct2, .boxProduct3 {
+		width: 100%;
+	}
+}
 
 .titleBox {                                    /*Contenedor Titulo de Grupo Productos*/
 	display: flex;
@@ -138,7 +158,6 @@ h2 {                                            /*Titulos Grupo Productos*/
 }
 
 /************Login y registro*********/
->>>>>>> e2795e0becbd25a4e101b6af0055454c603b75d1
 
 /*Paleta de Colores para Login - Registro - Carrito **** #826754 */
 
@@ -540,9 +559,9 @@ h2 {                                            /*Titulos Grupo Productos*/
 }
                                   /*Media Queries hacia Mobile*/
 @media (max-width: 768px) {
-	footer { flex-direction: column; }
+	.containerFooter { flex-direction: column; }
 	.footerBox3 { display: none; }
-
+	.footerBox1, .footerBox2 { width: 100%; }
 }
 
 

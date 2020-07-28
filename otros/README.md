@@ -22,3 +22,6 @@ Nombre: | Descripcon: | Tipo de empresa:
 [Chapini](https://www.chapini.com/) | -Experiencia de compra e insumos alimenticios, descartables e higiene. | e-commerce
 [Envases Descartables](http://www.envasesdescartables.com/) | -Dedicada a la comercialización y distribución de envases y artículos de embalaje. | e-commerce
 [Planeta Descartable](https://www.planetadescartable.com.ar/) | - N/A | Informacional
+
+## **Link Plataforma Trello**
+https://trello.com/b/W3MyCaCi/baggu-grupo-3
