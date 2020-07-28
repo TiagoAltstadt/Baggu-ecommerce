@@ -45,6 +45,11 @@ app.get('/login', function(req, res){
     res.sendFile(__dirname + '/views/login.html');
 });
 
+//crear ruta '/register' 
+app.get('/register', function(req, res){
+    res.sendFile(__dirname + '/views/register.html');
+});
+
 /*ruta header, luego borrar*/
 app.get('/header', function(req, res){
     res.sendFile(__dirname + '/views/header.html');

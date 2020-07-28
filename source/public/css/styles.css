@@ -56,7 +56,7 @@ h4{
 .logoHeader img{
 	height: 15rem;
 }
-/*Login y registro*/
+/*Login y registro del header*/
 
 /*Paleta de Colores para Login - Registro - Carrito **** #826754 */
 
@@ -400,7 +400,8 @@ footer {
 
 /*General*/
 .cuentaLogin{
-	background-color: #d2ff28;
+	background-color: #826754;
+	margin-bottom: 5rem;
 }
 /*Titulo*/
 .tituloLogin{
@@ -455,7 +456,7 @@ footer {
 .botonLogin button{
 	margin-right: 1rem;
 	border: 0;
-	background-color: #d2ff28;
+	background-color: #826754;
 	font-size: 2rem;
 }
 .botonLogin button:hover{
@@ -546,5 +547,160 @@ button{
 	}
 	.recordarmeLogin{
 		width: 50%;
+	}
+}
+
+/*******************Register**************************/
+/*reposo*/
+.icono label{
+	display: block;
+	width: 80%;
+	height: 5rem;
+	border: 2px solid silver;
+	padding: 8px 10px;
+	position: relative;
+	border-radius: 4px;
+	transition: .25s;
+}
+.icono label input{
+	display: block;
+	width: 100%;
+	border: none;
+	background: transparent;
+	outline: none;
+}
+.icono label span{
+	color: silver;
+	position: absolute;
+	top: 8px;
+	left: 10px;
+	transition: .25s;
+}
+/*focus*/
+.icono label.focus{
+	border-color: #141E29;
+}
+.icono label span.focus{
+	color: white;
+}
+/*top*/
+.icono label span.top{
+	left: 2px;
+	top:-10px;
+	font-size: 12px;
+	background: #141E29;
+	padding: 0 5px;
+}
+.icono label.top{
+	border-color: #141E29;
+}
+
+
+
+/*formulario*/
+.formularioRegiaster{
+	background-color: #826754;
+	width: 100%;
+	padding: 1rem;
+	margin-bottom: 5rem;
+}
+.otrosDatos{
+	width: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+}
+/*titulo y logo*/
+.logoPrincipal{
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	width: 50%;
+	height: 18rem;
+	margin-right: auto;
+	margin-left: auto;
+}
+.logoPrincipal i{
+	font-size: 10rem;
+	color: #141E29;
+	margin-left: auto;
+	margin-right: auto;
+}
+/*campos del formulario*/
+.icono{
+	display: flex;
+    flex-flow: row nowrap;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+.icono i{
+	font-size: 3rem;
+	margin-right: 0.5rem;
+	width: 3.7rem;
+	color: #141E29;
+}
+/*Subir foto al register*/
+.fotoRegister{
+	height: 30rem;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	-webkit-box-shadow: inset 0px 0px 51px -17px rgba(0,0,0,0.75);
+	-moz-box-shadow: inset 0px 0px 51px -17px rgba(0,0,0,0.75);
+	box-shadow: inset 0px 0px 51px -17px rgba(0,0,0,0.75);
+	border-radius: 4px;
+}
+/*Boton*/
+.Enviar{
+	margin-top: 3rem;
+	display: flex;
+	justify-content: flex-end;
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+}
+.Enviar button{
+	width: 10rem;
+	border-radius: 4px;
+	border-color: #141E29;
+	background-color: white;
+	-webkit-box-shadow: inset 0px 0px 39px -27px rgba(0,0,0,0.75);
+	-moz-box-shadow: inset 0px 0px 39px -27px rgba(0,0,0,0.75);
+	box-shadow: inset 0px 0px 39px -27px rgba(0,0,0,0.75);
+	font-weight: bold;
+}
+.Enviar button:hover{
+	background-color: #826754;
+	color: white;
+}
+
+/**Pantallas grandes**/
+@media only screen and (min-width: 768px){
+	.icono label{
+		width: 90%;
+	}
+}
+@media only screen and (min-width: 1024px){
+	.formularioRegiaster{
+		width: 75%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 3rem;
+		border-radius: 4rem;
+		border: 2px dashed black;
+		padding: 3rem 1rem;
+	}
+	.Enviar button{
+		width: 14rem;
+	}
+	.logoPrincipal h1{
+		font-size: 5.5rem;
+	}
+	.fotoRegister{
+		width: 60%;
 	}
 }
