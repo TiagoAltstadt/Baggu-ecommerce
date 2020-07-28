@@ -2,19 +2,116 @@
 <html lang="en"><!--Contenido de programacion en ingles-->
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="autor" content="">
+
     <title>Baggu: Home</title>
-    <link rel="shortcut icon" type="image/png" href="../media/photo5177449313322772614.jpg">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="font/css/fontawesome.css" rel="stylesheet">
+   	<link href="font/css/brands.css" rel="stylesheet">
+    <link href="font/css/solid.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css"> <!--Hoja de estilos en carpeta public-->
 </head>
 
 <body>
     
-    <header></header>
+    <header class="headerTotal">
+        <div class="logoHeader">
+            <img src="media/logos/logo.png" alt="Logo Baggu">
+        </div>
+        <div class="usuarioHeader">
+            <span><i class="fas fa-user"></i></span> <h3><a href="#">Login</a> o <a href="#">Registrarse</a></h3> 
 
-    <main></main>
+            <div class="busqueda">
+                <input type="search" id="search" placeholder="Search..." />
+                <span class="icon"><i class="fa fa-search"></i></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="containerCarrousel">      <!--Contenedor Carrousel-->
+            <div class="boxContainerCarrousel">
+                <div class="carrousel1">
+                    <img class="imgCarrousel" src="img/imagenPromocionCarrousel.jpg" alt="Promocion" width="350px" height="auto">
+                </div>
+                <div class="carrousel2">
+                    <img class="imgCarrousel" src="img/imagenPromocionCarrousel.jpg" alt="Promocion" width="350px" height="auto">
+                </div>
+                <div class="carrousel3">
+                    <img class="imgCarrousel" src="img/imagenPromocionCarrousel.jpg" alt="Promocion" width="350px" height="auto">
+                </div>
+            </div>
+        </div>
+
+        <div class="mainGrupProduct">         <!--Contenedor Grupos de Productos-->
+            <section class="containerMainProduct">
+                <article class="boxProduct1">
+                    <div class="titleBox">
+                        <h2>PRODUCTOS DESCARTABLES</h2>
+                    </div>
+                    <div class="imageBox">
+                        <img class="imgMainProduct1" src="img\imagenDescartables.jpg" alt="Productos Descartables">
+                    </div>
+                </article>
+                <article class="boxProduct2">
+                    <div class="titleBox">
+                        <h2>PRODUCTOS PAPELERIA</h2>
+                    </div>
+                    <div class="imageBox">
+                        <img class="imgMainProduct2" src="img\imagenPapeleria.jpg" alt="Productos Papeleria">
+                    </div>
+                </article>
+                <article class="boxProduct3">
+                    <div class="titleBox">
+                        <h2>PRODUCTOS HIGIENE</h2>
+                    </div>
+                    <div class="imageBox">
+                        <img class="imgMainProduct3" src="img\imagenLimpieza.jpg" alt="Productos Limpieza">
+                    </div>
+                </article>
+            </section>
+        </div>
+    </main>
     
-    <footer></footer>
+    <footer>
+        <div class="containerFooter">
+            <div class="footerBox1"> <!--Contenedor Informacion-->
+                <div class="footerBoxInfo"> 
+                    <div class="contacto">Direccion: <a class="linkInfo" href="https://www.google.com/maps/place/B%C3%B6rsa+Descartables/@-32.8658975,-68.824434,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x11b71e106ccd189d!8m2!3d-32.8658975!4d-68.8222453?hl=es-419"> Lisandro Moyano 95.</a></div>
+                    <div class="contacto">Localidad: Las Heras - Mendoza - Argentina.</div>
+                    <div class="contacto">Telefonos: <a class="linkInfo" href="tel0261700540">0261700540</a>-<a class="linkInfo" href="tel2614232223">2614232223</a></div>
+                    <div class="contacto">Email: <a class="linkInfo" href="mailto:baggu@gmail.com">baggu@gmail.com</a></div>
+                    <div class="contacto">Whatsapp: <a class="linkInfo" href="https://wa.me/5492617000540">+5942617000540</a></div>
+                    <div class="contacto">Horarios: Lunes a Sabados de 9:00 a 18:00</div>
+                </div>
+            </div>   
+            <div class="footerBox2"> <!--Contenedor Social Media y Logo-->
+                <div class="boxIconSocial">
+                    <a href="https://wa.me/5492617000540"><img class="imgSocial" src="img/LogoWapp.png" alt="Logo Whatsapp" width="50px" height="auto"></a>
+                    <a href="https://www.facebook.com"><img class="imgSocial" src="img/LogoFace.png" alt="Logo Whatsapp" width="50px" height="auto"></a>
+                    <a href="https://www.instagram.com"><img class="imgSocial" src="img/LogoInstagram.png" alt="Logo Whatsapp" width="50px" height="auto"></a>
+                </div>
+                <div class="boxIconLogoBaggu">
+                    <a href="/"><img src="media/logos/Nuevo Logo.png" alt="Logo Baggu" width="150px" height="auto"></a>
+                    <p class="legales">Reservados todos los derechos. Queda prohibida la utilizacion del contenido.</p>
+                </div>
+            </div>
+            <div class="footerBox3"> <!--Contenedor Botones de Footer-->
+                <div class="footerBoxButtons">
+                    <div class="boxButtonContact">
+                        <button id="buttonContact" type="button"><a class="linkInfo" href="contact.html">Contacto</a></button>
+                    </div>
+                    <div class="boxButtonUs">
+                        <button id="buttonUs" type="button"><a class="linkInfo" href="us.html">Empresa</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
 
 </body>
 </html>
