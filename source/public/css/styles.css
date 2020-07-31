@@ -98,7 +98,7 @@ h4{
 .mainGrupProduct {                  /* Container principal de grupos productos*/
 	display: flex;
 	width: 100%;
-	height: 70vh;
+	height: 70%;
 }
 
 .containerMainProduct {              /* Container secundario de grupos productos*/
@@ -114,6 +114,7 @@ h4{
 	width: 31%;
 	flex-direction: column;
 	border-radius: 20px;
+	overflow: hidden;
 }
 
 .boxProduct1 { background-color: #5386E4; }
@@ -121,7 +122,7 @@ h4{
 .boxProduct3 { background-color: #525998; }
 
 @media (max-width: 768px) {
-	.mainGrupProduct { flex-direction: column; }
+	.containerMainProduct { flex-direction: column; }
 	.boxProduct1, .boxProduct2, .boxProduct3 {
 		width: 100%;
 	}
