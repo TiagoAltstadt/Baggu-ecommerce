@@ -370,49 +370,118 @@ h2 {                                            /*Titulos Grupo Productos*/
 
 /*Paleta de Colores para Login - Registro - Carrito **** #826754 */
 
-.container_carrito {
+.carrito_container {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
-	background-color: yellow;
-	border-style: dotted;
-	border-color: black;
-	border-radius: 24px;
-	margin: 40px 130px;
-	padding: 10px;
-	
+	margin: 3%;
+	border: #141E29 dotted 2px;
+	border-radius: 12px;
+	background-color: #826754;
 }
 
-.header_carrito {
-	text-align: center;
-	border-bottom: thin black solid;
-	width: 90%;
-	margin: auto;
+.logo_carrito {
+	display: block;
+	box-sizing: border-box;
+	width: fit-content;
+	margin: 12px auto;
+}
+
+.logo_posta_carrito {
+	font-size: 60px;
+}
+
+.titulo_carrito {
+	display: block;
+	box-sizing: border-box;
+	font-size: 40px;
+	font-weight: bold;
+	border-bottom: solid black 1px;
+	width: fit-content;
+	margin: 2px auto;
+}
+
+.contenido_carrito {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
 }
 
 .producto_carrito {
 	display: flex;
 	flex-wrap: wrap;
-	margin: 12px 50px;
+	flex-direction: column;
 }
 
-.imagen_prueba {
-	display: block;
-	box-sizing: border-box;
-	width: 20%;
-	margin-right: 10%;
-	text-align: center;
-	padding-top: 40px;
-	font-size: 60px;
-	background-color: grey;
+.imagen_carrito {
+	display: flex;
+	flex-wrap: wrap;
 }
 
-.info_producto {
+.imagen_posta_carrito {
 	display: block;
-	padding-left: 8px;
 	box-sizing: border-box;
-	width: 70%;
-	height: auto;
+	width: 80%;
+	margin: 5px auto;
+}
+
+.descripcion_carrito {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	padding: 24px;
+
+}
+
+.nombre_producto {
+	font-size: x-large;
+	font-weight: bold;
+}
+
+.descripcion_producto {}
+
+.cantidad_carrito{
+	display: block;
+	box-sizing: border-box;
+	margin: auto;
+	width: fit-content;
+	background-color: #fff;
+	border: black solid 3px;
+	border-radius: 12px;
+	border-left: black;
+	border-top: black;
+}
+
+.borrar_carrito {}
+
+.pagar_carrito {}
+
+@media all and (min-width: 768px) {
+
+	.contenido_carrito {
+		flex-direction: row;
+	}
+
+	.producto_carrito {
+		flex-direction: row;
+	}
+
+	.imagen_carrito {
+		display: flex;
+		flex-wrap: wrap;
+		width: 30%;
+	}
+
+	.imagen_posta_carrito {
+		display: block;
+		box-sizing: border-box;
+		margin: 5px;
+
+	}
+
+	.descripcion_carrito {
+		width: 30%;
+	}
 
 }
 
@@ -443,15 +512,16 @@ h2 {                                            /*Titulos Grupo Productos*/
 }
 
 .imagen_detalle{
-	display: block;
-	box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
 	height: 30vh;
 }
 
 .img_detalle {
-	width: 80%;
-	align-self: center;
-	justify-content: center;
+	display: block;
+	box-sizing: border-box;
+	width: 280px;
+	margin: 12px auto;
 }
 
 @media all and (min-width: 768px){
@@ -462,8 +532,17 @@ h2 {                                            /*Titulos Grupo Productos*/
 	}
 
 	.imagen_detalle {
+		display: flex;
+		flex-wrap: wrap;
+		align-content: center;
 		width: 30%;
-		margin:1%;
+	}
+
+	.img_detalle {
+		display: block;
+		box-sizing: border-box;
+		align-content: center;
+		width: 220px;
 	}
 
 	.descripcion_detalle {
