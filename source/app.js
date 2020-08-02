@@ -1,14 +1,15 @@
-//ejecutar express
 const express = require('express');
 const app = express();
+
+let rutaHome = require('./routes/home.js');
+let rutaCarrito = require('./routes/carrito.js');
+let rutaDetalle = require('./routes/detalle.js');
 
 //crear funcion de express para utilizar carpeta public para archivos estaticos
 app.use(express.static("public"));
 
 //crear ruta para raiz '/'
-app.get('/', function(req, res){
-    res.sendFile(__dirname + '/views/index.html');
-});
+app.use('/', rutaHome);
 
 //crear ruta '/productos'
 app.get('/productos', function(req, res){
@@ -26,14 +27,10 @@ app.get('/contacto', function(req, res){
 });
 
 //crear ruta '/carrito'
-app.get('/carrito', function(req, res){
-    res.sendFile(__dirname + '/views/carrito.html');
-});
+app.use('/carrito', rutaCarrito);
 
 //crear ruta '/detalle'
-app.get('/detalle', function(req, res){
-    res.sendFile(__dirname + '/views/detalle.html');
-});
+app.use('/detalle', rutaDetalle)
 
 //crear ruta '/boom' 
 app.get('/boom', function(req, res){

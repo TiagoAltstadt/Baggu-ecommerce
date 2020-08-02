@@ -283,7 +283,7 @@ h2 {                                            /*Titulos Grupo Productos*/
 
 }
 
-/*----------Dedicado a boom.html----------*/
+/*------------------------------------------------------------Dedicado a boom.html----------------------------------------------------------------------*/
 
 .bodyBoom {
 	background-image:url("/media/gray.jpg");
@@ -365,7 +365,8 @@ h2 {                                            /*Titulos Grupo Productos*/
 	border: black 1px solid;
 }
 
-/*----------Dedicado a carrito.html----------*/
+
+/*------------------------------------------------------------Dedicado a carrito.html----------------------------------------------------------------------*/
 
 /*Paleta de Colores para Login - Registro - Carrito **** #826754 */
 
@@ -415,55 +416,122 @@ h2 {                                            /*Titulos Grupo Productos*/
 
 }
 
-/*----------Dedicado a detalle.html----------*/
+/*------------------------------------------------------------Dedicado a detalle.html----------------------------------------------------------------------*/
 
 /*Paleta de Colores para Envases Descartables **** #5386E4 */
 /*Paleta de Colores para Papeleria **** #00916E */
 /*Paleta de Colores para Higiene **** #525998 */
 
-.tipo_envase {
+.tipo_producto {
 	display: block;
 	box-sizing: border-box;
-	background-color: green;
-	border-radius: 20px;
-	text-align: center;
-	padding: 15px;
+	margin: 3%;
+	background-color: #5386E4;
 	color: white;
-	margin: auto 40px;
-
+	font-size: 25px;
+	text-align: center;
+	justify-content: center;
+	border-radius: 12px;
+	height: 6vh;
 }
 
-.container_detalle {
+.producto_container {
 	display: flex;
 	flex-wrap: wrap;
-	margin: 30px 40px;
+	flex-direction: column;
+	margin: 3%;
 }
 
-.imagen_prueba_detalle {
+.imagen_detalle{
 	display: block;
 	box-sizing: border-box;
-	width: 40%;
-	height: 380px;
-	margin-right: 5%;
-	text-align: center;
-	padding-top: 40px;
-	font-size: 60px;
-	background-color: grey;
+	height: 30vh;
 }
 
-.info_producto_detalle {
-	display: block;
-	padding-left: 4px;
-	box-sizing: border-box;
-	width: 50%;
-	height: auto;
+.img_detalle {
+	width: 80%;
+	align-self: center;
+	justify-content: center;
+}
 
+@media all and (min-width: 768px){
+
+	.producto_container {
+		flex-direction: row;
+		align-self: center;
+	}
+
+	.imagen_detalle {
+		width: 30%;
+		margin:1%;
+	}
+
+	.descripcion_detalle {
+		width: 30%;
+		margin:1%;
+	}
+
+	.resumen_detalle {
+		flex-direction: column;
+		width: 30%;
+		margin:1%;
+	}
+
+	.texto_detalle { font-size: smaller; }
+
+}
+
+.descripcion_detalle{
+	display: block;
+	box-sizing: border-box;
+	height: 30vh;
+	color: black;
+}
+
+.resumen_detalle {
+	display: flex;
+	flex-wrap: wrap;
+	height: 30vh;
 }
 
 .cantidad_detalle {
-	font-size: larger;
-	margin-left: 15%;
+	display: block;
+	box-sizing: border-box;
+	margin: 2% 10%;
 }
+
+.precio_detalle {
+	display: block;
+	box-sizing: border-box;
+	margin: 2% 10%;
+	color: green;
+	font-weight: bold;
+	font-size: large;
+}
+
+.comprar_detalle {
+	display: block;
+	box-sizing: border-box;
+	margin: 2% 10%;
+}
+
+.compartir_detalle {
+	display: block;
+	box-sizing: border-box;
+	margin: 2% 10%;
+}
+
+.subtitulo_detalle {
+	color: black;
+	font-size: large;
+	text-align: left;
+	font-weight: bold;
+}
+
+.texto_detalle { margin: 2%; }
+
+
+
 
 
 
