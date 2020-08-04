@@ -5,10 +5,12 @@ let rutaHome = require('./routes/home.js');
 let rutaCarrito = require('./routes/carrito.js');
 let rutaDetalle = require('./routes/detalle.js');
 
+app.set('view engine','ejs');
+
 //crear funcion de express para utilizar carpeta public para archivos estaticos
 app.use(express.static("public"));
 
-//crear ruta para raiz '/'
+//crear ruta '/'
 app.use('/', rutaHome);
 
 //crear ruta '/productos'
@@ -47,21 +49,10 @@ app.get('/register', function(req, res){
     res.sendFile(__dirname + '/views/register.html');
 });
 
-/*ruta header, luego borrar*/
-app.get('/header', function(req, res){
-    res.sendFile(__dirname + '/views/header.html');
-});
-
-/*ruta footer, luego borrar*/
-app.get('/footer', function(req, res){
-    res.sendFile(__dirname + '/views/footer.html');
-});
-
 //crear ruta de _inexistente_
 app.get('*', function(req, res){
     res.status(404).sendFile(__dirname + '/views/404.html');
 });
-
 
 //iniciar en 3000
 app.listen(3000, ()  => {console.log('Servidor escuchando en el puerto 3000.')});
