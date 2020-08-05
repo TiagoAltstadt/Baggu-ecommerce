@@ -7,6 +7,8 @@ let rutaDetalle = require('./routes/detalle.js');
 
 app.set('view engine','ejs');
 
+app.use(express.static(__dirname + +'public'));
+
 //crear funcion de express para utilizar carpeta public para archivos estaticos
 app.use(express.static("public"));
 

@@ -475,7 +475,9 @@ h2 {                                            /*Titulos Grupo Productos*/
 	.imagen_posta_carrito {
 		display: block;
 		box-sizing: border-box;
-		margin: 5px;
+		margin: auto;
+		
+
 
 	}
 
