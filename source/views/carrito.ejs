@@ -20,7 +20,7 @@
 
 <body>
     
-    <%- include('../partials/header.ejs') %>
+    <%- include('./partials/header.ejs') %>
 
     <main>
         <div class="carrito_container">
@@ -75,41 +75,7 @@
 
     </main>
 
-    <footer>
-        <div class="containerFooter">
-            <div class="footerBox1"> <!--Contenedor Informacion-->
-                <div class="footerBoxInfo"> 
-                    <div class="contacto">Direccion: <a class="linkInfo" href="https://www.google.com/maps/place/B%C3%B6rsa+Descartables/@-32.8658975,-68.824434,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x11b71e106ccd189d!8m2!3d-32.8658975!4d-68.8222453?hl=es-419"> Lisandro Moyano 95.</a></div>
-                    <div class="contacto">Localidad: Las Heras - Mendoza - Argentina.</div>
-                    <div class="contacto">Telefonos: <a class="linkInfo" href="tel0261700540">0261700540</a>-<a class="linkInfo" href="tel2614232223">2614232223</a></div>
-                    <div class="contacto">Email: <a class="linkInfo" href="mailto:baggu@gmail.com">baggu@gmail.com</a></div>
-                    <div class="contacto">Whatsapp: <a class="linkInfo" href="https://wa.me/5492617000540">+5942617000540</a></div>
-                    <div class="contacto">Horarios: Lunes a Sabados de 9:00 a 18:00</div>
-                </div>
-            </div>   
-            <div class="footerBox2"> <!--Contenedor Social Media y Logo-->
-                <div class="boxIconSocial">
-                    <a href="https://wa.me/5492617000540"><img class="imgSocial" src="img/LogoWapp.png" alt="Logo Whatsapp" width="50px" height="auto"></a>
-                    <a href="https://www.facebook.com"><img class="imgSocial" src="img/LogoFace.png" alt="Logo Whatsapp" width="50px" height="auto"></a>
-                    <a href="https://www.instagram.com"><img class="imgSocial" src="img/LogoInstagram.png" alt="Logo Whatsapp" width="50px" height="auto"></a>
-                </div>
-                <div class="boxIconLogoBaggu">
-                    <a href="/"><img src="media/logos/Nuevo Logo.png" alt="Logo Baggu" width="150px" height="auto"></a>
-                    <p class="legales">Reservados todos los derechos. Queda prohibida la utilizacion del contenido.</p>
-                </div>
-            </div>
-            <div class="footerBox3"> <!--Contenedor Botones de Footer-->
-                <div class="footerBoxButtons">
-                    <div class="boxButtonContact">
-                        <button id="buttonContact" type="button"><a class="linkInfo" href="contact.html">Contacto</a></button>
-                    </div>
-                    <div class="boxButtonUs">
-                        <button id="buttonUs" type="button"><a class="linkInfo" href="us.html">Empresa</a></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <%- include('./partials/footer.ejs') %>
 
     
 </body>

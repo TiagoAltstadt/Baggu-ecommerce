@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <meta name="autor" content="">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+		<title>Baggu: Detalle</title>
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+		<link href="font/css/fontawesome.css" rel="stylesheet">
+   		<link href="font/css/brands.css" rel="stylesheet">
+        <link href="font/css/solid.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
+    	
+    	
+    </head>
+
+<body>
+    
+    <%- include('./partials/header.ejs') %>
+
+
+    <main>
+
+        <div class="tipo_producto"><p>Envases descartable</p></div>
+
+        <section class="producto_container">
+            <!--Imagen-->
+            <div class="imagen_detalle"><img class="img_detalle" src="img/portal_gun.png" alt=""></div>
+            <!--Descripcion del producto-->
+            <div class="descripcion_detalle">
+                <p class="subtitulo_detalle">Descripcion del producto</p>
+                <p class="texto_detalle">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci autem, nam ipsa quo similique blanditiis dolores omnis tempore! Nihil, sint consequuntur, ullam sequi officiis magnam ex error delectus, eaque incidunt nesciunt aliquid.</p>
+            </div>
+            <!--Resumen-->
+            <div class="resumen_detalle">
+                <div class="cantidad_detalle">
+                    <label for="quantity">Cantidad</label>
+                    <select name="quantity" id="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                </div>
+                <div class="precio_detalle"><i class="fas fa-dollar-sign"></i>999.99</div>
+                <div class="comprar_detalle">Comprar <i class="fas fa-shopping-cart"></i></div>
+                <div class="compartir_detalle">Compartir <i class="fas fa-share-alt"></i></div>
+            </div>
+        </section>
+       
+    </main>
+
+    <%- include('./partials/footer.ejs') %>
+
+    
+</body>
+
+</html>

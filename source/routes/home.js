@@ -3,7 +3,7 @@ let express = require('express');
 let router = express.Router();
 
 router.get('/', function(req, res){
-    res.sendFile('index.html', { root: './views'});
+    res.render('index.ejs', { root: './views'});
 });
 
 module.exports = router;
