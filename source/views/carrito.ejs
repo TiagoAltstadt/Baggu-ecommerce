@@ -1,26 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-		<meta name="autor" content="">
-
-		<title>Baggu: Carrito</title>
-
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-		<link href="font/css/fontawesome.css" rel="stylesheet">
-   		<link href="font/css/brands.css" rel="stylesheet">
-        <link href="font/css/solid.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/styles.css">
-    	
-    	
-    </head>
+    <%- include('./partials/head.js', {title: "Baggu: Carrito"}) %>
 
 <body>
     
-    <%- include('./partials/header.ejs') %>
+    <%- include('./partials/header.js') %>
 
     <main>
         <div class="carrito_container">
@@ -75,7 +60,7 @@
 
     </main>
 
-    <%- include('./partials/footer.ejs') %>
+    <%- include('./partials/footer.js') %>
 
     
 </body>
