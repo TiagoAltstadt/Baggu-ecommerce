@@ -22,14 +22,13 @@ app.use('/contacto', rutaContacto);
 //crear ruta '/acercaDe (Empresa)'
 app.use('/acercaDe', rutaAcercaDe);
 
+
+
+
 //crear ruta '/productos'
 app.get('/productos', function(req, res){
     res.sendFile(__dirname + '/views/productos.html');
 });
-
-
-
-
 
 //crear ruta '/carrito'
 app.use('/carrito', rutaCarrito);
@@ -56,6 +55,8 @@ app.get('/register', function(req, res){
 app.get('*', function(req, res){
     res.status(404).sendFile(__dirname + '/views/404.html');
 });
+
+
 
 //iniciar en 3000
 app.listen(3000, ()  => {console.log('Servidor escuchando en el puerto 3000.')});
