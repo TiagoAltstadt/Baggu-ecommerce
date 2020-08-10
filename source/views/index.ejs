@@ -1,58 +1,56 @@
 <!DOCTYPE html> <!--Version HTML 5--> 
 <html lang="en"><!--Contenido de programacion en ingles-->
 
-<%- include('./partials/head.js', {title: "Baggu: Home"}) %>
+<%- include('./partials/head.ejs', {title: "Baggu: Home"}) %>
 
 <body>
     
-    <%- include('./partials/header.js') %>
+    <%- include('./partials/header.ejs') %>
 
     <main>
-        <div class="containerCarrousel">      <!--Contenedor Carrousel-->
-            <div class="boxContainerCarrousel">
-                <div class="carrousel1">
-                    <img class="imgCarrousel" src="img/imagenPromocionCarrousel.jpg" alt="Promocion" width="350px" height="auto">
-                </div>
-                <div class="carrousel2">
-                    <img class="imgCarrousel" src="img/imagenPromocionCarrousel.jpg" alt="Promocion" width="350px" height="auto">
-                </div>
-                <div class="carrousel3">
-                    <img class="imgCarrousel" src="img/imagenPromocionCarrousel.jpg" alt="Promocion" width="350px" height="auto">
-                </div>
+                                                <!--Contenedor Carrousel-->
+        <div class="boxContainerCarrousel">
+            <div class="carrousel1">
+                <img class="imgCarrousel" src="img/imagenPromocionCarrousel.jpg" alt="Promocion" width="350px" height="auto">
+            </div>
+            <div class="carrousel2">
+                <img class="imgCarrousel" src="img/imagenPromocionCarrousel.jpg" alt="Promocion" width="350px" height="auto">
+            </div>
+            <div class="carrousel3">
+                <img class="imgCarrousel" src="img/imagenPromocionCarrousel.jpg" alt="Promocion" width="350px" height="auto">
             </div>
         </div>
+    </main>   
 
-        <div class="mainGrupProduct">         <!--Contenedor Grupos de Productos-->
-            <section class="containerMainProduct">
-                <article class="boxProduct1">
-                    <div class="titleBox">
-                        <a href="/detalle"><h2>PRODUCTOS DESCARTABLES</h2></a>
-                    </div>
-                    <div class="imageBox">
-                        <a href="/detalle"><img class="imgMainProduct1" src="img\imagenDescartables.jpg" alt="Productos Descartables"></a>
-                    </div>
-                </article>
-                <article class="boxProduct2">
-                    <div class="titleBox">
-                        <a href="/detalle"><h2>PRODUCTOS PAPELERIA</h2></a>
-                    </div>
-                    <div class="imageBox">
-                        <a href="/detalle"><img class="imgMainProduct2" src="img\imagenPapeleria.jpg" alt="Productos Papeleria"></a>
-                    </div>
-                </article>
-                <article class="boxProduct3">
-                    <div class="titleBox">
-                        <a href="/detalle"><h2>PRODUCTOS HIGIENE</h2></a>
-                    </div>
-                    <div class="imageBox">
-                        <a href="/detalle"><img class="imgMainProduct3" src="img\imagenLimpieza.jpg" alt="Productos Limpieza"></a>
-                    </div>
-                </article>
-            </section>
-        </div>
-    </main>
+               
+                                             <!--Contenedor Grupos de Productos-->
+    <section class="containerMainProducts">
+        <article class="boxProduct1">
+            <div class="titleBox">
+                <a href="/detalle"><h2>PRODUCTOS DESCARTABLES</h2></a>
+            </div>
+            <div class="imageBox">
+                <a href="/detalle"><img class="imgMainProduct1" src="img\imagenDescartables.jpg" alt="Productos Descartables"></a>
+            </div>
+        </article>
+        <article class="boxProduct2">
+            <div class="titleBox">
+                <a href="/detalle"><h2>PRODUCTOS PAPELERIA</h2></a>
+            </div>
+            <div class="imageBox">
+                <a href="/detalle"><img class="imgMainProduct2" src="img\imagenPapeleria.jpg" alt="Productos Papeleria"></a>
+            </div>
+        </article>
+        <article class="boxProduct3">
+            <div class="titleBox">
+                <a href="/detalle"><h2>PRODUCTOS HIGIENE</h2></a>
+            </div>
+            <div class="imageBox">
+                <a href="/detalle"><img class="imgMainProduct3" src="img\imagenLimpieza.jpg" alt="Productos Limpieza"></a>
+            </div>
+        </article>
+    </section>
     
-    <%- include('./partials/footer.js') %>
-
+    <%- include('./partials/footer.ejs') %>
 </body>
 </html>

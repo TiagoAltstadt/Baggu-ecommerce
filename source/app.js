@@ -1,13 +1,14 @@
 const express = require('express');
 const app = express();
 
-let rutaHome = require('./routes/home.js');
+const rutaHome = require('./routes/home.js');
+const rutaContacto = require("./routes/contacto.js");
+const rutaAcercaDe = require("./routes/acercaDe.js");
 let rutaCarrito = require('./routes/carrito.js');
 let rutaDetalle = require('./routes/detalle.js');
 
 app.set('view engine','ejs');
 
-app.use(express.static(__dirname + +'public'));
 
 //crear funcion de express para utilizar carpeta public para archivos estaticos
 app.use(express.static("public"));
@@ -15,20 +16,20 @@ app.use(express.static("public"));
 //crear ruta '/'
 app.use('/', rutaHome);
 
+//crear ruta '/contacto'
+app.use('/contacto', rutaContacto);
+
+//crear ruta '/acercaDe (Empresa)'
+app.use('/acercaDe', rutaAcercaDe);
+
 //crear ruta '/productos'
 app.get('/productos', function(req, res){
     res.sendFile(__dirname + '/views/productos.html');
 });
 
-//crear ruta '/acerca-de'
-app.get('/acerca-de', function(req, res){
-    res.sendFile(__dirname + '/views/acerca-de.html');
-});
 
-//crear ruta '/contacto'
-app.get('/contacto', function(req, res){
-    res.sendFile(__dirname + '/views/contacto.html');
-});
+
+
 
 //crear ruta '/carrito'
 app.use('/carrito', rutaCarrito);
