@@ -5,4 +5,4 @@ const homeController = require ("../controllers/homeController.js");
 
 router.get('/acercaDe', homeController.acercaDe);
 
-module.express = router;
+module.exports = router;

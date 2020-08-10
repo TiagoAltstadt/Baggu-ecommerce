@@ -976,6 +976,12 @@ button{
 	margin-left: auto;
 	margin-right: auto;
 }
+.logoPrincipal h2{
+	width: 30rem;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 2.5rem;
+}
 /*campos del formulario*/
 .icono{
 	display: flex;
@@ -1033,6 +1039,12 @@ button{
 @media only screen and (min-width: 768px){
 	.icono label{
 		width: 90%;
+	}
+	.logoPrincipal h2{
+		width: 60rem;
+		margin-right: auto;
+		margin-left: auto;
+		font-size: 4rem;
 	}
 }
 @media only screen and (min-width: 1024px){

@@ -6,6 +6,10 @@ const rutaContacto = require("./routes/contacto.js");
 const rutaAcercaDe = require("./routes/acercaDe.js");
 let rutaCarrito = require('./routes/carrito.js');
 let rutaDetalle = require('./routes/detalle.js');
+const rutaLogin = require('./routes/login.js');
+const rutaRegister = require('./routes/register.js');
+const rutaCreacionProductos = require('./routes/creacionProductos.js');
+const rutaEdicionProductos = require('./routes/edicionProductos.js');
 
 app.set('view engine','ejs');
 
@@ -22,7 +26,17 @@ app.use('/contacto', rutaContacto);
 //crear ruta '/acercaDe (Empresa)'
 app.use('/acercaDe', rutaAcercaDe);
 
+//crear ruta '/login' 
+app.use('/login' , rutaLogin);
 
+//crear ruta '/register' 
+app.use('/register' , rutaRegister);
+
+//crear ruta '/creacionProductos'
+app.use('/creacionProductos' , rutaCreacionProductos);
+
+//crear ruta '/edicionProductos'
+app.use('/edicionProductos' , rutaEdicionProductos);
 
 
 //crear ruta '/productos'
@@ -41,15 +55,6 @@ app.get('/boom', function(req, res){
     res.sendFile(__dirname + '/views/boom.html');
 });
 
-//crear ruta '/login' 
-app.get('/login', function(req, res){
-    res.sendFile(__dirname + '/views/login.html');
-});
-
-//crear ruta '/register' 
-app.get('/register', function(req, res){
-    res.sendFile(__dirname + '/views/register.html');
-});
 
 //crear ruta de _inexistente_
 app.get('*', function(req, res){

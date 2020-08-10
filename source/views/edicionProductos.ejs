@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="autor" content="">
+    
+        <title></title>
+    
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link href="font/css/fontawesome.css" rel="stylesheet">
+           <link href="font/css/brands.css" rel="stylesheet">
+        <link href="font/css/solid.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+
+    <body>
+    	<%- include('./partials/header.ejs') %>
+		
+
+        <form class="formularioRegiaster">
+			<div class="logoPrincipal">
+				<h2>Edición de productos</h2>
+			</div>
+			<div class="otrosDatos">
+				<div class="icono">
+					<i class="fab fa-product-hunt"></i>
+					<label for="nombreProducto">
+						<span>New name product</span>
+						<input type="text" name="nuevoNombreProducto" id="nuevoNombreProducto">
+					</label>
+				</div>
+				<div class="icono">
+					<i class="fab fa-product-hunt"></i>
+					<label for="categoria">
+						<span>New category</span>
+						<input type="text" name="nuevaCategoria" id="nuevaCategoria">
+					</label>
+				</div>
+				<div class="icono">
+					<i class="fab fa-product-hunt"></i>
+					<label for="tipo">
+						<span>New kind</span>
+						<input type="text" name="nuevoTipo" id="nuevoTipo">
+					</label>
+				</div>
+
+				<div class="icono">
+					<i class="fab fa-product-hunt"></i>
+					<label for="precio">
+						<span>New price</span>
+						<input type="number" name="nuevoPrecio" id="nuevoPrecio">
+					</label>
+				</div>
+
+				<div class="fotoRegister">
+					<!--<label for="myfile">Select a file:</label>-->
+					<input type="file" id="nuevaFoto" name="nuevaFoto">
+				</div>
+			</div>
+			<div class="Enviar">
+				<button type="submit">Submit</button>
+			</div>
+		</form>
+
+
+
+        <%- include('./partials/footer.ejs') %>
+    	
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+
+</html>
