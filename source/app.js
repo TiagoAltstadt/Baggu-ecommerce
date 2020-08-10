@@ -38,7 +38,6 @@ app.use('/creacionProductos' , rutaCreacionProductos);
 //crear ruta '/edicionProductos'
 app.use('/edicionProductos' , rutaEdicionProductos);
 
-
 //crear ruta '/productos'
 app.get('/productos', function(req, res){
     res.sendFile(__dirname + '/views/productos.html');
