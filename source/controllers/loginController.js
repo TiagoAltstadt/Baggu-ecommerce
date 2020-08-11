@@ -1,6 +1,6 @@
 const loginController = {
     login: (req, res) => {
-        res.render('login.ejs');
+        res.render('./users/login.ejs');
     }
 };
 
