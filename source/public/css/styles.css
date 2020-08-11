@@ -326,90 +326,96 @@ div.boxTextEmpresa {
 
 }
 
-/*------------------------------------------------------------Dedicado a boom.html----------------------------------------------------------------------*/
+/*------------------------------------------------------------Dedicado a productos.ejs----------------------------------------------------------------------*/
 
-.bodyBoom {
-	background-image:url("/media/gray.jpg");
-	background-repeat: round;
-}
+	.products_container {
+		display: flex;
+		flex-wrap: wrap;
+		align-self: center;
+		justify-content: center;
+	}
 
-.headerBoom {
-	display: flex;
-	flex-wrap: wrap;
-	width: auto;
-	margin: auto 80px;
-	height: 100px;
-	border-bottom: black solid 2px;
-	align-items: center;
-}
+	.products_subcontainer {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 2% 2%;
+		padding: 0px;
+		
+	}
 
-.middleContentHeaderBoom {
-	display: block;
-	box-sizing: border-box;
-	width: 80%;
-	padding-left: 30%;
-}
+	@media all and (min-width: 426px) {
 
-.lastContentHeaderBoom {
-	display: block;
-	box-sizing: border-box;
-	width: 10%;
-}
+		.products_subcontainer {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 2% 2%;
+			padding: 0px;
+			justify-content: center;
+			
+		}
 
-.mainBoxBoom {
-	width: auto;
-	height: 700px;
-	margin: 60px 80px;
-	border: black 2px solid;
-}
+	}
+	
 
-.logoBoom {
-	width: 10%;
-}
+/*------------------------------------------------------------Dedicado a product.ejs----------------------------------------------------------------------*/
 
-.logoPostaBoom {
-	font-size: 95px;
-	margin: 2px auto;
-}
+	.product_container {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		background-color: #add8e6;
+		border-radius: 12px;
+		width: 40%;
+		margin: 5% 5%;
+	}
 
-.logoSearchBoom {
-	font-size: 30px;
-	margin-top: 2px;
-}
+	.product_image {
+		display: block;
+		box-sizing: border-box;
+		width: 80%;
+		margin: 5px auto;
+	}
 
-.buscarBoom {
-	border: #63717f;
-	border-radius: 12px;
-	background-color: darkgray;
-	border-bottom: black 2px solid;
-	border-right: black 2px solid;
-}
+	.product_title {
+		margin: auto;
+		padding: 2% 5%;
+	}
 
-.logoUserBoom {
-	font-size: 80px;
-	margin-top: 10px;
-	margin-left: 100px;
-}
+	.product_description {
+		margin: auto;
+		padding: 2% 5%;
+	}
 
-.footerBoom {
-	display: flex;
-	flex-wrap: wrap;
-	width: auto;
-	margin: 5px 60px;
-	height: 100px;
-	border-top: black solid 2px;
-}
+	.product_options {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0%;
+	}
 
-.footerBoxBoom {
-	display: block;
-	box-sizing: border-box;
-	margin: 5px auto;
-	width: 33%;
-	border: black 1px solid;
-}
+	.product_icon {
+		display: block;
+		box-sizing: border-box;
+		margin:  auto;
+		padding: 5%;
 
+	}
 
-/*------------------------------------------------------------Dedicado a carrito.html----------------------------------------------------------------------*/
+	@media all and (min-width: 426px){
+
+		.product_container {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			background-color: #add8e6;
+			border-radius: 12px;
+			width: 20%;
+			margin: 5% .99%;
+		}
+		
+
+	}
+
+/*------------------------------------------------------------Dedicado a carrito.ejs----------------------------------------------------------------------*/
 
 /*Paleta de Colores para Login - Registro - Carrito **** #826754 */
 
@@ -530,7 +536,7 @@ div.boxTextEmpresa {
 
 }
 
-/*------------------------------------------------------------Dedicado a detalle.html----------------------------------------------------------------------*/
+/*------------------------------------------------------------Dedicado a detalle.ejs----------------------------------------------------------------------*/
 
 /*Paleta de Colores para Envases Descartables **** #5386E4 */
 /*Paleta de Colores para Papeleria **** #00916E */

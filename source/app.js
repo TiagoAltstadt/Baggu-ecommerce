@@ -10,6 +10,7 @@ const rutaLogin = require('./routes/login.js');
 const rutaRegister = require('./routes/register.js');
 const rutaCreacionProductos = require('./routes/creacionProductos.js');
 const rutaEdicionProductos = require('./routes/edicionProductos.js');
+const rutaProductos = require('./routes/productos');
 
 app.set('view engine','ejs');
 
@@ -39,9 +40,7 @@ app.use('/creacionProductos' , rutaCreacionProductos);
 app.use('/edicionProductos' , rutaEdicionProductos);
 
 //crear ruta '/productos'
-app.get('/productos', function(req, res){
-    res.sendFile(__dirname + '/views/productos.html');
-});
+app.use('/productos', rutaProductos);
 
 //crear ruta '/carrito'
 app.use('/carrito', rutaCarrito);

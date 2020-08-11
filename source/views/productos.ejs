@@ -1,0 +1,38 @@
+<!DOCTYPE html> <!--Version HTML 5--> 
+<html lang="en"><!--Contenido de programacion en ingles-->
+
+    <%- include('./partials/head.ejs', {title: "Baggu: Productos"}) %>
+
+<body>
+    
+    <%- include('./partials/header.ejs') %>
+
+    <main>
+
+        <div class="products_container">
+
+            <div class="products_subcontainer">
+                
+                <%- include('./partials/product.ejs', {title: "Titulo 1", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime perspiciatis doloremque eligendi."}) %>
+
+                <%- include('./partials/product.ejs', {title: "Titulo 2", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime perspiciatis doloremque eligendi."}) %>
+
+                <%- include('./partials/product.ejs', {title: "Titulo 3", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime perspiciatis doloremque eligendi."}) %>
+
+                <%- include('./partials/product.ejs', {title: "Titulo 4", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime perspiciatis doloremque eligendi."}) %>
+
+                <%- include('./partials/product.ejs', {title: "Titulo 5", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime perspiciatis doloremque eligendi."}) %>
+
+                
+              
+            </div>
+
+        </div>
+
+
+    </main>
+    
+    <%- include('./partials/footer.ejs') %>
+
+</body>
+</html>
