@@ -3,6 +3,6 @@ const router = express.Router();
 
 const homeController = require ("../controllers/homeController.js");
 
-router.get('/contacto', homeController.contacto);
+router.get('/', homeController.contacto);
 
 module.exports = router;

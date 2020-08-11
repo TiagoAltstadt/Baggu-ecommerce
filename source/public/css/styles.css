@@ -58,6 +58,7 @@ h4{
 }
 /*Login y registro del header*/
 
+
 /*******************  Index ********************/
 
                                    /*Container Principal del Carrousel*/
@@ -171,6 +172,33 @@ h2 {
 .imgMainProduct1:hover, .imgMainProduct2:hover, .imgMainProduct3:hover {
 	width: 105%;
 	border: 2px solid grey;
+}
+
+/*************Acerca de - Empresa****************/
+
+
+h1.titleEmpresa { text-align: center;}
+
+
+article.empresa { 
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: column;
+}
+
+div.boxImgEmpresa {
+	padding: 10px;
+}
+
+div.boxTextEmpresa {
+	padding: 10px;
+}
+
+@media (min-width: 769px) and (orientation: landscape) {
+	article.empresa { 
+		flex-direction: row;
+	}
+	
 }
 
 /************Login y registro*********/
@@ -648,6 +676,8 @@ h2 {
 	width: 100%;
 	height: 220px;
 	flex-grow: 1;
+	flex-direction: column;
+	justify-content: center;
 	background-color: #141E29;
 }
 
@@ -676,6 +706,7 @@ h2 {
 	color: white;
 	font-size: 1.25rem;
 	font-family: OpenSans-Light;
+	text-align: center;
 }
                                     /*Contenedor de Iconos Social Media*/
 .boxIconSocial {            
@@ -737,6 +768,11 @@ h2 {
 @media (min-width: 769px) and (orientation: landscape) {
 	.containerFooter { flex-direction: row; }
 	.footerBox3 { display: flex; }
+	.footerBox1 {
+		flex-direction: row;
+		justify-content: flex-start;
+	 }
+	 .contacto { text-align: left; }
 	.footerBox1, .footerBox2, .footerBox3 { 
 		width: 33%;
 		flex-grow: 1; 
