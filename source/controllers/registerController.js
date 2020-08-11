@@ -1,6 +1,6 @@
 const registerController = {
     register: (req, res) => {
-        res.render('register.ejs');
+        res.render('./users/register.ejs');
     }
 };
 
