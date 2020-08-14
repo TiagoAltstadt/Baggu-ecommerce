@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head.ejs', {title: "Baggu: List"}) %>
+
+<body>
+    
+    <%- include('./partials/header.ejs') %>
+
+    <main>
+        
+        <h1>Users List</h1>
+
+        <ul>
+            <% for (let i=0; i<users.length; i++) { %>
+                <li>
+                    <a href="users/detail/<%= users[i].id %>"><%= users[i].name %></a>
+                </li>
+            <% } %>
+        </ul>
+        <h2>Search</h2>
+        <form action="./users/search.ejs" method="GET">
+            <input type="text" name="query">
+            <input type="submit" value="search">
+        </form>
+
+    </main>
+
+    <%- include('./partials/footer.ejs') %>
+
+</body>
+</html>

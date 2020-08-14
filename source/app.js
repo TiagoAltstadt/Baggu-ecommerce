@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
 
+const session = require('express-session');
+
+//-----Rutas-----
 const rutaHome = require('./routes/home.js');
 const rutaContacto = require("./routes/contacto.js");
 const rutaAcercaDe = require("./routes/acercaDe.js");
@@ -11,8 +14,10 @@ const rutaRegister = require('./routes/register.js');
 const rutaCreacionProductos = require('./routes/creacionProductos.js');
 const rutaEdicionProductos = require('./routes/edicionProductos.js');
 const rutaProductos = require('./routes/productos');
+const rutaList = require('./routes/list');
 
 app.set('view engine','ejs');
+app.use(session({secret: "Secret"}));
 
 
 //crear funcion de express para utilizar carpeta public para archivos estaticos
@@ -32,6 +37,9 @@ app.use('/login' , rutaLogin);
 
 //crear ruta '/register' 
 app.use('/register' , rutaRegister);
+
+//crear ruta '/list'
+app.use('/list', rutaList);
 
 //crear ruta '/creacionProductos'
 app.use('/creacionProductos' , rutaCreacionProductos);

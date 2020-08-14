@@ -147,7 +147,7 @@ h4{
                                           /*Titulos Grupo Productos*/
 h2 {                                           
 	font-size: 2rem;
-	color: whitesmoke; 
+	/* color: whitesmoke;  NO SE HACE ESTO */
 	}
                                           /*Contenedor Imagen Grupo Productos*/
 .imageBox {       
