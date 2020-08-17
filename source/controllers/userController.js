@@ -9,9 +9,9 @@ const userController = {
         let busqueda = req.query.search;
 
         let users = [
-            {id: 1, name: "Percy"},
-            {id: 2, name: "Anabeth"},
-            {id: 3, name: "Jason"}
+            {id: 1, name: "percy"},
+            {id: 2, name: "anabeth"},
+            {id: 3, name: "jason"}
         ]
 
         let usersResults = [];
@@ -25,11 +25,14 @@ const userController = {
         res.render('usersResults', {usersResults: usersResults});
 
     },
+    create: function (req, res) {
+        res.send();
+    },
     list: (req, res) => {
         let users = [
-            {id: 1, name: "Percy"},
-            {id: 2, name: "Anabeth"},
-            {id: 3, name: "Jason"}
+            {id: 1, name: "percy"},
+            {id: 2, name: "anabeth"},
+            {id: 3, name: "jason"}
         ]
 
         res.render('list', {'users': users});

@@ -9,12 +9,10 @@ const rutaContacto = require("./routes/contacto.js");
 const rutaAcercaDe = require("./routes/acercaDe.js");
 let rutaCarrito = require('./routes/carrito.js');
 let rutaDetalle = require('./routes/detalle.js');
-const rutaLogin = require('./routes/login.js');
-const rutaRegister = require('./routes/register.js');
 const rutaCreacionProductos = require('./routes/creacionProductos.js');
 const rutaEdicionProductos = require('./routes/edicionProductos.js');
 const rutaProductos = require('./routes/productos');
-const rutaList = require('./routes/list');
+const rutaUser = require('./routes/user');
 
 app.set('view engine','ejs');
 app.use(session({secret: "Secret"}));
@@ -26,20 +24,14 @@ app.use(express.static("public"));
 //crear ruta '/'
 app.use('/', rutaHome);
 
+//crear ruta '/list', '/register' '/login' '/search'
+app.use('/', rutaUser);
+
 //crear ruta '/contacto'
 app.use('/contacto', rutaContacto);
 
 //crear ruta '/acercaDe (Empresa)'
 app.use('/acercaDe', rutaAcercaDe);
-
-//crear ruta '/login' 
-app.use('/login' , rutaLogin);
-
-//crear ruta '/register' 
-app.use('/register' , rutaRegister);
-
-//crear ruta '/list'
-app.use('/list', rutaList);
 
 //crear ruta '/creacionProductos'
 app.use('/creacionProductos' , rutaCreacionProductos);
@@ -55,12 +47,6 @@ app.use('/carrito', rutaCarrito);
 
 //crear ruta '/detalle'
 app.use('/detalle', rutaDetalle)
-
-//crear ruta '/boom' 
-app.get('/boom', function(req, res){
-    res.sendFile(__dirname + '/views/boom.html');
-});
-
 
 //crear ruta de _inexistente_
 app.get('*', function(req, res){
