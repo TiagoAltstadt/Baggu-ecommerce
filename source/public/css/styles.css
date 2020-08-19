@@ -12,6 +12,13 @@
 html{
 	font-size: 62.5%; /**reset para rems -62.5% =10px de 16... esta cuenta es para hacer que un rem valga 10px**/
 	box-sizing: border-box;
+
+
+	--color-primero: #5386E4;
+	--color-segundo: #00916E;
+	--color-tercero: #525998;
+	--color-cuarto: whitesmoke;
+	--color-quinto: #141E29;
 }
 *, *:before, *:after{
 	box-sizing: inherit;
@@ -601,7 +608,7 @@ div.boxTextEmpresa {
 	display: block;
 	box-sizing: border-box;
 	margin: 3%;
-	background-color: #5386E4;
+	background-color: var(--color-primero);
 	color: white;
 	font-size: 25px;
 	text-align: center;
