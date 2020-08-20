@@ -1,3 +1,9 @@
+const fs = require('fs');
+let prueba = fs.readFileSync( './public/data/users.json' , {encoding: 'utf-8'});
+
+let pruebaJSON = JSON.parse(prueba);
+
+
 const userController = {
     register: (req, res) => {
         res.render('./users/register.ejs');
@@ -8,34 +14,23 @@ const userController = {
     search: (req, res) => {
         let busqueda = req.query.search;
 
-        let users = [
-            {id: 1, name: "percy"},
-            {id: 2, name: "anabeth"},
-            {id: 3, name: "jason"}
-        ]
-
         let usersResults = [];
 
-        for (let i=0; i<users.length; i++){
-            if (users[i].name.includes(busqueda)){
-                usersResults.push(users[i]);
+        for (let i=0; i<pruebaJSON.length; i++){
+            if (pruebaJSON[i].name.includes(busqueda)){
+                usersResults.push(pruebaJSON[i]);
             }
         }
 
-        res.render('usersResults', {usersResults: usersResults});
+        res.render('usersResults.ejs', {usersResults: usersResults});
 
     },
     create: function (req, res) {
         res.send();
     },
-    list: (req, res) => {
-        let users = [
-            {id: 1, name: "percy"},
-            {id: 2, name: "anabeth"},
-            {id: 3, name: "jason"}
-        ]
+    list: (req, res) => {      
 
-        res.render('list', {'users': users});
+        res.render('list.ejs', {'users': pruebaJSON});
     }
 };
 
