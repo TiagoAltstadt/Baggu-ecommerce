@@ -374,14 +374,14 @@ div.boxTextEmpresa {
 		flex-direction: column;
 		background-color: #add8e6;
 		border-radius: 12px;
-		width: 40%;
+		width: 100%;
 		margin: 5% 5%;
 	}
 
 	.product_image_container {
 		display: block;
 		box-sizing: border-box;
-		width: auto;
+		width: 100%;
 	}
 
 	.product_image {
@@ -389,11 +389,16 @@ div.boxTextEmpresa {
 		box-sizing: border-box;
 		width: 80%;
 		margin: 5px auto;
+		align-self: center;
 	}
 
 	.product_title {
 		display: block;
 		box-sizing: border-box;
+		font-weight: bold;
+		align-self: center;
+		font-size: larger;
+		margin: 2% 5%;
 		padding: 2% 5%;
 	}
 
@@ -407,6 +412,7 @@ div.boxTextEmpresa {
 	.product_price {
 		display: block;
 		box-sizing: border-box;
+		margin: 2% 5%;
 		color: #00916E;
 		font-weight: bold;
 	}
@@ -426,6 +432,21 @@ div.boxTextEmpresa {
 	}
 
 	@media all and (min-width: 426px){
+
+		.product_container {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			background-color: #add8e6;
+			border-radius: 12px;
+			width: 40%;
+			margin: 5% .99%;
+		}
+		
+
+	}
+
+	@media all and (min-width: 768px){
 
 		.product_container {
 			display: flex;
