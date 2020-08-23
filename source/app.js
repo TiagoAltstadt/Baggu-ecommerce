@@ -11,7 +11,7 @@ let rutaCarrito = require('./routes/carrito.js');
 let rutaDetalle = require('./routes/detalle.js');
 const rutaCreacionProductos = require('./routes/creacionProductos.js');
 const rutaEdicionProductos = require('./routes/edicionProductos.js');
-const rutaProductos = require('./routes/productos');
+const rutaProductos = require('./routes/productos.js');
 const rutaUser = require('./routes/user');
 
 app.set('view engine','ejs');

@@ -378,6 +378,12 @@ div.boxTextEmpresa {
 		margin: 5% 5%;
 	}
 
+	.product_image_container {
+		display: block;
+		box-sizing: border-box;
+		width: auto;
+	}
+
 	.product_image {
 		display: block;
 		box-sizing: border-box;
@@ -386,13 +392,23 @@ div.boxTextEmpresa {
 	}
 
 	.product_title {
-		margin: auto;
+		display: block;
+		box-sizing: border-box;
 		padding: 2% 5%;
 	}
 
 	.product_description {
+		display: block;
+		box-sizing: border-box;
 		margin: auto;
 		padding: 2% 5%;
+	}
+
+	.product_price {
+		display: block;
+		box-sizing: border-box;
+		color: #00916E;
+		font-weight: bold;
 	}
 
 	.product_options {

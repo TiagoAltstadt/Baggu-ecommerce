@@ -1,9 +1,9 @@
 let express = require('express');
+const productosController = require('../controllers/productosController');
 
 let router = express.Router();
 
-router.get('/', function(req, res){
-    res.render('productos.ejs', { root: './views'});
-});
+router.get('/', productosController.list);
+
 
 module.exports = router;
