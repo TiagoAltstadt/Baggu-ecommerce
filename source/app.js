@@ -4,15 +4,15 @@ const app = express();
 const session = require('express-session');
 
 //-----Rutas-----
-const rutaHome = require('./routes/home.js');
-const rutaContacto = require("./routes/contacto.js");
-const rutaAcercaDe = require("./routes/acercaDe.js");
-const rutaCarrito = require('./routes/carrito.js');
-const rutaDetalle = require('./routes/detalle.js');
-const rutaCreacionProductos = require('./routes/creacionProductos.js');
-const rutaEdicionProductos = require('./routes/edicionProductos.js');
-const rutaProductos = require('./routes/productos.js');
-const rutaUser = require('./routes/user');
+const rutaHome = require('./routes/home_route.js');
+const rutaContacto = require("./routes/contacto_route.js");
+const rutaAcercaDe = require("./routes/acercaDe_route.js");
+const rutaCarrito = require('./routes/carrito_route.js');
+const rutaDetalle = require('./routes/detalle_route.js');
+const rutaCreacionProductos = require('./routes/creacionProductos_route.js');
+const rutaEdicionProductos = require('./routes/edicionProductos_route.js');
+const rutaProductos = require('./routes/productos_route.js');
+const rutaUser = require('./routes/user_route');
 
 app.set('view engine','ejs');
 app.use(session({secret: "Secret"}));

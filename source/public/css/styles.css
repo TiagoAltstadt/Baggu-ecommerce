@@ -1098,8 +1098,10 @@ button{
 	flex-direction: column;
 	background-color: #add8e6;
 	border-radius: 12px;
-	
+	width: 90%;
+	margin: auto;
 }
+
 
 /*------------------------------------------------------------Dedicado a Register.ejs----------------------------------------------------------------------*/
 /*reposo*/

@@ -15,8 +15,6 @@ const productosController = {
     },
     detalle: (req, res) => {
 
-        let aux = req.params.id;
-
         res.render('../views/products/detalle.ejs', {'products': productJSON} );
     },
     carrito: (req, res) => {
