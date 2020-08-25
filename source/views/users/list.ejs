@@ -9,13 +9,15 @@
 
     <main>
         
-        <h1>Users List</h1>
+        <h1 class="title_list">Users List</h1>
 
-        <ul>
+        <section class="user_group_container">
+
             <%  for (let i=0; i<users.length; i++) {        %>
             <%-     include('../partials/user.ejs', {id: users[i].id, avatar: users[i].avatar, user: users[i].user, name: users[i].name, surname: users[i].surname, email: users[i].email, password: users[i].password, category: users[i].category}) %>
             <%  }                                           %>
-        </ul>
+        </section>
+                
         <h2>Search</h2>
         <form action="/search" method="GET">
             <input type="text" name="search">

@@ -13,4 +13,6 @@ router.get('/list' , userController.list);
 
 router.get('/search' , userController.search);
 
+router.get('/user/:id' , userController.user);
+
 module.exports = router;

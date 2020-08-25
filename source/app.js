@@ -24,7 +24,7 @@ app.use(express.static("public"));
 //crear ruta '/'
 app.use('/', rutaHome);
 
-//crear ruta '/list', '/register' '/login' '/search'
+//crear ruta '/list', '/register' '/login' '/search' '/user'
 app.use('/', rutaUser);
 
 //crear ruta '/contacto'

@@ -1,7 +1,7 @@
 const fs = require('fs');
-let prueba = fs.readFileSync( './public/data/users.json' , {encoding: 'utf-8'});
+let aux = fs.readFileSync( './public/data/users.json' , {encoding: 'utf-8'});
 
-let pruebaJSON = JSON.parse(prueba);
+let usersJSON = JSON.parse(aux);
 
 
 const userController = {
@@ -16,9 +16,9 @@ const userController = {
 
         let usersResults = [];
 
-        for (let i=0; i<pruebaJSON.length; i++){
-            if (pruebaJSON[i].name.includes(busqueda)){
-                usersResults.push(pruebaJSON[i]);
+        for (let i=0; i<usersJSON.length; i++){
+            if (usersJSON[i].name.includes(busqueda)){
+                usersResults.push(usersJSON[i]);
             }
         }
 
@@ -30,7 +30,10 @@ const userController = {
     },
     list: (req, res) => {      
 
-        res.render('./users/list.ejs', {'users': pruebaJSON});
+        res.render('./users/list.ejs', {'users': usersJSON});
+    },
+    user: (req, res) => {
+        res.render('./users/user.ejs', {'users': usersJSON});
     }
 };
 
