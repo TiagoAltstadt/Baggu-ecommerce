@@ -2,8 +2,8 @@ let express = require('express');
 
 let router = express.Router();
 
-router.get('/', function(req, res){
-    res.render('detalle.ejs', {root: './views'});
-});
+const productosController = require('../controllers/productosController');
+
+router.get('/:id', productosController.detalle);
 
 module.exports = router;

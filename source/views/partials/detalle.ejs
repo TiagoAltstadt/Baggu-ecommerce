@@ -2,7 +2,7 @@
     <main>
 
         <!-- Tipo de producto -->
-        <div class="tipo_producto"><p><%= product_type %></p></div>
+        <div class="tipo_producto"><p><%= category %></p></div>
 
         <section class="producto_container">
 
@@ -11,8 +11,8 @@
 
             <!--Descripcion del producto-->
             <div class="descripcion_detalle">
-                <p class="subtitulo_detalle">Descripcion del producto</p>
-                <p class="texto_detalle"><%= product_description %></p>
+                <p class="subtitulo_detalle"><%= titulo %></p>
+                <p class="texto_detalle"><%= description %></p>
             </div>
             <!--Resumen-->
             <div class="resumen_detalle">
@@ -27,7 +27,7 @@
                 </select>
                 </div>
                 <!-- Precio -->
-                <div class="precio_detalle"><i class="fas fa-dollar-sign"></i><%= product_price %></div></div>
+                <div class="precio_detalle"><i class="fas fa-dollar-sign"></i><%= price %></div></div>
 
                 <!-- Comprar -->
                 <div class="comprar_detalle">Comprar <i class="fas fa-shopping-cart"></i></div>

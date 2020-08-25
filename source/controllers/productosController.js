@@ -12,6 +12,15 @@ const productosController = {
     },
     list: (req, res) => {
         res.render('../views/products/productos.ejs', {'products': productJSON});
+    },
+    detalle: (req, res) => {
+
+        let aux = req.params.id;
+
+        res.render('../views/products/detalle.ejs', {'products': productJSON} );
+    },
+    carrito: (req, res) => {
+        res.render('../views/products/carrito.ejs', {'products': productJSON});
     }
 }
 module.exports = productosController;

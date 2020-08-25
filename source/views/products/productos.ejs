@@ -15,7 +15,7 @@
 
 
                 <% for( var i=1; i<products.length; i++){                                                          %>
-                <%- include('../partials/product.ejs', {image: products[i].product_image ,title: products[i].product_name , description: products[i].description ,price: products[i].price }) %>
+                <%- include('../partials/product.ejs', {id: products[i].id ,image: products[i].image ,title: products[i].name , description: products[i].description ,price: products[i].price }) %>
                 <% }                                                                                               %>        
 
                

@@ -30,7 +30,7 @@ const userController = {
     },
     list: (req, res) => {      
 
-        res.render('list.ejs', {'users': pruebaJSON});
+        res.render('./users/list.ejs', {'users': pruebaJSON});
     }
 };
 
