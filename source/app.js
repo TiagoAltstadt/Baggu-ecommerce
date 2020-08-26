@@ -13,6 +13,7 @@ const rutaCreacionProductos = require('./routes/creacionProductos_route.js');
 const rutaEdicionProductos = require('./routes/edicionProductos_route.js');
 const rutaProductos = require('./routes/productos_route.js');
 const rutaUser = require('./routes/user_route');
+const ruta404 = require('./routes/404_route.js')
 
 app.set('view engine','ejs');
 app.use(session({secret: "Secret"}));
@@ -49,9 +50,7 @@ app.use('/carrito', rutaCarrito);
 app.use('/detalle', rutaDetalle)
 
 //crear ruta de _inexistente_
-app.get('*', function(req, res){
-    res.status(404).sendFile(__dirname + '/views/404.html');
-});
+app.get('*', ruta404);
 
 
 
