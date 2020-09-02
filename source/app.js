@@ -9,14 +9,17 @@ const rutaContacto = require("./routes/contacto_route.js");
 const rutaAcercaDe = require("./routes/acercaDe_route.js");
 const rutaCarrito = require('./routes/carrito_route.js');
 const rutaDetalle = require('./routes/detalle_route.js');
-const rutaCreacionProductos = require('./routes/creacionProductos_route.js');
 const rutaEdicionProductos = require('./routes/edicionProductos_route.js');
 const rutaProductos = require('./routes/productos_route.js');
 const rutaUser = require('./routes/user_route');
-const ruta404 = require('./routes/404_route.js')
+const ruta404 = require('./routes/404_route.js');
+const { json } = require('express');
 
 app.set('view engine','ejs');
 app.use(session({secret: "Secret"}));
+
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
 
 
 //crear funcion de express para utilizar carpeta public para archivos estaticos
@@ -34,14 +37,11 @@ app.use('/contacto', rutaContacto);
 //crear ruta '/acercaDe (Empresa)'
 app.use('/acercaDe', rutaAcercaDe);
 
-//crear ruta '/creacionProductos'
-app.use('/creacionProductos' , rutaCreacionProductos);
-
 //crear ruta '/edicionProductos'
 app.use('/edicionProductos' , rutaEdicionProductos);
 
 //crear ruta '/productos'
-app.use('/productos', rutaProductos);
+app.use('/products', rutaProductos);
 
 //crear ruta '/carrito'
 app.use('/carrito', rutaCarrito);
