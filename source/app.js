@@ -8,7 +8,6 @@ const rutaHome = require('./routes/home_route.js');
 const rutaContacto = require("./routes/contacto_route.js");
 const rutaAcercaDe = require("./routes/acercaDe_route.js");
 const rutaCarrito = require('./routes/carrito_route.js');
-const rutaDetalle = require('./routes/detalle_route.js');
 const rutaEdicionProductos = require('./routes/edicionProductos_route.js');
 const rutaProductos = require('./routes/productos_route.js');
 const rutaUser = require('./routes/user_route');
@@ -16,7 +15,11 @@ const ruta404 = require('./routes/404_route.js');
 const { json } = require('express');
 
 app.set('view engine','ejs');
-app.use(session({secret: "Secret"}));
+app.use(session({
+    secret: "Secret", 
+    resave: true,
+    saveUninitialized: true
+}));
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
@@ -45,9 +48,6 @@ app.use('/products', rutaProductos);
 
 //crear ruta '/carrito'
 app.use('/carrito', rutaCarrito);
-
-//crear ruta '/detalle'
-app.use('/detalle', rutaDetalle)
 
 //crear ruta de _inexistente_
 app.get('*', ruta404);

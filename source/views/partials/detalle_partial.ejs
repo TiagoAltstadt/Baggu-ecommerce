@@ -2,16 +2,16 @@
     <main>
 
         <!-- Tipo de producto -->
-        <div class="tipo_producto"><p><%= category %></p></div>
+        <div class="tipo_producto"><p><%= titulo %></p></div>
 
         <section class="producto_container">
 
             <!--Imagen-->
-            <div class="imagen_detalle"><img class="img_detalle" src="img/portal_gun.png" alt=""></div>
+            <div class="imagen_detalle"><img class="img_detalle" src="<%=image%>" alt=""></div>
 
             <!--Descripcion del producto-->
             <div class="descripcion_detalle">
-                <p class="subtitulo_detalle"><%= titulo %></p>
+                <p class="subtitulo_detalle">ID:<%= category %></p>
                 <p class="texto_detalle"><%= description %></p>
             </div>
             <!--Resumen-->
