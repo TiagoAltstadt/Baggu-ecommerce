@@ -15,5 +15,8 @@ router.post('/create', productosController.createPOST);
 //Detalle de un producto particular
 router.get('/:id', productosController.detail);
 
+//Formulario de edición de productos
+router.get('/:id/edit', productosController.edit);
+
 
 module.exports = router;

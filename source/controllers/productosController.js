@@ -18,7 +18,7 @@ const productosController = {
         fs.appendFileSync('./public/data/products.json', datoJSON);
         res.redirect('/products');
     },
-    edicion: (req, res) => {
+    edit: (req, res) => {
         res.render('./products/edicionProductos.ejs');
     },
     detail: (req, res) => {

@@ -8,7 +8,6 @@ const rutaHome = require('./routes/home_route.js');
 const rutaContacto = require("./routes/contacto_route.js");
 const rutaAcercaDe = require("./routes/acercaDe_route.js");
 const rutaCarrito = require('./routes/carrito_route.js');
-const rutaEdicionProductos = require('./routes/edicionProductos_route.js');
 const rutaProductos = require('./routes/productos_route.js');
 const rutaUser = require('./routes/user_route');
 const ruta404 = require('./routes/404_route.js');
@@ -39,9 +38,6 @@ app.use('/contacto', rutaContacto);
 
 //crear ruta '/acercaDe (Empresa)'
 app.use('/acercaDe', rutaAcercaDe);
-
-//crear ruta '/edicionProductos'
-app.use('/edicionProductos' , rutaEdicionProductos);
 
 //crear ruta '/productos'
 app.use('/products', rutaProductos);
