@@ -18,5 +18,8 @@ router.get('/:id', productosController.detail);
 //Formulario de edición de productos
 router.get('/:id/edit', productosController.edit);
 
+//Confirmacion de edicion
+router.put('/:id/edit', productosController.update);
+
 
 module.exports = router;

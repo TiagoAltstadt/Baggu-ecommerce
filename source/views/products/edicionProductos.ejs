@@ -6,26 +6,26 @@
     	<%- include('../partials/header.ejs') %>
 		
 
-        <form method="PUT" action="/products" class="formularioRegiaster">
+        <form method="PUT" action="/products/1/edit" class="formularioRegiaster">
 			<div class="logoPrincipal">
 				<h2>Edición de productos</h2>
 			</div>
 			<div class="otrosDatos">
 				<label for="id">
 					<span> ID:</span>
-					<input type="text" name="id" id="id">
+					<input type="text" value="<%=products[data].id%>" name="id" id="id">
 				</label>
 				<label for="image">
 					<span>Nueva  Url de imagen de producto</span>
-					<input type="text" name="image" id="image">
+					<input type="text" value="<%=products[data].image%>" name="image" id="image">
 				</label>
 				<label for="name">
 					<span> Nuevo nombre de Producto</span>
-					<input type="text" name="name" id="name">
+					<input type="text" value="<%=products[data].name%>" name="name" id="name">
 				</label>
 				<label for="description">
 					<span> Nueva descripcion de producto</span>
-					<input type="text" name="description" id="description">
+					<input type="text" value="<%=products[data].description%>" name="description" id="description">
 				</label>
 				<label for="name">
 					<select name="category" id="category">
@@ -36,13 +36,13 @@
 				</label>
 				<label for="price">
 					<span> Nuevo precio</span>
-					<input type="text" name="price" id="price">
+					<input type="text" value="<%=products[data].price%>" name="price" id="price">
 				</label>
 				<label for="stock">
 					<span> Stock</span>
-					<input type="text" name="stock" id="stock">
+					<input type="text" value="<%=products[data].stock%>" name="stock" id="stock">
 				</label>
-
+				
 				
 				<!-- <div class="icono">
 					<i class="fab fa-product-hunt"></i>
@@ -75,7 +75,7 @@
 				</div>
 
 				<div class="fotoRegister">
-					<!--<label for="myfile">Select a file:</label>-->
+					<!-<label for="myfile">Select a file:</label>->
 					<input type="file" id="nuevaFoto" name="nuevaFoto">
 				</div>
 			</div> -->

@@ -40,7 +40,7 @@ const userController = {
             password: req.body.password,
             category: req.body.category
           }
-        
+          console.log(user);
         //leo el json de productos y lo paso a la variable archivoProductos
         const archivoUsers = fs.readFileSync('./public/data/users.json', { encoding: 'utf-8' });
 
@@ -63,7 +63,7 @@ const userController = {
         fs.writeFileSync('./public/data/users.json', usersJSON);
 
         //redirecciono
-        res.redirect('/users');
+        res.redirect('/users/list');
 
     },
     list: (req, res) => {      
