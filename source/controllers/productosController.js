@@ -11,12 +11,29 @@ const productosController = {
         res.render('./products/createProduct.ejs');
         
     },
-    createPOST: (req,res) => {
-        const data = JSON.parse(JSON.stringify(req.body));
-        console.log(data);
-        let datoJSON = JSON.stringify(data);
-        fs.appendFileSync('./public/data/products.json', datoJSON);
+    store: (req,res) => {
+        const producto = {
+            id: req.body.id,
+            image: req.body.image,
+            name: req.body.name,
+            description: req.body.description,
+            price: req.body.price,
+            stock: req.body.stock,
+            category: req.body.category
+            
+          }
+        const archivoProductos = fs.readFileSync('./public/data/products.json', { encoding: 'utf-8' })
+        let productos
+        if (archivoProductos == '') {
+            productos = []
+        } else {
+        productos = JSON.parse(archivoProductos)
+        }
+        productos.push(producto)
+        const productosJSON = JSON.stringify(productos);
+        fs.writeFileSync('./public/data/products.json', productosJSON);
         res.redirect('/products');
+
     },
     edit: (req, res) => {
         res.render('./products/edicionProductos.ejs');

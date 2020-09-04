@@ -10,7 +10,7 @@ router.get('/', productosController.list);
 router.get('/create', productosController.create);
 
 //Acción de creación (a donde se envía el formulario)
-router.post('/create', productosController.createPOST);
+router.post('/create', productosController.store);
 
 //Detalle de un producto particular
 router.get('/:id', productosController.detail);
