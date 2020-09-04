@@ -31,7 +31,7 @@ app.use(express.static("public"));
 app.use('/', rutaHome);
 
 //crear ruta '/list', '/register' '/login' '/search' '/user'
-app.use('/', rutaUser);
+app.use('/users', rutaUser);
 
 //crear ruta '/contacto'
 app.use('/contacto', rutaContacto);
