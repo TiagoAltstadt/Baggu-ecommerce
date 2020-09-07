@@ -1,19 +1,23 @@
 <section class="user_detail_container">
 
-    <div class="user_image"><img src="<%= avatar %>" alt=""></div>
+    <div class="user_image"><img class="user_img" src="<%= avatar %>" alt=""></div>
 
     <div class="user_info">
 
-        <p><b><%= user %></b></p>
-        <p><b> ID: </b> <%=id%></p>
-        <p><b> Name: </b><%=name%> <%=surname%></p>
-        <p><b> Email: </b><%=email%></p>
-        <p><b> Password: </b><%=password%></p>
+        <ul class="item_user_detail">
 
-        <% let option = "vendedor"; %>
-        <% if (category != 1){option = "Comprador"} %>
-
-        <p><b> Category: </b><%=option%></p>
-        
+            <li><div><b><%= user %></b></div></li>
+            <li><div><b> ID: </b> <%=id%></div></li>
+            <li><div><b> Name: </b><%=name%> <%=surname%></div></li>
+            <li><div><b> Email: </b><%=email%></div></li>
+            <li><div><b> Password: </b><%=password%></div></li>
+    
+           <li> <div>
+                <% let option = "vendedor"; %>
+                <% if (category != 1){option = "Comprador"} %>
+                <b> Category: </b><%=option%>
+            </div></li>
+            
+        </ul> 
     </div>
 </section>

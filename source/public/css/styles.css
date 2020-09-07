@@ -1174,10 +1174,32 @@ button{
 	flex-direction: column;
 	background-color: #add8e6;
 	border-radius: 12px;
-	width: 90%;
+	size: 90% ;
 	margin: auto;
 }
 
+.user_image{
+	margin: 3% auto;
+}
+.user_img{
+	width: 200%;
+	border: solid black 1px;
+	border-radius: 12px;
+}
+
+.user_info {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	
+}
+
+.item_user_detail{
+	display: block;
+	box-sizing: border-box;
+	width: 25%;
+	margin: 0 auto;
+}
 
 /*------------------------------------------------------------Dedicado a Register.ejs----------------------------------------------------------------------*/
 /*reposo*/
