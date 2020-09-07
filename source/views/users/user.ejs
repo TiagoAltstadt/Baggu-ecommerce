@@ -6,9 +6,8 @@
 <%- include('../partials/header.ejs') %>
 
 <main>
-    <%  let i = 2       %>
 
-    <%- include('../partials/userDetail_partial.ejs', {id: users[i].id, avatar: users[i].avatar, user: users[i].user, name: users[i].name, surname: users[i].surname, email: users[i].email, password: users[i].password, category: users[i].category}) %>
+    <%- include('../partials/userDetail_partial.ejs', {id: users[data].id, avatar: users[data].avatar, user: users[data].user, name: users[data].name, surname: users[data].surname, email: users[data].email, password: users[data].password, category: users[data].category}) %>
     
 </main>
 

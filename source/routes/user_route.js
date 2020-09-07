@@ -9,10 +9,10 @@ router.post('/register' , userController.store);
 
 router.get('/login' , userController.login);
 
-router.get('/list' , userController.list);
+router.get('/' , userController.list);
 
 router.get('/search' , userController.search);
 
-router.get('/user/:id' , userController.user);
+router.get('/:id' , userController.detail);
 
 module.exports = router;

@@ -48,7 +48,7 @@ const productosController = {
 
     },
     edit: function(req, res){
-        let data = req.params.id;
+        let data = req.params.id -1;
         res.render('./products/edicionProductos.ejs', {'products': productJSON, 'data': data});
     },
     update: function(req, res){

@@ -4,6 +4,9 @@ let aux = fs.readFileSync( './public/data/users.json' , {encoding: 'utf-8'});
 let usersJSON = JSON.parse(aux);
 
 
+
+
+
 const userController = {
     register: (req, res) => {
         res.render('./users/register.ejs');
@@ -70,9 +73,10 @@ const userController = {
 
         res.render('./users/list.ejs', {'users': usersJSON});
     },
-    user: (req, res) => {
-        res.render('./users/user.ejs', {'users': usersJSON});
-    }
+    detail: function(req, res){
+        let data = req.params.id - 1;
+        res.render('../views/users/user.ejs', {'users': usersJSON, 'data': data} );
+    },
 };
 
 module.exports = userController;
