@@ -1,18 +1,20 @@
-<header class="headerTotal">
-    <div class="logoHeader">
-        <a href="/"><img src="media/logos/logo.png" alt="Logo Baggu"></a>
+<div class="headerContainer">
+
+    <div class="logoContainer">
+        <a href="/"><img class="imgHeader" src="media/logos/logo.png" alt="Logo Baggu"></a> 
     </div>
-    <div class="usuarioHeader">
-        <span><i class="fas fa-user"></i></span> <h3><a href="login">Login</a> o <a href="register">Registrarse</a></h3> 
 
-        <div class="busqueda">
-            <input type="search" id="search" placeholder="Search..." />
-            <span class="icon"><i class="fa fa-search"></i></span>
-        </div>
+    <div class="noLogoContainer">
+        <section class="serchHeader">
+            <div class="md-form active-cyan active-cyan-2 mb-3">
+                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+            </div>
+        </section>
+
+        <section class="optionsHeader">
+            <span class="optionHeader"><a href="/users/login">Login</a></span>
+            <span class="optionHeader"><a href="/users/register">Register</a></span>
+            <span class="optionHeader"><a href="/carrito">Carrito</a></span>
+        </section>
     </div>
-</header>
-<hr>
-
-
-
-<script src="../js/bootstrap.min.js"></script>
+</div>

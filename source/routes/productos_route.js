@@ -19,7 +19,7 @@ router.get('/:id', productosController.detail);
 router.get('/:id/edit', productosController.edit);
 
 //Confirmacion de edicion
-router.put('/:id/edit', productosController.update);
+router.post('/:id/edit', productosController.update);
 
 
 module.exports = router;

@@ -21,6 +21,7 @@ html{
 	--color-quinto: #141E29;
 }
 *, *:before, *:after{
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	box-sizing: inherit;
 }
 body{
@@ -59,9 +60,71 @@ h4{
 	margin: 5% 10%;
 }
 
+/*------------------------------------------------------------Dedicado a header de tiago-------------------------------------------------------------*/
+
+.headerContainer {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.logoContainer {
+	display: block;
+	box-sizing: border-box;
+	width: 20%;
+}
+.imgHeader{
+	width: 100%;
+}
+	
+.noLogoContainer{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	width: 80%;
+}
+
+.serchHeader{
+	padding: 5%;
+	width: 100%;
+	height: 50%;
+
+}
+.active-cyan-2 input.form-control[type=text]:focus:not([readonly]) {
+	border-bottom: 1px solid #4dd0e1;
+	box-shadow: 0 1px 0 0 #4dd0e1;
+	font-size: larger;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.form-control{
+	width: 100%;
+	height: 40px;
+	font-size: larger;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.optionsHeader{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	width: 100%;
+	height: 50%;
+}
+
+.optionHeader{
+	display: block;
+	box-sizing: border-box;
+	margin: auto;
+}
+
+@media all and (min-width: 769px){
+	
+}
+
+
 /*------------------------------------------------------------Dedicado a header----------------------------------------------------------------------*/
 
-.headerTotal{
+/* .headerTotal{
 	width: 100%;
 	height: 15rem;
 	margin-left: auto;
@@ -69,14 +132,13 @@ h4{
 	display: flex;
 	flex-flow: row nowrap;
 }
-/*Logo*/
 .logoHeader{
-	width: 35vw;
+	width: 20vw;
 	height: 20rem;
 }
 .logoHeader img{
 	height: 15rem;
-}
+} */
 /*Login y registro del header*/
 
 
@@ -229,7 +291,7 @@ div.boxTextEmpresa {
 /*Paleta de Colores para Login - Registro - Carrito **** #826754 */
 
 .usuarioHeader{
-	width: 65vw;
+	width: 80vw;
 	height: 20rem;
 	text-align: right;
 	padding: 2rem;

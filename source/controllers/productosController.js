@@ -49,7 +49,6 @@ const productosController = {
     },
     edit: function(req, res){
         let data = req.params.id;
-        console.log(data);
         res.render('./products/edicionProductos.ejs', {'products': productJSON, 'data': data});
     },
     update: function(req, res){
@@ -63,12 +62,11 @@ const productosController = {
             stock: req.body.stock,
             category: req.body.category
           }
-        
+          
         //leo el json de productos y lo paso a la variable archivoProductos
         const archivoProductos = fs.readFileSync('./public/data/products.json', { encoding: 'utf-8' });
 
         const productos = JSON.parse(archivoProductos);
-          
 
         for(let i=1; i<productos.length; i++){
             if (productos[i].id == producto.id){
