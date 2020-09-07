@@ -25,6 +25,8 @@ html{
 	box-sizing: inherit;
 }
 body{
+	width: 80%;
+	margin: auto 10%;
 	font-family: '';
 	font-size: 1.6rem;
 	line-height: 2;
@@ -66,6 +68,8 @@ h4{
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
+	width: 80%;
+	margin: auto 10%;
 }
 
 .logoContainer {
@@ -84,12 +88,11 @@ h4{
 	width: 80%;
 }
 
-.serchHeader{
-	padding: 5%;
+.searchHeader{
+	padding: 1.5%;
 	width: 100%;
-	height: 50%;
-
 }
+
 .active-cyan-2 input.form-control[type=text]:focus:not([readonly]) {
 	border-bottom: 1px solid #4dd0e1;
 	box-shadow: 0 1px 0 0 #4dd0e1;
@@ -107,8 +110,6 @@ h4{
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
-	width: 100%;
-	height: 50%;
 }
 
 .optionHeader{
@@ -143,6 +144,10 @@ h4{
 
 
 /*------------------------------------------------------------Dedicado a Index.ejs----------------------------------------------------------------------*/
+
+.indexContainer{
+
+}
 
                                    /*Container Principal del Carrousel*/
 .boxContainerCarrousel { 
