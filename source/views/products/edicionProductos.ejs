@@ -6,7 +6,7 @@
     	<%- include('../partials/header.ejs') %>
 		
 
-        <form method="POST" action="/products/<%= data %>/edit" class="formularioRegiaster">
+        <form action="/products/<%= data %>?_method=PUT" method="POST" enctype="multipart/form-data" class="formularioRegiaster">
 			<div class="logoPrincipal">
 				<h2>Edición de productos</h2>
 			</div>

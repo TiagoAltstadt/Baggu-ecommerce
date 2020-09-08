@@ -77,6 +77,9 @@ const userController = {
         let data = req.params.id - 1;
         res.render('../views/users/user.ejs', {'users': usersJSON, 'data': data} );
     },
+    update: (req, res) => {
+        
+      }
 };
 
 module.exports = userController;

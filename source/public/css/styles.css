@@ -17,8 +17,9 @@ html{
 	--color-primero: #5386E4;
 	--color-segundo: #00916E;
 	--color-tercero: #525998;
-	--color-cuarto: whitesmoke;
-	--color-quinto: #141E29;
+	--color-cuarto: #add8e6;
+	--color-quinto: whitesmoke;
+	--color-sexto: #141E29;
 }
 *, *:before, *:after{
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -1177,7 +1178,7 @@ button{
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
-	background-color: #add8e6;
+	background-color: var(--color-cuarto);
 	border-radius: 12px;
 	size: 90% ;
 	margin: auto;
@@ -1255,7 +1256,7 @@ button{
 
 /*formulario*/
 .formularioRegiaster{
-	background-color: #826754;
+	background-color: var(--color-cuarto);
 	width: 100%;
 	padding: 1rem;
 	margin-bottom: 5rem;

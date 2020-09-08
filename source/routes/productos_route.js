@@ -9,17 +9,19 @@ router.get('/', productosController.list);
 //Formulario de creación de productos
 router.get('/create', productosController.create);
 
-//Acción de creación (a donde se envía el formulario)
-router.post('/create', productosController.store);
-
 //Detalle de un producto particular
 router.get('/:id', productosController.detail);
+
+//Acción de creación (a donde se envía el formulario)
+router.post('/create', productosController.store);
 
 //Formulario de edición de productos
 router.get('/:id/edit', productosController.edit);
 
-//Confirmacion de edicion
-router.post('/:id/edit', productosController.update);
+//Acción de edición (a donde se envía el formulario):
+router.put('/:id', productosController.update);
 
+//Acción de borrado
+//router.delete('/:id', productosController.delete);
 
 module.exports = router;

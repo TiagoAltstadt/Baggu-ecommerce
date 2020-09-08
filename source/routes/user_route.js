@@ -15,4 +15,6 @@ router.get('/search' , userController.search);
 
 router.get('/:id' , userController.detail);
 
+router.put('/:id' , userController.update);
+
 module.exports = router;
