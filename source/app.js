@@ -3,6 +3,10 @@ const app = express();
 
 const session = require('express-session');
 
+const methodOverride = require("method-override");
+app.use(methodOverride("_method"));
+
+
 //-----Rutas-----
 const rutaHome = require('./routes/home_route.js');
 const rutaProductos = require('./routes/productos_route.js');
