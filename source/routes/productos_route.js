@@ -6,6 +6,9 @@ let router = express.Router();
 //Listado de productos
 router.get('/', productosController.list);
 
+//ruta a carrito
+router.get('/carrito', productosController.carrito);
+
 //Formulario de creación de productos
 router.get('/create', productosController.create);
 

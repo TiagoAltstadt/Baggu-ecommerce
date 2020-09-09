@@ -6,33 +6,35 @@
 <body>
     <%- include('../partials/header.ejs') %>
 
-    <form method="POST" action="/users/register">
+    <form class="register_form" method="POST" action="/users/register">
+        
+        <h1 class="register_option">Registrarse</h1>
 
-        <label for="id">
+        <label class="register_option" for="id">
             <span> ID:</span>
             <input type="text" name="id" id="id">
         </label>
-        <label for="avatar">
+        <label class="register_option" for="avatar">
             <span> Avatar:</span>
             <input type="text" name="avatar" id="avatar">
         </label>
-        <label for="user">
+        <label class="register_option" for="user">
             <span> Usuario:</span>
             <input type="text" name="user" id="user">
         </label>
-        <label for="surname">
+        <label class="register_option" for="surname">
             <span> Apellido:</span>
             <input type="text" name="surname" id="surname">
         </label>
-        <label for="email">
+        <label class="register_option" for="email">
             <span> Email:</span>
             <input type="email" name="email" id="email">
         </label>
-        <label for="password">
+        <label class="register_option" for="password">
             <span> Contraseña:</span>
             <input type="password" name="password" id="password">
         </label>
-        <label for="category">
+        <label class="register_option" for="category">
             <select name="category" id="category">
                 <option value="1">Comprador</option>
                 <option value="2">Vendedor</option>

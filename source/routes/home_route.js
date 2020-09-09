@@ -6,6 +6,10 @@ const session = require('express-session');
 
 router.get('/', homeController.index);
 
+router.get('/contacto', homeController.contacto);
+
+router.get('/acerca-de', homeController.acercaDe);
+
 // router.get('/preubaSession', function (req, res){
 
 //     if(req.session.numeroVisitas == undefined){

@@ -1,129 +1,131 @@
 const fs = require('fs');
 
 const productosController = {
-    list: function(req, res){
+    list: 
+        function(req, res){
         
-        //leo el json de productos y lo paso a la variable archivoProductos como objeto literal
-        const archivoProductos = fs.readFileSync( './public/data/products.json' , {encoding: 'utf-8'});
-        const productJSON = JSON.parse(archivoProductos);
+            //leo el json de productos y lo paso a la variable archivoProductos como objeto literal
+            const archivoProductos = fs.readFileSync( './public/data/products.json' , {encoding: 'utf-8'});
+            const productJSON = JSON.parse(archivoProductos);
 
-        res.render('../views/products/productos.ejs', {'products': productJSON});
+            res.render('../views/products/productos.ejs', {'products': productJSON});
 
-    },
-    create: function(req, res){
+        },
+    create: 
+        function(req, res){
+            res.render('./products/createProduct.ejs');
+        },
+    store: 
+        function(req,res){
 
-        res.render('./products/createProduct.ejs');
+            //guardo todos los datos del formulario en la variable producto
+            const producto = {
+                id: req.body.id,
+                image: req.body.image,
+                name: req.body.name,
+                description: req.body.description,
+                price: req.body.price,
+                stock: req.body.stock,
+                category: req.body.category
+            }
+            
+            //leo el json de productos y lo paso a la variable archivoProductos
+            const archivoProductos = fs.readFileSync('./public/data/products.json', { encoding: 'utf-8' });
 
-    },
-    store: function(req,res){
+            //defino productos y digo, si esta vacia, creala, si tiene algo, parsealo para poder trabajar con eso
+            let productos;
 
-        //guardo todos los datos del formulario en la variable producto
-        const producto = {
-            id: req.body.id,
-            image: req.body.image,
-            name: req.body.name,
-            description: req.body.description,
-            price: req.body.price,
-            stock: req.body.stock,
-            category: req.body.category
-          }
-        
-        //leo el json de productos y lo paso a la variable archivoProductos
-        const archivoProductos = fs.readFileSync('./public/data/products.json', { encoding: 'utf-8' });
+            if (archivoProductos == '') {
+                productos = []
+            } else {
+            productos = JSON.parse(archivoProductos);
+            }
 
-        //defino productos y digo, si esta vacia, creala, si tiene algo, parsealo para poder trabajar con eso
-        let productos;
+            //sea cual sea el output, le meto la nueva info que declare mas arriba en productos
+            productos.push(producto);
 
-        if (archivoProductos == '') {
-            productos = []
-        } else {
-        productos = JSON.parse(archivoProductos);
-        }
+            //lo vuelvo un string para guardarlo
+            const productosJSON = JSON.stringify(productos);
 
-        //sea cual sea el output, le meto la nueva info que declare mas arriba en productos
-        productos.push(producto);
+            //uso write para pisar la data previa y guardar todo lo nuevo
+            fs.writeFileSync('./public/data/products.json', productosJSON);
 
-        //ño vuelvo un string para guardarlo
-        const productosJSON = JSON.stringify(productos);
+            //redirecciono
+            res.redirect('/products');
 
-        //uso write para pisar la data previa y guardar todo lo nuevo
-        fs.writeFileSync('./public/data/products.json', productosJSON);
+        },
+    edit: 
+        function(req, res){
 
-        //redirecciono
-        res.redirect('/products');
+            //leo el json de productos y lo paso a la variable archivoProductos como objeto literal
+            const archivoProductos = fs.readFileSync( './public/data/products.json' , {encoding: 'utf-8'});
+            const productJSON = JSON.parse(archivoProductos);
 
-    },
-    edit: function(req, res){
+            let data = req.params.id -1;
 
-        //leo el json de productos y lo paso a la variable archivoProductos como objeto literal
-        const archivoProductos = fs.readFileSync( './public/data/products.json' , {encoding: 'utf-8'});
-        const productJSON = JSON.parse(archivoProductos);
+            res.render('./products/edicionProductos.ejs', {'products': productJSON, 'data': data});
+        },
+    update: 
+        function(req, res){
 
-        let data = req.params.id -1;
+            //guardo la id en una variable
+            let idProducto = req.params.id;
 
-        res.render('./products/edicionProductos.ejs', {'products': productJSON, 'data': data});
+            //guardo todos los datos del formulario en la variable producto
+            const producto = {
+                id: req.body.id,
+                image: req.body.image,
+                name: req.body.name,
+                description: req.body.description,
+                price: req.body.price,
+                stock: req.body.stock,
+                category: req.body.category
+            }
+            
+            //leo el json de productos y lo paso a la variable archivoProductos como objeto literal
+            const archivoProductos = fs.readFileSync('./public/data/products.json', { encoding: 'utf-8' });
+            const productos = JSON.parse(archivoProductos);
 
-    },
-    update: function(req, res){
+            for(let i=1; i<productos.length; i++){
+                if (productos[i].id == idProducto){
 
-        //guardo la id en una variable
-        let idProducto = req.params.id;
+                    productos[i].id = producto.id;
+                    productos[i].image = producto.image;
+                    productos[i].description = producto.description;
+                    productos[i].price = producto.price;
+                    productos[i].stock = producto.stock;
+                    productos[i].category = producto.category;
 
-        //guardo todos los datos del formulario en la variable producto
-        const producto = {
-            id: req.body.id,
-            image: req.body.image,
-            name: req.body.name,
-            description: req.body.description,
-            price: req.body.price,
-            stock: req.body.stock,
-            category: req.body.category
-          }
-          
-        //leo el json de productos y lo paso a la variable archivoProductos como objeto literal
-        const archivoProductos = fs.readFileSync('./public/data/products.json', { encoding: 'utf-8' });
-        const productos = JSON.parse(archivoProductos);
+                }   
+            }
 
-        for(let i=1; i<productos.length; i++){
-            if (productos[i].id == idProducto){
-
-                productos[i].id = producto.id;
-                productos[i].image = producto.image;
-                productos[i].description = producto.description;
-                productos[i].price = producto.price;
-                productos[i].stock = producto.stock;
-                productos[i].category = producto.category;
-
-            }   
-        }
-
-         //lo vuelvo un string para guardarlo
-         const productosJSON = JSON.stringify(productos);
- 
-        console.log(productosJSON);
-
-         //uso write para pisar la data previa y guardar todo lo nuevo
-         fs.writeFileSync('products.json', productosJSON);
- 
-         //redirecciono
-         res.redirect('/products');
+            //lo vuelvo un string para guardarlo
+            const productosJSON = JSON.stringify(productos);
     
+            console.log(productosJSON); //FLAG----------------
 
-    },
-    detail: function(req, res){
-        //leo el json de productos y lo paso a la variable archivoProductos como objeto literal
-        const archivoProductos = fs.readFileSync( './public/data/products.json' , {encoding: 'utf-8'});
-        const productJSON = JSON.parse(archivoProductos);
+            //uso write para pisar la data previa y guardar todo lo nuevo
+            fs.writeFileSync('products.json', productosJSON);
+    
+            //redirecciono
+            res.redirect('/products');
+        },
+    detail: 
+        function(req, res){
+            //leo el json de productos y lo paso a la variable archivoProductos como objeto literal
+            const archivoProductos = fs.readFileSync( './public/data/products.json' , {encoding: 'utf-8'});
+            const productJSON = JSON.parse(archivoProductos);
 
-        let data = req.params.id - 1;
-        res.render('../views/products/detalle.ejs', {'products': productJSON, 'data': data} );
-    },
-    carrito: function(req, res){
-        //leo el json de productos y lo paso a la variable archivoProductos como objeto literal
-        const archivoProductos = fs.readFileSync( './public/data/products.json' , {encoding: 'utf-8'});
-        const productJSON = JSON.parse(archivoProductos);
+            let data = req.params.id - 1;
+            res.render('../views/products/detalle.ejs', {'products': productJSON, 'data': data} );
+        },
+    carrito:
+        function(req, res){
+            //leo el json de productos y lo paso a la variable archivoProductos como objeto literal
+            const archivoProductos = fs.readFileSync( './public/data/products.json' , {encoding: 'utf-8'});
+            const productJSON = JSON.parse(archivoProductos);
 
-        res.render('../views/products/carrito.ejs', {'products': productJSON});
-    }
+            res.render('../views/products/carrito.ejs', {'products': productJSON});
+        }
 }
 module.exports = productosController;

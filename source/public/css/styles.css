@@ -1208,6 +1208,24 @@ button{
 }
 
 /*------------------------------------------------------------Dedicado a Register.ejs----------------------------------------------------------------------*/
+
+.register_form {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	background-color: var(--color-cuarto);
+	width: 80%;
+	margin: auto;
+	border-radius: 12px; 
+}
+
+.register_option {
+	display: block;
+	box-sizing: border-box;
+	margin: 1% auto;
+}
+
+/*------------------------------------------------------------Dedicado a Register.ejs----------------------------------------------------------------------*/
 /*reposo*/
 .icono label{
 	display: block;
