@@ -25,6 +25,6 @@ router.get('/:id/edit', productosController.edit);
 router.put('/:id', productosController.update);
 
 //Acción de borrado
-//router.delete('/:id', productosController.delete);
+router.delete('/:id', productosController.delete);
 
 module.exports = router;

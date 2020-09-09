@@ -1174,6 +1174,8 @@ button{
 
 /*------------------------------------------------------------Dedicado a userDetail.ejs----------------------------------------------------------------------*/
 
+
+
 .user_detail_container{
 	display: flex;
 	flex-wrap: wrap;
@@ -1393,3 +1395,28 @@ button{
 	}
 }
 
+/*------------------------------------------------------------Dedicado a Boom.ejs----------------------------------------------------------------------*/
+
+.background-image {
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	display: block;
+	background-image: url('/img/prueba/bc.jpg');
+	width: 100hv;
+	height: 100%;
+	-webkit-filter: blur(5px);
+	-moz-filter: blur(5px);
+	-o-filter: blur(5px);
+	-ms-filter: blur(5px);
+	filter: blur(5px);
+  }
+  
+  .content {
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	margin: auto 10%;
+  }

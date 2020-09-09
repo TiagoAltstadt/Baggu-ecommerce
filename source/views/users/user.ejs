@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<%- include('../partials/head.ejs', {title: "Baggu: User"}) %>
-
-<body >
-
-    <main>
-
-        <%- include('../partials/header.ejs') %>
-
-        <%- include('../partials/userDetail_partial.ejs', {id: users[data].id, avatar: users[data].avatar, user: users[data].user, name: users[data].name, surname: users[data].surname, email: users[data].email, password: users[data].password, category: users[data].category}) %>
-        
-        <%- include('../partials/footer.ejs') %>
-
-    </main>
-
-<body>
+<html lang="en" >
+    <!--Head-->
+    <%- include('../partials/head.ejs', {title: "Baggu: User"}) %>
     
+    <body>
+        
+        <!--Header-->
+        <%- include('../partials/header.ejs') %>
+        
+        <main >
+            
+            <%- include('../partials/userDetail_partial.ejs', {id: users[data].id, avatar: users[data].avatar, user: users[data].user, name: users[data].name, surname: users[data].surname, email: users[data].email, password: users[data].password, category: users[data].category}) %>
+            
+        </main>
+        
+        <!--Footer-->
+        <%- include('../partials/footer.ejs') %>
+        
+    <body>
+            
+
 </body>
 </html>

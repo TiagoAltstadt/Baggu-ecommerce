@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!--Head-->
 <%- include('../partials/head.ejs', {title: "Baggu: List"}) %>
 
 <body>
     
+    <!--Header-->
     <%- include('../partials/header.ejs') %>
 
+    
     <main>
         
         <h1 class="title_list">Users List</h1>
@@ -16,6 +19,7 @@
             <%  for (let i=0; i<users.length; i++) {        %>
             <%-     include('../partials/user_partial.ejs', {id: users[i].id, avatar: users[i].avatar, user: users[i].user, name: users[i].name, surname: users[i].surname, email: users[i].email, password: users[i].password, category: users[i].category}) %>
             <%  }                                           %>
+            
         </section>
                 
         <h2>Search</h2>
@@ -26,6 +30,7 @@
 
     </main>
 
+    <!--Footer-->
     <%- include('../partials/footer.ejs') %>
 
 </body>
