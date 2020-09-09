@@ -12,8 +12,6 @@
 html{
 	font-size: 62.5%; /**reset para rems -62.5% =10px de 16... esta cuenta es para hacer que un rem valga 10px**/
 	box-sizing: border-box;
-
-
 	--color-primero: #5386E4;
 	--color-segundo: #00916E;
 	--color-tercero: #525998;
@@ -21,6 +19,7 @@ html{
 	--color-quinto: whitesmoke;
 	--color-sexto: #141E29;
 }
+
 *, *:before, *:after{
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	box-sizing: inherit;
@@ -32,6 +31,7 @@ body{
 	font-size: 1.6rem;
 	line-height: 2;
 }
+
 h1, h2, h3, h4{
 	font-family: '';
 }
@@ -551,10 +551,10 @@ div.boxTextEmpresa {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
-	margin: 3%;
-	border: #141E29 dotted 2px;
-	border-radius: 12px;
-	background-color: #add8e6; /* #add8e6 */
+	background-color: var(--color-cuarto);
+	width: 80%;
+	margin: auto;
+	border-radius: 12px; 
 }
 
 .subheader_carrito {
@@ -1392,3 +1392,4 @@ button{
 		width: 60%;
 	}
 }
+

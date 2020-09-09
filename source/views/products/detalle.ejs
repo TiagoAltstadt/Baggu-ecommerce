@@ -3,14 +3,18 @@
 
     <%- include('../partials/head.ejs', {title: "Baggu: Detalle"}) %>
 
-<body>
-    <%- include('../partials/header.ejs') %>
+<body class="bc_detalle">
 
-    <%- include('../partials/detalle_partial.ejs', {  id: products[data].id ,category: products[data].category, titulo: products[ data ].name, image: products[ data ].image, type: products[ data ].type, description: products[ data ].description, price: products[ data ].price }) %> 
+    <main>
+        
+        <%- include('../partials/header.ejs') %>
 
-    <%- include('../partials/footer.ejs') %>
+        <%- include('../partials/detalle_partial.ejs', {  id: products[data].id ,category: products[data].category, titulo: products[ data ].name, image: products[ data ].image, type: products[ data ].type, description: products[ data ].description, price: products[ data ].price }) %> 
 
-    
+        <%- include('../partials/footer.ejs') %>
+        
+    </main>
+
 </body>
 
 </html>
