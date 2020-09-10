@@ -419,6 +419,30 @@ div.boxTextEmpresa {
 
 /*------------------------------------------------------------Dedicado a productos.ejs----------------------------------------------------------------------*/
 
+.background_image {
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	display: block;
+	background-image: url('/img/prueba/bc.jpg');
+	width: 100hv;
+	height: 100%;
+	-webkit-filter: blur(5px);
+	-moz-filter: blur(5px);
+	-o-filter: blur(5px);
+	-ms-filter: blur(5px);
+	filter: blur(5px);
+  }
+  
+  .content {
+	position: relative;
+	left: 0;
+	right: 0;
+	z-index: 3;
+	margin: auto 10%;
+  }
+
 	.products_container {
 		display: flex;
 		flex-wrap: wrap;
@@ -448,100 +472,7 @@ div.boxTextEmpresa {
 	}
 	
 
-/*------------------------------------------------------------Dedicado a product.ejs----------------------------------------------------------------------*/
 
-	.product_container {
-		display: flex;
-		flex-wrap: wrap;
-		flex-direction: column;
-		background-color: #add8e6;
-		border-radius: 12px;
-		width: 100%;
-		margin: 5% 5%;
-	}
-
-	.product_image_container {
-		display: block;
-		box-sizing: border-box;
-		width: 100%;
-	}
-
-	.product_image {
-		display: block;
-		box-sizing: border-box;
-		width: 80%;
-		margin: 5px auto;
-		align-self: center;
-	}
-
-	.product_title {
-		display: block;
-		box-sizing: border-box;
-		font-weight: bold;
-		align-self: center;
-		font-size: larger;
-		margin: 2% 5%;
-		padding: 2% 5%;
-	}
-
-	.product_description {
-		display: block;
-		box-sizing: border-box;
-		margin: auto;
-		padding: 2% 5%;
-	}
-
-	.product_price {
-		display: block;
-		box-sizing: border-box;
-		margin: 2% 5%;
-		color: #00916E;
-		font-weight: bold;
-	}
-
-	.product_options {
-		display: flex;
-		flex-wrap: wrap;
-		margin: 0%;
-	}
-
-	.product_icon {
-		display: block;
-		box-sizing: border-box;
-		margin:  auto;
-		padding: 5%;
-
-	}
-
-	@media all and (min-width: 426px){
-
-		.product_container {
-			display: flex;
-			flex-wrap: wrap;
-			flex-direction: column;
-			background-color: #add8e6;
-			border-radius: 12px;
-			width: 40%;
-			margin: 5% .99%;
-		}
-		
-
-	}
-
-	@media all and (min-width: 768px){
-
-		.product_container {
-			display: flex;
-			flex-wrap: wrap;
-			flex-direction: column;
-			background-color: #add8e6;
-			border-radius: 12px;
-			width: 20%;
-			margin: 5% .99%;
-		}
-		
-
-	}
 
 /*------------------------------------------------------------Dedicado a carrito.ejs----------------------------------------------------------------------*/ 
 
@@ -1397,26 +1328,127 @@ button{
 
 /*------------------------------------------------------------Dedicado a Boom.ejs----------------------------------------------------------------------*/
 
-.background-image {
-	position: fixed;
-	left: 0;
-	right: 0;
-	z-index: 1;
+
+
+
+/*_____               _____    _______   _____              _         _____ 
+  |  __ \      /\     |  __ \  |__   __| |_   _|     /\     | |       / ____|
+  | |__) |    /  \    | |__) |    | |      | |      /  \    | |      | (___  
+  |  ___/    / /\ \   |  _  /     | |      | |     / /\ \   | |       \___ \ 
+  | |       / ____ \  | | \ \     | |     _| |_   / ____ \  | |____   ____) |
+  |_|      /_/    \_\ |_|  \_\    |_|    |_____| /_/    \_\ |______| |_____/ 
+*/
+
+/*------------------------------------------------------------Dedicado a product_partial.ejs----------------------------------------------------------------------*/
+
+
+
+.product_container {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: grey;
+	flex-direction: column;
+	border-radius: 12px;
+	width: 100%;
+	margin: 5% 5%;
+	
+}
+
+.product_image_container {
 	display: block;
-	background-image: url('/img/prueba/bc.jpg');
-	width: 100hv;
-	height: 100%;
-	-webkit-filter: blur(5px);
-	-moz-filter: blur(5px);
-	-o-filter: blur(5px);
-	-ms-filter: blur(5px);
-	filter: blur(5px);
-  }
-  
-  .content {
-	position: fixed;
-	left: 0;
-	right: 0;
-	z-index: 9999;
-	margin: auto 10%;
-  }
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.product_image {
+	display: block;
+	box-sizing: border-box;
+	width: 80%;
+	margin: 5px auto;
+	align-self: center;
+}
+
+.product_title {
+	display: block;
+	box-sizing: border-box;
+	font-weight: bold;
+	align-self: center;
+	font-size: larger;
+	margin: 2% 5%;
+	padding: 2% 5%;
+}
+
+.product_description {
+	display: block;
+	box-sizing: border-box;
+	margin: auto;
+	padding: 2% 5%;
+}
+
+.product_price {
+	display: block;
+	box-sizing: border-box;
+	margin: 2% 5%;
+	color: #00916E;
+	font-weight: bold;
+}
+
+.product_options {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0%;
+}
+
+.product_icon {
+	display: block;
+	box-sizing: border-box;
+	margin:  auto;
+	padding: 5%;
+
+}
+
+@media all and (min-width: 426px){
+
+	.product_container {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		border-radius: 12px;
+		width: 40%;
+		margin: 5% .99%;
+	}
+	
+
+}
+
+@media all and (min-width: 768px){
+
+	.product_container {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		border-radius: 12px;
+		width: 20%;
+		margin: 5% .99%;
+	}
+	
+
+}
+
+/*
+  _____    _____     ____    _____    _    _    _____   _______    _____ 
+ |  __ \  |  __ \   / __ \  |  __ \  | |  | |  / ____| |__   __|  / ____|
+ | |__) | | |__) | | |  | | | |  | | | |  | | | |         | |    | (___  
+ |  ___/  |  _  /  | |  | | | |  | | | |  | | | |         | |     \___ \ 
+ | |      | | \ \  | |__| | | |__| | | |__| | | |____     | |     ____) |
+ |_|      |_|  \_\  \____/  |_____/   \____/   \_____|    |_|    |_____/                                                                     
+*/
+																		
+/* 
+  _    _    _____   ______   _____     _____ 
+ | |  | |  / ____| |  ____| |  __ \   / ____|
+ | |  | | | (___   | |__    | |__) | | (___  
+ | |  | |  \___ \  |  __|   |  _  /   \___ \ 
+ | |__| |  ____) | | |____  | | \ \   ____) |
+  \____/  |_____/  |______| |_|  \_\ |_____/ 
+*/
