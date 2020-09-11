@@ -50,6 +50,35 @@ h4{
 	font-size: 2.8rem;
 }
 
+
+/*------------------------------------------------------------Transicion de presentacion----------------------------------------------------------------------*/
+
+/*	para usarlo tienen que pegar este div apenas arranca el body <div class="bro">BAGGU</div>	, obsiomente pueden cambiar el contenido por una imagen o algo	*/
+
+.bro{
+	position: fixed;
+	text-align: center;
+	line-height: 100vh;
+	width: 100%;
+	background-color: var(--color-primero);
+	font-size: larger;
+	animation: fade 5s ease forwards;
+}
+
+@keyframes fade {
+	from {
+		opacity: 1;
+		display: block;
+		pointer-events: all;
+	}
+	to{
+		opacity: 0;
+		display: none;
+		pointer-events: none;
+	}
+}
+
+
 /*------------------------------------------------------------Dedicado a 404.ejs----------------------------------------------------------------------*/
 
 .NFcontainer {
@@ -63,92 +92,11 @@ h4{
 	margin: 5% 10%;
 }
 
-/*------------------------------------------------------------Dedicado a header de tiago-------------------------------------------------------------*/
 
-.headerContainer {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	width: 80%;
-	margin: auto 10%;
-}
-
-.logoContainer {
-	display: block;
-	box-sizing: border-box;
-	width: 20%;
-}
-.imgHeader{
-	width: 100%;
-}
-	
-.noLogoContainer{
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	width: 80%;
-}
-
-.searchHeader{
-	padding: 1.5%;
-	width: 100%;
-}
-
-.active-cyan-2 input.form-control[type=text]:focus:not([readonly]) {
-	border-bottom: 1px solid #4dd0e1;
-	box-shadow: 0 1px 0 0 #4dd0e1;
-	font-size: larger;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-.form-control{
-	width: 100%;
-	height: 40px;
-	font-size: larger;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.optionsHeader{
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-}
-
-.optionHeader{
-	display: block;
-	box-sizing: border-box;
-	margin: auto;
-}
-
-@media all and (min-width: 769px){
-	
-}
-
-
-/*------------------------------------------------------------Dedicado a header----------------------------------------------------------------------*/
-
-/* .headerTotal{
-	width: 100%;
-	height: 15rem;
-	margin-left: auto;
-	margin-bottom: auto;
-	display: flex;
-	flex-flow: row nowrap;
-}
-.logoHeader{
-	width: 20vw;
-	height: 20rem;
-}
-.logoHeader img{
-	height: 15rem;
-} */
 /*Login y registro del header*/
 
 
 /*------------------------------------------------------------Dedicado a Index.ejs----------------------------------------------------------------------*/
-
-.indexContainer{
-
-}
 
                                    /*Container Principal del Carrousel*/
 .boxContainerCarrousel { 
@@ -417,728 +365,27 @@ div.boxTextEmpresa {
 
 }
 
-/*------------------------------------------------------------Dedicado a productos.ejs----------------------------------------------------------------------*/
 
-.background_image {
-	position: fixed;
-	left: 0;
-	right: 0;
-	z-index: 1;
-	display: block;
-	background-image: url('/img/prueba/bc.jpg');
-	width: 100hv;
-	height: 100%;
-	-webkit-filter: blur(5px);
-	-moz-filter: blur(5px);
-	-o-filter: blur(5px);
-	-ms-filter: blur(5px);
-	filter: blur(5px);
-  }
-  
-  .content {
-	position: relative;
-	left: 0;
-	right: 0;
-	z-index: 3;
-	margin: auto 10%;
-  }
 
-	.products_container {
-		display: flex;
-		flex-wrap: wrap;
-		align-self: center;
-		justify-content: center;
-	}
 
-	.products_subcontainer {
-		display: flex;
-		flex-wrap: wrap;
-		margin: 2% 2%;
-		padding: 0px;
-		
-	}
 
-	@media all and (min-width: 426px) {
 
-		.products_subcontainer {
-			display: flex;
-			flex-wrap: wrap;
-			margin: 2% 2%;
-			padding: 0px;
-			justify-content: center;
-			
-		}
 
-	}
-	
 
 
 
-/*------------------------------------------------------------Dedicado a carrito.ejs----------------------------------------------------------------------*/ 
 
-/*Paleta de Colores para Login - Registro - Carrito **** #826754 */
 
-.carrito_container {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	background-color: var(--color-cuarto);
-	width: 80%;
-	margin: auto;
-	border-radius: 12px; 
-}
 
-.subheader_carrito {
-	display: flex;
-	flex-wrap: nowrap;
-	flex-direction: column;
-	background-color: #9dc2cf;
-	padding: 12px;
-}
 
-.logo_carrito {
-	display: flex;
-	flex-wrap: wrap;
-	align-self: center;
-	align-content: center;
-	width: auto ;
-}
 
-.logo_posta_carrito {
-	display: block;
-	box-sizing: border-box;
-	font-size: 60px;
-}
 
-.titulo_carrito {
-	display: block;
-	box-sizing: border-box;
-	font-size: 40px;
-	font-weight: bold;
-	border-bottom: solid black 1px;
-	width: 100%;
-	align-self: center;
-	align-content: center;
-}
 
-.titulo_escrito_carrito {
-	display: block;
-	box-sizing: border-box;
-	align-self: center;
-	width: fit-content;
-	margin: auto;
-}
 
-.contenido_carrito {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-}
 
-.producto_carrito {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-}
 
-.imagen_carrito {
-	display: flex;
-	flex-wrap: wrap;
-}
 
-.imagen_posta_carrito {
-	display: block;
-	box-sizing: border-box;
-	width: 80%;
-	margin: 5px auto;
-}
 
-.descripcion_carrito {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	padding: 24px;
-
-}
-
-.nombre_producto {
-	font-size: x-large;
-	font-weight: bold;
-}
-
-.descripcion_producto {}
-
-.botones_individuales_carrito {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-}
-
-.cantidad_carrito{
-	display: block;
-	box-sizing: border-box;
-	margin: auto;
-	padding: 6px;
-	background-color: #9dc2cf;
-	border: black solid 3px;
-	border-radius: 12px;
-	border-left: black;
-	border-top: black;
-}
-
-.eliminar_producto_carrito {
-	display: block;
-	box-sizing: border-box;
-	margin: auto;
-	align-self: center;
-}
-
-.boton_eliminar_carrito {
-	border: none;
-	background-color: transparent;
-}
-
-.tamaño_icono_delete_carrito {
-	font-size: 30px;
-}
-
-.botones_final_carrito {
-	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
-	padding: 12px;
-}
-
-.borrar_carrito {
-	margin-left: 25%;
-	margin-right: 25%;
-}
-
-@media all and (min-width: 768px) {
-
-	.contenido_carrito {
-		flex-direction: row;
-	}
-
-	.producto_carrito {
-		flex-direction: row;
-	}
-
-	.imagen_carrito {
-		display: flex;
-		flex-wrap: wrap;
-		width: 30%;
-	}
-
-	.imagen_posta_carrito {
-		display: block;
-		box-sizing: border-box;
-		margin: auto;
-	}
-
-	.descripcion_carrito {
-		width: 30%;
-	}
-
-	.botones_individuales_carrito { 
-		flex-direction: row;
-		width: 33%;
-	 }
-
-	.eliminar_producto_carrito { margin-left: 5%; }
-}
-
-/*------------------------------------------------------------Dedicado a detalle.ejs----------------------------------------------------------------------*/
-
-/*Paleta de Colores para Envases Descartables **** #5386E4 */
-/*Paleta de Colores para Papeleria **** #00916E */
-/*Paleta de Colores para Higiene **** #525998 */
-
-.tipo_producto {
-	display: block;
-	box-sizing: border-box;
-	margin: 3%;
-	background-color: var(--color-primero);
-	color: white;
-	font-size: 25px;
-	text-align: center;
-	justify-content: center;
-	border-radius: 12px;
-	height: 6vh;
-}
-
-.producto_container {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	margin: 3%;
-}
-
-.imagen_detalle{
-	display: flex;
-	flex-wrap: wrap;
-	height: 30vh;
-}
-
-.img_detalle {
-	display: block;
-	box-sizing: border-box;
-	width: 280px;
-	margin: 12px auto;
-}
-
-@media all and (min-width: 768px){
-
-	.producto_container {
-		flex-direction: row;
-		align-self: center;
-	}
-
-	.imagen_detalle {
-		display: flex;
-		flex-wrap: wrap;
-		align-content: center;
-		width: 30%;
-	}
-
-	.img_detalle {
-		display: block;
-		box-sizing: border-box;
-		align-content: center;
-		width: 220px;
-	}
-
-	.descripcion_detalle {
-		width: 30%;
-		margin:1%;
-	}
-
-	.resumen_detalle {
-		flex-direction: column;
-		width: 30%;
-		margin:1%;
-	}
-
-	.texto_detalle { font-size: smaller; }
-
-}
-
-.descripcion_detalle{
-	display: block;
-	box-sizing: border-box;
-	height: 30vh;
-	color: black;
-}
-
-.resumen_detalle {
-	display: flex;
-	flex-wrap: wrap;
-	height: 30vh;
-}
-
-.cantidad_detalle {
-	display: block;
-	box-sizing: border-box;
-	margin: 2% 10%;
-}
-
-.precio_detalle {
-	display: block;
-	box-sizing: border-box;
-	margin: 2% 10%;
-	color: green;
-	font-weight: bold;
-	font-size: large;
-}
-
-.comprar_detalle {
-	display: block;
-	box-sizing: border-box;
-	margin: 2% 10%;
-}
-
-.compartir_detalle {
-	display: block;
-	box-sizing: border-box;
-	margin: 2% 10%;
-}
-
-.subtitulo_detalle {
-	color: black;
-	font-size: large;
-	text-align: left;
-	font-weight: bold;
-}
-
-.texto_detalle { margin: 2%; }
-
-
-
-
-
-
-/*------------------------------------------------------------Dedicado a Footer----------------------------------------------------------------------*/
-
-/*Paleta de Colores para Footer- Contacto- Empresa **** #141E29 */
-
-                                  /*contenedor padre*/
-.containerFooter {            
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	width: 100%;
-}
-                                  /*3 contenedores*/
-.footerBox1 {  
-	padding: 15px;
-	width: 100%;
-	height: 220px;
-	flex-grow: 1;
-	flex-direction: column;
-	justify-content: center;
-	background-color: #141E29;
-}
-
-.footerBox2 { 
-	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
-	height: 220px;
-	flex-grow: 1;
-	background-color: #141E29;
- }
-
-.footerBox3 {  
-	display: none;
-	flex-direction: column;
-	justify-content: space-around;
-	align-items: center;
-	width: 100%;
-	height: 220px;
-	background-color: #141E29;
-}
-
-
-                                    /*Estilos de info*/
-.contacto {                  
-	color: white;
-	font-size: 1.25rem;
-	font-family: OpenSans-Light;
-	text-align: center;
-}
-                                    /*Contenedor de Iconos Social Media*/
-.boxIconSocial {            
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	width: 100%;
-	height: 50%;
-}
-                                    /*Estilos de Iconos Social Media*/
-.imgSocial { border-radius: 10%; }
-.imgSocial:hover { border: 3px solid white; }
-
-                                    /*Contenedor de Icono Baggu Linkeado y Legales*/
-.boxIconLogoBaggu {          
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	height: 50%;
-}
-                                      /*Estilos Legales*/
-.legales {                   
-	font-size: 0.8rem;
-	color: whitesmoke;
-	width: 100%;
-	text-align: center;
-}
-
-                                     /*Contenedores Botones*/
-.boxButtonContact, .boxButtonUs {      
-	display: flex;
-	width: 100%;
-	height: 100%;
-	justify-content: center;
-	padding-top: 30px;
-}
-
-                                    /*Estilo en botones de footer*/
-#buttonContact, #buttonUs {     
-	background-color: cadetblue;
-	width: 30%;
-	height: 40%;
-	text-align: center;
-}
-
-#buttonContact:hover, #buttonUs:hover {
-	background-color: turquoise;
-}
-                                 /*Palabras Linkeadas Contacto y Botones*/
-.linkInfo {                       
-	text-decoration: unset;
-	text-align: center;
-	color: whitesmoke;
-}
-
-                                  /*Media Queries hacia Laptop*/
-@media (min-width: 769px) and (orientation: landscape) {
-	.containerFooter { flex-direction: row; }
-	.footerBox3 { display: flex; }
-	.footerBox1 {
-		flex-direction: row;
-		justify-content: flex-start;
-	 }
-	 .contacto { text-align: left; }
-	.footerBox1, .footerBox2, .footerBox3 { 
-		width: 33%;
-		flex-grow: 1; 
-	}
-}
-
-
-
-/*------------------------------------------------------------Dedicado a Login.ejs----------------------------------------------------------------------*/
-
-/*Paleta de Colores para Login - Registro - Carrito **** #826754 */
-
-/*General*/
-.cuentaLogin{
-	background-color: #add8e6;
-	margin-bottom: 5rem;
-}
-/*Titulo*/
-.tituloLogin{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
-	margin-bottom: 10rem;
-	border-bottom: 2px solid black;
-	width: 95%;
-	margin-right: auto;
-	margin-left: auto;
-}
-.tituloLogin i{
-	margin-right: 1rem;
-	font-size: 3.2rem;
-}
-/*Formulario*/
-.campoLogin{
-	padding: 2rem;
-}
-.subCampoLogin{
-	display: flex;
-	flex-direction: column;
-	margin-bottom: 2rem;
-}
-.subCampoLogin input{
-	border-radius: 10px;
-	-webkit-box-shadow: 9px 9px 5px -7px rgba(219,216,219,1);
-	-moz-box-shadow: 9px 9px 5px -7px rgba(219,216,219,1);
-	box-shadow: 9px 9px 5px -7px rgba(219,216,219,1);
-}
-.subCampoLogin input:hover{
-	background-color: #dbd8db;
-	-webkit-box-shadow: 9px 13px 9px -7px rgba(0,0,0,0.75);
-	-moz-box-shadow: 9px 13px 9px -7px rgba(0,0,0,0.75);
-	box-shadow: 9px 13px 9px -7px rgba(0,0,0,0.75);
-}
-.subCampoLogin label{
-	font-weight: bold;
-}
-/*Botones*/
-.botonLogin{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	padding: 2rem;
-	align-items: center;
-	align-content: center;
-}
-.botonLogin button{
-	margin-right: 1rem;
-	border: 0;
-	background-color: #826754;
-	font-size: 2rem;
-}
-.botonLogin button:hover{
-	font-weight: bold;
-}
-.botonLogin button:hover~i{
-	color: white;
-}
-.botonLogin i{
-	font-size: 3.2rem;
-}
-button{
-	outline: none;
-}
-
-/* Checkbox */
-[type="checkbox"]{display: none;}
-.animado{
-	margin-top: 3rem;
-	margin-left: 1.2rem;
-}
-.animado label {
-  padding-left: 2rem;
-  position: relative;
-}
-
-.animado label:before{
-  content: '';
-  border: solid 1px black;
-  border-radius: 5px;
-  width: 2.3rem;
-  height: 2.3rem;
-  position: absolute;
-  left: -10px;
-  transition: all 0.2s;
-  transform: rotate(0deg);
-}
-
-[type="checkbox"]:checked + label:before{
-  border-color: white;
-  color: black;
-  content: '\f00c';  
-  font-family: "Font Awesome 5 Free";
-  transform: rotate(360deg);
-  padding-left: .3rem;
-  font-size: smaller;
-}
-/**Pantallas grandes**/
-@media only screen and (min-width: 768px){
-	/*Formulario*/
-	.subCampoLogin{
-		width: 70%;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	.recordarmeLogin{
-		width: 70%;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	/*Botones*/
-	.botonLogin{
-		width: 70%;
-		margin-right: auto;
-		margin-left: auto;
-	}
-}
-@media only screen and (min-width: 1024px){
-	/*General*/
-	.cuentaLogin{
-		width: 75%;
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 3rem;
-		border-radius: 6rem;
-		border: 2px dashed black;
-	}
-	/*Titulo*/
-	.tituloLogin{
-		margin-bottom: 7rem;
-	}
-	/*Formulario*/
-	.subCampoLogin:first-child{
-		margin-bottom: 4rem;
-	}
-	.subCampoLogin{
-		width: 50%;
-	}
-	.recordarmeLogin{
-		width: 50%;
-	}
-}
-
-/*------------------------------------------------------------Dedicado a user.ejs----------------------------------------------------------------------*/
-
-.title_list {
-	width: fit-content;
-	margin: auto;
-}
-
-.user_group_container {
-	display: flex;
-	flex-wrap: wrap;
-
-}
-
-.user_container {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	background-color: #add8e6;
-	border-radius: 12px;
-	width: 80%;
-	margin: 12px auto;
-	border: dotted black 1px;
-	border-radius: 12px;
-}
-
-.imagen_user_container {
-	width: 100%;
-}
-
-.imagen_user {
-	width: 100%;
-	border: solid black 1px;
-	border-radius: 12px;
-}
-
-.info_box_user {
-	margin: 5% 30%;
-}
-
-
-@media all and (min-width: 424px){
-	.user_container {
-		width: 45%;
-		margin: 5% auto;
-		flex-direction: row;
-	}
-}
-
-/*------------------------------------------------------------Dedicado a userDetail.ejs----------------------------------------------------------------------*/
-
-
-
-.user_detail_container{
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	background-color: var(--color-cuarto);
-	border-radius: 12px;
-	size: 90% ;
-	margin: auto;
-}
-
-.user_image{
-	margin: 3% auto;
-}
-.user_img{
-	width: 200%;
-	border: solid black 1px;
-	border-radius: 12px;
-}
-
-.user_info {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	
-}
-
-.item_user_detail{
-	display: block;
-	box-sizing: border-box;
-	width: 25%;
-	margin: 0 auto;
-}
 
 /*------------------------------------------------------------Dedicado a Register.ejs----------------------------------------------------------------------*/
 
@@ -1326,12 +573,9 @@ button{
 	}
 }
 
-/*------------------------------------------------------------Dedicado a Boom.ejs----------------------------------------------------------------------*/
-
-
-
-
-/*_____               _____    _______   _____              _         _____ 
+/*
+PARTIALS
+  _____               _____    _______   _____              _         _____ 
   |  __ \      /\     |  __ \  |__   __| |_   _|     /\     | |       / ____|
   | |__) |    /  \    | |__) |    | |      | |      /  \    | |      | (___  
   |  ___/    / /\ \   |  _  /     | |      | |     / /\ \   | |       \___ \ 
@@ -1339,9 +583,241 @@ button{
   |_|      /_/    \_\ |_|  \_\    |_|    |_____| /_/    \_\ |______| |_____/ 
 */
 
+/*------------------------------------------------------------Dedicado a header de tiago-------------------------------------------------------------*/
+
+.headerContainer {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	width: 80%;
+	margin: auto 10%;
+}
+
+.logoContainer {
+	display: block;
+	box-sizing: border-box;
+	width: 20%;
+}
+.imgHeader{
+	width: 100%;
+}
+	
+.noLogoContainer{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	width: 80%;
+}
+
+.searchHeader{
+	padding: 1.5%;
+	width: 100%;
+}
+
+.active-cyan-2 input.form-control[type=text]:focus:not([readonly]) {
+	border-bottom: 1px solid #4dd0e1;
+	box-shadow: 0 1px 0 0 #4dd0e1;
+	font-size: larger;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.form-control{
+	width: 100%;
+	height: 40px;
+	font-size: larger;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.optionsHeader{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.optionHeader{
+	display: block;
+	box-sizing: border-box;
+	margin: auto;
+}
+
+@media all and (min-width: 769px){
+	
+}
+
+
+/*------------------------------------------------------------Dedicado a header----------------------------------------------------------------------*/
+
+/* .headerTotal{
+	width: 100%;
+	height: 15rem;
+	margin-left: auto;
+	margin-bottom: auto;
+	display: flex;
+	flex-flow: row nowrap;
+}
+.logoHeader{
+	width: 20vw;
+	height: 20rem;
+}
+.logoHeader img{
+	height: 15rem;
+} */
+
+/*------------------------------------------------------------Dedicado a Footer----------------------------------------------------------------------*/
+
+/*Paleta de Colores para Footer- Contacto- Empresa **** #141E29 */
+
+  /*contenedor padre*/
+	.containerFooter {            
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	width: 100%;
+}
+	/*3 contenedores*/
+.footerBox1 {  
+	padding: 15px;
+	width: 100%;
+	height: 220px;
+	flex-grow: 1;
+	flex-direction: column;
+	justify-content: center;
+	background-color: #141E29;
+}
+
+.footerBox2 { 
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 220px;
+	flex-grow: 1;
+	background-color: #141E29;
+	}
+
+.footerBox3 {  
+	display: none;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	height: 220px;
+	background-color: #141E29;
+}
+
+
+/*Estilos de info*/
+.contacto {                  
+	color: white;
+	font-size: 1.25rem;
+	font-family: OpenSans-Light;
+	text-align: center;
+}
+/*Contenedor de Iconos Social Media*/
+.boxIconSocial {            
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	height: 50%;
+}
+/*Estilos de Iconos Social Media*/
+.imgSocial { border-radius: 10%; }
+.imgSocial:hover { border: 3px solid white; }
+
+/*Contenedor de Icono Baggu Linkeado y Legales*/
+.boxIconLogoBaggu {          
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 50%;
+}
+/*Estilos Legales*/
+.legales {                   
+	font-size: 0.8rem;
+	color: whitesmoke;
+	width: 100%;
+	text-align: center;
+}
+
+/*Contenedores Botones*/
+.boxButtonContact, .boxButtonUs {      
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	padding-top: 30px;
+}
+
+/*Estilo en botones de footer*/
+#buttonContact, #buttonUs {     
+	background-color: cadetblue;
+	width: 30%;
+	height: 40%;
+	text-align: center;
+}
+
+#buttonContact:hover, #buttonUs:hover {
+	background-color: turquoise;
+}
+/*Palabras Linkeadas Contacto y Botones*/
+.linkInfo {                       
+	text-decoration: unset;
+	text-align: center;
+	color: whitesmoke;
+}
+
+/*Media Queries hacia Laptop*/
+@media (min-width: 769px) and (orientation: landscape) {
+	.containerFooter { flex-direction: row; }
+	.footerBox3 { display: flex; }
+	.footerBox1 {
+		flex-direction: row;
+		justify-content: flex-start;
+		}
+		.contacto { text-align: left; }
+	.footerBox1, .footerBox2, .footerBox3 { 
+		width: 33%;
+		flex-grow: 1; 
+	}
+}
+
+/*------------------------------------------------------------Dedicado a userDetail_partial.ejs----------------------------------------------------------------------*/
+
+.user_detail_container{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	background-color: var(--color-cuarto);
+	border-radius: 12px;
+	size: 90% ;
+	margin: auto;
+}
+
+.user_image{
+	margin: 3% auto;
+}
+.user_img{
+	width: 200%;
+	border: solid black 1px;
+	border-radius: 12px;
+}
+
+.user_info {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	
+}
+
+.item_user_detail{
+	display: block;
+	box-sizing: border-box;
+	width: 25%;
+	margin: 0 auto;
+}
+
 /*------------------------------------------------------------Dedicado a product_partial.ejs----------------------------------------------------------------------*/
-
-
 
 .product_container {
 	display: flex;
@@ -1435,7 +911,132 @@ button{
 
 }
 
+/*------------------------------------------------------------Dedicado a detalle_partial.ejs----------------------------------------------------------------------*/
+
+/*Paleta de Colores para Envases Descartables **** #5386E4 */
+/*Paleta de Colores para Papeleria **** #00916E */
+/*Paleta de Colores para Higiene **** #525998 */
+
+.tipo_producto {
+	display: block;
+	box-sizing: border-box;
+	margin: 3%;
+	background-color: var(--color-primero);
+	color: white;
+	font-size: 25px;
+	text-align: center;
+	justify-content: center;
+	border-radius: 12px;
+	height: 6vh;
+}
+
+.producto_container {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	margin: 3%;
+}
+
+.imagen_detalle{
+	display: flex;
+	flex-wrap: wrap;
+	height: 30vh;
+}
+
+.img_detalle {
+	display: block;
+	box-sizing: border-box;
+	width: 280px;
+	margin: 12px auto;
+}
+
+@media all and (min-width: 768px){
+
+	.producto_container {
+		flex-direction: row;
+		align-self: center;
+	}
+
+	.imagen_detalle {
+		display: flex;
+		flex-wrap: wrap;
+		align-content: center;
+		width: 30%;
+	}
+
+	.img_detalle {
+		display: block;
+		box-sizing: border-box;
+		align-content: center;
+		width: 220px;
+	}
+
+	.descripcion_detalle {
+		width: 30%;
+		margin:1%;
+	}
+
+	.resumen_detalle {
+		flex-direction: column;
+		width: 30%;
+		margin:1%;
+	}
+
+	.texto_detalle { font-size: smaller; }
+
+}
+
+.descripcion_detalle{
+	display: block;
+	box-sizing: border-box;
+	height: 30vh;
+	color: black;
+}
+
+.resumen_detalle {
+	display: flex;
+	flex-wrap: wrap;
+	height: 30vh;
+}
+
+.cantidad_detalle {
+	display: block;
+	box-sizing: border-box;
+	margin: 2% 10%;
+}
+
+.precio_detalle {
+	display: block;
+	box-sizing: border-box;
+	margin: 2% 10%;
+	color: green;
+	font-weight: bold;
+	font-size: large;
+}
+
+.comprar_detalle {
+	display: block;
+	box-sizing: border-box;
+	margin: 2% 10%;
+}
+
+.compartir_detalle {
+	display: block;
+	box-sizing: border-box;
+	margin: 2% 10%;
+}
+
+.subtitulo_detalle {
+	color: black;
+	font-size: large;
+	text-align: left;
+	font-weight: bold;
+}
+
+.texto_detalle { margin: 2%; }
+
 /*
+PRODUCTS
   _____    _____     ____    _____    _    _    _____   _______    _____ 
  |  __ \  |  __ \   / __ \  |  __ \  | |  | |  / ____| |__   __|  / ____|
  | |__) | | |__) | | |  | | | |  | | | |  | | | |         | |    | (___  
@@ -1443,8 +1044,237 @@ button{
  | |      | | \ \  | |__| | | |__| | | |__| | | |____     | |     ____) |
  |_|      |_|  \_\  \____/  |_____/   \____/   \_____|    |_|    |_____/                                                                     
 */
-																		
-/* 
+
+/*------------------------------------------------------------Dedicado a productos.ejs----------------------------------------------------------------------*/
+
+.background_image {
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	display: block;
+	background-image: url('/img/prueba/bc.jpg');
+	width: 100hv;
+	height: 100%;
+	-webkit-filter: blur(5px);
+	-moz-filter: blur(5px);
+	-o-filter: blur(5px);
+	-ms-filter: blur(5px);
+	filter: blur(5px);
+  }
+  
+  .content {
+	position: relative;
+	left: 0;
+	right: 0;
+	z-index: 3;
+	margin: auto 10%;
+  }
+
+	.products_container {
+		display: flex;
+		flex-wrap: wrap;
+		align-self: center;
+		justify-content: center;
+	}
+
+	.products_subcontainer {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 2% 2%;
+		padding: 0px;
+		
+	}
+
+	@media all and (min-width: 426px) {
+
+		.products_subcontainer {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 2% 2%;
+			padding: 0px;
+			justify-content: center;
+			
+		}
+
+	}
+}
+
+/*------------------------------------------------------------Dedicado a carrito.ejs----------------------------------------------------------------------*/ 
+
+/*Paleta de Colores para Login - Registro - Carrito **** #826754 */
+
+.carrito_container {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	background-color: var(--color-cuarto);
+	width: 80%;
+	margin: auto;
+	border-radius: 12px; 
+}
+
+.subheader_carrito {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	background-color: #9dc2cf;
+	padding: 12px;
+}
+
+.logo_carrito {
+	display: flex;
+	flex-wrap: wrap;
+	align-self: center;
+	align-content: center;
+	width: auto ;
+}
+
+.logo_posta_carrito {
+	display: block;
+	box-sizing: border-box;
+	font-size: 60px;
+}
+
+.titulo_carrito {
+	display: block;
+	box-sizing: border-box;
+	font-size: 40px;
+	font-weight: bold;
+	border-bottom: solid black 1px;
+	width: 100%;
+	align-self: center;
+	align-content: center;
+}
+
+.titulo_escrito_carrito {
+	display: block;
+	box-sizing: border-box;
+	align-self: center;
+	width: fit-content;
+	margin: auto;
+}
+
+.contenido_carrito {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+.producto_carrito {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+.imagen_carrito {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.imagen_posta_carrito {
+	display: block;
+	box-sizing: border-box;
+	width: 80%;
+	margin: 5px auto;
+}
+
+.descripcion_carrito {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	padding: 24px;
+
+}
+
+.nombre_producto {
+	font-size: x-large;
+	font-weight: bold;
+}
+
+.botones_individuales_carrito {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.cantidad_carrito{
+	display: block;
+	box-sizing: border-box;
+	margin: auto;
+	padding: 6px;
+	background-color: #9dc2cf;
+	border: black solid 3px;
+	border-radius: 12px;
+	border-left: black;
+	border-top: black;
+}
+
+.eliminar_producto_carrito {
+	display: block;
+	box-sizing: border-box;
+	margin: auto;
+	align-self: center;
+}
+
+.boton_eliminar_carrito {
+	border: none;
+	background-color: transparent;
+}
+
+.tamaño_icono_delete_carrito {
+	font-size: 30px;
+}
+
+.botones_final_carrito {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	padding: 12px;
+}
+
+.borrar_carrito {
+	margin-left: 25%;
+	margin-right: 25%;
+}
+
+@media all and (min-width: 768px) {
+
+	.contenido_carrito {
+		flex-direction: row;
+	}
+
+	.producto_carrito {
+		flex-direction: row;
+	}
+
+	.imagen_carrito {
+		display: flex;
+		flex-wrap: wrap;
+		width: 30%;
+	}
+
+	.imagen_posta_carrito {
+		display: block;
+		box-sizing: border-box;
+		margin: auto;
+	}
+
+	.descripcion_carrito {
+		width: 30%;
+	}
+
+	.botones_individuales_carrito { 
+		flex-direction: row;
+		width: 33%;
+	 }
+
+	.eliminar_producto_carrito { margin-left: 5%; }
+}
+
+
+/*
+USERS 
   _    _    _____   ______   _____     _____ 
  | |  | |  / ____| |  ____| |  __ \   / ____|
  | |  | | | (___   | |__    | |__) | | (___  
@@ -1452,3 +1282,207 @@ button{
  | |__| |  ____) | | |____  | | \ \   ____) |
   \____/  |_____/  |______| |_|  \_\ |_____/ 
 */
+
+/*------------------------------------------------------------Dedicado a user.ejs----------------------------------------------------------------------*/
+
+.title_list {
+	width: fit-content;
+	margin: auto;
+}
+
+.user_group_container {
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
+.user_container {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	background-color: #add8e6;
+	border-radius: 12px;
+	width: 80%;
+	margin: 12px auto;
+	border: dotted black 1px;
+	border-radius: 12px;
+}
+
+.imagen_user_container {
+	width: 100%;
+}
+
+.imagen_user {
+	width: 100%;
+	border: solid black 1px;
+	border-radius: 12px;
+}
+
+.info_box_user {
+	margin: 5% 30%;
+}
+
+
+@media all and (min-width: 424px){
+	.user_container {
+		width: 45%;
+		margin: 5% auto;
+		flex-direction: row;
+	}
+}
+
+/*------------------------------------------------------------Dedicado a Login.ejs----------------------------------------------------------------------*/
+
+/*Paleta de Colores para Login - Registro - Carrito **** #826754 */
+
+/*General*/
+.cuentaLogin{
+	background-color: #add8e6;
+	margin-bottom: 5rem;
+}
+/*Titulo*/
+.tituloLogin{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	margin-bottom: 10rem;
+	border-bottom: 2px solid black;
+	width: 95%;
+	margin-right: auto;
+	margin-left: auto;
+}
+.tituloLogin i{
+	margin-right: 1rem;
+	font-size: 3.2rem;
+}
+/*Formulario*/
+.campoLogin{
+	padding: 2rem;
+}
+.subCampoLogin{
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 2rem;
+}
+.subCampoLogin input{
+	border-radius: 10px;
+	-webkit-box-shadow: 9px 9px 5px -7px rgba(219,216,219,1);
+	-moz-box-shadow: 9px 9px 5px -7px rgba(219,216,219,1);
+	box-shadow: 9px 9px 5px -7px rgba(219,216,219,1);
+}
+.subCampoLogin input:hover{
+	background-color: #dbd8db;
+	-webkit-box-shadow: 9px 13px 9px -7px rgba(0,0,0,0.75);
+	-moz-box-shadow: 9px 13px 9px -7px rgba(0,0,0,0.75);
+	box-shadow: 9px 13px 9px -7px rgba(0,0,0,0.75);
+}
+.subCampoLogin label{
+	font-weight: bold;
+}
+/*Botones*/
+.botonLogin{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 2rem;
+	align-items: center;
+	align-content: center;
+}
+.botonLogin button{
+	margin-right: 1rem;
+	border: 0;
+	background-color: #826754;
+	font-size: 2rem;
+}
+.botonLogin button:hover{
+	font-weight: bold;
+}
+.botonLogin button:hover~i{
+	color: white;
+}
+.botonLogin i{
+	font-size: 3.2rem;
+}
+button{
+	outline: none;
+}
+
+/* Checkbox */
+[type="checkbox"]{display: none;}
+.animado{
+	margin-top: 3rem;
+	margin-left: 1.2rem;
+}
+.animado label {
+  padding-left: 2rem;
+  position: relative;
+}
+
+.animado label:before{
+  content: '';
+  border: solid 1px black;
+  border-radius: 5px;
+  width: 2.3rem;
+  height: 2.3rem;
+  position: absolute;
+  left: -10px;
+  transition: all 0.2s;
+  transform: rotate(0deg);
+}
+
+[type="checkbox"]:checked + label:before{
+  border-color: white;
+  color: black;
+  content: '\f00c';  
+  font-family: "Font Awesome 5 Free";
+  transform: rotate(360deg);
+  padding-left: .3rem;
+  font-size: smaller;
+}
+/**Pantallas grandes**/
+@media only screen and (min-width: 768px){
+	/*Formulario*/
+	.subCampoLogin{
+		width: 70%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.recordarmeLogin{
+		width: 70%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	/*Botones*/
+	.botonLogin{
+		width: 70%;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+@media only screen and (min-width: 1024px){
+	/*General*/
+	.cuentaLogin{
+		width: 75%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 3rem;
+		border-radius: 6rem;
+		border: 2px dashed black;
+	}
+	/*Titulo*/
+	.tituloLogin{
+		margin-bottom: 7rem;
+	}
+	/*Formulario*/
+	.subCampoLogin:first-child{
+		margin-bottom: 4rem;
+	}
+	.subCampoLogin{
+		width: 50%;
+	}
+	.recordarmeLogin{
+		width: 50%;
+	}
+}
