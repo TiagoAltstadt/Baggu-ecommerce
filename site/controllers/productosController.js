@@ -16,19 +16,19 @@ const productosController = {
             res.render('./products/createProduct.ejs');
         },
     store: 
-        function(req,res){
+        function(req,res, next){
 
             //guardo todos los datos del formulario en la variable producto
             const producto = {
                 id: req.body.id,
-                image: req.body.image,
+                //image: req.files[0].filename,
                 name: req.body.name,
                 description: req.body.description,
                 price: req.body.price,
                 stock: req.body.stock,
                 category: req.body.category
             }
-            
+            console.log(producto);
             //leo el json de productos y lo paso a la variable archivoProductos
             const archivoProductos = fs.readFileSync('./data/products.json', { encoding: 'utf-8' });
 
@@ -48,7 +48,7 @@ const productosController = {
             const productosJSON = JSON.stringify(productos);
 
             //uso write para pisar la data previa y guardar todo lo nuevo
-            fs.writeFileSync('./public/data/products.json', productosJSON);
+            fs.writeFileSync('./data/products.json', productosJSON);
 
             //redirecciono
             res.redirect('/products');
@@ -145,9 +145,8 @@ const productosController = {
 
             res.render('../views/products/carrito.ejs', {'products': productJSON});
         },
-        delete: function(req, res){
-
-            
+    delete: 
+        function(req, res){
             res.redirect('/products');
         }
 }
