@@ -21,7 +21,7 @@ const productosController = {
             //guardo todos los datos del formulario en la variable producto
             const producto = {
                 id: req.body.id,
-                //image: req.files[0].filename,
+                image: req.files[0].filename,
                 name: req.body.name,
                 description: req.body.description,
                 price: req.body.price,
