@@ -31,12 +31,12 @@ const userController = {
             res.render('./users/createUser.ejs');
         },
     store: 
-        function(req,res){
+        function(req,res, next){
 
             //guardo todos los datos del formulario en la variable producto
             const user = {
-                id: req.body.id,
-                avatar: req.body.avatar,
+                id: parseInt(req.body.id),
+                image: req.files[0].filename,
                 user: req.body.user,
                 name: req.body.name,
                 surname: req.body.surname,
@@ -47,7 +47,7 @@ const userController = {
             console.log(user);
 
             //leo el json de productos y lo paso a la variable archivoProductos
-            const archivoUsers = fs.readFileSync('../data/users.json', { encoding: 'utf-8' });
+            const archivoUsers = fs.readFileSync('./data/users.json', { encoding: 'utf-8' });
 
             //defino productos y digo, si esta vacia, creala, si tiene algo, parsealo para poder trabajar con eso
             let users;
@@ -65,24 +65,24 @@ const userController = {
             const usersJSON = JSON.stringify(users);
 
             //uso write para pisar la data previa y guardar todo lo nuevo
-            fs.writeFileSync('../data/users.json', usersJSON);
+            fs.writeFileSync('./data/users.json', usersJSON);
 
             //redirecciono
-            res.redirect('/users/list');
+            res.redirect('/users');
 
         },
     list: 
         function(req, res){      
             let aux = fs.readFileSync( './data/users.json' , {encoding: 'utf-8'});
             let usersJSON = JSON.parse(aux);
-            res.render('./users/list.ejs', {'users': usersJSON});
+            res.render('../views/users/list.ejs', {'users': usersJSON});
         },
     detail: 
         function(req, res){
             let aux = fs.readFileSync( './data/users.json' , {encoding: 'utf-8'});
             let usersJSON = JSON.parse(aux);
             let data = req.params.id - 1;
-            res.render('../views/users/user.ejs', {'users': usersJSON, 'data': data} );
+            res.render('../views/users/user.ejs', {'users': usersJSON, 'data': data} ); 
         },
     update: 
         function(req, res){
