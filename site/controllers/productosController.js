@@ -1,13 +1,11 @@
 const fs = require('fs');
-const { Console } = require('console');
-const { type } = require('os');
 
 const productosController = {
     list: 
         function(req, res){
         
             //leo el json de productos y lo paso a la variable archivoProductos como objeto literal
-            const archivoProductos = fs.readFileSync( './public/data/products.json' , {encoding: 'utf-8'});
+            const archivoProductos = fs.readFileSync( './data/products.json' , {encoding: 'utf-8'});
             const productJSON = JSON.parse(archivoProductos);
 
             res.render('../views/products/productos.ejs', {'products': productJSON});
@@ -32,7 +30,7 @@ const productosController = {
             }
             
             //leo el json de productos y lo paso a la variable archivoProductos
-            const archivoProductos = fs.readFileSync('./public/data/products.json', { encoding: 'utf-8' });
+            const archivoProductos = fs.readFileSync('./data/products.json', { encoding: 'utf-8' });
 
             //defino productos y digo, si esta vacia, creala, si tiene algo, parsealo para poder trabajar con eso
             let productos;
@@ -60,7 +58,7 @@ const productosController = {
         function(req, res){
 
             //leo el json de productos y lo paso a la variable archivoProductos como objeto literal
-            const archivoProductos = fs.readFileSync( './public/data/products.json' , {encoding: 'utf-8'});
+            const archivoProductos = fs.readFileSync( './data/products.json' , {encoding: 'utf-8'});
             const productJSON = JSON.parse(archivoProductos);
 
             let data = req.params.id - 1;
@@ -87,7 +85,7 @@ const productosController = {
             
 
             //leo el json de productos y lo paso a la variable archivoProductos como objeto literal
-            const archivoProductos = fs.readFileSync('./public/data/products.json', { encoding: 'utf-8' });
+            const archivoProductos = fs.readFileSync('./data/products.json', { encoding: 'utf-8' });
             const productos = JSON.parse(archivoProductos);
 
             let updated = productos.map( function(modificado){
@@ -125,7 +123,7 @@ const productosController = {
     
 
             //uso write para pisar la data previa y guardar todo lo nuevo
-            fs.writeFileSync(__dirname + '/../public/data/products.json', productosJSON);
+            fs.writeFileSync('./data/products.json', productosJSON);
     
             //redirecciono
             res.redirect('/products');
@@ -133,7 +131,7 @@ const productosController = {
     detail: 
         function(req, res){
             //leo el json de productos y lo paso a la variable archivoProductos como objeto literal
-            const archivoProductos = fs.readFileSync( './public/data/products.json' , {encoding: 'utf-8'});
+            const archivoProductos = fs.readFileSync( './data/products.json' , {encoding: 'utf-8'});
             const productJSON = JSON.parse(archivoProductos);
 
             let data = req.params.id - 1;
@@ -142,7 +140,7 @@ const productosController = {
     carrito:
         function(req, res){
             //leo el json de productos y lo paso a la variable archivoProductos como objeto literal
-            const archivoProductos = fs.readFileSync( './public/data/products.json' , {encoding: 'utf-8'});
+            const archivoProductos = fs.readFileSync( './data/products.json' , {encoding: 'utf-8'});
             const productJSON = JSON.parse(archivoProductos);
 
             res.render('../views/products/carrito.ejs', {'products': productJSON});

@@ -9,13 +9,13 @@
   "stock": true
  },
  {
-  "id": 2,
+  "id": "1",
   "image": "https://robohash.org/itaquevoluptatemvelit.bmp?size=50x50&set=set1",
-  "name": "Cheese Cloth",
+  "name": "Pinky",
   "description": "Triple-buffered local installation",
-  "category": 1,
-  "price": 97.7,
-  "stock": true
+  "price": "97.7",
+  "stock": "true",
+  "category": "1"
  },
  {
   "id": 3,

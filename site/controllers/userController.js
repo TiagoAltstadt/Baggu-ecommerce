@@ -1,7 +1,4 @@
 const fs = require('fs');
-let aux = fs.readFileSync( './public/data/users.json' , {encoding: 'utf-8'});
-
-let usersJSON = JSON.parse(aux);
 
 const userController = {
     register: 
@@ -14,6 +11,9 @@ const userController = {
         },
     search: 
         function(req, res){
+            let aux = fs.readFileSync( '../data/users.json' , {encoding: 'utf-8'});
+            let usersJSON = JSON.parse(aux);
+
             let busqueda = req.query.search;
 
             let usersResults = [];
@@ -47,7 +47,7 @@ const userController = {
             console.log(user);
 
             //leo el json de productos y lo paso a la variable archivoProductos
-            const archivoUsers = fs.readFileSync('./public/data/users.json', { encoding: 'utf-8' });
+            const archivoUsers = fs.readFileSync('../data/users.json', { encoding: 'utf-8' });
 
             //defino productos y digo, si esta vacia, creala, si tiene algo, parsealo para poder trabajar con eso
             let users;
@@ -65,7 +65,7 @@ const userController = {
             const usersJSON = JSON.stringify(users);
 
             //uso write para pisar la data previa y guardar todo lo nuevo
-            fs.writeFileSync('./public/data/users.json', usersJSON);
+            fs.writeFileSync('../data/users.json', usersJSON);
 
             //redirecciono
             res.redirect('/users/list');
@@ -73,10 +73,14 @@ const userController = {
         },
     list: 
         function(req, res){      
+            let aux = fs.readFileSync( './data/users.json' , {encoding: 'utf-8'});
+            let usersJSON = JSON.parse(aux);
             res.render('./users/list.ejs', {'users': usersJSON});
         },
     detail: 
         function(req, res){
+            let aux = fs.readFileSync( './data/users.json' , {encoding: 'utf-8'});
+            let usersJSON = JSON.parse(aux);
             let data = req.params.id - 1;
             res.render('../views/users/user.ejs', {'users': usersJSON, 'data': data} );
         },

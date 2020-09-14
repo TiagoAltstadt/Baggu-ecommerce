@@ -12,7 +12,6 @@ const rutaHome = require('./routes/home_route.js');
 const rutaProductos = require('./routes/productos_route.js');
 const rutaUser = require('./routes/user_route');
 const ruta404 = require('./routes/404_route.js');
-const { json } = require('express');
 
 
 //session
