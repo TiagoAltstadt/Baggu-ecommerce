@@ -35,6 +35,9 @@ html{
 	--color-quinto: whitesmoke;
 	--color-sexto: #141E29;
 	
+	/*	Estandar de bordes 	*/
+	--border-radius: 12px;
+
 	/*	Para que se mueva suaaaave...	*/
 	scroll-behavior: smooth;
 }
@@ -362,39 +365,7 @@ div.boxTextEmpresa {
 }
 
 
-/*------------------------------------------------------------Dedicado a Register.ejs----------------------------------------------------------------------*/
 
-.register_form {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	background-color: var(--color-cuarto);
-	width: 80%;
-	margin: auto;
-	border-radius: 12px; 
-}
-
-.register_option {
-	display: block;
-	box-sizing: border-box;
-	margin: 1% auto;
-}
-
-.fotoRegister{
-	height: 30rem;
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: white;
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: center;
-	align-items: center;
-	-webkit-box-shadow: inset 0px 0px 51px -17px rgba(0,0,0,0.75);
-	-moz-box-shadow: inset 0px 0px 51px -17px rgba(0,0,0,0.75);
-	box-shadow: inset 0px 0px 51px -17px rgba(0,0,0,0.75);
-	border-radius: 4px;
-}
 
 
 /*
@@ -413,8 +384,6 @@ PARTIALS
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
-	width: 80%;
-	margin: auto 10%;
 }
 
 .logoContainer {
@@ -579,6 +548,79 @@ PARTIALS
 	.footerBox1, .footerBox2, .footerBox3 { 
 		width: 33%;
 		flex-grow: 1; 
+	}
+}
+
+/*------------------------------------------------------------Dedicado a user_partial.ejs----------------------------------------------------------------------*/
+
+.title_list {
+	width: fit-content;
+	margin: auto;
+}			
+
+.user_group_container {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+
+}
+
+.user_container {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	background-color: var(--color-cuarto);
+	border-radius: 12px;
+	width: 80%;
+	margin: 5% auto;
+	border: dotted black 1px;
+	border-radius: 12px;
+}
+
+.imagen_user_container {
+	width: 80%;
+	margin: 5% auto;
+}
+
+.imagen_user {
+	width: 100%;
+	border: solid black 6px;
+	border-radius: 100%;
+	background-color: var(--color-primero);
+}
+
+.info_box_user {
+	margin: auto;
+}
+
+@media all and (min-width: 571px){
+	
+	.user_container{
+		width: 40%;
+	}
+	.info_box_user{
+		padding: auto;
+	}
+}
+
+@media all and (min-width: 767px){
+	
+	.user_container{
+		width: 30%;
+	}
+	.info_box_user{
+		padding: auto;
+	}
+}
+
+@media all and (min-width: 1025px){
+	
+	.user_container{
+		width: 24%;
+		margin: 5% 0.5%;
+	}
+	.info_box_user{
+		padding: auto;
 	}
 }
 
@@ -1085,79 +1127,40 @@ USERS
   \____/  |_____/  |______| |_|  \_\ |_____/ 
 */
 
-/*------------------------------------------------------------Dedicado a user_partial.ejs----------------------------------------------------------------------*/
+/*------------------------------------------------------------Dedicado a Register.ejs----------------------------------------------------------------------*/
 
-.title_list {
-	width: fit-content;
-	margin: auto;
-}			
-
-.user_group_container {
+.main_register{
 	display: flex;
 	flex-wrap: wrap;
-	flex-direction: row;
-
+	border-radius: var(--border-radius);
+	background-color:var(--color-cuarto);
+	margin: auto;
 }
 
-.user_container {
+.formulario_register{
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
-	background-color: var(--color-cuarto);
-	border-radius: 12px;
-	width: 80%;
-	margin: 5% auto;
-	border: dotted black 1px;
-	border-radius: 12px;
+	margin: auto;
+	padding: 2%;
 }
 
-.imagen_user_container {
-	width: 80%;
-	margin: 5% auto;
+.titulo_register{
+	display: block;
+	box-sizing: border-box;
+	
 }
 
-.imagen_user {
-	width: 100%;
-	border: solid black 6px;
-	border-radius: 100%;
-	background-color: var(--color-primero);
+/*	con esta pavada podes cambiar los puntitos del ul por emojis! https://emojipedia.org/	pero hay que setear el list_style_type a none	*/
+li:before { content: '\1F374'; margin-left: -20px; margin-right: 10px; } 
+
+.ul_register{
+		list-style-type: none;
 }
 
-.info_box_user {
+.submit_register{
 	margin: auto;
 }
-
-@media all and (min-width: 571px){
-	
-	.user_container{
-		width: 40%;
-	}
-	.info_box_user{
-		padding: auto;
-	}
-}
-
-@media all and (min-width: 767px){
-	
-	.user_container{
-		width: 30%;
-	}
-	.info_box_user{
-		padding: auto;
-	}
-}
-
-@media all and (min-width: 1025px){
-	
-	.user_container{
-		width: 24%;
-		margin: 5% 0.5%;
-	}
-	.info_box_user{
-		padding: auto;
-	}
-}
-
 
 /*------------------------------------------------------------Dedicado a Login.ejs----------------------------------------------------------------------*/
 

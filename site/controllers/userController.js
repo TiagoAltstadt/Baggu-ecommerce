@@ -27,10 +27,6 @@ const userController = {
 
             res.render('usersResults.ejs', {usersResults: usersResults});
         },
-    create: 
-        function(req, res){
-            res.render('./users/create_user.ejs');
-        },
     store: 
         function(req,res, next){
 

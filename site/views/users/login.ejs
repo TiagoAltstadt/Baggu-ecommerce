@@ -6,15 +6,18 @@
 
 
     <body>
+
 		<!--Header-->
     	<%- include('../partials/header.ejs') %>
 		
 
-        <main class="cuentaLogin"><!--General-->
-			<div class="tituloLogin"><!--Titulo-->
-				<i class="fas fa-user"></i><h1>Login</h1>
-			</div>
-			<form action="#" method="POST" class="campoLogin"><!--FormularioLogin-->
+        <main class="cuentaLogin">
+
+			<!--Titulo-->
+			<div class="tituloLogin">	<i class="fas fa-user"></i><h1>Login</h1>	</div>
+
+			<!--Formulario Login-->
+			<form action="#" method="POST" class="campoLogin">
 				<div class="subCampoLogin">
 					<label for="email">Usuario / Email:</label>
 					<input type="text" id="email" name="email" placeholder="Your name">
@@ -30,12 +33,15 @@
 					</div>
 				</div>
 			</form>
-			<div class="botonLogin"><!--Botones-->
+
+			<!--Botones-->
+			<div class="botonLogin">
 				<button type="submit">Recuperar Contraseña</button>
 				<div>
 					<button type="submit">Ingresar</button><i class="fas fa-sign-in-alt"></i>
 				</div>
 			</div>
+
 		</main>
 
 		<!--Footer-->
