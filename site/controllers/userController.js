@@ -29,7 +29,7 @@ const userController = {
         },
     create: 
         function(req, res){
-            res.render('./users/createUser.ejs');
+            res.render('./users/create_user.ejs');
         },
     store: 
         function(req,res, next){
@@ -79,7 +79,7 @@ const userController = {
             let usersJSON = JSON.parse(users);
 
             //renderizo la vista y le envio users, que contiene el json con la base de datos
-            res.render('../views/users/list.ejs', {'users': usersJSON});
+            res.render('../views/users/list_user.ejs', {'users': usersJSON});
         },
     detail: 
         function(req, res){

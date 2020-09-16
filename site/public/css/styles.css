@@ -1,11 +1,11 @@
 
 /*
-											 _____    _____    _____ 
-											/ ____|  / ____|  / ____|
-											| |      | (___   | (___  
-											| |       \___ \   \___ \ 
-											| |____   ____) |  ____) |
-											\_____|  |_____/  |_____/ 
+ _____    _____    _____ 
+/ ____|  / ____|  / ____|
+| |      | (___   | (___  
+| |       \___ \   \___ \ 
+| |____   ____) |  ____) |
+\_____|  |_____/  |_____/ 
 
 */
 
@@ -435,7 +435,7 @@ PARTIALS
 
 .searchHeader{
 	padding: 1.5%;
-	width: 100%;
+	width: 100%; 
 }
 
 .active-cyan-2 input.form-control[type=text]:focus:not([readonly]) {
@@ -462,29 +462,6 @@ PARTIALS
 	box-sizing: border-box;
 	margin: auto;
 }
-
-@media all and (min-width: 769px){
-	
-}
-
-
-/*------------------------------------------------------------Dedicado a header----------------------------------------------------------------------*/
-
-/* .headerTotal{
-	width: 100%;
-	height: 15rem;
-	margin-left: auto;
-	margin-bottom: auto;
-	display: flex;
-	flex-flow: row nowrap;
-}
-.logoHeader{
-	width: 20vw;
-	height: 20rem;
-}
-.logoHeader img{
-	height: 15rem;
-} */
 
 /*------------------------------------------------------------Dedicado a Footer----------------------------------------------------------------------*/
 
@@ -526,7 +503,6 @@ PARTIALS
 	height: 220px;
 	background-color: #141E29;
 }
-
 
 /*Estilos de info*/
 .contacto {                  
@@ -737,9 +713,11 @@ PARTIALS
 
 /*------------------------------------------------------------Dedicado a detalle_partial.ejs----------------------------------------------------------------------*/
 
-/*Paleta de Colores para Envases Descartables **** #5386E4 */
-/*Paleta de Colores para Papeleria **** #00916E */
-/*Paleta de Colores para Higiene **** #525998 */
+/*
+-Paleta de Colores para Envases Descartables **** #5386E4 
+-Paleta de Colores para Papeleria **** #00916E 
+-Paleta de Colores para Higiene **** #525998 
+*/
 
 .tipo_producto {
 	display: block;
@@ -1183,7 +1161,9 @@ USERS
 
 /*------------------------------------------------------------Dedicado a Login.ejs----------------------------------------------------------------------*/
 
-/*Paleta de Colores para Login - Registro - Carrito **** #826754 */
+/*
+	Paleta de Colores para Login - Registro - Carrito **** #826754 
+*/
 
 /*General*/
 .cuentaLogin{

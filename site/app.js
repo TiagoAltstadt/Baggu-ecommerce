@@ -18,7 +18,7 @@ app.use(methodOverride("_method"));
 
 //----Rutas----
 const rutaHome = require('./routes/home_route.js');
-const rutaProductos = require('./routes/productos_route.js');
+const rutaProducts = require('./routes/productos_route.js');
 const rutaUser = require('./routes/user_route');
 const ruta404 = require('./routes/404_route.js');
 
@@ -36,7 +36,7 @@ app.use('/', rutaHome);
 app.use('/users', rutaUser);
 
 //crear ruta '/productos', '/carrito'
-app.use('/products', rutaProductos);
+app.use('/products', rutaProducts);
 
 //crear ruta de _inexistente_
 app.get('*', ruta404);

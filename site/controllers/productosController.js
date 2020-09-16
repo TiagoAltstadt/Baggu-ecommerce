@@ -13,7 +13,7 @@ const productosController = {
         },
     create: 
         function(req, res){
-            res.render('./products/createProduct.ejs');
+            res.render('./products/create_product.ejs');
         },
     store: 
         function(req,res, next){
@@ -64,7 +64,7 @@ const productosController = {
             let data = req.params.id - 1;
 
             //renderizo la vista y le envio products, que contiene el json con la base de datos + la variable data que va a definir cual producto mostrar en los campos a completar
-            res.render('./products/edicionProductos.ejs', {'products': productJSON, 'data': data});
+            res.render('./products/edicion_products.ejs', {'products': productJSON, 'data': data});
         },
     update: 
         function(req, res){
@@ -123,7 +123,7 @@ const productosController = {
             let data = req.params.id - 1;
 
              //renderizo la vista y le envio products, que contiene el json con la base de datos + la variable data que va a definir cual producto mostrar en los campos a completar
-            res.render('../views/products/detalle.ejs', {'products': productJSON, 'data': data} );
+            res.render('../views/products/detalle_products.ejs', {'products': productJSON, 'data': data} );
         },
     carrito:
         function(req, res){
