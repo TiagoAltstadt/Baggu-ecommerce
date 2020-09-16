@@ -1,3 +1,4 @@
+//----File System----
 const fs = require('fs');
 
 const userController = {
@@ -11,7 +12,7 @@ const userController = {
         },
     search: 
         function(req, res){
-            let aux = fs.readFileSync( '../data/users.json' , {encoding: 'utf-8'});
+            let aux = fs.readFileSync( './data/users.json' , {encoding: 'utf-8'});
             let usersJSON = JSON.parse(aux);
 
             let busqueda = req.query.search;
@@ -44,12 +45,11 @@ const userController = {
                 password: req.body.password,
                 category: req.body.category
             }
-            console.log(user);
 
-            //leo el json de productos y lo paso a la variable archivoProductos
+            //leo el json de productos y lo paso a la variable archivoUsers
             const archivoUsers = fs.readFileSync('./data/users.json', { encoding: 'utf-8' });
 
-            //defino productos y digo, si esta vacia, creala, si tiene algo, parsealo para poder trabajar con eso
+            //defino users y digo, si esta vacia, creala, si tiene algo, parsealo para poder trabajar con eso
             let users;
 
             if (archivoUsers == '') {
@@ -58,7 +58,7 @@ const userController = {
             users = JSON.parse(archivoUsers);
             }
 
-            //sea cual sea el output, le meto la nueva info que declare mas arriba en productos
+            //sea cual sea el output, le meto la nueva info que declare mas arriba en users
             users.push(user);
 
             //lo vuelvo un string para guardarlo
@@ -73,15 +73,24 @@ const userController = {
         },
     list: 
         function(req, res){      
-            let aux = fs.readFileSync( './data/users.json' , {encoding: 'utf-8'});
-            let usersJSON = JSON.parse(aux);
+
+            //creo una variable auxiliar donde le meto users.json y lo parseo
+            let users = fs.readFileSync( './data/users.json' , {encoding: 'utf-8'});
+            let usersJSON = JSON.parse(users);
+
+            //renderizo la vista y le envio users, que contiene el json con la base de datos
             res.render('../views/users/list.ejs', {'users': usersJSON});
         },
     detail: 
         function(req, res){
+            //creo una variable auxiliar donde le meto users.json y lo parseo
             let aux = fs.readFileSync( './data/users.json' , {encoding: 'utf-8'});
             let usersJSON = JSON.parse(aux);
+
+            //creo una variable a la que le meto el id que pedi en la url y le resto uno porque sino no anda
             let data = req.params.id - 1;
+
+            //renderizo la vista y le envio users, que contiene el json con la base de datos + la variable data que va a definir cual usuario mostrar en los campos a completar
             res.render('../views/users/user.ejs', {'users': usersJSON, 'data': data} ); 
         },
     update: 
@@ -90,4 +99,5 @@ const userController = {
         }
 };
 
+//----Exports----
 module.exports = userController;

@@ -1,27 +1,26 @@
+//----Express----
 const express = require('express');
 const app = express();
 
+//----Session----
 const session = require('express-session');
-
-const methodOverride = require("method-override");
-app.use(methodOverride("_method"));
-
-
-
-//-----Rutas-----
-const rutaHome = require('./routes/home_route.js');
-const rutaProductos = require('./routes/productos_route.js');
-const rutaUser = require('./routes/user_route');
-const ruta404 = require('./routes/404_route.js');
-
-
-//session
 app.set('view engine','ejs');
 app.use(session({
     secret: "Secret", 
     resave: true,
     saveUninitialized: true
 }));
+
+//----Method----
+const methodOverride = require("method-override");
+app.use(methodOverride("_method"));
+
+
+//----Rutas----
+const rutaHome = require('./routes/home_route.js');
+const rutaProductos = require('./routes/productos_route.js');
+const rutaUser = require('./routes/user_route');
+const ruta404 = require('./routes/404_route.js');
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
@@ -44,5 +43,5 @@ app.get('*', ruta404);
 
 
 
-//iniciar en 3000
-app.listen(3000, ()  => {console.log('Servidor escuchando en el puerto 3000.')});
+//----Configuracion de puerto y msje de inicio----
+app.listen(3000, ()  => {console.log( '\033[2J' + ' ------------------------------------------------------\n | Servidor escuchando en el puerto 3000.             | \n ------------------------------------------------------')});

@@ -1,4 +1,5 @@
-
+//----File System----
+const fs = require('fs');
 
 const homeController = {
     index: 
@@ -15,4 +16,5 @@ const homeController = {
         }
 };
 
+//----Exports----
 module.exports = homeController;

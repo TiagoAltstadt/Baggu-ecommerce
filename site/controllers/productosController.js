@@ -1,15 +1,15 @@
+//----File System----
 const fs = require('fs');
 
 const productosController = {
     list: 
         function(req, res){
         
-            //leo el json de productos y lo paso a la variable archivoProductos como objeto literal
+            //leo el json de productos y lo paso a la variable archivoProductos como objeto literal, luego lo parseo
             const archivoProductos = fs.readFileSync( './data/products.json' , {encoding: 'utf-8'});
             const productJSON = JSON.parse(archivoProductos);
 
             res.render('../views/products/productos.ejs', {'products': productJSON});
-
         },
     create: 
         function(req, res){
@@ -28,7 +28,7 @@ const productosController = {
                 stock: req.body.stock,
                 category: req.body.category
             }
-            console.log(producto);
+
             //leo el json de productos y lo paso a la variable archivoProductos
             const archivoProductos = fs.readFileSync('./data/products.json', { encoding: 'utf-8' });
 
@@ -38,7 +38,7 @@ const productosController = {
             if (archivoProductos == '') {
                 productos = []
             } else {
-            productos = JSON.parse(archivoProductos);
+                productos = JSON.parse(archivoProductos);
             }
 
             //sea cual sea el output, le meto la nueva info que declare mas arriba en productos
@@ -52,7 +52,6 @@ const productosController = {
 
             //redirecciono
             res.redirect('/products');
-
         },
     edit: 
         function(req, res){
@@ -61,8 +60,10 @@ const productosController = {
             const archivoProductos = fs.readFileSync( './data/products.json' , {encoding: 'utf-8'});
             const productJSON = JSON.parse(archivoProductos);
 
+            //creo la variable data y le paso la info del url para que sepa de que producto estamos hablando
             let data = req.params.id - 1;
 
+            //renderizo la vista y le envio products, que contiene el json con la base de datos + la variable data que va a definir cual producto mostrar en los campos a completar
             res.render('./products/edicionProductos.ejs', {'products': productJSON, 'data': data});
         },
     update: 
@@ -82,8 +83,6 @@ const productosController = {
                 category: req.body.category
             }
             
-            
-
             //leo el json de productos y lo paso a la variable archivoProductos como objeto literal
             const archivoProductos = fs.readFileSync('./data/products.json', { encoding: 'utf-8' });
             const productos = JSON.parse(archivoProductos);
@@ -105,23 +104,9 @@ const productosController = {
                 }
             })
 
-            // for(let i=1; i<productos.length; i++){
-            //     if (productos[i].id == idProducto){
-
-            //         productos[i].id = producto.id;
-            //         productos[i].image = producto.image;
-            //         productos[i].description = producto.description;
-            //         productos[i].price = producto.price;
-            //         productos[i].stock = producto.stock;
-            //         productos[i].category = producto.category;
-
-            //     }   
-            // }
-
             //lo vuelvo un string para guardarlo
             const productosJSON = JSON.stringify(updated, null, " ");
     
-
             //uso write para pisar la data previa y guardar todo lo nuevo
             fs.writeFileSync('./data/products.json', productosJSON);
     
@@ -134,11 +119,15 @@ const productosController = {
             const archivoProductos = fs.readFileSync( './data/products.json' , {encoding: 'utf-8'});
             const productJSON = JSON.parse(archivoProductos);
 
+             //creo la variable data y le paso la info del url para que sepa de que producto estamos hablando
             let data = req.params.id - 1;
+
+             //renderizo la vista y le envio products, que contiene el json con la base de datos + la variable data que va a definir cual producto mostrar en los campos a completar
             res.render('../views/products/detalle.ejs', {'products': productJSON, 'data': data} );
         },
     carrito:
         function(req, res){
+
             //leo el json de productos y lo paso a la variable archivoProductos como objeto literal
             const archivoProductos = fs.readFileSync( './data/products.json' , {encoding: 'utf-8'});
             const productJSON = JSON.parse(archivoProductos);
@@ -150,4 +139,6 @@ const productosController = {
             res.redirect('/products');
         }
 }
+
+//----Exports----
 module.exports = productosController;
