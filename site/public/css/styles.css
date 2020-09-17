@@ -1148,6 +1148,7 @@ USERS
 .titulo_register{
 	display: block;
 	box-sizing: border-box;
+	justify-content: center;margin: auto;
 	
 }
 
@@ -1318,4 +1319,29 @@ button{
 	.recordarmeLogin{
 		width: 50%;
 	}
+}
+
+/*------------------------------------------------------------Dedicado a edicion_users.ejs----------------------------------------------------------------------*/
+
+
+.main_edicion_users{
+	display: flex;
+	flex-wrap: wrap;
+	background-color: var(--color-cuarto);
+	border-radius: var(--border-radius);
+	padding: 5%;
+}
+
+.title_edicion_users{
+	margin: 12px auto;
+	border-bottom: var(--color-tercero) dotted 1px;
+}
+
+.button_edicion_users{
+	margin: auto;
+}
+
+.form_edit_users{
+
+
 }

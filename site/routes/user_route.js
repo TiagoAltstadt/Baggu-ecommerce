@@ -21,18 +21,21 @@ var storage = multer.diskStorage({
 var upload = multer({storage: storage});
 
 //----Rutas----
+
+router.get('/' , userController.list);
+
 router.get('/register' , userController.register);
 router.post('/register' ,upload.any(), userController.store);
 
 router.get('/login' , userController.login);
 
-router.get('/' , userController.list);
+router.get('/:id' , userController.detail);
+
+router.get('/:id/edit', userController.edit);
+router.put('/:id' , userController.update);
 
 router.get('/search' , userController.search);
 
-router.get('/:id' , userController.detail);
-
-router.put('/:id' , userController.update);
 
 
 //----Export----
