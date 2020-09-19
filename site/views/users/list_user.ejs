@@ -17,7 +17,7 @@
         <section class="user_group_container">
 
             <%  for (let i=0; i<users.length; i++) {        %>
-            <%-     include('../partials/user_partial.ejs', {id: users[i].id, avatar: users[i].avatar, user: users[i].user, name: users[i].name, surname: users[i].surname, email: users[i].email, password: users[i].password, category: users[i].category}) %>
+            <%-     include('../partials/user_partial.ejs', {id: users[i].id, avatar: users[i].avatar, username: users[i].username, name: users[i].name, surname: users[i].surname, email: users[i].email, password: users[i].password, category: users[i].category}) %>
             <%  }                                           %>
             
         </section>

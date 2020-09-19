@@ -1,7 +1,29 @@
 //----File System----
 const fs = require('fs');
 
+//----Data Base----
+let db = require('../database/models');
+
 const userController = {
+    list: 
+        function(req, res){      
+
+            db.Users.findAll()
+                .then(function(users) {
+                    res.render('../views/users/list_user.ejs', {users:users});
+                })
+
+
+            /* LIST CON JSON
+            //creo una variable auxiliar donde le meto users.json y lo parseo
+            let users = fs.readFileSync( './data/users.json' , {encoding: 'utf-8'});
+            let usersJSON = JSON.parse(users);
+            
+            //renderizo la vista y le envio users, que contiene el json con la base de datos
+            res.render('../views/users/list_user.ejs', {'users': usersJSON});
+            */
+            
+        },
     register: 
         function(req, res){
             res.render('./users/register.ejs');
@@ -66,16 +88,6 @@ const userController = {
             //redirecciono
             res.redirect('/users');
 
-        },
-    list: 
-        function(req, res){      
-
-            //creo una variable auxiliar donde le meto users.json y lo parseo
-            let users = fs.readFileSync( './data/users.json' , {encoding: 'utf-8'});
-            let usersJSON = JSON.parse(users);
-
-            //renderizo la vista y le envio users, que contiene el json con la base de datos
-            res.render('../views/users/list_user.ejs', {'users': usersJSON});
         },
     detail: 
         function(req, res){
