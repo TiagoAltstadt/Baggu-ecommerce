@@ -34,7 +34,7 @@ router.get('/:id' , userController.detail);
 router.get('/:id/edit', userController.edit);
 router.put('/:id' , userController.update);
 
-router.get('/search' , userController.search);
+router.get('/search' , userController.search); //SIN TERMINAR
 
 
 

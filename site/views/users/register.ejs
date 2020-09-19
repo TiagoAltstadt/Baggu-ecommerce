@@ -12,7 +12,7 @@
 		<main class="main_register">
 
 			<!--Form Register-->
-			<form class="formulario_register" method="POST" action="/register"> 
+			<form class="formulario_register"  action="/register/<%= data %>?_method=POST" method="POST"> 
 				
 					<div class="titulo_register">
 						<h1>Registrarse</h1>
@@ -20,19 +20,19 @@
 
 					<ul class="ul_register">
 						<li>
-							<label for="nombre">
+							<label for="name">
 								<span>Name</span>
-								<input type="text" name="nombre" id="nombre">
+								<input type="text" name="name" id="name">
 							</label></li>
 						<li>
-							<label for="apellido">
+							<label for="surname">
 								<span>Surname</span>
-								<input type="text" name="apellido" id="apellido">
+								<input type="text" name="surname" id="surname">
 							</label></li>
 						<li>
-							<label for="usuario">
+							<label for="username">
 								<span>User</span>
-								<input type="text" name="usuario" id="usuario">
+								<input type="text" name="username" id="usuario">
 							</label>
 						</li>
 						<li>
@@ -42,28 +42,20 @@
 							</label>
 						</li>
 						<li>
-							<label for="contrasena">
+							<label for="password">
 								<span>Password</span>
-								<input type="password" id="contrasena" name="contrasena">
+								<input type="password" id="password" name="password">
 							</label>
 						</li>
-						<li>
+						<!-- <li>
 							<label for="confirmar">
 								<span>Confirm Password <br></span>
 								<input type="password" name="confirmar" id="confirmar">
 							</label>
-						</li>
+						</li> -->
 						<li>
-							<label for="telefono">
-								<span>Phone Number</span>
-								<input type="text" name="telefono" id="telefono">
-							</label>
-						</li>
-						<li>
-							<label for="myfile">
-								<!--<label for="myfile">Select a file:</label>-->
-								<input type="file" id="myfile" name="myfile">
-							</label>
+							Category: 
+							<input type="text">
 						</li>
 					</ul>
 
