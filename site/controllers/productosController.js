@@ -1,16 +1,28 @@
 //----File System----
 const fs = require('fs');
+//----Phat------
+const path = require("path");
+
+
+//------Se lee la base de datos products.json, se lo parcea para su utilizacion------
+const datapath = path.join(__dirname, "/../data/products.json") ;
+const productJSON = JSON.parse(fs.readFileSync(datapath, {encoding: 'utf-8'}));
+
+
 
 const productosController = {
-    list: 
-        function(req, res){
+    list: (req, res) => {
         
-            //leo el json de productos y lo paso a la variable archivoProductos como objeto literal, luego lo parseo
-            const archivoProductos = fs.readFileSync( './data/products.json' , {encoding: 'utf-8'});
-            const productJSON = JSON.parse(archivoProductos);
-
-            res.render('../views/products/productos.ejs', {'products': productJSON});
+            res.render('products/productos', {'products': productJSON});
         },
+    search: (req, res) => {
+        let result = {};  
+        if(req.query.search){
+            result = productJSON.filter(group => group.name.toLowerCase().includes(req.query.search.toLowerCase()));    
+        };
+        
+        res.render("products/search", {result});
+    },
     create: 
         function(req, res){
             res.render('./products/create_product.ejs');
