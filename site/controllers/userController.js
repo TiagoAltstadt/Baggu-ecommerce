@@ -1,8 +1,23 @@
+const { validationResult } = require('express-validator');
 //----File System----
 const fs = require('fs');
 
 //----Data Base----
 let db = require('../database/models');
+
+/*
+Para chequear errores
+
+let errors = validationResult(req); 
+            if(errors.isEmpty() ) {
+
+            }else{
+                return res.render('login', {errors: errors.errors});
+            }
+
+*/
+
+
 
 const userController = {
     list:
@@ -51,12 +66,44 @@ const userController = {
 
             let aux = req.params.id;
 
-            res.render('./users/register.ejs', {data: aux});
+            res.render('./users/register.ejs', { data: aux });
         },
     login:
         function (req, res) {
-            res.render('./users/login.ejs');
+            let errors = validationResult(req);
+            res.render('./users/login.ejs', { errors: errors.errors });
         },
+    processLogin: function (req, res) {
+
+        //creo la variable errors y la relleno con la validacion de resultados, si estan bien contestadas las cosas del form va a volver vacio
+        let errors = validationResult(req);
+
+        //si esta vacio, entra, sino, devuelvo los errores
+        if (errors.isEmpty()) {
+
+            //si entro, busco en todos los usuarios y espero que se cumplan los requisitos (email y password)
+            db.Users.findAll()
+                .then(function (user) {
+                    if (user.email == req.body.email && user.password == req.body.password) {
+                        //si se cumple lo de arriba, a currentUser le mando el usuario que encontro y cierro el ciclo
+                        let currentUser = user;
+                        break;
+                    }
+                })
+            if (currentUser == undefined) {
+                //si currentUser es undefined es porque no hubo coincidencia mas arriba y devuelvo un log que lo explica
+                console.log('credenciales invalidas.')
+            }else{
+                //si no es undefined, lo meto en session
+                req.session.currentUser = currentUser;
+            }
+            return res.render('login.ejs', { errors: errors.errors });
+
+        } else {
+            return res.render('login.ejs', { errors: errors.errors });
+        }
+        //return res.render('login.ejs', { errors: errors.errors });
+    },
     search:
         function (req, res) {
 
