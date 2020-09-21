@@ -64,12 +64,6 @@ const productosController = {
             res.redirect('/products');
         },
     edit: (req, res) => {
-            //creo la variable data y le paso la info del url para que sepa de que producto estamos hablando
-            //let data = req.params.id - 1;
-
-            //renderizo la vista y le envio products, que contiene el json con la base de datos + la variable data que va a definir cual producto mostrar en los campos a completar
-            //res.render('./products/edicion_products.ejs', {'products': productJSON, 'data': data});
-
             const editProduct = productJSON.find(editProduct => editProduct.id == req.params.id);
 
             res.render("products/edicion_products", {"products": editProduct});
@@ -121,25 +115,13 @@ const productosController = {
             //redirecciono
             res.redirect('/products');
         },
-    detail: 
-        function(req, res){
-            //leo el json de productos y lo paso a la variable archivoProductos como objeto literal
-            const archivoProductos = fs.readFileSync( './data/products.json' , {encoding: 'utf-8'});
-            const productJSON = JSON.parse(archivoProductos);
-
-             //creo la variable data y le paso la info del url para que sepa de que producto estamos hablando
-            let data = req.params.id - 1;
-
-             //renderizo la vista y le envio products, que contiene el json con la base de datos + la variable data que va a definir cual producto mostrar en los campos a completar
-            res.render('../views/products/detalle_products.ejs', {'products': productJSON, 'data': data} );
+    detail: (req, res) => {
+            const detailProduct = productJSON.find(detailProduct => detailProduct.id == req.params.id);
+        
+            res.render("products/detalle_products", { "products": detailProduct });
         },
     carrito:
         function(req, res){
-
-            //leo el json de productos y lo paso a la variable archivoProductos como objeto literal
-            const archivoProductos = fs.readFileSync( './data/products.json' , {encoding: 'utf-8'});
-            const productJSON = JSON.parse(archivoProductos);
-
             res.render('../views/products/carrito.ejs', {'products': productJSON});
         },
     delete: 
