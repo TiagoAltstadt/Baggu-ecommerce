@@ -39,7 +39,9 @@
                 <div class="comprar_detalle"><a href="/products/<%= id %>/edit">  Editar </a><i class="fas fa-share-alt"></i></div>
 
                 <!--delete-->
-                <div><form  action="/products/:id?_method=DELETE" method="POST">
+                <div>
+                    <form action="/products/<%= products.id %>?_method=DELETE" method="POST">
+                        <button type="submit">Borrar</button>
                     </form>
                 </div>
 

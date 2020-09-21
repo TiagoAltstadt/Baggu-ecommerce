@@ -126,6 +126,12 @@ const productosController = {
         },
     delete: 
         function(req, res){
+            let rows = productJSON;
+            let updatedRows = rows.filter(oneRow => oneRow.id != req.params.id);
+    
+            let fileContents = JSON.stringify(updatedRows, null, " ");
+            (fs.writeFileSync(path.join(__dirname, "/../data/products.json"), fileContents));
+    
             res.redirect('/products');
         }
 }

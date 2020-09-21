@@ -1,1 +1,11 @@
 <%- include('../partials/product_partial.ejs', {id: products[i].id ,image: products[i].image ,title: products[i].name , description: products[i].description ,price: products[i].price }) %>
+
+{
+        "id": 20,
+        "image": "https://robohash.org/ideligendisaepe.jpg?size=50x50&set=set1",
+        "name": "Pasta - Agnolotti - Butternut",
+        "description": "Public-key next generation secured line",
+        "category": 2,
+        "price": 50.5,
+        "stock": true
+    }

@@ -1,182 +1,182 @@
 [
-    {
-        "id": 1,
-        "image": "https://robohash.org/sequimagniaut.bmp?size=50x50&set=set1",
-        "name": "Alpha",
-        "description": "Upgradable eco-centric info-mediaries",
-        "category": 2,
-        "price": 32.8,
-        "stock": true
-    },
-    {
-        "id": "1",
-        "image": "https://robohash.org/itaquevoluptatemvelit.bmp?size=50x50&set=set1",
-        "name": "Pinky",
-        "description": "Triple-buffered local installation",
-        "price": "97.7",
-        "stock": "true",
-        "category": "1"
-    },
-    {
-        "id": 3,
-        "image": "https://robohash.org/nequesaepeofficia.bmp?size=50x50&set=set1",
-        "name": "Mini - Vol Au Vents",
-        "description": "Re-contextualized secondary pricing structure",
-        "category": 2,
-        "price": 29.6,
-        "stock": true
-    },
-    {
-        "id": 4,
-        "image": "https://robohash.org/sedvelitcorrupti.jpg?size=50x50&set=set1",
-        "name": "Shortbread - Cookie Crumbs",
-        "description": "Optimized bandwidth-monitored application",
-        "category": 3,
-        "price": 65.1,
-        "stock": false
-    },
-    {
-        "id": 5,
-        "image": "https://robohash.org/mollitiaestlaboriosam.bmp?size=50x50&set=set1",
-        "name": "Lettuce - Baby Salad Greens",
-        "description": "Enterprise-wide exuding access",
-        "category": 2,
-        "price": 48.4,
-        "stock": false
-    },
-    {
-        "id": 6,
-        "image": "https://robohash.org/asperioresrerumvoluptatibus.png?size=50x50&set=set1",
-        "name": "Lid - Translucent, 3.5 And 6 Oz",
-        "description": "Secured fault-tolerant system engine",
-        "category": 1,
-        "price": 23.1,
-        "stock": false
-    },
-    {
-        "id": 7,
-        "image": "https://robohash.org/explicaboperspiciatisconsequuntur.bmp?size=50x50&set=set1",
-        "name": "Dasheen",
-        "description": "Grass-roots client-server website",
-        "category": 3,
-        "price": 32.7,
-        "stock": true
-    },
-    {
-        "id": 8,
-        "image": "https://robohash.org/itaquevelmolestias.jpg?size=50x50&set=set1",
-        "name": "Cookies - Fortune",
-        "description": "Business-focused fresh-thinking budgetary management",
-        "category": 1,
-        "price": 74.9,
-        "stock": false
-    },
-    {
-        "id": 9,
-        "image": "https://robohash.org/temporequiquia.png?size=50x50&set=set1",
-        "name": "Cake - Bande Of Fruit",
-        "description": "Streamlined bandwidth-monitored structure",
-        "category": 1,
-        "price": 46.1,
-        "stock": true
-    },
-    {
-        "id": 10,
-        "image": "https://robohash.org/utcupiditatehic.png?size=50x50&set=set1",
-        "name": "Wine - Cahors Ac 2000, Clos",
-        "description": "Ameliorated optimizing project",
-        "category": 2,
-        "price": 94.5,
-        "stock": true
-    },
-    {
-        "id": 11,
-        "image": "https://robohash.org/quiatemporaest.png?size=50x50&set=set1",
-        "name": "Juice - Cranberry, 341 Ml",
-        "description": "Secured national forecast",
-        "category": 3,
-        "price": 19,
-        "stock": false
-    },
-    {
-        "id": 12,
-        "image": "https://robohash.org/essevoluptasquas.jpg?size=50x50&set=set1",
-        "name": "Coke - Classic, 355 Ml",
-        "description": "Right-sized clear-thinking help-desk",
-        "category": 3,
-        "price": 80.4,
-        "stock": true
-    },
-    {
-        "id": 13,
-        "image": "https://robohash.org/quisetexpedita.jpg?size=50x50&set=set1",
-        "name": "Wine - Two Oceans Sauvignon",
-        "description": "Multi-channelled dynamic encoding",
-        "category": 1,
-        "price": 31.5,
-        "stock": false
-    },
-    {
-        "id": 14,
-        "image": "https://robohash.org/namrerumcorrupti.png?size=50x50&set=set1",
-        "name": "Crackers - Water",
-        "description": "Grass-roots multi-state strategy",
-        "category": 3,
-        "price": 37.7,
-        "stock": false
-    },
-    {
-        "id": 15,
-        "image": "https://robohash.org/quisquodeum.jpg?size=50x50&set=set1",
-        "name": "Herb Du Provence - Primerba",
-        "description": "Optimized tangible middleware",
-        "category": 2,
-        "price": 30.6,
-        "stock": false
-    },
-    {
-        "id": 16,
-        "image": "https://robohash.org/voluptatesquisquammagnam.png?size=50x50&set=set1",
-        "name": "Pie Shells 10",
-        "description": "Monitored eco-centric extranet",
-        "category": 1,
-        "price": 72.1,
-        "stock": true
-    },
-    {
-        "id": 17,
-        "image": "https://robohash.org/nostrumdoloremqueducimus.jpg?size=50x50&set=set1",
-        "name": "Appetizer - Mini Egg Roll, Shrimp",
-        "description": "Fundamental multi-state contingency",
-        "category": 2,
-        "price": 2.1,
-        "stock": false
-    },
-    {
-        "id": 18,
-        "image": "https://robohash.org/quasiasperiorescommodi.png?size=50x50&set=set1",
-        "name": "Scallops - Live In Shell",
-        "description": "Centralized content-based open system",
-        "category": 3,
-        "price": 33.9,
-        "stock": true
-    },
-    {
-        "id": 19,
-        "image": "https://robohash.org/quierrorvoluptatum.bmp?size=50x50&set=set1",
-        "name": "Bread - French Baquette",
-        "description": "Polarised bandwidth-monitored hardware",
-        "category": 1,
-        "price": 95.1,
-        "stock": true
-    },
-    {
-        "id": 20,
-        "image": "https://robohash.org/ideligendisaepe.jpg?size=50x50&set=set1",
-        "name": "Pasta - Agnolotti - Butternut",
-        "description": "Public-key next generation secured line",
-        "category": 2,
-        "price": 50.5,
-        "stock": true
-    }
-]   
+ {
+  "id": 1,
+  "image": "https://robohash.org/sequimagniaut.bmp?size=50x50&set=set1",
+  "name": "Alpha",
+  "description": "Upgradable eco-centric info-mediaries",
+  "category": 2,
+  "price": 32.8,
+  "stock": true
+ },
+ {
+  "id": 2,
+  "image": "https://robohash.org/itaquevoluptatemvelit.bmp?size=50x50&set=set1",
+  "name": "Pinky",
+  "description": "Triple-buffered local installation",
+  "price": "97.7",
+  "stock": "true",
+  "category": "1"
+ },
+ {
+  "id": 3,
+  "image": "https://robohash.org/nequesaepeofficia.bmp?size=50x50&set=set1",
+  "name": "Mini - Vol Au Vents",
+  "description": "Re-contextualized secondary pricing structure",
+  "category": 2,
+  "price": 29.6,
+  "stock": true
+ },
+ {
+  "id": 4,
+  "image": "https://robohash.org/sedvelitcorrupti.jpg?size=50x50&set=set1",
+  "name": "Shortbread - Cookie Crumbs",
+  "description": "Optimized bandwidth-monitored application",
+  "category": 3,
+  "price": 65.1,
+  "stock": false
+ },
+ {
+  "id": 5,
+  "image": "https://robohash.org/mollitiaestlaboriosam.bmp?size=50x50&set=set1",
+  "name": "Lettuce - Baby Salad Greens",
+  "description": "Enterprise-wide exuding access",
+  "category": 2,
+  "price": 48.4,
+  "stock": false
+ },
+ {
+  "id": 6,
+  "image": "https://robohash.org/asperioresrerumvoluptatibus.png?size=50x50&set=set1",
+  "name": "Lid - Translucent, 3.5 And 6 Oz",
+  "description": "Secured fault-tolerant system engine",
+  "category": 1,
+  "price": 23.1,
+  "stock": false
+ },
+ {
+  "id": 7,
+  "image": "https://robohash.org/explicaboperspiciatisconsequuntur.bmp?size=50x50&set=set1",
+  "name": "Dasheen",
+  "description": "Grass-roots client-server website",
+  "category": 3,
+  "price": 32.7,
+  "stock": true
+ },
+ {
+  "id": 8,
+  "image": "https://robohash.org/itaquevelmolestias.jpg?size=50x50&set=set1",
+  "name": "Cookies - Fortune",
+  "description": "Business-focused fresh-thinking budgetary management",
+  "category": 1,
+  "price": 74.9,
+  "stock": false
+ },
+ {
+  "id": 9,
+  "image": "https://robohash.org/temporequiquia.png?size=50x50&set=set1",
+  "name": "Cake - Bande Of Fruit",
+  "description": "Streamlined bandwidth-monitored structure",
+  "category": 1,
+  "price": 46.1,
+  "stock": true
+ },
+ {
+  "id": 10,
+  "image": "https://robohash.org/utcupiditatehic.png?size=50x50&set=set1",
+  "name": "Wine - Cahors Ac 2000, Clos",
+  "description": "Ameliorated optimizing project",
+  "category": 2,
+  "price": 94.5,
+  "stock": true
+ },
+ {
+  "id": 11,
+  "image": "https://robohash.org/quiatemporaest.png?size=50x50&set=set1",
+  "name": "Juice - Cranberry, 341 Ml",
+  "description": "Secured national forecast",
+  "category": 3,
+  "price": 19,
+  "stock": false
+ },
+ {
+  "id": 12,
+  "image": "https://robohash.org/essevoluptasquas.jpg?size=50x50&set=set1",
+  "name": "Coke - Classic, 355 Ml",
+  "description": "Right-sized clear-thinking help-desk",
+  "category": 3,
+  "price": 80.4,
+  "stock": true
+ },
+ {
+  "id": 13,
+  "image": "https://robohash.org/quisetexpedita.jpg?size=50x50&set=set1",
+  "name": "Wine - Two Oceans Sauvignon",
+  "description": "Multi-channelled dynamic encoding",
+  "category": 1,
+  "price": 31.5,
+  "stock": false
+ },
+ {
+  "id": 14,
+  "image": "https://robohash.org/namrerumcorrupti.png?size=50x50&set=set1",
+  "name": "Crackers - Water",
+  "description": "Grass-roots multi-state strategy",
+  "category": 3,
+  "price": 37.7,
+  "stock": false
+ },
+ {
+  "id": 15,
+  "image": "https://robohash.org/quisquodeum.jpg?size=50x50&set=set1",
+  "name": "Herb Du Provence - Primerba",
+  "description": "Optimized tangible middleware",
+  "category": 2,
+  "price": 30.6,
+  "stock": false
+ },
+ {
+  "id": 16,
+  "image": "https://robohash.org/voluptatesquisquammagnam.png?size=50x50&set=set1",
+  "name": "Pie Shells 10",
+  "description": "Monitored eco-centric extranet",
+  "category": 1,
+  "price": 72.1,
+  "stock": true
+ },
+ {
+  "id": 17,
+  "image": "https://robohash.org/nostrumdoloremqueducimus.jpg?size=50x50&set=set1",
+  "name": "Appetizer - Mini Egg Roll, Shrimp",
+  "description": "Fundamental multi-state contingency",
+  "category": 2,
+  "price": 2.1,
+  "stock": false
+ },
+ {
+  "id": 18,
+  "image": "https://robohash.org/quasiasperiorescommodi.png?size=50x50&set=set1",
+  "name": "Scallops - Live In Shell",
+  "description": "Centralized content-based open system",
+  "category": 3,
+  "price": 33.9,
+  "stock": true
+ },
+ {
+  "id": 19,
+  "image": "https://robohash.org/quierrorvoluptatum.bmp?size=50x50&set=set1",
+  "name": "Bread - French Baquette",
+  "description": "Polarised bandwidth-monitored hardware",
+  "category": 1,
+  "price": 95.1,
+  "stock": true
+ },
+ {
+    "id": 20,
+    "image": "https://robohash.org/ideligendisaepe.jpg?size=50x50&set=set1",
+    "name": "Pasta - Agnolotti - Butternut",
+    "description": "Public-key next generation secured line",
+    "category": 2,
+    "price": 50.5,
+    "stock": true
+}
+]
