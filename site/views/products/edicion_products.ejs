@@ -6,7 +6,7 @@
     	<%- include('../partials/header.ejs') %>
 		
 
-		<form action="/products/<%= data %>?_method=PUT" method="POST" class="formularioRegiaster">
+		<form action="/products/<%= products.id %>?_method=PUT" method="POST" class="formularioRegiaster">
 			
 			<div class="logoPrincipal">
 				<h2>Edición de productos</h2>
@@ -15,38 +15,46 @@
 			<div class="otrosDatos">
 				<label for="id">
 					<span> ID:</span>
-					<input type="text" value="<%=products[data].id%>" name="id" id="id">
+					<input type="text" value="<%=products.id%>" name="id" id="id">
 				</label>
+				<br>
 				<label for="image">
 					<span>Nueva  Url de imagen de producto</span>
-					<input type="text" value="<%=products[data].image%>" name="image" id="image">
+					<input type="text" value="<%=products.image%>" name="image" id="image">
 				</label>
+				<br>
 				<label for="name">
 					<span> Nuevo nombre de Producto</span>
-					<input type="text" value="<%=products[data].name%>" name="name" id="name">
+					<input type="text" value="<%=products.name%>" name="name" id="name">
 				</label>
+				<br>
 				<label for="description">
 					<span> Nueva descripcion de producto</span>
-					<input type="text" value="<%=products[data].description%>" name="description" id="description">
+					<input type="text" value="<%=products.description%>" name="description" id="description">
 				</label>
-				<label for="name">
+				<br>
+				<label for="name"> 
+					<span>Categoria de Usuario</span>
 					<select name="category" id="category">
 						<option value="1">Buyer</option>
 						<option value="2">Seller</option>
 						<option value="3">God</option>
 					</select>
 				</label>
+				<br>
 				<label for="price">
 					<span> Nuevo precio</span>
-					<input type="text" value="<%=products[data].price%>" name="price" id="price">
+					<input type="text" value="<%=products.price%>" name="price" id="price">
 				</label>
+				<br>
 				<label for="stock">
 					<span> Stock</span>
-					<input type="text" value="<%=products[data].stock%>" name="stock" id="stock">
+					<input type="text" value="<%=products.stock%>" name="stock" id="stock">
 				</label>
+				<br>
 				
 			<div class="Enviar">
-				<button type="submit">Submit</button>
+				<button type="submit">Editar</button>
 			</div>
 		</form>
 

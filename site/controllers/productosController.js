@@ -23,12 +23,10 @@ const productosController = {
         
         res.render("products/search", {result});
     },
-    create: 
-        function(req, res){
-            res.render('./products/create_product.ejs');
+    create: (req, res) => {
+            res.render('products/create_product');
         },
-    store: 
-        function(req,res, next){
+    store: (req,res, next) => {
 
             //guardo todos los datos del formulario en la variable producto
             const producto = {
@@ -65,18 +63,16 @@ const productosController = {
             //redirecciono
             res.redirect('/products');
         },
-    edit: 
-        function(req, res){
-
-            //leo el json de productos y lo paso a la variable archivoProductos como objeto literal
-            const archivoProductos = fs.readFileSync( './data/products.json' , {encoding: 'utf-8'});
-            const productJSON = JSON.parse(archivoProductos);
-
+    edit: (req, res) => {
             //creo la variable data y le paso la info del url para que sepa de que producto estamos hablando
-            let data = req.params.id - 1;
+            //let data = req.params.id - 1;
 
             //renderizo la vista y le envio products, que contiene el json con la base de datos + la variable data que va a definir cual producto mostrar en los campos a completar
-            res.render('./products/edicion_products.ejs', {'products': productJSON, 'data': data});
+            //res.render('./products/edicion_products.ejs', {'products': productJSON, 'data': data});
+
+            const editProduct = productJSON.find(editProduct => editProduct.id == req.params.id);
+
+            res.render("products/edicion_products", {"products": editProduct});
         },
     update: 
         function(req, res){
