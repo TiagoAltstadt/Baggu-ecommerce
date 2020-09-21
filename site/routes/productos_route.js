@@ -1,5 +1,6 @@
 //----Express----
 let express = require('express');
+
 //--Metodo Router----
 let router = express.Router();
 
@@ -22,6 +23,8 @@ var upload = multer({storage: storage});
 //----Rutas----
 
 router.get('/', productosController.list);
+
+router.get("/search", productosController.search);
 
 router.get('/carrito', productosController.carrito);
 

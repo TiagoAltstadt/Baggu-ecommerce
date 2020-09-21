@@ -1,0 +1,1 @@
+<%- include('../partials/product_partial.ejs', {id: products[i].id ,image: products[i].image ,title: products[i].name , description: products[i].description ,price: products[i].price }) %>
