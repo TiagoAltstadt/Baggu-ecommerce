@@ -5,20 +5,6 @@ const fs = require('fs');
 //----Data Base----
 let db = require('../database/models');
 
-/*
-Para chequear errores
-
-let errors = validationResult(req); 
-if(errors.isEmpty() ) {
-    
-}else{
-    return res.render('login', {errors: errors.errors});
-}
-
-*/
-
-
-
 const userController = {
     list:
         function (req, res) {
@@ -63,42 +49,8 @@ const userController = {
         },
     processLogin: function (req, res) {
 
-        //creo la variable errors y la relleno con la validacion de resultados, si estan bien contestadas las cosas del form va a volver vacio
-        let errors = validationResult(req);
+        
 
-        //si esta vacio, entra, sino, devuelvo los errores
-        //if (errors.isEmpty()) {
-
-        //si entro, busco en todos los usuarios y espero que se cumplan los requisitos (email y password)
-
-        db.Users.findAll()
-            .then(function (user) {
-
-                console.log('flag');
-                console.log(user.email + ' = ' + req.body.email);
-                if (user.email == req.body.email && user.password == req.body.password) {
-                    console.log('flag 2');
-                    //si se cumple lo de arriba, a currentUser le mando el usuario que encontro y cierro el ciclo
-                    req.session.currentUser = user;
-                    console.log(req.session.currentUser);
-                    if (currentUser == undefined) {
-                        //si currentUser es undefined es porque no hubo coincidencia mas arriba y devuelvo un log que lo explica
-                        console.log('Credenciales invalidas.')
-                    } else {
-                        //si no es undefined, lo meto en session
-                        req.session.currentUser = currentUser;
-                        console.log('funciono');
-                    }
-                }
-            })
-
-        return res.render('users/login.ejs', { errors: errors.errors });
-
-        // } else {
-        return res.render('users/login.ejs', { errors: errors.errors });
-        // }
-        //return res.render('login.ejs', { errors: errors.errors });
-        console.log(req.session.currentUser);
     },
     profile:
         function (req, res) {
