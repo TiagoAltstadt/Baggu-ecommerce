@@ -9,11 +9,11 @@ let db = require('../database/models');
 Para chequear errores
 
 let errors = validationResult(req); 
-            if(errors.isEmpty() ) {
-
-            }else{
-                return res.render('login', {errors: errors.errors});
-            }
+if(errors.isEmpty() ) {
+    
+}else{
+    return res.render('login', {errors: errors.errors});
+}
 
 */
 
@@ -28,38 +28,6 @@ const userController = {
                     res.render('../views/users/list_user.ejs', { users: users });
                 })
 
-
-            /* LIST CON JSON
-            //creo una variable auxiliar donde le meto users.json y lo parseo
-                let users = fs.readFileSync( './data/users.json' , {encoding: 'utf-8'});
-                let usersJSON = JSON.parse(users);
-                
-                //renderizo la vista y le envio users, que contiene el json con la base de datos
-                res.render('../views/users/list_user.ejs', {'users': usersJSON});
-                */
-
-        },
-    detail:
-        function (req, res) {
-
-            let aux = req.params.id;
-
-            db.Users.findByPk(aux)
-                .then(function (user) {
-                    res.render('../views/users/user.ejs', { user: user });
-                })
-
-            /*
-            //creo una variable auxiliar donde le meto users.json y lo parseo
-            let aux = fs.readFileSync( './data/users.json' , {encoding: 'utf-8'});
-            let usersJSON = JSON.parse(aux);
-            
-            //creo una variable a la que le meto el id que pedi en la url y le resto uno porque sino no anda
-            let data = req.params.id - 1;
-            
-            //renderizo la vista y le envio users, que contiene el json con la base de datos + la variable data que va a definir cual usuario mostrar en los campos a completar
-            res.render('../views/users/user.ejs', {'users': usersJSON, 'data': data} ); 
-            */
         },
     register:
         function (req, res) {
@@ -67,69 +35,6 @@ const userController = {
             let aux = req.params.id;
 
             res.render('./users/register.ejs', { data: aux });
-        },
-    login:
-        function (req, res) {
-            let errors = validationResult(req);
-            res.render('./users/login.ejs', { errors: errors.errors });
-        },
-    processLogin: function (req, res) {
-
-        //creo la variable errors y la relleno con la validacion de resultados, si estan bien contestadas las cosas del form va a volver vacio
-        let errors = validationResult(req);
-
-        //si esta vacio, entra, sino, devuelvo los errores
-        if (errors.isEmpty()) {
-
-            //si entro, busco en todos los usuarios y espero que se cumplan los requisitos (email y password)
-            db.Users.findAll()
-                .then(function (user) {
-                    if (user.email == req.body.email && user.password == req.body.password) {
-                        //si se cumple lo de arriba, a currentUser le mando el usuario que encontro y cierro el ciclo
-                        let currentUser = user;
-                        break;
-                    }
-                })
-            if (currentUser == undefined) {
-                //si currentUser es undefined es porque no hubo coincidencia mas arriba y devuelvo un log que lo explica
-                console.log('credenciales invalidas.')
-            }else{
-                //si no es undefined, lo meto en session
-                req.session.currentUser = currentUser;
-            }
-            return res.render('login.ejs', { errors: errors.errors });
-
-        } else {
-            return res.render('login.ejs', { errors: errors.errors });
-        }
-        //return res.render('login.ejs', { errors: errors.errors });
-    },
-    search:
-        function (req, res) {
-
-            let aux = req.params.id;
-
-            db.Users.findByPk(aux)
-                .then(function (user) {
-                    res.render('usersResults.ejs', { usersResults: user });
-                })
-
-            /*
-            let aux = fs.readFileSync('./data/users.json', { encoding: 'utf-8' });
-            let usersJSON = JSON.parse(aux);
-            
-            let busqueda = req.query.search;
-            
-            let usersResults = [];
-            
-            for (let i = 0; i < usersJSON.length; i++) {
-                if (usersJSON[i].name.includes(busqueda)) {
-                    usersResults.push(usersJSON[i]);
-                }
-            }
-            
-            res.render('usersResults.ejs', { usersResults: usersResults });
-           */
         },
     store:
         function (req, res, next) {
@@ -147,46 +52,75 @@ const userController = {
 
             res.redirect('/users')
 
+        },
+    login:
+        function (req, res) {
+            //creo la variable errors y la relleno con la validacion de resultados, si estan bien contestadas las cosas del form va a volver vacio
+            let errors = validationResult(req);
 
+            //envio la vista y los errores, si es que hay
+            res.render('./users/login.ejs', { errors: errors.errors });
+        },
+    processLogin: function (req, res) {
 
+        //creo la variable errors y la relleno con la validacion de resultados, si estan bien contestadas las cosas del form va a volver vacio
+        let errors = validationResult(req);
 
-            /* 
-            //guardo todos los datos del formulario en la variable producto
-            const user = {
-                id: parseInt(req.body.id),
-                image: req.files[0].filename,
-                user: req.body.user,
-                name: req.body.name,
-                surname: req.body.surname,
-                email: req.body.email,
-                password: req.body.password,
-                category: req.body.category
-            }
-            
-            //leo el json de productos y lo paso a la variable archivoUsers
-            const archivoUsers = fs.readFileSync('./data/users.json', { encoding: 'utf-8' });
-            
-            //defino users y digo, si esta vacia, creala, si tiene algo, parsealo para poder trabajar con eso
-            let users;
-            
-            if (archivoUsers == '') {
-                users = []
-            } else {
-                users = JSON.parse(archivoUsers);
-            }
-            
-            //sea cual sea el output, le meto la nueva info que declare mas arriba en users
-            users.push(user);
-            
-            //lo vuelvo un string para guardarlo
-            const usersJSON = JSON.stringify(users);
-            
-            //uso write para pisar la data previa y guardar todo lo nuevo
-            fs.writeFileSync('./data/users.json', usersJSON);
-            
-            //redirecciono
-            res.redirect('/users');
-          */
+        //si esta vacio, entra, sino, devuelvo los errores
+        //if (errors.isEmpty()) {
+
+        //si entro, busco en todos los usuarios y espero que se cumplan los requisitos (email y password)
+
+        db.Users.findAll()
+            .then(function (user) {
+
+                console.log('flag');
+                console.log(user.email + ' = ' + req.body.email);
+                if (user.email == req.body.email && user.password == req.body.password) {
+                    console.log('flag 2');
+                    //si se cumple lo de arriba, a currentUser le mando el usuario que encontro y cierro el ciclo
+                    req.session.currentUser = user;
+                    console.log(req.session.currentUser);
+                    if (currentUser == undefined) {
+                        //si currentUser es undefined es porque no hubo coincidencia mas arriba y devuelvo un log que lo explica
+                        console.log('Credenciales invalidas.')
+                    } else {
+                        //si no es undefined, lo meto en session
+                        req.session.currentUser = currentUser;
+                        console.log('funciono');
+                    }
+                }
+            })
+
+        return res.render('users/login.ejs', { errors: errors.errors });
+
+        // } else {
+        return res.render('users/login.ejs', { errors: errors.errors });
+        // }
+        //return res.render('login.ejs', { errors: errors.errors });
+        console.log(req.session.currentUser);
+    },
+    profile:
+        function (req, res) {
+
+            let aux = req.params.id;
+
+            db.Users.findByPk(aux)
+                .then(function (user) {
+                    res.render('../views/users/user.ejs', { user: user });
+                })
+
+        },
+    search:
+        function (req, res) {
+
+            let aux = req.params.id;
+
+            db.Users.findByPk(aux)
+                .then(function (user) {
+                    res.render('usersResults.ejs', { usersResults: user });
+                })
+
 
         },
     edit: function (req, res) {

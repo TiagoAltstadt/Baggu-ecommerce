@@ -27,13 +27,13 @@
   "stock": true
  },
  {
-  "id": 4,
-  "image": "https://robohash.org/sedvelitcorrupti.jpg?size=50x50&set=set1",
-  "name": "Shortbread - Cookie Crumbs",
-  "description": "Optimized bandwidth-monitored application",
-  "category": 3,
-  "price": 65.1,
-  "stock": false
+  "id": "3",
+  "image": "https://robohash.org/nequesaepeofficia.bmp?size=50x50&set=set1",
+  "name": "hola",
+  "description": "Re-contextualized secondary pricing structure",
+  "price": "29.6",
+  "stock": "true",
+  "category": "1"
  },
  {
   "id": 5,
@@ -171,12 +171,12 @@
   "stock": true
  },
  {
-    "id": 20,
-    "image": "https://robohash.org/ideligendisaepe.jpg?size=50x50&set=set1",
-    "name": "Pasta - Agnolotti - Butternut",
-    "description": "Public-key next generation secured line",
-    "category": 2,
-    "price": 50.5,
-    "stock": true
-}
+  "id": 20,
+  "image": "https://robohash.org/ideligendisaepe.jpg?size=50x50&set=set1",
+  "name": "Pasta - Agnolotti - Butternut",
+  "description": "Public-key next generation secured line",
+  "category": 2,
+  "price": 50.5,
+  "stock": true
+ }
 ]

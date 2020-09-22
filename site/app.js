@@ -44,4 +44,4 @@ app.get('*', ruta404);
 
 
 //----Configuracion de puerto y msje de inicio----
-app.listen(3000, ()  => {console.log( "\033[2J' + ' ------------------------------------------------------\n | Servidor escuchando en el puerto 3000.             | \n ------------------------------------------------------")});
+app.listen(3000, ()  => {console.log( "\033[2J' ------------------------------------------------------\n | Servidor escuchando en el puerto 3000.             | \n ------------------------------------------------------")});

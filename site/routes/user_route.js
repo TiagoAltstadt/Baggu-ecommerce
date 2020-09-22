@@ -32,9 +32,9 @@ router.get('/login', userController.login);
 router.post('/login', [
     check('email').isEmail().withMessage('Email Invalido.'),
     check('password').isLength({min: 8}).withMessage('La contraseña debe tener minimo 8 caracteres.')
-    ], userController.processLogin)
+    ], userController.processLogin);
 
-router.get('/:id', userController.detail);
+router.get('/:id', userController.profile);
 
 router.get('/:id/edit', userController.edit);
 router.put('/:id', userController.update);
