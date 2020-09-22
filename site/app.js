@@ -41,7 +41,5 @@ app.use('/products', routeProducts);
 //crear ruta de _inexistente_
 app.get('*', route404);
 
-
-
 //----Configuracion de puerto y msje de inicio----
 app.listen(3000, ()  => {console.log( "\033[2J' ------------------------------------------------------\n | Servidor escuchando en el puerto 3000.             | \n ------------------------------------------------------")});

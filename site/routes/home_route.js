@@ -10,6 +10,8 @@ router.get('/contact', homeController.contact);
 
 router.get('/aboutUs', homeController.aboutUs);
 
+router.get('/new', homeController.new);
+
 // router.get('/preubaSession', function (req, res){
 
 //     if(req.session.numeroVisitas == undefined){

@@ -364,8 +364,51 @@ div.boxTextEmpresa {
 	}
 }
 
+/*------------------------------------------------------------Dedicado a new.ejs-------------------------------------------------------------*/
 
+.body_new{
+	margin: 0%;
+	padding: 0%;
+	width: 100%;
+}
 
+.section_new{
+	display: flex;
+	flex-direction: row;
+}
+
+.descartables_new{
+	display: block;
+	box-sizing: border-box;
+	width: 50vw;
+	height: 86vh;
+	background-color: #4dd0e1;
+}
+
+.papeleria_new{
+	display: block;
+	box-sizing: border-box;
+	width: 50vw;
+	height: 86vh;
+	background-color: orange;
+}
+
+.higiene_new{
+	position: fixed;
+	left: 0%;
+	bottom: 0%;
+
+	border-bottom: 40vh solid orangered;
+	border-left: 600px solid transparent;
+	border-right: 600px solid transparent;
+	height: 0;
+	width: 100%;
+	
+}
+
+.promo_new{
+
+}
 
 
 /*

@@ -8,7 +8,10 @@ const homeController = {
         },
     aboutUs: (req, res) => {
             res.render("aboutUs");
-        }
+        },
+    new: function (req, res){
+        res.render('new');
+    }
 };
 
 //----Exports----
