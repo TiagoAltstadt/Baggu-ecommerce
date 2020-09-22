@@ -1,0 +1,35 @@
+
+---------------LISTA DE CODIGO O VISTAS A MEJORAR----------
+
+Hacer Funcionar en barra de busqueda en Old query
+Hacer funcionar update
+
+
+Mejorar el Nav con el funcionamiento de Midelware
+
+Terminar Pagina de contacto
+
+Ver por q no funciona pagina de AboutUs
+
+Ver por que se rompen imagenes de Footer en diferentes vistas
+
+
+Mejorar estructura en:
+
+-unificar lenguaje todo ingles
+-en carpeta css borramos bootstrap? ------------------------------------(Proceder a borrar)
+-carpeta font??? --------------------------------------------------------(Proceder a Borrar)
+-carpeta js?? tenemos idea q es? ----------------------------------------(Es bootstrap, Proceder a borrar)
+-Controlar 404
+-en Views/partial borrar header1? ----------------------------------------(Proceder a borrar)
+-en product route, por que variable path esta en Multer
+-no utilizar stock por la dificultad
+-que son los script al fondo por ejemplo en edicion_products?--------------(Es bootstrap, proceder a borrar)
+-Como hariamos carrito?
+
+
+
+Lo saque :
+
+a input de search
+aria-label="Search"
