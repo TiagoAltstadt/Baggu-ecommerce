@@ -1,0 +1,101 @@
+
+---------------LISTA DE CODIGO O VISTAS A MEJORAR----------
+
+Hacer Funcionar en barra de busqueda en Old query
+Hacer funcionar update
+
+Mejorar en Home---- (★ Como cliente quiero ver un resumen de la oferta de productos para poder decidir
+rápidamente si quedarme o buscar el producto en otro sitio.
+★ Como cliente quiero que el sitio funcione bien en mi teléfono celular para poder
+acceder en cualquier momento.)
+
+Mejorar en Detalle---- (★ Como cliente quiero poder ver toda la información relevante del producto para
+decidir si voy a comprarlo.
+★ Cómo cliente quiero poder agregar fácilmente el producto a mi carrito para poder
+comprarlo.)
+
+Mejorar Carrito---- (★ Como cliente quiero poder acceder al detalle de mi carrito de compras en
+cualquier momento para finalizar la compra.
+★ Como cliente quiero poder modificar productos del carrito para poder eliminarlos
+de la compra o modificar la cantidad.)
+
+Mejorar Register---- (★ Como cliente quiero registrarme para acceder a mi historial de compras.
+★ Como cliente quiero registrarme para facilitar futuras compras.)
+
+Mejorar Login---- (★ Como cliente quiero registrarme para acceder a mi historial de compras.
+★ Como cliente quiero tener la opción de que el sitio me recuerde para no escribir mi
+usuario y contraseña cada vez.
+★ Como cliente quiero poder recuperar la contraseña para poder ingresar si me la
+olvido.)
+
+Mejorar el Nav con el funcionamiento de Midelware
+
+Terminar Pagina de contacto
+
+Mejorar Visualmente Footer
+
+Por que al Crear, Editar o Borrar y redireccionar a la pagina del listado no esta actualizada?
+
+Crear un bread Crum o seguimiento del camino o de las rutas
+
+
+Mejorar estructura en:
+
+-unificar lenguaje todo ingles
+-en carpeta css borramos bootstrap? ------------------------------------(Proceder a borrar)
+-carpeta font??? --------------------------------------------------------(Proceder a Borrar)
+-carpeta js?? tenemos idea q es? ----------------------------------------(Es bootstrap, Proceder a borrar)
+-en Views/partial borrar header1? ----------------------------------------(Proceder a borrar)
+-en product route, por que variable path esta en Multer
+-no utilizar stock por la dificultad
+-que son los script al fondo por ejemplo en edicion_products?--------------(Es bootstrap, proceder a borrar)
+-Como hariamos carrito?
+
+
+
+-----------------PENDIENTES EN SPRINTS----------------------------------
+
+Sprint 1
+-Consultar donde colocar Wireframes y bocetos de colores y tipogafias ya que existen pero no las han encontrado
+(Carpeta Wireframes) ● Home ● Detalle de producto ● Carrito de compras ● Formulario de registro ● Formulario de login
+(Carpeta Desing) ● Logo ● Colores ● Tipografías
+
+Sprint 2
+-Ver si se puede implementar Daily pero retroactivo o en momentos anteriores
+
+Sprint 3
+-Archivo retro.md y archivo Daily.md
+Retro : 1. Comenzar a hacer 2. Hacer más 3. Continuar haciendo 4. Hacer menos 5. Dejar de hacer
+Daily : ● Qué hizo ayer ● Si se encontró con algún impedimento ● Qué va a hacer hoy
+
+Sprint 4
+-Archivo retro.md y archivo Daily.md
+-En ABM falta alta y Baja
+
+Sprint 5
+-Archivo retro.md y archivo Daily.md
+-Objetivo: 
+● Permita el flujo de registro, login y logout de usuarios
+● Permita recordar al usuario para que pueda ingresar sin volverse a logear
+● Tenga rutas accesibles sólo por huéspedes (visitantes sin login)
+● Tenga rutas accesible sólo por usuarios (que hicieron login)
+-Formulario de registro Usuarios:
+● Deberá permitir la subida de una imagen de perfil (con Multer )
+● Deberá encriptar la contraseña ingresada por el usuario (con bcrypt.js )
+● Deberá guardar los datos enviados en el archivo JSON de usuarios
+-Login de Usuarios (Midelware, Session, cookies)
+● Incluya los campos de email y password
+● Verifique la información enviada por el usuario y según el caso:
+        ○ Redireccione a la home o a la página de perfil en caso de éxito y muestre
+                   los datos del usuario en algún lugar del sitio, como el header.
+        ○ Redireccione nuevamente al login en caso de error
+● (Checkbox para recordar usiario) Utilizar cookies para guardar esa información en el navegador
+● Implementar un middleware de aplicación que busque la cookie y logee al
+    usuario en caso de que exista y sus datos sean correctos.
+-(Rutas de huéspedes y de usuarios)
+    ● Rutas accesibles por cualquiera → sin cambios
+    ● Rutas accesibles sólo sin login → Redirigen al perfil
+    ● Rutas accesibles sólo con login → Redireccionan a login
+
+Sprint 6
+

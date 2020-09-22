@@ -17,10 +17,10 @@ app.use(methodOverride("_method"));
 
 
 //----Rutas----
-const rutaHome = require('./routes/home_route.js');
-const rutaProducts = require('./routes/productos_route.js');
-const rutaUser = require('./routes/user_route');
-const ruta404 = require('./routes/404_route.js');
+const routeHome = require('./routes/home_route.js');
+const routeProducts = require('./routes/productos_route.js');
+const routeUser = require('./routes/user_route');
+const route404 = require('./routes/404_route.js');
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
@@ -30,16 +30,16 @@ app.use(express.json());
 app.use(express.static(__dirname + "/public"));
 
 //crear ruta '/'
-app.use('/', rutaHome);
+app.use('/', routeHome);
 
 //crear ruta '/list', '/register' '/login' '/search' '/user'
-app.use('/users', rutaUser);
+app.use('/users', routeUser);
 
 //crear ruta '/productos', '/carrito'
-app.use('/products', rutaProducts);
+app.use('/products', routeProducts);
 
 //crear ruta de _inexistente_
-app.get('*', ruta404);
+app.get('*', route404);
 
 
 

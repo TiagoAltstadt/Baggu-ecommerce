@@ -6,9 +6,9 @@ const session = require('express-session');
 
 router.get('/', homeController.index);
 
-router.get('/contacto', homeController.contacto);
+router.get('/contact', homeController.contact);
 
-router.get('/acerca-de', homeController.acercaDe);
+router.get('/aboutUs', homeController.aboutUs);
 
 // router.get('/preubaSession', function (req, res){
 
