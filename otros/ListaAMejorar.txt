@@ -20,7 +20,6 @@ Mejorar estructura en:
 -en carpeta css borramos bootstrap? ------------------------------------(Proceder a borrar)
 -carpeta font??? --------------------------------------------------------(Proceder a Borrar)
 -carpeta js?? tenemos idea q es? ----------------------------------------(Es bootstrap, Proceder a borrar)
--Controlar 404
 -en Views/partial borrar header1? ----------------------------------------(Proceder a borrar)
 -en product route, por que variable path esta en Multer
 -no utilizar stock por la dificultad

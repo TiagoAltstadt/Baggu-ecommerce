@@ -1,18 +1,13 @@
-//----File System----
-const fs = require('fs');
 
 const homeController = {
-    index: 
-        function(req, res){
-            res.render('index.ejs', { root: './views'});
+    index: (req, res) => {
+            res.render('index');
         },
-    contacto: 
-        function(req, res){
-            res.render('contacto.ejs', { root: "./views"});
+    contact: (req, res) => {
+            res.render('contact');
         },
-    acercaDe: 
-        function(req, res){
-            res.render("acercaDe.ejs", { roots: "./views"});
+    aboutUs: (req, res) => {
+            res.render("aboutUs");
         }
 };
 
