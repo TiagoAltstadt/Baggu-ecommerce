@@ -1,25 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include('./partials/head.ejs', {title: "Baggu: New"}) %>
+<%- include('./partials/head.ejs', {title: "Baggu: New"}) %>
 
 <body class="body_new">
     <%- include('./partials/header.ejs') %>
 
     <section class="section_new">
 
-        <div class="descartables_new"> <h1>Descartables</h1> </div>
+        <a href="/products">
+            <div class="descartables_new">
+                <h1>Descartables</h1>
+            </div>
+        </a>
 
-        <div class="papeleria_new"> <h1>Papeleria</h1> </div>
+        <a href="/products">
+            <div class="papeleria_new">
+                <h1>Papeleria</h1>
+            </div>
+        </a>
 
-        <div class="higiene_new trapezoid"> <h1>Higiene</h1> </div>
+        <a href="/products">
+            <div class="higiene_new trapezoid">
+                <h1>Higiene</h1>
+            </div>
+        </a>
 
-        <div class="promo_new"> <h1>Promociones</h1> </div>
+        <a href="/products">
+            <div class="promo_new">
+                <h1>Promociones</h1>
+            </div>
+        </a>
 
     </section>
 
     <%- include('./partials/footer.ejs') %>
 </body>
-
 
 </html>
