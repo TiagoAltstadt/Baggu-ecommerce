@@ -385,18 +385,29 @@ div.boxTextEmpresa {
 	background-color: #4dd0e1;
 }
 
+.descartables_new:hover {
+	background-color: lightblue;
+}
+
 .papeleria_new{
 	display: block;
 	box-sizing: border-box;
 	width: 50vw;
 	height: 86vh;
 	background-color: orange;
+	
+}
+
+.papeleria_new:hover {
+	background-color: lightcoral;
 }
 
 .higiene_new{
-	position: fixed;
+	position: absolute;
 	left: 0%;
-	bottom: 0%;
+	bottom: -4%;
+
+	color: white;
 
 	border-bottom: 40vh solid orangered;
 	border-left: 600px solid transparent;
@@ -406,8 +417,21 @@ div.boxTextEmpresa {
 	
 }
 
-.promo_new{
+.higiene_new:hover {
+	border-bottom: 40vh solid lightpink;
+}
 
+.promo_new{
+	position: absolute;
+	left: 31%;
+	bottom: 25vh;
+
+	height: 300px;
+  	width: 728px;
+  	background-color: #555;
+}
+.promo_new:hover {
+	background-color: gold;
 }
 
 
