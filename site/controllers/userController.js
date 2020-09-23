@@ -72,6 +72,11 @@ const userController = {
 
                             req.session.currentUser = user;
 
+                            
+
+                            
+                            
+
                         } else {
 
                             console.log('La password esta mal.');
@@ -82,9 +87,9 @@ const userController = {
                     }
                 }
             })
-
-
-
+            
+            res.redirect('/');
+            
 
     },
     profile:

@@ -1,6 +1,7 @@
 
 const homeController = {
     index: (req, res) => {
+        
             res.render('index');
         },
     contact: (req, res) => {
