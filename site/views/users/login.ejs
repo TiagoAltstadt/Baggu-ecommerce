@@ -11,7 +11,7 @@
 	<%- include('../partials/header.ejs') %>
 
 	<!--PARA MARCAR SI HAY ERRORES-->
-	<% if (typeof errors.length > 0){ %>
+	<% if ( locals.errors && errors.length > 0){ %>
 	<p style="color: red">ERROR</p>
 	<ul>
 		<% for (let i=0; i<errors.length; i++){ %>

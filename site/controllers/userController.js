@@ -5,6 +5,8 @@ const fs = require('fs');
 //----Data Base----
 let db = require('../database/models');
 
+//----Bcrypt----
+const bcrypt = require('bcryptjs');
 
 
 const userController = {
@@ -28,46 +30,39 @@ const userController = {
         function (req, res, next) {
 
             db.Users.create({
-                id: req.body.id,
                 avatar: req.body.avatar,
                 username: req.body.username,
                 name: req.body.name,
                 surname: req.body.surname,
                 email: req.body.email,
-                password: req.body.password,
-                category: req.body.category
-            });
-
-            res.redirect('/users')
+                password: bcrypt.hashSync(req.body.password, 10),
+                category: 1
+            })
+            .then(user => {
+                res.redirect('/');
+            })
+            
 
         },
-    login:
-        function (req, res) {
-            //creo la variable errors y la relleno con la validacion de resultados, si estan bien contestadas las cosas del form va a volver vacio
-            let errors = validationResult(req);
-
-            //envio la vista y los errores, si es que hay
-            res.render('./users/login.ejs', { errors: errors.errors });
+    login: function (req, res) {
+            //envio la vista
+            res.render('users/login');
         },
     processLogin: function (req, res) {
 
 
         //  Pido buscar en la db si hay coincidencia
         db.Users.findOne({ where: { email: req.body.email } })
-            .then(function (user) {
-
+            .then( user => {
 
                 //  De ser nulo el valor (no hay coincidencia) retorno un console.log que diga que esta mal
-                if (user == null) {
-                    console.log('No hay mail.');
-
-                    //   Pero si funciona 
-                } else { 
-
+                if (user) {
+                    
                     console.log('El Email esta bien.');
-
-                    //   Corroboro la password
-                    if (user.password == req.body.password) {
+                    console.log('Contraseña: ' , user.password);
+                    console.log('Contraseña body: ', req.body.password);
+                    //   Corroboro la password 
+                    if (bcrypt.compareSync(req.body.password, user.password)) {
 
                         console.log('La password esta bien.');
                         
@@ -76,12 +71,13 @@ const userController = {
         
                         req.session.user = userData;
 
-
                     } else {
 
                         console.log('La password esta mal.');
                     }
 
+                } else { 
+                    console.log('Email Invalido.');
                 }
             })
 

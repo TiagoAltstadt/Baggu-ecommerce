@@ -12,7 +12,7 @@
 		<main class="main_register">
 
 			<!--Form Register-->
-			<form class="formulario_register"  action="/register/<%= data %>?_method=POST" method="POST"> 
+			<form class="formulario_register"  action="/users/register" method="POST"> 
 				
 					<div class="titulo_register">
 						<h1>Registrarse</h1>
@@ -21,7 +21,7 @@
 					<ul class="ul_register">
 						<li>
 							<label for="name">
-								<span>Name</span>
+								<span>Nombre</span>
 								<input type="text" name="name" id="name">
 							</label></li>
 						<li>
@@ -53,10 +53,7 @@
 								<input type="password" name="confirmar" id="confirmar">
 							</label>
 						</li> -->
-						<li>
-							Category: 
-							<input type="text">
-						</li>
+						
 					</ul>
 
 				<div class="submit_register">

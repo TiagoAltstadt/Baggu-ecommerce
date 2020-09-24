@@ -26,6 +26,7 @@ const routeHome = require('./routes/home_route.js');
 const routeProducts = require('./routes/productos_route.js');
 const routeUser = require('./routes/user_route');
 const route404 = require('./routes/404_route.js');
+const { use } = require('./routes/home_route.js');
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
