@@ -1,6 +1,10 @@
 //----Express----
 const express = require('express');
 const app = express();
+const auth = require('./middlewares/auth');
+
+//crear funcion de express para utilizar carpeta public para archivos estaticos
+app.use(express.static(__dirname + "/public"));
 
 //----Session----
 const session = require('express-session');
@@ -10,6 +14,7 @@ app.use(session({
     resave: true,
     saveUninitialized: true
 }));
+app.use(auth);
 
 //----Method----
 const methodOverride = require("method-override");
@@ -26,8 +31,6 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
 
-//crear funcion de express para utilizar carpeta public para archivos estaticos
-app.use(express.static(__dirname + "/public"));
 
 //crear ruta '/'
 app.use('/', routeHome);

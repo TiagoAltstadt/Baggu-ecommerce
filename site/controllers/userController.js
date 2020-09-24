@@ -5,6 +5,8 @@ const fs = require('fs');
 //----Data Base----
 let db = require('../database/models');
 
+
+
 const userController = {
     list:
         function (req, res) {
@@ -49,47 +51,42 @@ const userController = {
         },
     processLogin: function (req, res) {
 
+
         //  Pido buscar en la db si hay coincidencia
         db.Users.findOne({ where: { email: req.body.email } })
             .then(function (user) {
 
+
                 //  De ser nulo el valor (no hay coincidencia) retorno un console.log que diga que esta mal
                 if (user == null) {
-                    console.log('Datos Incorrectos.');
+                    console.log('No hay mail.');
 
-                //   Pero si funciona 
-                } else {
+                    //   Pero si funciona 
+                } else { 
 
-                    //  Corroboro el email
-                    if (user.email == req.body.email) {
+                    console.log('El Email esta bien.');
 
-                        console.log('El Email esta bien.');
+                    //   Corroboro la password
+                    if (user.password == req.body.password) {
 
-                        //   Corroboro la password
-                        if (user.password == req.body.password) {
+                        console.log('La password esta bien.');
+                        
+                        userData = user.dataValues;
+                        delete userData.password
+        
+                        req.session.user = userData;
 
-                            console.log('La password esta bien.');
 
-                            req.session.currentUser = user;
-
-                            
-
-                            
-                            
-
-                        } else {
-
-                            console.log('La password esta mal.');
-                        }
                     } else {
 
-                        console.log('El mail esta mal.');
+                        console.log('La password esta mal.');
                     }
+
                 }
             })
-            
-            res.redirect('/');
-            
+
+        res.redirect('/');
+
 
     },
     profile:
