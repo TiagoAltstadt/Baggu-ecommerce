@@ -70,7 +70,6 @@ Daily : ● Qué hizo ayer ● Si se encontró con algún impedimento ● Qué v
 
 Sprint 4
 -Archivo retro.md y archivo Daily.md
--En ABM falta alta y Baja
 
 Sprint 5
 -Archivo retro.md y archivo Daily.md
