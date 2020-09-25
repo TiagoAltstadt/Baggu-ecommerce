@@ -17,19 +17,17 @@
 
             <label for="myfile">    Avatar:     <input type="file" id="myfile" name="myfile" >                                                   </label>
             
-            <label for="id">        ID:         <input type="text"      name="id"       id="id"         value="<%= users[data].id %>">          </label>
+            <label for="id">        ID:         <input type="text"      name="id"       id="id"         value="<%= user.id %>">          </label>
 
-            <label for="user">      Usuario     <input type="text"      name="user"     id="user"       value="<%= users[data].user %>">        </label>
+            <label for="user">      Usuario     <input type="text"      name="user"     id="user"       value="<%= user.user %>">        </label>
 
-            <label for="name">      Nombre:     <input type="text"      name="name"     id="name"       value="<%= users[data].name %>">        </label>
+            <label for="name">      Nombre:     <input type="text"      name="name"     id="name"       value="<%= user.name %>">        </label>
 
-            <label for="surname">   Apellido:   <input type="text"      name="surname"  id="surname"    value="<%= users[data].surname %>">     </label>
+            <label for="surname">   Apellido:   <input type="text"      name="surname"  id="surname"    value="<%= user.surname %>">     </label>
 
-            <label for="email">     Email:      <input type="email"     name="email"    id="email"      value="<%= users[data].email %>">       </label>
+            <label for="email">     Email:      <input type="email"     name="email"    id="email"      value="<%= user.email %>">       </label>
 
-            <label for="password">  Contraseña: <input type="password"  name="password" id="password"   value="<%= users[data].password %>">    </label>
-
-            <label for="category">  Categoria:  <input type="text"      name="category" id="category"   value="<%= users[data].catogory %>">    </label>
+            <label for="password">  Contraseña: <input type="password"  name="password" id="password"   value="<%= user.password %>">    </label>
 
             <button type="submit" class="button_edicion_users">  Enviar  </button>
         </form>

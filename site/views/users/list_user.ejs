@@ -14,11 +14,22 @@
         
         <h1 class="title_list">Users List</h1>
 
-        <section class="user_group_container">
+        <section class="section_user_list">
 
-            <%  for (let i=0; i<users.length; i++) {        %>
-            <%-     include('../partials/user_partial.ejs', {id: users[i].id, avatar: users[i].avatar, username: users[i].username, name: users[i].name, surname: users[i].surname, email: users[i].email, password: users[i].password, category: users[i].category}) %>
-            <%  }                                           %>
+            <% if(users){ %> 
+                <% users.forEach((user) => {%> 
+                <a class="user_list" href="/users/<%= user.id %>/ ">
+                    <div>
+                            <div >Imagen: <img class="photo-user" src="<%= user.avatar %>"></div>
+                            <div >Usuario: $<%= user.username %> </div>
+                            <div >Nombre: <%= user.name %> </div>
+                            <div >Apellido: $<%= user.surname %> </div>
+                            <div >Email: $<%= user.email %> </div>
+                            <!-- <div id="password_div_user_list">Contraseña: $<%= user.password %> </div> -->
+                            
+                    </div>
+                </a>
+                <% })} %>                                          %>
             
         </section>
                 
