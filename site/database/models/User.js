@@ -3,11 +3,6 @@ module.exports = function(sequelize, dataTypes) {
     let alias = 'Users';
 
     let cols = {
-        id: {
-            autoIncrement: true,
-            primaryKey: true,
-            type: dataTypes.INTEGER
-        },
         avatar: {
             type: dataTypes.STRING
         },
@@ -35,7 +30,7 @@ module.exports = function(sequelize, dataTypes) {
     };
 
     let config = {
-        //tableName: "users",
+        tableName: "users",
         timestamps: false
     }
 
