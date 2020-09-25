@@ -39,8 +39,6 @@ const userController = {
     },
 
     login: function (req, res) {
-        let password = bcrypt.hashSync('mono@gmail.com', 10);
-        console.log(bcrypt.compareSync('mono@gmail.com', '$2a$10$cuGGOcbTI4pc2KUZwX5.v.CD0XuzxQw3ME5p1IXh1RA'));
         res.render('users/login');
     },
 
@@ -51,22 +49,18 @@ const userController = {
                 //  De ser nulo el valor (no hay coincidencia) retorno un console.log que diga que esta mal
                 if (user) {
                     console.log('El Email esta bien.');
-                    console.log('Contraseña: ', user.password);
-                    console.log('Contraseña body: ', req.body.password);
                     //   Corroboro la password 
                     if (bcrypt.compareSync(req.body.password, user.password)) {
                         console.log('La password esta bien.');
-                        userData = user.dataValues;
-                        delete userData.password
-                        req.session.user = userData;
+                        req.session.user = user;
+                        res.redirect('/');
                     } else {
-                        console.log('La password esta mal.');
+                        res.send('La password esta mal.')
                     }
                 } else {
-                    console.log('Email Invalido.');
+                    res.send('El email esta mal.')
                 }
             })
-        res.redirect('/');
     },
 
     profile: function (req, res) {
