@@ -29,7 +29,7 @@ const productsController = {
     store: (req,res, next) => {
 
             //guardo todos los datos del formulario en la variable producto
-            const producto = {
+            const productNew = {
                 id: req.body.id,
                 image: req.files[0].filename,
                 name: req.body.name,
@@ -40,25 +40,25 @@ const productsController = {
             }
 
             //leo el json de productos y lo paso a la variable archivoProductos
-            const archivoProductos = fs.readFileSync('./data/products.json', { encoding: 'utf-8' });
+            const fileProduct = fs.readFileSync('./data/products.json', { encoding: 'utf-8' });
 
             //defino productos y digo, si esta vacia, creala, si tiene algo, parsealo para poder trabajar con eso
-            let productos;
+            let product;
 
-            if (archivoProductos == '') {
-                productos = []
+            if (fileProduct == '') {
+                product = []
             } else {
-                productos = JSON.parse(archivoProductos);
+                product = JSON.parse(fileProduct);
             }
 
-            //sea cual sea el output, le meto la nueva info que declare mas arriba en productos
-            productos.push(producto);
+            //sea cual sea el output, le meto la nueva info que declare mas arriba en product
+            product.push(productNew);
 
             //lo vuelvo un string para guardarlo
-            const productosJSON = JSON.stringify(productos);
+            const JSONproduct = JSON.stringify(product, null, " ");
 
             //uso write para pisar la data previa y guardar todo lo nuevo
-            fs.writeFileSync('./data/products.json', productosJSON);
+            fs.writeFileSync('./data/products.json', JSONproduct);
 
             //redirecciono
             res.redirect('/products');
@@ -68,8 +68,7 @@ const productsController = {
 
             res.render("products/edit_products", {"products": editProduct});
         },
-    update: 
-        function(req, res, next){
+    update: (req, res, next) => {
 
             //guardo la id en una variable
             let idProducto = parseInt(req.params.id) + 1;
@@ -120,12 +119,10 @@ const productsController = {
         
             res.render("products/detail_products", { "products": detailProduct });
         },
-    cart:
-        function(req, res){
+    cart: (req, res) => {
             res.render('../views/products/cart.ejs', {'products': productJSON});
         },
-    delete: 
-        function(req, res){
+    delete: (req, res) => {
             let rows = productJSON;
             let updatedRows = rows.filter(oneRow => oneRow.id != req.params.id);
     

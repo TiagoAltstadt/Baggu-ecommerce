@@ -178,5 +178,13 @@
   "category": 2,
   "price": 50.5,
   "stock": true
+ },
+ {
+  "id": "21",
+  "image": "image-1601041709799.jpg",
+  "name": "Caja de Pizza",
+  "description": "Caja 33 x 33",
+  "price": "140",
+  "category": "2"
  }
 ]
