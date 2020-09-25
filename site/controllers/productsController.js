@@ -10,10 +10,10 @@ const productJSON = JSON.parse(fs.readFileSync(datapath, {encoding: 'utf-8'}));
 
 
 
-const productosController = {
+const productsController = {
     list: (req, res) => {
         
-            res.render('products/productos', {'products': productJSON});
+            res.render('products/products', {'products': productJSON});
         },
     search: (req, res) => {
         let result = {};  
@@ -66,10 +66,10 @@ const productosController = {
     edit: (req, res) => {
             const editProduct = productJSON.find(editProduct => editProduct.id == req.params.id);
 
-            res.render("products/edicion_products", {"products": editProduct});
+            res.render("products/edit_products", {"products": editProduct});
         },
     update: 
-        function(req, res){
+        function(req, res, next){
 
             //guardo la id en una variable
             let idProducto = parseInt(req.params.id) + 1;
@@ -118,11 +118,11 @@ const productosController = {
     detail: (req, res) => {
             const detailProduct = productJSON.find(detailProduct => detailProduct.id == req.params.id);
         
-            res.render("products/detalle_products", { "products": detailProduct });
+            res.render("products/detail_products", { "products": detailProduct });
         },
-    carrito:
+    cart:
         function(req, res){
-            res.render('../views/products/carrito.ejs', {'products': productJSON});
+            res.render('../views/products/cart.ejs', {'products': productJSON});
         },
     delete: 
         function(req, res){
@@ -137,4 +137,4 @@ const productosController = {
 }
 
 //----Exports----
-module.exports = productosController;
+module.exports = productsController;

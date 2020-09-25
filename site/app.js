@@ -24,7 +24,7 @@ app.use(auth);
 
 //----Rutas----
 const routeHome = require('./routes/home_route');
-const routeProducts = require('./routes/productos_route');
+const routeProducts = require('./routes/products_route');
 const routeUser = require('./routes/user_route');
 const route404 = require('./routes/404_route');
 
