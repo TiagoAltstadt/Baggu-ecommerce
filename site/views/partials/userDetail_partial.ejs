@@ -27,8 +27,11 @@
                 <b> Categoria: </b><%=option%> 
             </li>
 
-            <form action="/users/<%= id %>/delete?_method=PUT" method="POST"><button type="submit">Delete</button>
-            </form>
+            <form action="/users/<%= id %>/delete?_method=PUT" method="POST"><button type="submit">Borrar Usuario</button></form>
+
+            <% if(locals.user.id == id ){  console.log('Local: '+locals.user.id + 'Query: '+ id)  %> 
+                <form action="/users/logout?_method=PUT" method="POST"><button type="submit">Cerrar Sesion</button></form>
+                <% } %>
 
         </ul>
     </div>

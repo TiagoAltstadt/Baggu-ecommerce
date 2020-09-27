@@ -118,6 +118,10 @@ const userController = {
         db.Users.destroy({ where: { id: req.params.id } });
 
         res.redirect('/users');
+    },
+    logout: function(req, res){
+        req.session = null;
+        res.redirect('/');
     }
 
 };

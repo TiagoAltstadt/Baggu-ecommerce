@@ -33,6 +33,7 @@ router.post('/login', [
     check('email').isEmail().withMessage('Email Invalido.'),
     check('password').isLength({ min: 8 }).withMessage('La contraseña debe tener minimo 8 caracteres.')
 ], userController.processLogin);
+router.put('/logout', userController.logout);
 
 router.get('/:id', userController.profile);
 
