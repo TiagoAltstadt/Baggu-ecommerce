@@ -1,23 +1,35 @@
-<section class="user_detail_container">
+<!--UDP stands for "User Detail Partial"-->
 
-    <div class="user_image"><img class="user_img" src="<%= avatar %>" alt="avatar"></div>
+<section class="section_UDP">
 
-    <div class="user_info">
 
-        <ul class="item_user_detail">
+    <div class="individual_UDP">
 
-            <li><div><b> Username: </b> <%= username %> </div></li>
-            <li><div><b> ID: </b> <%=id%></div></li>
-            <li><div><b> Name: </b><%=name%> <%=surname%></div></li>
-            <li><div><b> Email: </b><%=email%></div></li>
-            <li><div><b> Password: </b><%=password%></div></li>
-    
-           <li> <div>
-                <% let option = "vendedor"; %>
-                <% if (category != 1){option = "Comprador"} %>
-                <b> Category: </b><%=option%>
-            </div></li>
-            
-        </ul> 
+        <div class="avatar_container_UDP">
+            <img class="avatar_UDP " src="<%= avatar %>" alt="avatar">
+        </div>
+        
+
+        <ul>
+
+            <li class="info_UDP">     <b> Usuario:    </b>    <%= username %>       
+            </li>
+            <li class="info_UDP">     <b> ID:         </b>    <%=id%>                    
+            </li>
+            <li class="info_UDP">     <b> Nombre:     </b>    <%=name%> <%=surname%>  
+            </li>
+            <li class="info_UDP">     <b> Email:      </b>    <%=email%>               
+            </li>
+
+            <li class="info_UDP">     
+                <% let option = "vendedor" %>
+                <% if (category != 1){option = "Vendedor"} %>
+                <b> Categoria: </b><%=option%> 
+            </li>
+
+            <form action="/users/<%= id %>/delete?_method=PUT" method="POST"><button type="submit">Delete</button>
+            </form>
+
+        </ul>
     </div>
 </section>

@@ -39,6 +39,10 @@ router.get('/:id', userController.profile);
 router.get('/:id/edit', userController.edit);
 router.put('/:id', userController.update);
 
+router.put('/:id/delete', userController.delete);
+
+
+
 router.get('/search', userController.search); //SIN TERMINAR
 
 //----Export----

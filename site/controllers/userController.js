@@ -10,7 +10,7 @@ const bcrypt = require('bcryptjs');
 
 
 const userController = {
-    
+
     list: function (req, res) {
         db.Users.findAll()
             .then(function (users) {
@@ -24,8 +24,16 @@ const userController = {
     },
 
     store: function (req, res, next) {
+
+        let avatarOK = '';
+        if (req.avatar) {
+            avatarOk = req.file.filename;
+        } else {
+            avatarOK = '/img/user_default/default.png';
+        }
+
         db.Users.create({
-            avatar: req.body.avatar,
+            avatar: avatarOK,
             username: req.body.username,
             name: req.body.name,
             surname: req.body.surname,
@@ -103,7 +111,15 @@ const userController = {
             })
         res.redirect('/');
 
+    },
+    delete: async (req, res) => {
+
+        // borrar producto
+        db.Users.destroy({ where: { id: req.params.id } });
+
+        res.redirect('/users');
     }
+
 };
 
 //----Exports----

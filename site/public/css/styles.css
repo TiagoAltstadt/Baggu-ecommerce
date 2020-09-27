@@ -694,37 +694,28 @@ PARTIALS
 
 /*------------------------------------------------------------Dedicado a userDetail_partial.ejs----------------------------------------------------------------------*/
 
-.user_detail_container{
+.individual_UDP{
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
 	background-color: var(--color-cuarto);
-	border-radius: 12px;
-	size: 90% ;
+	border-radius: var(--border-radius);
+
+}
+
+.avatar_container_UDP{
 	margin: auto;
 }
 
-.user_image{
-	margin: 3% auto;
-}
-.user_img{
-	width: 200%;
-	border: solid black 1px;
-	border-radius: 12px;
+.avatar_UDP{
+	width: 20vw;
+	margin: 1vh auto;
+	border: black 2px solid;
+	border-radius: var(--border-radius);
 }
 
-.user_info {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	
-}
-
-.item_user_detail{
-	display: block;
-	box-sizing: border-box;
-	width: 25%;
-	margin: 0 auto;
+.info_UDP{
+	margin: auto;
 }
 
 /*------------------------------------------------------------Dedicado a product_partial.ejs----------------------------------------------------------------------*/
@@ -1414,18 +1405,20 @@ button{
 .section_user_list{
 	display: flex;
 	flex-wrap: wrap;
-	flex-direction: column;
-
+	flex-direction: row;
 }
 
-.user_list{
-	margin: 5% auto;
+.content_user_list{
+	margin: auto;
 	background-color: var(--color-cuarto);
-	width: 90%;
+	width: fit-content;
 }
 
-#password_div_user_list{
-	display: block;
-	box-sizing: border-box;
-	font-size: 80%;
+.info_list_user{
+	margin: auto;
+	width: fit-content;
+}
+
+.user_list_image{
+	width: 20vw;
 }
