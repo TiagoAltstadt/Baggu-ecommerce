@@ -365,8 +365,6 @@ div.boxTextEmpresa {
 
 /*------------------------------------------------------------Dedicado a new.ejs-------------------------------------------------------------*/
 
-
-
 .body_new{
 	margin: 0%;
 	padding: 0%;
@@ -405,22 +403,20 @@ div.boxTextEmpresa {
 
 .higiene_new{
 	position: absolute;
-	left: 0%;
-	bottom: -4%;
+	left: 0.39%;
+	bottom: -8.55vh;
 
-	color: white;
-
-	border-bottom: 40vh solid orangered;
-	border-left: 600px solid transparent;
-	border-right: 600px solid transparent;
-	height: 0;
-	width: 100%;
-	background: transparent;
+	background-color: red;
+	clip-path: polygon(50% 50%, 0 100%, 100% 100%);
+	width: 99vw;
+	height: 70vh;
 }
 
 .higiene_new:hover {
 	border-bottom: 40vh solid lightpink;
 }
+
+
 
 .promo_new{
 	position: absolute;
