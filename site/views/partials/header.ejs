@@ -1,27 +1,32 @@
-<div class="headerContainer">
+<section class="header_container">
 
-    <div class="logoContainer">
-        <a href="/"><img class="imgHeader" src="/media/logos/logoLandscape.png" alt="Logo Baggu"></a> 
+    <div class="logo_container_H">
+        <a href="/"><img class="img_Header" src="/media/logos/logoLandscape.png" alt="Logo Baggu"></a>
     </div>
 
-    <div class="noLogoContainer">
-        <section class="searchHeader">
-            <div class="md-form active-cyan active-cyan-2 mb-3">
-                <form action="/products/search" method="GET">
-                    <input  type="text" name="search"
-                        value=""
-                        placeholder="Que Producto Necesitas?&hellip;" 
-                        class="form-control">
-                </form>
-            </div>
-        </section>
 
-        <section class="optionsHeader">
-            <span class="optionHeader"><a href="/users/login">Login</a></span>
-            
-            <span class="optionHeader"><a href="/users/register">Register</a></span>
-            <span class="optionHeader"><a href="/products/cart">Carrito</a></span>
-            <span class="optionHeader"><a href="/users">Usuarios</a></span>
-        </section>
-    </div>
-</div>
+    <section class="search_header">
+        <form action="/products/search" method="GET">
+            <input type="text" name="search" value="" placeholder="Que Producto Necesitas?&hellip;"
+                class="search_header">
+        </form>
+    </section>
+
+    <section class="options_header"> 
+
+        <% if (locals.user){ %>
+            <span><a href="/users/<%= locals.user.id %>" class="option_header"> Hola, <%= locals.user.name %></a></span>
+        <% } else { %> 
+            <span><a class="option_header" href="/users/login">Login</a></span>
+            <span><a class="option_header" href="/users/register">Register</a></span>
+        <% } %> 
+
+        <span><a class="option_header" href="/products/cart">Carrito</a></span>
+        <span><a class="option_header" href="/users">Usuarios</a></span>
+    </section>
+
+
+</section>
+
+
+

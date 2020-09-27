@@ -2,7 +2,7 @@
 const homeController = {
     index: (req, res) => {
         
-            res.render('index');
+            res.render('index', {user: req.session.user});
         },
     contact: (req, res) => {
             res.render('contact');

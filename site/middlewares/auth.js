@@ -2,9 +2,9 @@ module.exports = (req, res, next) => {
 
     //console.log(req.session);
     if (req.session){
-        //console.log(req.session);
+        res.locals.user = req.session.user;
     }else {
-        //console.log('Usuario no esta logueado.');
+        res.locals.user = null;
     }
     next();
 
