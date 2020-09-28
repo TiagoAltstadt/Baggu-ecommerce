@@ -404,12 +404,12 @@ div.boxTextEmpresa {
 .higiene_new{
 	position: absolute;
 	left: 0.39%;
-	bottom: -8.55vh;
+	bottom: -8vh;
 
 	background-color: red;
 	clip-path: polygon(50% 50%, 0 100%, 100% 100%);
-	width: 99vw;
-	height: 70vh;
+	width: 100vw;
+	height: 100vh;
 }
 
 .higiene_new:hover {
@@ -475,12 +475,42 @@ PARTIALS
 	margin: 0% 5%;
 }
 
+.logged_container{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	margin: auto 0%;
+	width: 25vw;
+	background-color: var(--color-primero);
+	border-radius: 12px;
+}
+
+.image_logged{
+	display: block;
+	box-sizing: border-box;
+	margin: 0.2vw;
+}
+
+#image_logged{
+	width: 50px;
+	border: black solid 2px;
+	border-radius: 50%;
+}
+.name_logged{
+	display: block;
+	box-sizing: border-box;
+	margin: auto 2vw;
+	
+
+}
+
 /*------------------------------------------------------------Dedicado a Footer----------------------------------------------------------------------*/
 
 /*Paleta de Colores para Footer- Contacto- Empresa **** #141E29 */
 
   /*contenedor padre*/
 	.containerFooter {            
+	position: relative;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;

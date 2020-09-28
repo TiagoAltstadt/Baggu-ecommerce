@@ -12,20 +12,26 @@
         </form>
     </section>
 
-    <section class="options_header"> 
+    <section class="options_header">
 
         <% if (locals.user){ %>
-            <span><a href="/users/<%= locals.user.id %>" class="option_header"> Hola <%= locals.user.name %>!</a></span>
-        <% } else { %> 
-            <span><a class="option_header" href="/users/login">Login</a></span>
-            <span><a class="option_header" href="/users/register">Register</a></span>
-        <% } %> 
+        <a href="users/<%= locals.user.id %>">
+            <div class="logged_container">
+                <div class="image_logged">
+                    <img id="image_logged" src="<%= locals.user.avatar %>" alt="Avatar">
+                </div>
+                <div class="name_logged">
+                    <span>Hola <%= locals.user.name %>!</span>
+                </div>
+            </div>
+        </a>
+        <% } else { %>
+        <span><a class="option_header" href="/users/login">Login</a></span>
+        <span><a class="option_header" href="/users/register">Register</a></span>
+        <% } %>
         <span><a class="option_header" href="/products/cart">Carrito</a></span>
         <span><a class="option_header" href="/users">Usuarios</a></span>
     </section>
 
 
 </section>
-
-
-
