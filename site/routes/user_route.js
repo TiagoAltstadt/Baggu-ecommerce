@@ -4,6 +4,9 @@ const express = require('express');
 //----metodo Router----
 const router = express.Router();
 
+//----Lock Midleware----
+const lock = require('../middlewares/lock');
+
 //----Controlador de Usuarios----
 const userController = require('../controllers/userController.js');
 
@@ -23,28 +26,25 @@ var upload = multer({ storage: storage });
 
 //----Rutas----
 
-router.get('/', userController.list);
+router.get('/', lock , userController.list);
 
 router.get('/register', userController.register);
 router.post('/register', upload.any(), userController.store);
 
 router.get('/login', userController.login);
-router.post('/login', [
-    check('email').isEmail().withMessage('Email Invalido.'),
-    check('password').isLength({ min: 8 }).withMessage('La contraseña debe tener minimo 8 caracteres.')
-], userController.processLogin);
+router.post('/login', [ check('email').isEmail().withMessage('Email Invalido.'), check('password').isLength({ min: 8 }).withMessage('La contraseña debe tener minimo 8 caracteres.') ], userController.processLogin);
 router.put('/logout', userController.logout);
 
-router.get('/:id', userController.profile);
+router.get('/:id', lock, userController.profile);
 
-router.get('/:id/edit', userController.edit);
+router.get('/:id/edit', lock, userController.edit);
 router.put('/:id', userController.update);
 
-router.put('/:id/delete', userController.delete);
+router.put('/:id/delete', lock, userController.delete);
 
 
 
-router.get('/search', userController.search); //SIN TERMINAR
+router.get('/search', lock, userController.search); //SIN TERMINAR
 
 //----Export----
 module.exports = router;

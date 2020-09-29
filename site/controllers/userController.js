@@ -51,22 +51,28 @@ const userController = {
     },
 
     processLogin: function (req, res) {
+        console.log('--------------------------INSTANCIA DE LOGUEO--------------------------');
         //  Pido buscar en la db si hay coincidencia
         db.Users.findOne({ where: { email: req.body.email } })
             .then(user => {
                 //  De ser nulo el valor (no hay coincidencia) retorno un console.log que diga que esta mal
                 if (user) {
-                    console.log('El Email esta bien.');
+                    console.log('- El Email esta bien.');
                     //   Corroboro la password 
                     if (bcrypt.compareSync(req.body.password, user.password)) {
-                        console.log('La password esta bien.');
                         req.session.user = user;
+                        console.log('- La password esta bien.');
+                        console.log('-----------------------------------------------------------------------');
                         res.redirect('/');
                     } else {
-                        res.send('La password esta mal.')
+                        res.send('La password esta mal.');
+                        console.log('- La password esta mal.')
+                        console.log('-----------------------------------------------------------------------');
                     }
                 } else {
-                    res.send('El email esta mal.')
+                    res.send('El email esta mal.');
+                    console.log('- El email esta mal');
+                    console.log('-----------------------------------------------------------------------');
                 }
             })
     },
@@ -119,8 +125,8 @@ const userController = {
 
         res.redirect('/users');
     },
-    logout: function(req, res){
-        req.session = null;
+    logout: function (req, res) {
+        req.session.user = null;
         res.redirect('/');
     }
 

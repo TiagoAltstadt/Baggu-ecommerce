@@ -5,6 +5,7 @@ const methodOverride = require("method-override");
 const session = require('express-session');
 const auth = require('./middlewares/auth');
 
+
 // Motor de vistas
 app.use(express.static(__dirname + "/public"));
 app.set('view engine','ejs');
@@ -22,6 +23,7 @@ app.use(session({
 }));
 app.use(auth);
 
+
 //----Rutas----
 const routeHome = require('./routes/home_route');
 const routeProducts = require('./routes/products_route');
@@ -35,7 +37,7 @@ app.use('/', routeHome);
 app.use('/products', routeProducts);
 
 //crear ruta '/list', '/register' '/login' '/search' '/user'
-app.use('/users', routeUser);
+app.use('/users' , routeUser);
 
 //crear ruta de _inexistente_
 app.get('*', route404);
