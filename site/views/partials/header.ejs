@@ -14,14 +14,14 @@
 
     <section class="options_header">
 
-        <% if (locals.user){ %>
-        <a href="users/<%= locals.user.id %>">
+        <% if (locals.loggedUser){ %>
+        <a href="users/<%= locals.loggedUser.id %>">
             <div class="logged_container">
                 <div class="image_logged">
-                    <img id="image_logged" src="<%= locals.user.avatar %>" alt="Avatar">
+                    <img id="image_logged" src="<%= locals.loggedUser.avatar %>" alt="Avatar">
                 </div>
                 <div class="name_logged">
-                    <span>Hola <%= locals.user.name %>!</span>
+                    <span>Hola <%= locals.loggedUser.name %>!</span>
                 </div>
             </div>
         </a>

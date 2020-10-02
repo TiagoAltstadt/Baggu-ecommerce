@@ -29,7 +29,7 @@
 
             <form action="/users/<%= id %>/delete?_method=PUT" method="POST"><button type="submit">Borrar Usuario</button></form>
 
-            <% if(locals.user.id == id ){  console.log('Local: '+locals.user.id + 'Query: '+ id)  %> 
+            <% if(locals.loggedUser.id == id ){  console.log('Local: '+locals.user.id + 'Query: '+ id)  %> 
                 <form action="/users/logout?_method=PUT" method="POST"><button type="submit">Cerrar Sesion</button></form>
                 <% } %>
 

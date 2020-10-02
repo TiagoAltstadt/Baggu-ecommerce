@@ -1,8 +1,8 @@
 module.exports = function(req, res, next) {
     if (req.session.user != undefined){
-        res.locals.user = req.session.user;
+        res.locals.loggedUser = req.session.user;
     }else {
-        res.locals.user = undefined;
+        res.locals.loggedUser = undefined;
     }
     next();
 }
