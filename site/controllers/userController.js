@@ -23,17 +23,10 @@ const userController = {
         res.render('./users/register.ejs', { data: aux });
     },
 
-    store: function (req, res, next) {
-
-        let avatarOK = '';
-        if (req.avatar) {
-            avatarOk = req.file.filename;
-        } else {
-            avatarOK = '/img/user_default/default.png';
-        }
-
+    store: function (req, res, next) { 
+ 
         db.Users.create({
-            avatar: avatarOK,
+            avatar: req.files[0].filename,
             username: req.body.username,
             name: req.body.name,
             surname: req.body.surname,

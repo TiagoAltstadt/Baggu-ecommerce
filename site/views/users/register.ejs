@@ -12,13 +12,17 @@
 		<main class="main_register">
 
 			<!--Form Register-->
-			<form class="formulario_register"  action="/users/register" method="POST"> 
+			<form class="formulario_register" enctype="multipart/form-data" action="/users/register" method="POST"> 
 				
 					<div class="titulo_register">
 						<h1>Registrarse</h1>
 					</div>
 
 					<ul class="ul_register">
+						<li>
+							<label for="avatar">Select a file:</label>
+							<input type="file" id="avatar" name="avatar">
+						</li>
 						<li>
 							<label for="name">
 								<span>Nombre</span>
@@ -47,12 +51,6 @@
 								<input type="password" id="password" name="password">
 							</label>
 						</li>
-						<!-- <li>
-							<label for="confirmar">
-								<span>Confirm Password <br></span>
-								<input type="password" name="confirmar" id="confirmar">
-							</label>
-						</li> -->
 						
 					</ul>
 
