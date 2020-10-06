@@ -4,22 +4,56 @@ module.exports = function(sequelize, dataTypes) {
 
     let cols = {
         id: {
-            autoIncrement: true,
+            type: dataTypes.INTEGER,
             primaryKey: true,
-            type: dataTypes.INTEGER
+            autoIncremental: true,
+            notNull: true
         },
-        title: {
-            allowNull: false,
-            type: dataTypes.STRING
+        name: {
+            type: dataTypes.STRING,
+            notNull: true
+        },
+        description: {
+            type: dataTypes.STRING,
+            notNull: true
+        },
+        price: {
+            type: dataTypes.INTEGER,
+            notNull: true
+        },
+        image_id: {
+            type: dataTypes.INTEGER,
+            notNull: true
+        },
+        brand_id: {
+            type: dataTypes.INTEGER,
+            notNull: true
+        },
+        category_id: {
+            type: dataTypes.INTEGER,
+            notNull: true
         }
     };
 
     let config = {
-        //tableName: "products",
+        tableName: "products",
         timestamps: false
+    };
+
+    const Products = sequelize.define(alias, cols, config);
+
+    Products.assosiate = function(models) {
+        Products.belongsTo(models.Categories, {
+            as: "categories",
+            foreignKey: "category_id"
+        });
+
+        Products.belongsTo(models.Brands, {
+            as: "brands",
+            foreignKey: "brand_id"
+        })
     }
 
-    const Product = sequelize.define(alias, cols, config);
 
-    return Product;
+    return Products;
 }
