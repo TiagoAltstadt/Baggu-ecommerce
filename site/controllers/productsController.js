@@ -2,6 +2,8 @@
 const fs = require('fs');
 //----Phat------
 const path = require("path");
+//----Data Base----
+let db = require('../database/models');
 
 
 //------Se lee la base de datos products.json, se lo parcea para su utilizacion------
@@ -12,8 +14,10 @@ const productJSON = JSON.parse(fs.readFileSync(datapath, {encoding: 'utf-8'}));
 
 const productsController = {
     list: (req, res) => {
-        
-            res.render('products/products', {'products': productJSON});
+        db.Products.findAll()
+            .then(function(products){
+                res.render('products/products', {'products': products});
+            })
         },
     search: (req, res) => {
         let result = {};  
@@ -22,7 +26,7 @@ const productsController = {
         };
         
         res.render("products/search", {result});
-    },
+        },
     create: (req, res) => {
             res.render('products/create_product');
         },
