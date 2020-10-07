@@ -38,7 +38,7 @@ router.put('/logout', userController.logout);
 router.get('/:id', lock, userController.profile);
 
 router.get('/:id/edit', lock, userController.edit);
-router.put('/:id', userController.update);
+router.put('/:id/edit', userController.update);
 
 router.put('/:id/delete', lock, userController.delete);
 

@@ -13,21 +13,19 @@
 
         <h3 class="title_edicion_users">Editar Producto</h3>
 
-        <form action="/users/<%= data %>?_method=PUT" method="POST" class="form_edit_users">
+        <form action="/users/<%= data %>/edit?_method=PUT" method="POST" class="form_edit_users">
 
-            <label for="myfile">    Avatar:     <input type="file" id="myfile" name="myfile" >                                                   </label>
-            
-            <label for="id">        ID:         <input type="text"      name="id"       id="id"         value="<%= user.id %>">          </label>
+            <label for="myfile">    Avatar:     <input type="file" id="myfile" name="myfile" >                                           </label>
 
-            <label for="user">      Usuario     <input type="text"      name="user"     id="user"       value="<%= user.user %>">        </label>
+            <label for="user">      Usuario:     <input type="text"      name="user"     id="user"      placeholder="<%= user.user %>">        </label>
 
-            <label for="name">      Nombre:     <input type="text"      name="name"     id="name"       value="<%= user.name %>">        </label>
+            <label for="name">      Nombre:     <input type="text"      name="name"     id="name"       placeholder="<%= user.name %>">        </label>
 
-            <label for="surname">   Apellido:   <input type="text"      name="surname"  id="surname"    value="<%= user.surname %>">     </label>
+            <label for="surname">   Apellido:   <input type="text"      name="surname"  id="surname"    placeholder="<%= user.surname %>">     </label>
 
-            <label for="email">     Email:      <input type="email"     name="email"    id="email"      value="<%= user.email %>">       </label>
+            <label for="email">     Email:      <input type="email"     name="email"    id="email"      placeholder="<%= user.email %>">       </label>
 
-            <label for="password">  Contraseña: <input type="password"  name="password" id="password"   value="<%= user.password %>">    </label>
+            <label for="password">  Contraseña: <input type="password"  name="password" id="password"   placeholder="<%= user.password %>">    </label>
 
             <button type="submit" class="button_edicion_users">  Enviar  </button>
         </form>
