@@ -555,9 +555,9 @@ PARTIALS
 	background-color: var(--color-tercero);
 	border-radius: 12px;
 	right: 55%;
-	top: 15%;
+	
 	width: 45%;
-	height: 50vh;
+	height: 100vh;
 	padding: 2%;
 	
 	z-index: 100;

@@ -3,10 +3,10 @@
 <!--    Header  -->
     <div class="header_subcontainer1">
         <div class="header_burguer"><button type="submit">X</button></div>
-        <div class="header_logo"><img src="/media/logos/logoLandscape.png" alt="LOGO" id="header_logo"></div>
+        <div class="header_logo"><a href="/"><img src="/media/logos/logoLandscape.png" alt="LOGO" id="header_logo"></a></div>
         <div class="header_profile">
             <% if (locals.loggedUser){ %>
-            <img src="/img/user_default/default.png" alt="LogoL" id="header_profile">
+            <img src="/users/<%= locals.loggedUser.avatar %>" alt="LogoL" id="header_profile">
             <% } else { %>
             <a href="/users/login"><img src="/img/user_default/default.png" alt="LogoN" id="header_profile"></a>
             <% } %>
@@ -25,7 +25,7 @@
     <% if (locals.loggedUser){ %>
     <section class="header_popUp">
         <div class="profile_block1">
-            <img src="/img/user_default/default.png" alt="LogoL" class="profile_popUpAvatar">
+            <img src="/users/<%= locals.loggedUser.avatar %>" alt="LogoL" class="profile_popUpAvatar">
             <div class="profile_mainInfo">
 
                 <p class=" profile_name"><%= locals.loggedUser.name %></p>
