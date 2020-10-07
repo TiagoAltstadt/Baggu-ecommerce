@@ -15,7 +15,7 @@
     <section class="options_header">
 
         <% if (locals.loggedUser){ %>
-        <a href="users/<%= locals.loggedUser.id %>">
+        <a href="/users/<%= locals.loggedUser.id %>">
             <div class="logged_container">
                 <div class="image_logged">
                     <img id="image_logged" src="<%= locals.loggedUser.avatar %>" alt="Avatar">
