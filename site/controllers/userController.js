@@ -32,7 +32,7 @@ const userController = {
             surname: req.body.surname,
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password, 10),
-            category: 1
+            category_user_id: 1
         })
             .then(user => {
                 res.redirect('/');

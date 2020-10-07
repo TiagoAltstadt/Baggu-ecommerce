@@ -1,8 +1,14 @@
-module.exports = function(sequelize, dataTypes) {
+module.exports = function (sequelize, dataTypes) {
 
     let alias = 'Users';
 
     let cols = {
+        id: {
+            type: dataTypes.INTEGER,
+            primaryKey: true,
+            autoIncremental: true,
+            notNull: true
+        },
         avatar: {
             type: dataTypes.STRING
         },
@@ -10,21 +16,24 @@ module.exports = function(sequelize, dataTypes) {
             type: dataTypes.STRING
         },
         name: {
-            allowNull: false,
-            type: dataTypes.STRING
+            type: dataTypes.STRING,
+            notNull: true
         },
         surname: {
-            allowNull: false,
-            type: dataTypes.STRING
+            type: dataTypes.STRING,
+            notNull: true
         },
         email: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING,
+            notNull: true
         },
         password: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING,
+            notNull: true
         },
-        category: {
-            type: dataTypes.INTEGER
+        category_user_id: {
+            type: dataTypes.INTEGER,
+            notNull: true
         }
 
     };
@@ -36,5 +45,11 @@ module.exports = function(sequelize, dataTypes) {
 
     const User = sequelize.define(alias, cols, config);
 
+    User.assosiate = function (models) {
+        User.belongsTo(models.Category_user, {
+            as: "category_users",
+            foreignKey: "category_user_id"
+        })
+    }
     return User;
 }
