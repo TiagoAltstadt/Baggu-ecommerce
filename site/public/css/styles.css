@@ -544,6 +544,33 @@ PARTIALS
 	flex-wrap: wrap;
 	flex-direction: column;
 }
+
+/* header burguer*/
+/* on: flex, of: none */
+.header_burguer_popUp{
+	display: none;
+	flex-direction: column;
+	flex-wrap: wrap;
+	position: fixed;
+	background-color: var(--color-tercero);
+	border-radius: 12px;
+	right: 55%;
+	top: 15%;
+	width: 45%;
+	height: 50vh;
+	padding: 2%;
+	
+	z-index: 100;
+}
+
+.header_burguer_popUp ul{
+	margin: 0%;
+}
+
+.header_burguer_popUp ul li {
+	margin: 15px 0%;
+}
+
 /*------------------------------------------------------------Dedicado a Footer----------------------------------------------------------------------*/
 
 /*Paleta de Colores para Footer- Contacto- Empresa **** #141E29 */

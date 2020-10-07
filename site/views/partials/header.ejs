@@ -1,5 +1,6 @@
 <section class="header_container">
 
+<!--    Header  -->
     <div class="header_subcontainer1">
         <div class="header_burguer"><button type="submit">X</button></div>
         <div class="header_logo"><img src="/media/logos/logoLandscape.png" alt="LOGO" id="header_logo"></div>
@@ -18,12 +19,15 @@
             </form>
         </div>
     </div>
+
+<!--    User Pop-up -->
+
     <% if (locals.loggedUser){ %>
     <section class="header_popUp">
         <div class="profile_block1">
             <img src="/img/user_default/default.png" alt="LogoL" class="profile_popUpAvatar">
             <div class="profile_mainInfo">
-                
+
                 <p class=" profile_name"><%= locals.loggedUser.name %></p>
             </div>
         </div>
@@ -33,6 +37,19 @@
         </div>
     </section>
     <% } %>
+
+<!--    Hamburguer Pop-up   -->
+
+    <section class="header_burguer_popUp">
+        <ul>
+            <li>Home</li>
+            <li>Descartables</li>
+            <li>Papeleria</li>
+            <li>Higiene</li>
+            <li>Acerca-de</li>
+            <li>Contacto</li>
+        </ul>
+    </section>
 
 
 
