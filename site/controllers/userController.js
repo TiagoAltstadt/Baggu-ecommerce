@@ -25,13 +25,14 @@ const userController = {
 
     store: function (req, res, next) {
 
-        // let avatarOK= '../public/img/user_default/default.png';
-        // if (req.files[0].filename != undefined){
-        //     avatarOK = req.files[0].filename;
-        // }
+        //NO FUNCIONA CUANDO NO SELECCIONAS UNA FOTO
+        let avatarOK= '../public/img/user_default/default.png';
+        if (req.files[0].filename != undefined){
+            avatarOK = req.files[0].filename;
+        }
 
         db.Users.create({
-            avatar: req.files[0].filename,
+            avatar: avatarOK,
             username: req.body.username,
             name: req.body.name,
             surname: req.body.surname,
