@@ -22,10 +22,13 @@
     <!--    Header  -->
 
     <div class="header_subcontainer1">
+        <!--Menu-->
         <button class="header_button" onclick="sidebar_open()">☰</button>
+        <!--Logo-->
         <div class="header_logo">
             <a href="/"><img src="/media/logos/logoLandscape.png" alt="LOGO" id="header_logo"></a>
         </div>
+        <!--Profile pic-->
         <div class="header_profile">
             <% if (locals.loggedUser){ %>
                 <img src="/users/<%= locals.loggedUser.avatar %>" alt="LogoL" id="header_profile" onclick="profile()" id="profile">
@@ -35,6 +38,7 @@
         </div>
     </div>
     <div class="header_subcontainer2">
+        <!--Search-->
         <div class="header_search">
             <form action="/products/search" method="GET" class="header_form">
                 <input type="text" name="header_search" placeholder="Buscar" class="header_searchBox">
@@ -46,7 +50,7 @@
     <!--    Hamburguer Pop-up   -->
 
     <section class="header_burguer_popUp" style="display:none" id="mySidebar">
-        <button onclick="sidebar_close()">Close &times;</button>
+        <button class="header_button" onclick="sidebar_close()">☰</button>
         <ul>
             <li>Home</li>
             <li>Descartables</li>
@@ -62,18 +66,33 @@
 
     <% if (locals.loggedUser){ %>
         <section class="header_popUp" id="profile">
-            <div class="profile_block1">
-                <img src="/users/<%= locals.loggedUser.avatar %>" alt="LogoL" class="profile_popUpAvatar">
-                <div class="profile_mainInfo">
-                    <p class=" profile_name">
-                        <%= locals.loggedUser.name %>
-                    </p>
-                </div>
+            <!--Image-->
+            <img src="/users/<%= locals.loggedUser.avatar %>" alt="LogoL" class="profile_popUpAvatar">
+
+            <!--Main Info-->
+            <div class="profile_mainInfo">
+                <p class=" profile_name">
+                    <%= locals.loggedUser.name %>
+                </p>
             </div>
-            <div class="profile_block2">
-                <button type="submit">Perfil</button>
-                <button type="submit">Cerrar sesion</button>
-            </div>
+
+            <!--Options-->>
+            <ul>
+                <a href="/users/<%= locals.loggedUser.id %>">
+                    <li class="option">Perfil</li>
+                </a>
+                <a href="/users/<%= locals.loggedUser.id %>/edit">
+                    <li class="option">Editar perfil</li>
+                </a>
+
+                <a href="https://weirdorconfusing.com/">
+                    <li class="option">Boton magico</li>
+                </a>
+                <li class="option">
+                    <form action="/users/logout?_method=PUT" method="POST"><button type="submit">Cerrar Sesion</button></form>
+                </li>
+            </ul>
+
         </section>
         <% } %>
 

@@ -594,13 +594,14 @@ PARTIALS
     flex-direction: column;
     flex-wrap: wrap;
     position: fixed;
-    background-color: #555;
+    background-color: white;
     right: 5%;
     top: 15%;
-    width: 90%;
-    height: 25vh;
+    width: 45vw;
+    height: fit-content;
     padding: 2%;
     z-index: 100;
+    border: black solid 1px;
 }
 
 .profile_block1 {

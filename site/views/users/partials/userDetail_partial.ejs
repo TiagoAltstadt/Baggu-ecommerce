@@ -8,29 +8,35 @@
         <div class="avatar_container_UDP">
             <img class="avatar_UDP " src="/users/<%= avatar %>" alt="avatar">
         </div>
-        
+
 
         <ul>
 
-            <li class="info_UDP">     <b> Usuario:    </b>    <%= username %>       
+            <li class="info_UDP"> <b> Usuario:    </b>
+                <%= username %>
             </li>
-            <li class="info_UDP">     <b> ID:         </b>    <%=id%>                    
+            <li class="info_UDP"> <b> ID:         </b>
+                <%=id%>
             </li>
-            <li class="info_UDP">     <b> Nombre:     </b>    <%=name%> <%=surname%>  
+            <li class="info_UDP"> <b> Nombre:     </b>
+                <%=name%>
+                    <%=surname%>
             </li>
-            <li class="info_UDP">     <b> Email:      </b>    <%=email%>               
+            <li class="info_UDP"> <b> Email:      </b>
+                <%=email%>
             </li>
 
-            <li class="info_UDP">     
+            <li class="info_UDP">
                 <% let option = "vendedor" %>
-                <% if (category != 1){option = "Vendedor"} %>
-                <b> Categoria: </b><%=option%> 
+                    <% if (category != 1){option = "Vendedor"} %>
+                        <b> Categoria: </b>
+                        <%=option%>
             </li>
 
             <form action="/users/<%= id %>/delete?_method=PUT" method="POST"><button type="submit">Borrar Usuario</button></form>
             <a href="/users/<%= id %>/edit"><button type="submit">Editar</button></a>
 
-            <% if(locals.loggedUser.id == id ){  console.log('Local: '+locals.user.id + 'Query: '+ id)  %> 
+            <% if(locals.loggedUser.id == id ){%>
                 <form action="/users/logout?_method=PUT" method="POST"><button type="submit">Cerrar Sesion</button></form>
                 <% } %>
 
