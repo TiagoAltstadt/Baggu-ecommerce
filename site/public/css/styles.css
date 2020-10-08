@@ -67,6 +67,10 @@ h4 {
     font-size: 2.8rem;
 }
 
+a {
+    text-decoration: none;
+}
+
 
 /*------------------------------------------------------------Transicion de presentacion----------------------------------------------------------------------*/
 
@@ -594,6 +598,7 @@ PARTIALS
     flex-direction: column;
     flex-wrap: wrap;
     position: fixed;
+    justify-items: center;
     background-color: white;
     right: 5%;
     top: 15%;
@@ -604,37 +609,24 @@ PARTIALS
     border: black solid 1px;
 }
 
-.profile_block1 {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-
 .profile_popUpAvatar {
     display: block;
     box-sizing: border-box;
-    width: 20%;
+    margin: auto;
+    width: 50%;
     border: #4dd0e1 solid 2px;
-    border-radius: 50%;
-    margin-bottom: 2%;
 }
 
 .profile_mainInfo {
     display: block;
     box-sizing: border-box;
     width: 80%;
-    margin: 0%;
+    margin: auto;
 }
 
 .profile_name {
     width: fit-content;
     margin: auto;
-}
-
-.profile_block2 {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
 }
 
 

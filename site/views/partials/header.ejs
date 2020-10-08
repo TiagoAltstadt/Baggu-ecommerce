@@ -52,13 +52,24 @@
     <section class="header_burguer_popUp" style="display:none" id="mySidebar">
         <button class="header_button" onclick="sidebar_close()">☰</button>
         <ul>
-            <li>Home</li>
-            <li>Descartables</li>
-            <li>Papeleria</li>
-            <li>Higiene</li>
-            <li>Acerca-de</li>
-            <li>Contacto</li>
-        </ul>
+            <a href="/">
+                <li>Home</li>
+            </a>
+            <a href="/products">
+                <li>Descartables</li>
+            </a>
+            <a href="/products">
+                <li>Papeleria</li>
+            </a>
+            <a href="/products">
+                <li>Higiene</li>
+            </a>
+            <a href="/acerca-de">
+                <li>Acerca de</li>
+            </a>
+            <a href="/contact">
+                <li>Contacto</li>
+            </a>
     </section>
 
 
@@ -76,7 +87,7 @@
                 </p>
             </div>
 
-            <!--Options-->>
+            <!--Options-->
             <ul>
                 <a href="/users/<%= locals.loggedUser.id %>">
                     <li class="option">Perfil</li>
@@ -88,10 +99,9 @@
                 <a href="https://weirdorconfusing.com/">
                     <li class="option">Boton magico</li>
                 </a>
-                <li class="option">
-                    <form action="/users/logout?_method=PUT" method="POST"><button type="submit">Cerrar Sesion</button></form>
-                </li>
+
             </ul>
+            <form action="/users/logout?_method=PUT" method="POST"><button type="submit">Cerrar Sesion</button></form>
 
         </section>
         <% } %>
