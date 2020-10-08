@@ -21,10 +21,6 @@ module.exports = function(sequelize, dataTypes) {
             type: dataTypes.INTEGER,
             notNull: true
         },
-        image_id: {
-            type: dataTypes.INTEGER,
-            notNull: true
-        },
         brand_id: {
             type: dataTypes.INTEGER,
             notNull: true
@@ -51,6 +47,11 @@ module.exports = function(sequelize, dataTypes) {
         Products.belongsTo(models.Brands, {
             as: "brands",
             foreignKey: "brand_id"
+        });
+
+        Products.hasMany(models.Images, {
+            as: "images",
+            foreignKey: "product_id"
         })
     }
 
