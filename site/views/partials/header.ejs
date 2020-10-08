@@ -1,15 +1,37 @@
 <section class="header_container">
 
-<!--    Header  -->
+    <!--    Script  -->
+    <script>
+        function sidebar_open() {
+            document.getElementById("mySidebar").style.display = "block";
+        }
+
+        function sidebar_close() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+
+        function profile() {
+            if (document.getElementById("profile").style.display == "block") {
+                document.getElementById("profile").style.display = "none";
+            } else {
+                document.getElementById("profile").style.display = "block";
+            }
+        }
+    </script>
+
+    <!--    Header  -->
+
     <div class="header_subcontainer1">
-        <div class="header_burguer"><button type="submit">X</button></div>
-        <div class="header_logo"><a href="/"><img src="/media/logos/logoLandscape.png" alt="LOGO" id="header_logo"></a></div>
+        <button class="header_button" onclick="sidebar_open()">☰</button>
+        <div class="header_logo">
+            <a href="/"><img src="/media/logos/logoLandscape.png" alt="LOGO" id="header_logo"></a>
+        </div>
         <div class="header_profile">
             <% if (locals.loggedUser){ %>
-            <img src="/users/<%= locals.loggedUser.avatar %>" alt="LogoL" id="header_profile">
-            <% } else { %>
-            <a href="/users/login"><img src="/img/user_default/default.png" alt="LogoN" id="header_profile"></a>
-            <% } %>
+                <img src="/users/<%= locals.loggedUser.avatar %>" alt="LogoL" id="header_profile" onclick="profile()" id="profile">
+                <% } else { %>
+                    <a href="/users/login"><img src="/img/user_default/default.png" alt="LogoN" id="header_profile"></a>
+                    <% } %>
         </div>
     </div>
     <div class="header_subcontainer2">
@@ -20,27 +42,11 @@
         </div>
     </div>
 
-<!--    User Pop-up -->
 
-    <% if (locals.loggedUser){ %>
-    <section class="header_popUp">
-        <div class="profile_block1">
-            <img src="/users/<%= locals.loggedUser.avatar %>" alt="LogoL" class="profile_popUpAvatar">
-            <div class="profile_mainInfo">
+    <!--    Hamburguer Pop-up   -->
 
-                <p class=" profile_name"><%= locals.loggedUser.name %></p>
-            </div>
-        </div>
-        <div class="profile_block2">
-            <button type="submit">Perfil</button>
-            <button type="submit">Cerrar sesion</button>
-        </div>
-    </section>
-    <% } %>
-
-<!--    Hamburguer Pop-up   -->
-
-    <section class="header_burguer_popUp">
+    <section class="header_burguer_popUp" style="display:none" id="mySidebar">
+        <button onclick="sidebar_close()">Close &times;</button>
         <ul>
             <li>Home</li>
             <li>Descartables</li>
@@ -52,49 +58,25 @@
     </section>
 
 
+    <!--    User Pop-up -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- <section class="logo_container_H">
-        <a href="/"><img class="img_Header" src="/media/logos/logoLandscape.png" alt="Logo Baggu"></a>
-    </section>
-
-
-    <section class="search_header">
-        <form action="/products/search" method="GET">
-            <input type="text" name="search" value="" placeholder="Que Producto Necesitas?&hellip;"
-                class="search_header">
-        </form>
-    </section>
-
-    <section class="options_header">
-
-        <% if (locals.loggedUser){ %>
-        <span class="logged_container">
-            <a href="/users/<%= locals.loggedUser.id %>">
-                <div class="image_logged">
-                    <img id="image_logged" src="<%= locals.loggedUser.avatar %>" alt="Avatar">
+    <% if (locals.loggedUser){ %>
+        <section class="header_popUp" id="profile">
+            <div class="profile_block1">
+                <img src="/users/<%= locals.loggedUser.avatar %>" alt="LogoL" class="profile_popUpAvatar">
+                <div class="profile_mainInfo">
+                    <p class=" profile_name">
+                        <%= locals.loggedUser.name %>
+                    </p>
                 </div>
-               
-            </a>
-        </span>
-        <span><a class="option_header" href="/users">Usuarios</a></span>
-        <% } else { %>
-        <span><a class="option_header" href="/users/login">Login</a></span>
-        <span><a class="option_header" href="/users/register">Register</a></span>
+            </div>
+            <div class="profile_block2">
+                <button type="submit">Perfil</button>
+                <button type="submit">Cerrar sesion</button>
+            </div>
+        </section>
         <% } %>
-        <span><a class="option_header" href="/products/cart">Carrito</a></span>
-    </section> -->
+
 
 
 </section>
