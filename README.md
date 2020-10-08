@@ -21,3 +21,5 @@ Nombre: | Descripcon: | Tipo de empresa:
 [Envases Descartables](http://www.envasesdescartables.com/) | -Dedicada a la comercialización y distribución de envases y artículos de embalaje. | e-commerce
 [Planeta Descartable](https://www.planetadescartable.com.ar/) | - N/A | Informacional
 
+## **Como correr nuestro proyecto?**
+-En consola el pryecto se inicia con **"npm run startdev"**
