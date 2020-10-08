@@ -26,12 +26,12 @@
         <button class="header_button" onclick="sidebar_open()">☰</button>
         <!--Logo-->
         <div class="header_logo">
-            <a href="/"><img src="/media/logos/logoLandscape.png" alt="LOGO" id="header_logo"></a>
+            <a href="/"><img src="/img/logos/logoLandscape.png" alt="LOGO" id="header_logo"></a>
         </div>
         <!--Profile pic-->
         <div class="header_profile">
             <% if (locals.loggedUser){ %>
-                <img src="/users/<%= locals.loggedUser.avatar %>" alt="LogoL" id="header_profile" onclick="profile()" id="profile">
+                <img src="/fileUsers/<%= locals.loggedUser.avatar %>" alt="LogoL" id="header_profile" onclick="profile()" id="profile">
                 <% } else { %>
                     <a href="/users/login"><img src="/img/user_default/default.png" alt="LogoN" id="header_profile"></a>
                     <% } %>
@@ -78,7 +78,7 @@
     <% if (locals.loggedUser){ %>
         <section class="header_popUp" id="profile">
             <!--Image-->
-            <img src="/users/<%= locals.loggedUser.avatar %>" alt="LogoL" class="profile_popUpAvatar">
+            <img src="/fileUsers/<%= locals.loggedUser.avatar %>" alt="LogoL" class="profile_popUpAvatar">
 
             <!--Main Info-->
             <div class="profile_mainInfo">

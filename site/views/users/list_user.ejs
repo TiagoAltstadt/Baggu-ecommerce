@@ -4,49 +4,59 @@
 <!--Head-->
 <%- include('../partials/head.ejs', {title: "Baggu: List"}) %>
 
-<body>
+    <body>
 
-    <!--Header-->
-    <%- include('../partials/header.ejs') %>
+        <!--Header-->
+        <%- include('../partials/header.ejs') %>
 
 
-    <main>
+            <main>
 
-        <h1 class="title_list">Users List</h1>
+                <h1 class="title_list">Users List</h1>
 
-        <section class="section_user_list">
+                <section class="section_user_list">
 
-            <% if(users){ %>
-            <% users.forEach((user) => {%>
+                    <% if(users){ %>
+                        <% users.forEach((user) => {%>
 
-            
 
-                <div class="content_user_list">
-                    <a href="/users/<%= user.id %>/ ">  <div class="info_list_user"><img class="user_list_image" src="<%= user.avatar %>"></div>    </a>
-                    <div class="info_list_user">Usuario: $<%= user.username %> </div>
-                    <div class="info_list_user">Nombre: <%= user.name %> </div>
-                    <div class="info_list_user">Apellido: $<%= user.surname %> </div>
-                    <div class="info_list_user">Email: $<%= user.email %> </div>
 
-                </div>
+                            <div class="content_user_list">
+                                <a href="/users/<%= user.id %>/ ">
+                                    <div class="info_list_user"><img class="user_list_image" src="/fileUsers/<%= user.avatar %>"></div>
+                                </a>
+                                <div class="info_list_user">Usuario:
+                                    <%= user.username %>
+                                </div>
+                                <div class="info_list_user">Nombre:
+                                    <%= user.name %>
+                                </div>
+                                <div class="info_list_user">Apellido:
+                                    <%= user.surname %>
+                                </div>
+                                <div class="info_list_user">Email:
+                                    <%= user.email %>
+                                </div>
 
-           
+                            </div>
 
-            <% })} %> %>
 
-        </section>
 
-        <h2>Search</h2>
-        <form action="/search" method="GET">
-            <input type="text" name="search">
-            <input type="submit" value="search">
-        </form>
+                            <% })} %> %>
 
-    </main>
+                </section>
 
-    <!--Footer-->
-    <%- include('../partials/footer.ejs') %>
+                <h2>Search</h2>
+                <form action="/search" method="GET">
+                    <input type="text" name="search">
+                    <input type="submit" value="search">
+                </form>
 
-</body>
+            </main>
+
+            <!--Footer-->
+            <%- include('../partials/footer.ejs') %>
+
+    </body>
 
 </html>

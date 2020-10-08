@@ -609,7 +609,7 @@ PARTIALS
     z-index: 100;
     border: black solid 1px;
     border-radius: 6px;
-    background-image: url("/media/5c6525f95e5c360c578a91bf.w800.jpg");
+    background-image: url("/img/backgrounds/paper_background.jpg");
 }
 
 .profile_popUpAvatar {
@@ -652,7 +652,7 @@ PARTIALS
     position: fixed!important;
     z-index: 1;
     overflow: auto;
-    background-image: url("/media/5c6525f95e5c360c578a91bf.w800.jpg");
+    background-image: url("/img/backgrounds/paper_background.jpg");
 }
 
 .header_burguer_popUp ul {
