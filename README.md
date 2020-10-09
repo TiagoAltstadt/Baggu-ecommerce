@@ -3,12 +3,12 @@
 ## **E-Commerce: Baggu :dragon:**
 - La **tematica del sitio** de este grupo es _venta de productos gastronomicos descartables_, apuntando al rubro gastronomico en general, ya sean restaurantes, bares, cafes, etc. La idea es construir un sitio en donde el usuario pueda consultar productos, precios, contactos y demas. Pero a su vez que se sienta comodo y disfrute de una interfaz limpia e intuitiva.
 
-## **Un poco de los Programadores: :walking: :walking: **
+## **Un poco de los Programadores: :walking: :walking:**
 - Tiago Altstadt: Mejor conocido como Goia, estudie unos años ingenieria en sistemas, y tengo locura por la programacion en general, juego mucho a la computadora y como por dos personas. ;)
 
 - Marcelo Giaccaglia: Estudie diseño industrial y comercio exterior, ambos inconclusos. Es mi primera vez en el mundo de la programacion, de chiquito tire algunos comandos en DOS con algun Windows viejo si mal no recuendo 95, pero nada mas. Soy muy creativo y me gusta crear herramientas que generen soluciones.
 
-## **Tablero de trabajo: **
+## **Tablero de trabajo:**
 [Trello] (https://trello.com/b/W3MyCaCi/baggu-grupo-3)
 
 ## **Referencias en las que nos basamos:**
@@ -22,10 +22,10 @@ Nombre: | Descripcon: | Tipo de empresa:
 [Planeta Descartable](https://www.planetadescartable.com.ar/) | - N/A | Informacional
 
 ## **Como correr nuestro proyecto?**
--Hacer un clone del proyecto
--Crear un archivo en 'site/database/config' llamado config.js a partir de config.js.example
--Iniciar mamp o xampp o similar
--En workbench: 
-    -Correr el script en 'site/database/baggu.sql' (estructura de la base de datos)
-    -Correr el script en 'site/database/data.sql' (datos de productos, usuarios, etc.)
--En consola el pryecto se inicia con **"npm run startdev"** desde /site
+- Hacer un clone del proyecto
+- Crear un archivo en 'site/database/config' llamado config.js a partir de config.js.example
+- Iniciar mamp o xampp o similar
+- En workbench: 
+    - Correr el script en 'site/database/baggu.sql' (estructura de la base de datos)
+    - Correr el script en 'site/database/data.sql' (datos de productos, usuarios, etc.)
+- En consola el pryecto se inicia con **"npm run startdev"** desde /site
