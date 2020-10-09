@@ -95,6 +95,7 @@ const userController = {
     edit: function (req, res) {
         db.Users.findOne({ where: { id: req.params.id } })
             .then(function (user) {
+                console.log(user);
                 res.render('./users/edicion_users.ejs', { user: user, data: req.params.id });
             })
     },

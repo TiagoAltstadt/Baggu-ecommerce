@@ -71,6 +71,10 @@ a {
     text-decoration: none;
 }
 
+ul {
+    list-style-type: none;
+}
+
 
 /*------------------------------------------------------------Transicion de presentacion----------------------------------------------------------------------*/
 
@@ -664,6 +668,7 @@ PARTIALS
     margin: 0%;
     background-color: rgba(219, 216, 219, 0.4);
     border-radius: 6px;
+    width: 40vw;
 }
 
 .header_burguer_popUp ul li {
