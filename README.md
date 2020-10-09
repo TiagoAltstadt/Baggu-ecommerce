@@ -22,4 +22,10 @@ Nombre: | Descripcon: | Tipo de empresa:
 [Planeta Descartable](https://www.planetadescartable.com.ar/) | - N/A | Informacional
 
 ## **Como correr nuestro proyecto?**
--En consola el pryecto se inicia con **"npm run startdev"**
+-Hacer un clone del proyecto
+-Crear un archivo en 'site/database/config' llamado config.js a partir de config.js.example
+-Iniciar mamp o xampp o similar
+-En workbench: 
+    -Correr el script en 'site/database/baggu.sql' (estructura de la base de datos)
+    -Correr el script en 'site/database/data.sql' (datos de productos, usuarios, etc.)
+-En consola el pryecto se inicia con **"npm run startdev"** desde /site
