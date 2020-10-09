@@ -535,7 +535,8 @@ PARTIALS
     cursor: pointer;
     background-color: white;
     color: black;
-    border: 2px solid #4CAF50;
+    border: 2px solid grey;
+    border-radius: 5px;
 }
 
 .header_button:hover {
@@ -646,13 +647,17 @@ PARTIALS
 /* on: flex, of: none */
 
 .header_burguer_popUp {
-    height: 100%;
-    width: 200px;
-    background-color: #fff;
     position: fixed!important;
-    z-index: 1;
+    height: 100%;
+    width: 45vw;
+    left: 0vw;
+    top: 0vh;
+    padding-top: 1vh;
+    padding-left: 2vw;
     overflow: auto;
+    background-color: #fff;
     background-image: url("/img/backgrounds/paper_background.jpg");
+    z-index: 1;
 }
 
 .header_burguer_popUp ul {

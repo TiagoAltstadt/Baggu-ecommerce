@@ -33,7 +33,7 @@
             <% if (locals.loggedUser){ %>
                 <img src="/fileUsers/<%= locals.loggedUser.avatar %>" alt="LogoL" id="header_profile" onclick="profile()" id="profile">
                 <% } else { %>
-                    <a href="/users/login"><img src="/img/user_default/default.png" alt="LogoN" id="header_profile"></a>
+                    <img src="/img/user_default/default.png" alt="LogoL" id="header_profile" onclick="profile()" id="profile">
                     <% } %>
         </div>
     </div>
@@ -52,9 +52,6 @@
     <section class="header_burguer_popUp" style="display:none" id="mySidebar">
         <button class="header_button" onclick="sidebar_close()">☰</button>
         <ul>
-            <a href="/">
-                <li>Home</li>
-            </a>
             <a href="/products">
                 <li>Descartables</li>
             </a>
@@ -104,7 +101,38 @@
             <form action="/users/logout?_method=PUT" method="POST"><button type="submit">Cerrar Sesion</button></form>
 
         </section>
-        <% } %>
+        <% }else{ %>
+
+            <section class="header_popUp" id="profile">
+                <!--Image-->
+                <img src="/img/user_default/default.png" alt="LogoL" class="profile_popUpAvatar">
+    
+                <!--Main Info-->
+                <div class="profile_mainInfo">
+                    <p class=" profile_name">
+                        <p>No estas logueado</p>
+                    </p>
+                </div>
+    
+                <!--Options-->
+                <ul>
+                    <a href="/users/login">
+                        <li class="option">Iniciar sesion</li>
+                    </a>
+                    <a href="/users/register">
+                        <li class="option">Registrate</li>
+                    </a>
+    
+                    <a href="https://weirdorconfusing.com/">
+                        <li class="option">Boton magico</li>
+                    </a>
+    
+                </ul>
+                <form action="/users/logout?_method=PUT" method="POST"><button type="submit">Cerrar Sesion</button></form>
+    
+            </section>
+
+            <% } %>
 
 
 
