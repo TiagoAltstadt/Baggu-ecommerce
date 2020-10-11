@@ -1,0 +1,60 @@
+<section class="header_container">
+
+
+    <!--    Script  METER EN OTRO LADO  -->
+    <script>
+        function sidebar_open() {
+            document.getElementById("mySidebar").style.left = "0vw";
+        }
+
+        function sidebar_close() {
+            document.getElementById("mySidebar").style.left = "-45vw";
+        }
+
+        function profile() {
+            if (document.getElementById("profile").style.right == "2.5vw") {
+                document.getElementById("profile").style.right = "-47.5vw";
+            } else {
+                document.getElementById("profile").style.right = "2.5vw";
+            }
+        }
+    </script>
+
+    <!--    Header  -->
+
+    <div class="header_subcontainer1">
+        <!--Menu-->
+        <button class="header_button" onclick="sidebar_open()">☰</button>
+        <!--Logo-->
+        <div class="header_logo">
+            <a href="/"><img src="/img/logos/logoLandscape.png" alt="LOGO" id="header_logo"></a>
+        </div>
+        <!--Profile pic-->
+        <div class="header_profile">
+            <% if (locals.loggedUser){ %>
+            <img src="/fileUsers/<%= locals.loggedUser.avatar %>" alt="LogoL" id="header_profile" onclick="profile()"
+                id="profile">
+            <% } else { %>
+            <img src="/img/user_default/default.png" alt="LogoL" id="header_profile" onclick="profile()" id="profile">
+            <% } %>
+        </div>
+    </div>
+    <div class="header_subcontainer2">
+        <!--Search-->
+        <div class="header_search">
+            <form action="/products/search" method="GET" class="header_form">
+                <input type="text" name="header_search" placeholder="Buscar" class="header_searchBox">
+            </form>
+        </div>
+    </div>
+
+
+    <!--    Hamburguer Pop-up   -->
+
+    <%- include('./menu.ejs') %>
+
+    <!--    User Pop-up -->
+
+    <%- include('./user_popUp.ejs')%>
+
+</section>

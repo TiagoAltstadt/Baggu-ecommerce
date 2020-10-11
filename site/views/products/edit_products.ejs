@@ -3,8 +3,7 @@
 	<%- include('../partials/head.ejs', {title: "Baggu: Edición productos"}) %>
 
     <body>
-    	<%- include('../partials/header.ejs') %>
-		
+		<%- include('../partials/header/header.ejs') %>
 
 		<form action="/products/<%= products.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="formularioRegiaster">
 			

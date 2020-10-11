@@ -600,14 +600,14 @@ PARTIALS
 /* on: flex, of: none */
 
 .header_popUp {
-    display: none;
+    transition-duration: .25s;
     flex-direction: column;
     flex-wrap: wrap;
     position: fixed;
     justify-items: center;
     background-color: white;
-    right: 5%;
-    top: 15%;
+    right: -47.5vw;
+    top: 16vh;
     width: 45vw;
     height: fit-content;
     padding: 2%;
@@ -651,6 +651,7 @@ PARTIALS
 /* on: flex, of: none */
 
 .header_burguer_popUp {
+    transition-duration: .25s;
     position: fixed!important;
     height: 100%;
     width: 45vw;
