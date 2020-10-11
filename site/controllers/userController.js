@@ -26,8 +26,8 @@ const userController = {
     store: function (req, res, next) {
 
         //NO FUNCIONA CUANDO NO SELECCIONAS UNA FOTO
-        let avatarOK= '../public/img/user_default/default.png';
-        if (req.files[0].filename != undefined){
+        let avatarOK = '../public/img/user_default/default.png';
+        if (req.files[0].filename != undefined) {
             avatarOK = req.files[0].filename;
         }
 
@@ -95,12 +95,19 @@ const userController = {
     edit: function (req, res) {
         db.Users.findOne({ where: { id: req.params.id } })
             .then(function (user) {
-                console.log(user);
                 res.render('./users/edicion_users.ejs', { user: user, data: req.params.id });
             })
     },
 
     update: function (req, res) {
+
+        console.log('----------------------------------------');
+        console.log('Body: ');
+        console.log(req.body);
+        console.log('ID: ');
+        console.log(req.params.id);
+        console.log('----------------------------------------');
+
         db.Users.update({
             avatar: req.body.avatar,
             username: req.body.username,
@@ -108,14 +115,13 @@ const userController = {
             surname: req.body.surname,
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password, 10),
-            category: 1
-        },
-            {
-                where: {
-                    email: req.params.email
-                }
+            category: 1,
+        }, { where: { id: req.params.id } })
+            .then(userUpdated => {
+                res.redirect('/users');
             })
-        res.redirect('/');
+            .catch(error => console.log(error));
+
 
     },
     delete: async (req, res) => {

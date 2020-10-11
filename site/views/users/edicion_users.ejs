@@ -7,33 +7,50 @@
 <body>
 
     <!--Header-->
-    <%- include('./partials/header/header.ejs') %>
-    
+    <%- include('../partials/header/header.ejs') %>
+
     <main class="main_edicion_users">
 
         <h3 class="title_edicion_users">Editar Producto</h3>
 
         <form action="/users/<%= data %>/edit?_method=PUT" method="POST" class="form_edit_users">
 
-            <label for="myfile">    Avatar:     <input type="file" id="myfile" name="myfile" >                                           </label>
+            <div class="form_edit_userOPT">
+                <label for="user"> Usuario:
+                    <input type="text" name="user" id="user" placeholder="<%= user.username %>">
+                </label>
+            </div>
 
-            <label for="user">      Usuario:     <input type="text"      name="user"     id="user"      placeholder="<%= user.username %>">        </label>
+            <div class="form_edit_userOPT">
+                <label for="name"> Nombre:
+                    <input type="text" name="name" id="name" placeholder="<%= user.name %>">
+                </label>
+            </div>
 
-            <label for="name">      Nombre:     <input type="text"      name="name"     id="name"       placeholder="<%= user.name %>">        </label>
+            <div class="form_edit_userOPT">
+                <label for="surname"> Apellido:
+                    <input type="text" name="surname" id="surname" placeholder="<%= user.surname %>"> </label>
+            </div>
 
-            <label for="surname">   Apellido:   <input type="text"      name="surname"  id="surname"    placeholder="<%= user.surname %>">     </label>
+            <div class="form_edit_userOPT">
+                <label for="email"> Email:
+                    <input type="email" name="email" id="email" placeholder="<%= user.email %>">
+                </label>
+            </div>
 
-            <label for="email">     Email:      <input type="email"     name="email"    id="email"      placeholder="<%= user.email %>">       </label>
+            <div class="form_edit_userOPT">
+                <label for="password"> Contraseña:
+                    <input type="password" name="password" id="password" placeholder="<%= user.password %>">
+                </label>
+            </div>
 
-            <label for="password">  Contraseña: <input type="password"  name="password" id="password"   placeholder="<%= user.password %>">    </label>
-
-            <button type="submit" class="button_edicion_users">  Enviar  </button>
+            <button type="submit" class="button_edicion_users"> Enviar </button>
         </form>
 
     </main>
-    
+
     <!--Footer-->
-	<%- include('../partials/footer.ejs') %>
+    <%- include('../partials/footer.ejs') %>
 
 </body>
 

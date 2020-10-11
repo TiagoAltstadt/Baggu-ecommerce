@@ -136,16 +136,15 @@ HOME
 /*Container Principal del Carrousel*/
 
 .boxContainerCarrousel {
-    box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    margin: 20px 0px 20px 0px;
+    box-sizing: border-box;
+    width: 90vw;
+    margin: 2vw auto;
     height: 15vh;
-    border: 2px grey;
+    border: 1px grey;
     border-style: ridge;
 }
-
 
 /* 3 columnas de Carrousel*/
 
@@ -169,6 +168,7 @@ HOME
 
 .imgCarrousel {
     width: 100%;
+    height: 14vh;
 }
 
 
@@ -201,7 +201,7 @@ HOME
 .boxProduct2,
 .boxProduct3 {
     display: flex;
-    width: 100%;
+    width: 100vw;
     height: 20vh;
     flex-direction: column;
     justify-content: center;
@@ -594,8 +594,7 @@ PARTIALS
 }
 
 
-/* Pop-up Perfil*/
-
+/*  Pop-up Perfil   */
 
 /* on: flex, of: none */
 
@@ -645,7 +644,7 @@ PARTIALS
 }
 
 
-/* header burguer*/
+/*  Header burguer  */
 
 
 /* on: flex, of: none */
@@ -1638,6 +1637,10 @@ button {
 .title_edicion_users {
     margin: 12px auto;
     border-bottom: var(--color-tercero) dotted 1px;
+}
+
+.form_edit_userOPT{
+    margin: 0%;
 }
 
 .button_edicion_users {
