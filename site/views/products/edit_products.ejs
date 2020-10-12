@@ -8,52 +8,67 @@
 		<form action="/products/<%= products.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="formularioRegiaster">
 			
 			<div class="logoPrincipal">
-				<h2>Edición de productos</h2>
+				<h2>Edicion de productos</h2>
 			</div>
-			
+			<br>
 			<div class="otrosDatos">
-				<label for="id">
-					<span> ID:</span>
-					<input type="text" value="<%=products.id%>" name="id" id="id">
-				</label>
-				<br>
-				<label for="image">
-					<span>Nueva  Url de imagen de producto</span>
-					<input type="text" value="<%=products.image%>" name="image" id="image">
-				</label>
-				<br>
 				<label for="name">
-					<span> Nuevo nombre de Producto</span>
-					<input type="text" value="<%=products.name%>" name="name" id="name">
+					<span> Cambiar Nombre del Producto</span>
+					<input type="text" name="name" id="name" value="<%= products.name %>">
 				</label>
 				<br>
+				<!--div class="fotoRegister"-->
+					<!--label for="image">Cambiar una Imagen</label-->
+					<!--input type="text" id="image" name="image" value="<%= images.name %>"-->
+					<!--input type="file" id="image" name="image" value="<%= images.name %>"--> <!--Esta imagen tiene q viajar con otro name-->
+				<!--</div>-->
 				<label for="description">
-					<span> Nueva descripcion de producto</span>
-					<input type="text" value="<%=products.description%>" name="description" id="description">
+					<span> Cambiar descripcion del Producto</span>
+					<br>
+					<textarea name="description" id="description" cols="60" rows="5"><%= products.description %></textarea>
 				</label>
 				<br>
-				<label for="name"> 
-					<span>Categoria de Usuario</span>
+				<label for="category">
+					<span>Cambiar Categoria Global del Producto</span>
 					<select name="category" id="category">
-						<option value="1">Buyer</option>
-						<option value="2">Seller</option>
-						<option value="3">God</option>
+						<% for( let i = 0; i < categories.length; i++ ) { 
+							if(categories[i].id == products.category_id){%>
+							<option value="<%= categories[i].id %>" selected> 
+								<%= categories[i].name %>
+							</option>
+							<% }else{ %>
+							<option value="<%= categories[i].id %>"> 
+								<%= categories[i].name %>
+							</option>	 
+						<% }; } %>
+					</select>
+				</label>
+				<br>
+				<label for="brand">
+					<span>Cambiar Marca del Producto</span>
+					<select name="brand" id="brand">
+						<% for( let i = 0; i < brands.length; i++ ) { 
+							if(brands[i].id == products.brand_id){%>
+							<option value="<%= brands[i].id %>" selected> 
+								<%= brands[i].name %>
+							</option>
+							<% }else{ %>
+							<option value="<%= brands[i].id %>"> 
+								<%= brands[i].name %>
+							</option>	
+						<% }; } %>
+
 					</select>
 				</label>
 				<br>
 				<label for="price">
-					<span> Nuevo precio</span>
-					<input type="text" value="<%=products.price%>" name="price" id="price">
+					<span> Cambiar Precio del Producto</span>
+					<input type="text" name="price" id="price" value="<%= products.price %>">
 				</label>
 				<br>
-				<label for="stock">
-					<span> Stock</span>
-					<input type="text" value="<%=products.stock%>" name="stock" id="stock">
-				</label>
-				<br>
-				
+			</div>
 			<div class="Enviar">
-				<button type="submit">Editar</button>
+				<button type="submit">Editar Producto</button>
 			</div>
 		</form>
 

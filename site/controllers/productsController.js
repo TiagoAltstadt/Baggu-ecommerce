@@ -61,56 +61,32 @@ const productsController = {
         },
 
     edit: (req, res) => {
-            const editProduct = productJSON.find(editProduct => editProduct.id == req.params.id);
+            let productEdit = db.Products.findByPk(req.params.id);
+            let categoriesEdit = db.Categories.findAll();
+            let brandsEdit = db.Brands.findAll();
+            let imagesEdit = db.Images.findAll();
 
-            res.render("products/edit_products", {"products": editProduct});
+            Promise.all([productEdit, categoriesEdit, brandsEdit, imagesEdit])
+                .then(function([products, categories, brands, images]){
+                    res.render("products/edit_products", {products, categories, brands, images});
+                })
         },
+
     update: (req, res, next) => {
-
-            //guardo la id en una variable
-            let idProducto = parseInt(req.params.id) + 1;
-
-            //guardo todos los datos del formulario en la variable producto
-            const producto = {
-                id: req.params.id,
-                image: req.body.image,
+        db.Products.update({
+                //image: req.files[0].image, //no funciona que viaje imagen a base de datos//
                 name: req.body.name,
                 description: req.body.description,
                 price: req.body.price,
-                stock: req.body.stock,
-                category: req.body.category
-            }
-            
-            //leo el json de productos y lo paso a la variable archivoProductos como objeto literal
-            const archivoProductos = fs.readFileSync('./data/products.json', { encoding: 'utf-8' });
-            const productos = JSON.parse(archivoProductos);
-
-            let updated = productos.map( function(modificado){
-                if (modificado.id == idProducto){
-                    let aux = modificado;
-                    aux.id = producto.id;
-                    aux.image = producto.image;
-                    aux.description = producto.description;
-                    aux.price = producto.price;
-                    aux.stock = producto.stock;
-                    aux.category = producto.category;
-
-                    return producto;
-                }
-                else{
-                    return modificado;
-                }
-            })
-
-            //lo vuelvo un string para guardarlo
-            const productosJSON = JSON.stringify(updated, null, " ");
-    
-            //uso write para pisar la data previa y guardar todo lo nuevo
-            fs.writeFileSync('./data/products.json', productosJSON);
-    
-            //redirecciono
+                brand_id: req.body.brand,
+                category_id: req.body.category
+        }, {
+            where: {
+                id: req.params.id }
+        });
             res.redirect('/products');
         },
+
     detail: (req, res) => {
             db.Products.findByPk(req.params.id, 
                // {include: [{association: "categories"}, {association: "brands"}, {association: "images"}]}
@@ -129,12 +105,13 @@ const productsController = {
     cart: (req, res) => {
             res.render('../views/products/cart.ejs', {'products': productJSON});
         },
+        
     delete: (req, res) => {
-            let rows = productJSON;
-            let updatedRows = rows.filter(oneRow => oneRow.id != req.params.id);
-    
-            let fileContents = JSON.stringify(updatedRows, null, " ");
-            (fs.writeFileSync(path.join(__dirname, "/../data/products.json"), fileContents));
+            db.Products.destroy({
+                where:{
+                    id: req.params.id
+                }
+            })
     
             res.redirect('/products');
         }
