@@ -101,13 +101,6 @@ const userController = {
 
     update: function (req, res) {
 
-        console.log('----------------------------------------');
-        console.log('Body: ');
-        console.log(req.body);
-        console.log('ID: ');
-        console.log(req.params.id);
-        console.log('----------------------------------------');
-
         db.Users.update({
             avatar: req.body.avatar,
             username: req.body.username,
@@ -124,7 +117,7 @@ const userController = {
 
 
     },
-    delete: async (req, res) => {
+    delete: function (req, res) {
 
         // borrar producto
         db.Users.destroy({ where: { id: req.params.id } });

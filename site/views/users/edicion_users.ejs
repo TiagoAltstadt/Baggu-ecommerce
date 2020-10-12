@@ -16,31 +16,31 @@
         <form action="/users/<%= data %>/edit?_method=PUT" method="POST" class="form_edit_users">
 
             <div class="form_edit_userOPT">
-                <label for="user"> Usuario:
-                    <input type="text" name="user" id="user" placeholder="<%= user.username %>">
+                <label for="username"> Usuario:
+                    <input type="text" name="username" id="username" value="<%= user.username %>" >
                 </label>
             </div>
 
             <div class="form_edit_userOPT">
                 <label for="name"> Nombre:
-                    <input type="text" name="name" id="name" placeholder="<%= user.name %>">
+                    <input type="text" name="name" id="name" value="<%= user.name %>">
                 </label>
             </div>
 
             <div class="form_edit_userOPT">
                 <label for="surname"> Apellido:
-                    <input type="text" name="surname" id="surname" placeholder="<%= user.surname %>"> </label>
+                    <input type="text" name="surname" id="surname" value="<%= user.surname %>"> </label>
             </div>
 
             <div class="form_edit_userOPT">
                 <label for="email"> Email:
-                    <input type="email" name="email" id="email" placeholder="<%= user.email %>">
+                    <input type="email" name="email" id="email" value="<%= user.email %>">
                 </label>
             </div>
 
             <div class="form_edit_userOPT">
                 <label for="password"> Contraseña:
-                    <input type="password" name="password" id="password" placeholder="<%= user.password %>">
+                    <input type="password" name="password" id="password" value="<%= user.password %>">
                 </label>
             </div>
 
