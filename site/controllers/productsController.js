@@ -25,6 +25,7 @@ const productsController = {
                 })
             })
         },
+
     search: (req, res) => {
         let result = {};  
         if(req.query.search){
@@ -33,53 +34,32 @@ const productsController = {
         
         res.render("products/search", {result});
         },
+
     create: (req, res) => {
         db.Categories.findAll()
             .then(function(categories){
                 db.Brands.findAll()
                 .then(function(brands){
-                    res.render('products/create_product', {categories, brands});
+                    db.Images.findAll()
+                    .then(function(images){
+                    res.render('products/create_product', {categories, brands, images});
+                    })
                 })
-                
             })
         },
-    store: (req,res, next) => {
 
-            //guardo todos los datos del formulario en la variable producto
-            const productNew = {
-                id: req.body.id,
-                image: req.files[0].filename,
+    store: (req,res, next) => {
+        db.Products.create({
+                image: req.files[0].image, //no funciona que viaje imagen a base de datos//
                 name: req.body.name,
                 description: req.body.description,
                 price: req.body.price,
-                stock: req.body.stock,
-                category: req.body.category
-            }
-
-            //leo el json de productos y lo paso a la variable archivoProductos
-            const fileProduct = fs.readFileSync('./data/products.json', { encoding: 'utf-8' });
-
-            //defino productos y digo, si esta vacia, creala, si tiene algo, parsealo para poder trabajar con eso
-            let product;
-
-            if (fileProduct == '') {
-                product = []
-            } else {
-                product = JSON.parse(fileProduct);
-            }
-
-            //sea cual sea el output, le meto la nueva info que declare mas arriba en product
-            product.push(productNew);
-
-            //lo vuelvo un string para guardarlo
-            const JSONproduct = JSON.stringify(product, null, " ");
-
-            //uso write para pisar la data previa y guardar todo lo nuevo
-            fs.writeFileSync('./data/products.json', JSONproduct);
-
-            //redirecciono
+                brand_id: req.body.brand,
+                category_id: req.body.category
+        });
             res.redirect('/products');
         },
+
     edit: (req, res) => {
             const editProduct = productJSON.find(editProduct => editProduct.id == req.params.id);
 
@@ -132,10 +112,20 @@ const productsController = {
             res.redirect('/products');
         },
     detail: (req, res) => {
-            const detailProduct = productJSON.find(detailProduct => detailProduct.id == req.params.id);
-        
-            res.render("products/detail_products", { "products": detailProduct });
-        },
+            db.Products.findByPk(req.params.id, 
+               // {include: [{association: "categories"}, {association: "brands"}, {association: "images"}]}
+            )
+                .then(function(products){
+                db.Brands.findAll()
+                    .then(function(brands){
+                    db.Images.findAll()
+                        .then(function(images){
+                            res.render("products/detail_products", { products, brands, images });
+                        })
+                    })
+                })    
+            },
+
     cart: (req, res) => {
             res.render('../views/products/cart.ejs', {'products': productJSON});
         },

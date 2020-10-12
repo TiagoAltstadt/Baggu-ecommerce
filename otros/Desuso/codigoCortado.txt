@@ -1,0 +1,55 @@
+---------------Estructura para iniciar base de datos----------------
+
+CREATE SCHEMA `baggu` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci ;
+
+CREATE TABLE `baggu`.`users` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `avatar` VARCHAR(50) NULL,
+  `username` VARCHAR(50) NULL,
+  `name` VARCHAR(50) NULL,
+  `surname` VARCHAR(50) NULL,
+  `email` VARCHAR(250) NULL,
+  `password` VARCHAR(250) NULL,
+  `category` TINYINT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC));
+
+  ---------------Codigo en Create_Product.ejs---------------------
+
+  				<!-- <div class="icono">
+					<i class="fab fa-product-hunt"></i>
+					<label for="name">
+						<span> Product name</span>
+						<input type="text" name="name" id="name">
+					</label>
+				</div>
+				<div class="icono">
+					<i class="fab fa-product-hunt"></i>
+					<label for="description">
+						<span>Description</span>
+						<input type="text" name="description" id="description">
+					</label>
+				</div>
+				<div class="icono">
+					<i class="fab fa-product-hunt"></i>
+					<label for="category">
+						<span>Category</span>
+						<select name="category" id="category">Category</select>
+						<option value="1">Seller</option>
+						<option value="2">Buyer</option>
+						<option value="3">God</option>
+					</label>
+				</div>
+
+				<div class="icono">
+					<i class="fab fa-product-hunt"></i>
+					<label for="precio">
+						<span>price</span>
+						<input type="number" name="precio" id="precio">
+					</label>
+				</div>
+
+				<div class="fotoRegister">
+					!--<label for="myfile">Select a file:</label>->
+					<input type="file" id="fotoProducto" name="fotoProducto">
+				</div> -->

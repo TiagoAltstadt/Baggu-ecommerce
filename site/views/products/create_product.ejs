@@ -12,90 +12,53 @@
 			</div>
 			<br>
 			<div class="otrosDatos">
-				<label for="id">
-					<span> ID:</span>
-					<input type="text" name="id" id="id">
-				</label>
-				<br>
-				<!-- <label for="image">
-					<span> Url de imagen de producto</span>
-					<input type="text" name="image" id="image">
-				</label> -->
-				<div class="fotoRegister">
-					<label for="image">Select a file:</label>
-					<input type="file" id="image" name="image">
-				</div>
-				<br>
-
 				<label for="name">
-					<span> Product name</span>
+					<span> Nombre del Producto</span>
 					<input type="text" name="name" id="name">
 				</label>
 				<br>
+				<div class="fotoRegister">
+					<label for="image">Seleccionar una Imagen</label>
+					<input type="file" id="image" name="image"> <!--Esta imagen tiene q viajar con otro name-->
+				</div>
 				<label for="description">
-					<span> Product Description</span>
+					<span> Descripcion del Producto</span>
 					<input type="text" name="description" id="description">
 				</label>
 				<br>
-				<label for="name">
+				<label for="category">
 					<span>Categoria Global del Producto</span>
 					<select name="category" id="category">
-						<option value="1">Papel</option>
-						<option value="2">Carton</option>
-						<option value="3">Materia oscura</option>
+						<% for( let i = 0; i < categories.length; i++ ) { %>
+							<option value="<%= categories[i].id %>"> 
+								<%= categories[i].name %>
+							</option>
+						<% } %>
+					</select>
+				</label>
+				<br>
+				<label for="brand">
+					<span>Marca del Producto</span>
+					<select name="brand" id="brand">
+						<% for( let i = 0; i < brands.length; i++ ) { %>
+							<option value="<%= brands[i].id %>"> 
+								<%= brands[i].name %>
+							</option>
+						<% } %>
+
 					</select>
 				</label>
 				<br>
 				<label for="price">
-					<span> Product price</span>
+					<span> Precio del Producto</span>
 					<input type="text" name="price" id="price">
 				</label>
 				<br>
-
-				<!-- <div class="icono">
-					<i class="fab fa-product-hunt"></i>
-					<label for="name">
-						<span> Product name</span>
-						<input type="text" name="name" id="name">
-					</label>
-				</div>
-				<div class="icono">
-					<i class="fab fa-product-hunt"></i>
-					<label for="description">
-						<span>Description</span>
-						<input type="text" name="description" id="description">
-					</label>
-				</div>
-				<div class="icono">
-					<i class="fab fa-product-hunt"></i>
-					<label for="category">
-						<span>Category</span>
-						<select name="category" id="category">Category</select>
-						<option value="1">Seller</option>
-						<option value="2">Buyer</option>
-						<option value="3">God</option>
-					</label>
-				</div>
-
-				<div class="icono">
-					<i class="fab fa-product-hunt"></i>
-					<label for="precio">
-						<span>price</span>
-						<input type="number" name="precio" id="precio">
-					</label>
-				</div>
-
-				<div class="fotoRegister">
-					!--<label for="myfile">Select a file:</label>->
-					<input type="file" id="fotoProducto" name="fotoProducto">
-				</div> -->
 			</div>
 			<div class="Enviar">
-				<button type="submit">Submit</button>
+				<button type="submit">Crear Producto</button>
 			</div>
 		</form>
-
-
 
         <%- include('../partials/footer.ejs') %>
     	

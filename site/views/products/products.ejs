@@ -27,7 +27,11 @@
                         <a href="products/<%= bodyProducts.id %>" class="product_image_container">
                             <div class="background_color"></div>  <%#---para que es esto?? --%>
                             <div class="product_content">
+                                <%#-- if(bodyImages.name == undefined){--%>
+                                    <%#-- <img class="product_image" src="/img/logos/Nuevo Logo.png" alt="Imagen Default" width="100%" height="50%">--%>
+                                <%#-- }else{--%>
                                 <img class="product_image" src="/fileProducts/<%= bodyImages[0].name %>" alt="Imagen" width="100%" height="50%">
+                                <%#-- }--%>
                                 <div class="product_title"> <%= bodyProducts.title %> </div>
                                 <div class="product_title"><p>Marca: <%= bodyBrans.name %> </p> </div>
                                 <div class="product_description"> <%= bodyProducts.description %> </div>
