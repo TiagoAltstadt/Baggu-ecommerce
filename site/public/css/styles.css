@@ -944,7 +944,7 @@ PARTIALS
     flex-wrap: wrap;
     background-color: var(--color-cuarto);
     flex-direction: column;
-    border-radius: 12px;
+    box-shadow: black 100px;
     width: 100%;
     margin: 5% 5%;
 }
@@ -958,8 +958,8 @@ PARTIALS
 .product_image {
     display: block;
     box-sizing: border-box;
-    width: 80%;
-    margin: 5px auto;
+    width: 100%;
+    height: 60%;
     align-self: center;
 }
 

@@ -16,7 +16,13 @@ const productsController = {
     list: (req, res) => {
         db.Products.findAll()
             .then(function(products){
-                res.render('products/products', {'products': products});
+                db.Brands.findAll()
+                .then(function(brands){
+                    db.Images.findAll()
+                    .then(function(images){
+                res.render('products/products', {products, brands, images});
+                    })
+                })
             })
         },
     search: (req, res) => {
@@ -28,7 +34,14 @@ const productsController = {
         res.render("products/search", {result});
         },
     create: (req, res) => {
-            res.render('products/create_product');
+        db.Categories.findAll()
+            .then(function(categories){
+                db.Brands.findAll()
+                .then(function(brands){
+                    res.render('products/create_product', {categories, brands});
+                })
+                
+            })
         },
     store: (req,res, next) => {
 

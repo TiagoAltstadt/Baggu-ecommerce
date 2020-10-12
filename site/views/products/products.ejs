@@ -11,23 +11,38 @@
         
         <%- include('../partials/header/header.ejs') %>
         <main>
-            
             <div class="products_container">
-
-            <div class="products_subcontainer">         
-
-                
-                <% for( var i=0; i<products.length; i++){                                                          %>
-                    <%- include('../partials/product_partial.ejs', {id: products[i].id ,image: products[i].image ,title: products[i].name , description: products[i].description ,price: products[i].price }) %>
-                    <% }                                                                                               %>        
-
-                    
-                    
+                <div class="products_subcontainer">
+                    <% for( var i=0; i<products.length; i++){ 
+                        bodyProducts =  {id: products[i].id, image: products[i].image, title: products[i].name, description: products[i].description, price: products[i].price, brandId: products[i].brand_id};
+                        bodyBrans = {};
+                    for( let i = 0; i < brands.length; i++ ) { 
+                        if(brands[i].id == bodyProducts.brandId){
+                            bodyBrans = {name: brands[i].name};};}
+                        bodyImages = [];
+                    for( let i = 0; i < images.length; i++ ) { 
+                        if(images[i].product_id == bodyProducts.id){
+                            bodyImages.push({name: images[i].name});};}%>
+                    <section class="product_container">
+                        <a href="products/<%= bodyProducts.id %>" class="product_image_container">
+                            <div class="background_color"></div>  <%#---para que es esto?? --%>
+                            <div class="product_content">
+                                <img class="product_image" src="/fileProducts/<%= bodyImages[0].name %>" alt="Imagen" width="100%" height="50%">
+                                <div class="product_title"> <%= bodyProducts.title %> </div>
+                                <div class="product_title"><p>Marca: <%= bodyBrans.name %> </p> </div>
+                                <div class="product_description"> <%= bodyProducts.description %> </div>
+                                <div class="product_price">Precio: $ <%= bodyProducts.price %>  </div>
+                                <div class="product_options">
+                                    <i class="fas fa-share product_icon"></i>
+                                    <i class="fas fa-cart-plus product_icon"></i>
+                                    <i class="fas fa-dollar-sign product_icon"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </section>
+                    <% } %> 
                 </div>
-
             </div>
-            
-            
         </main>
         
         <%- include('../partials/footer.ejs') %>
