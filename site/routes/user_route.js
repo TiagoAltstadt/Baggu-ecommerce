@@ -30,16 +30,16 @@ var upload = multer({ storage: storage });
 router.get('/', loggedOut_lock, userController.list);
 
 router.get('/register', loggedIn_lock, userController.register);
-router.post('/register', upload.any(), userController.store);
+router.post('/register', loggedIn_lock, upload.any(), userController.store);
 
-router.get('/login', userController.login);
-router.post('/login', [check('email').isEmail().withMessage('Email Invalido.'), check('password').isLength({ min: 8 }).withMessage('La contraseña debe tener minimo 8 caracteres.')], userController.processLogin);
-router.put('/logout', userController.logout);
+router.get('/login', loggedIn_lock, userController.login);
+router.post('/login', loggedIn_lock, [check('email').isEmail().withMessage('Email Invalido.'), check('password').isLength({ min: 8 }).withMessage('La contraseña debe tener minimo 8 caracteres.')], userController.processLogin);
+router.put('/logout', loggedIn_lock, userController.logout);
 
 router.get('/:id', loggedOut_lock, userController.profile);
 
 router.get('/:id/edit', loggedOut_lock, userController.edit);
-router.put('/:id/edit', userController.update);
+router.put('/:id/edit', loggedOut_lock, userController.update);
 
 router.put('/:id/delete', loggedOut_lock, userController.delete);
 
