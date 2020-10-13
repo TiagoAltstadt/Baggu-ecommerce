@@ -75,3 +75,19 @@ Manejarse con egoísmo respecto a ideas que uno quiere implementar y otros no.
 
 
 ------------------------------------------------------------------------------------
+13-10-2020 (Sprint 7)
+
+Que comenzar hacer?
+Venimos con una comunicacion y reuniones muy fluidas, generando avances mas concretos, solo quedaria dividirse tareas puntuales para ver si el resultado es mejor
+
+Que hacer mas?
+La comunicacion y las reuniones son fundamentales, seria muy beneficioso que se generaran mas reuniones en lo posible
+
+Que continuar haciendo?
+Continuar con la comunicacion fluida, las buenas energias, el empuje a no aflojar y la predisposicion a estar para cualquier duda o problema
+
+Que hacer menos?
+No pedir ayuda y generar atrasos en el proyecto
+
+Que dejar de hacer?
+No volver a cometer errores del inicio del proyecto
