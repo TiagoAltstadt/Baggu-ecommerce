@@ -8,16 +8,13 @@ INSERT INTO category_users (name) VALUES ("admin");
 
 -- Insert de usuarios --
 
-INSERT INTO users (avatar, username, name, surname, email, password, category_user_id) VALUES ('https://robohash.org/aliquidnobisaspernatur.bmp?size=500x500&set=set1', 'bdaid0', 'Beilul', 'Daid', 'bdaid0@alibaba.com', 'ABuh8s', 2);
-INSERT INTO users (avatar, username, name, surname, email, password, category_user_id) VALUES ('https://robohash.org/magnamatanimi.bmp?size=500x500&set=set1', 'amadgett1', 'Ann', 'Madgett', 'amadgett1@cafepress.com', 'ymuaMtV', 1);
-INSERT INTO users (avatar, username, name, surname, email, password, category_user_id) VALUES ('https://robohash.org/cumqueinquae.png?size=500x500&set=set1', 'ljoannidi2', 'Lauraine', 'Joannidi', 'ljoannidi2@weather.com', 'N6GR931wS', 2);
-INSERT INTO users (avatar, username, name, surname, email, password, category_user_id) VALUES ('https://robohash.org/utnonipsum.jpg?size=500x500&set=set1', 'eheather3', 'Elyn', 'Heather', 'eheather3@hud.gov', 'HwBY6ObVYAX', 1);
-INSERT INTO users (avatar, username, name, surname, email, password, category_user_id) VALUES ('https://robohash.org/eaetid.jpg?size=500x500&set=set1', 'rmcclinton4', 'Randie', 'McClinton', 'rmcclinton4@fotki.com', 'YtwJvye', 2);
-INSERT INTO users (avatar, username, name, surname, email, password, category_user_id) VALUES ('https://robohash.org/cupiditateassumendaaut.jpg?size=500x500&set=set1', 'mjedrys5', 'Melisande', 'Jedrys', 'mjedrys5@multiply.com', 'jwAszN', 1);
-INSERT INTO users (avatar, username, name, surname, email, password, category_user_id) VALUES ('https://robohash.org/quiaataliquam.png?size=500x500&set=set1', 'mvalasek6', 'Mattie', 'Valasek', 'mvalasek6@photobucket.com', 'JbvTAM52J', 2);
-INSERT INTO users (avatar, username, name, surname, email, password, category_user_id) VALUES ('https://robohash.org/veniambeataequas.bmp?size=500x500&set=set1', 'mbyne7', 'Mano', 'Byne', 'mbyne7@census.gov', 'C01bcinTfYqB', 2);
-INSERT INTO users (avatar, username, name, surname, email, password, category_user_id) VALUES ('https://robohash.org/officiisfugiata.png?size=500x500&set=set1', 'caccomb8', 'Cris', 'Accomb', 'caccomb8@skyrock.com', 'UjoXxRQ34y', 2);
-INSERT INTO users (avatar, username, name, surname, email, password, category_user_id) VALUES ('https://robohash.org/indelenitiincidunt.png?size=500x500&set=set1', 'wlooker9', 'Westleigh', 'Looker', 'wlooker9@4shared.com', 'WxUwEEXfKLDF', 1);
+INSERT INTO users (avatar, username, name, surname, email, password, category_user_id) VALUES ('Lorenzo.jpg', 'lolo03', 'Lorenzo', 'Marchese', 'lomarchese@gmail.com', 'ABuh8s', 1);
+INSERT INTO users (avatar, username, name, surname, email, password, category_user_id) VALUES ('Maria.jpg', 'maripo84', 'Maria', 'Impellizzieri', 'mimellizzieri@hotmail.com', 'ymuaMtV', 1);
+INSERT INTO users (avatar, username, name, surname, email, password, category_user_id) VALUES ('Lauraine.jpg', 'ljoa2020', 'Lauraine', 'Joannidi', 'ljoannidi2@gmail.com', 'N6GR931wS', 1);
+INSERT INTO users (avatar, username, name, surname, email, password, category_user_id) VALUES ('Elyn.jpg', 'eheather3', 'Elyn', 'Heather', 'eheather3@hotmail.com', 'HwBY6ObVYAX', 1);
+INSERT INTO users (avatar, username, name, surname, email, password, category_user_id) VALUES ('Tiago.jpg', 'Goia', 'Tiago', 'Altstadt', ' tiagoaltstadt@gmail.com', '$2a$10$2.PFWUUCjM6c.QtM0ByTAOu84wVrw.SLGPtGy/VikStpzRApgDGgu', 2);
+INSERT INTO users (avatar, username, name, surname, email, password, category_user_id) VALUES ('Marcelo.jpg', 'marceg', 'Marcelo', 'Giaccaglia', 'marcelogiaccaglia@hotmail.com', '$2a$10$2.PFWUUCjM6c.QtM0ByTAOu84wVrw.SLGPtGy/VikStpzRApgDGgu', 2);
+
 
 -- Insert de marcas --
 
