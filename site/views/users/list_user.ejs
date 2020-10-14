@@ -24,17 +24,17 @@
                                 <a href="/users/<%= user.id %>/ ">
                                     <div class="info_list_user"><img class="user_list_image" src="/fileUsers/<%= user.avatar %>"></div>
                                 </a>
-                                <div class="info_list_user">Usuario:
+                                <div class="info_list_user"> <b>Usuario:</b>  <br>
                                     <%= user.username %>
                                 </div>
-                                <div class="info_list_user">Nombre:
+                                <div class="info_list_user"> <b> Nombre:</b> <br>
                                     <%= user.name %>
                                 </div>
-                                <div class="info_list_user">Apellido:
+                                <div class="info_list_user"> <b>Apellido:</b>  <br>
                                     <%= user.surname %>
                                 </div>
-                                <div class="info_list_user">Email: <br>
-                                    <%= user.email %>
+                                <div class="info_list_user"> <b style="margin: 0px 30%;">Email:</b> <br>
+                                   <p style="font-size: smaller;"><%= user.email %></p>
                                 </div>
 
                             </div>

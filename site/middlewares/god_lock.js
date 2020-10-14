@@ -4,6 +4,6 @@ module.exports = (req, res, next) => {
     if (req.session.user.category_user_id == 2) {
         next();
     } else {
-        res.send('NO TENES PERMISO, SACALAMANODEAHI!');
+        res.redirect('/');
     }
 }
