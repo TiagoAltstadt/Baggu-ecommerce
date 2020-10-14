@@ -15,6 +15,12 @@
 
         <form action="/users/<%= data %>/edit?_method=PUT" method="POST" class="form_edit_users">
 
+            <div class="form_edit_OPT">
+                <label for="avatar">
+                    <input type="file" id="avatar" name="avatar" placeholder="Elegi una fotod e tu PC">
+                </label>
+            </div>
+
             <div class="form_edit_userOPT">
                 <label for="username"> Usuario:
                     <input type="text" name="username" id="username" value="<%= user.username %>" >

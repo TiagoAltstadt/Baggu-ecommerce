@@ -15,13 +15,15 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(methodOverride("_method"));
 
-// Sesiones y cookies
+// Sesiones 
 app.use(session({
     secret: "Secret", 
     resave: true,
     saveUninitialized: true
 }));
 app.use(auth);
+
+
 
 
 //----Rutas----

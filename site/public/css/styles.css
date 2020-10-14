@@ -201,12 +201,12 @@ HOME
 .boxProduct2,
 .boxProduct3 {
     display: flex;
-    width: 100vw;
-    height: 20vh;
     flex-direction: column;
-    justify-content: center;
-    margin: 20px 0px;
+    width: 95vw;
+    height: 20vh;
+    margin: 20px auto;
     padding: 10px;
+    justify-content: center;
 }
 
 h2.titleIndex {
@@ -612,7 +612,7 @@ PARTIALS
     padding: 2%;
     z-index: 100;
     border: black solid 1px;
-    border-radius: 6px;
+    border-radius: 4px;
     background-image: url("/img/backgrounds/paper_background.jpg");
 }
 
@@ -620,8 +620,9 @@ PARTIALS
     display: block;
     box-sizing: border-box;
     margin: auto;
+    margin-bottom: 5px;
     width: 50%;
-    border: #4dd0e1 solid 2px;
+    box-shadow: 5px 5px;
 }
 
 .profile_mainInfo {
@@ -630,12 +631,12 @@ PARTIALS
     width: 80%;
     margin: auto;
     background-color: rgba(219, 216, 219, 0.4);
-    border-radius: 6px;
+    border-radius: 4px;
 }
 
 .header_popUp ul {
     background-color: rgba(219, 216, 219, 0.4);
-    border-radius: 6px;
+    border-radius: 4px;
 }
 
 .profile_name {
@@ -1657,14 +1658,20 @@ button {
 }
 
 .content_user_list {
-    margin: auto;
+    display: block;
+    box-sizing: border-box;
+    box-shadow: 5px 5px;
+    border-radius: 2px;
+    margin: 2vw auto;
     background-color: var(--color-cuarto);
-    width: fit-content;
+    width: 40vw;
+    
 }
 
 .info_list_user {
-    margin: auto;
+    margin: 8px auto;
     width: fit-content;
+    font-size: small;
 }
 
 .user_list_image {

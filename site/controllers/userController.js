@@ -61,6 +61,9 @@ const userController = {
                     if (bcrypt.compareSync(req.body.password, user.password)) {
                         req.session.user = user;
                         console.log('- La password esta bien.');
+
+                        
+                        
                         console.log('-----------------------------------------------------------------------');
                         res.redirect('/');
                     } else {
@@ -114,8 +117,6 @@ const userController = {
                 res.redirect('/users');
             })
             .catch(error => console.log(error));
-
-
     },
     delete: function (req, res) {
 
