@@ -34,7 +34,7 @@ router.post('/register', loggedIn_lock, upload.any(), userController.store);
 
 router.get('/login', loggedIn_lock, userController.login);
 router.post('/login', loggedIn_lock, [check('email').isEmail().withMessage('Email Invalido.'), check('password').isLength({ min: 8 }).withMessage('La contraseña debe tener minimo 8 caracteres.')], userController.processLogin);
-router.put('/logout', loggedIn_lock, userController.logout);
+router.put('/logout', userController.logout);
 
 router.get('/:id', loggedOut_lock, userController.profile);
 
