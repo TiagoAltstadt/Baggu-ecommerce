@@ -12,33 +12,37 @@
 
         <ul>
 
-            <li class="info_UDP"> <b> Usuario:    </b>
+            <li class="info_UDP"> <b> Usuario: </b>
                 <%= username %>
             </li>
-            <li class="info_UDP"> <b> ID:         </b>
+            <li class="info_UDP"> <b> ID: </b>
                 <%=id%>
             </li>
-            <li class="info_UDP"> <b> Nombre:     </b>
+            <li class="info_UDP"> <b> Nombre: </b>
                 <%=name%>
-                    <%=surname%>
+                <%=surname%>
             </li>
-            <li class="info_UDP"> <b> Email:      </b>
+            <li class="info_UDP"> <b> Email: </b>
                 <%=email%>
             </li>
 
             <li class="info_UDP">
                 <% let option = "vendedor" %>
-                    <% if (category != 1){option = "Vendedor"} %>
-                        <b> Categoria: </b>
-                        <%=option%>
+                <% if (category != 1){option = "Vendedor"} %>
+                <b> Categoria: </b>
+                <%=option%>
             </li>
 
-            <form action="/users/<%= id %>/delete?_method=PUT" method="POST"><button type="submit">Borrar Usuario</button></form>
-            <a href="/users/<%= id %>/edit"><button type="submit">Editar</button></a>
 
-            <% if(locals.loggedUser.id == id ){%>
-                <form action="/users/logout?_method=PUT" method="POST"><button type="submit">Cerrar Sesion</button></form>
-                <% } %>
+            <% if((locals.loggedUser.id == id) || (locals.loggedUser.category_user_id == 2)){%>
+            <form action="/users/<%= id %>/delete?_method=PUT" method="POST"><button type="submit">Borrar
+                    Usuario</button></form>
+            <a href="/users/<%= id %>/edit"><button type="submit">Editar</button></a>
+            <% } %>
+            
+            <% if(locals.loggedUser.id == id){%>
+            <form action="/users/logout?_method=PUT" method="POST"><button type="submit">Cerrar Sesion</button></form>
+            <% } %>
 
         </ul>
     </div>

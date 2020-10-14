@@ -7,6 +7,8 @@ const router = express.Router();
 //----Lock Midleware----
 const loggedOut_lock = require('../middlewares/loggedOut_lock');
 const loggedIn_lock = require('../middlewares/loggedIn_lock');
+const god_lock = require('../middlewares/god_lock');
+
 
 //----Controlador de Usuarios----
 const userController = require('../controllers/userController.js');
@@ -27,7 +29,7 @@ var upload = multer({ storage: storage });
 
 //----Rutas----
 
-router.get('/', loggedOut_lock, userController.list);
+router.get('/', loggedOut_lock, god_lock, userController.list);
 
 router.get('/register', loggedIn_lock, userController.register);
 router.post('/register', loggedIn_lock, upload.any(), userController.store);

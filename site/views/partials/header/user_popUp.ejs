@@ -1,66 +1,71 @@
 <!--    Si esta logueado:   -->
 <% if (locals.loggedUser){ %>
 
-    <section class="header_popUp" id="profile">
-        
-        <!--Image-->
-        <img src="/fileUsers/<%= locals.loggedUser.avatar %>" alt="LogoL" class="profile_popUpAvatar">
+<section class="header_popUp" id="profile">
 
-        <!--Main Info-->
-        <div class="profile_mainInfo">
-            <p class=" profile_name">
-                <%= locals.loggedUser.name %>
-            </p>
-        </div>
+    <!--Image-->
+    <img src="/fileUsers/<%= locals.loggedUser.avatar %>" alt="LogoL" class="profile_popUpAvatar">
 
-        <!--Options-->
-        <ul>
-            <a href="/users/<%= locals.loggedUser.id %>">
-                <li class="option">Perfil</li>
+    <!--Main Info-->
+    <div class="profile_mainInfo">
+        <p class=" profile_name">
+            <%= locals.loggedUser.name %>
+        </p>
+    </div>
+
+    <!--Options-->
+    <ul>
+        <a href="/users/<%= locals.loggedUser.id %>">
+            <li class="option">Perfil</li>
+        </a>
+        <a href="/users/<%= locals.loggedUser.id %>/edit">
+            <li class="option">Editar perfil</li>
+        </a>
+
+        <a href="https://weirdorconfusing.com/">
+            <li class="option">Boton magico</li>
+        </a>
+        <% if (locals.loggedUser.category_user_id == 2){ %>
+            <a href="/users">
+                <li class="option">Usuarios</li>
             </a>
-            <a href="/users/<%= locals.loggedUser.id %>/edit">
-                <li class="option">Editar perfil</li>
-            </a>
+        <% } %>
 
-            <a href="https://weirdorconfusing.com/">
-                <li class="option">Boton magico</li>
-            </a>
+    </ul>
+    <form action="/users/logout?_method=PUT" method="POST"><button type="submit">Cerrar Sesion</button></form>
 
-        </ul>
-        <form action="/users/logout?_method=PUT" method="POST"><button type="submit">Cerrar Sesion</button></form>
+</section>
 
-    </section>
-
-    <!--    Si no esta logueado -->
+<!--    Si no esta logueado -->
 <% } else { %>
 
-    <section class="header_popUp" id="profile">
+<section class="header_popUp" id="profile">
 
-        <!--Image-->
-        <img src="/img/user_default/default.png" alt="LogoL" class="profile_popUpAvatar">
+    <!--Image-->
+    <img src="/img/user_default/default.png" alt="LogoL" class="profile_popUpAvatar">
 
-        <!--Main Info-->
-        <div class="profile_mainInfo">
-            <p class=" profile_name">
-            <p>No estas logueado</p>
-            </p>
-        </div>
+    <!--Main Info-->
+    <div class="profile_mainInfo">
+        <p class=" profile_name">
+        <p>No estas logueado</p>
+        </p>
+    </div>
 
-        <!--Options-->
-        <ul>
-            <a href="/users/login">
-                <li class="option">Iniciar sesion</li>
-            </a>
-            <a href="/users/register">
-                <li class="option">Registrate</li>
-            </a>
+    <!--Options-->
+    <ul>
+        <a href="/users/login">
+            <li class="option">Iniciar sesion</li>
+        </a>
+        <a href="/users/register">
+            <li class="option">Registrate</li>
+        </a>
 
-            <a href="https://weirdorconfusing.com/">
-                <li class="option">Boton magico</li>
-            </a>
+        <a href="https://weirdorconfusing.com/">
+            <li class="option">Boton magico</li>
+        </a>
 
-        </ul>
+    </ul>
 
-    </section>
+</section>
 
-    <% } %>
+<% } %>
