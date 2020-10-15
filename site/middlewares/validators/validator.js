@@ -23,6 +23,7 @@ module.exports = {
             .notEmpty().withMessage('Debes completar el campo de email').bail()
             .isEmail().withMessage('Email invalido.'),
         check('password')
-            .notEmpty().withMessage('Debes completar el campo de contraseña').bail(),
+            .notEmpty().withMessage('Debes completar el campo de contraseña').bail()
+            .isLength({ min: 5 }).withMessage('La contraseña debe tener al menos 5 caracteres.'),
     ]
 }

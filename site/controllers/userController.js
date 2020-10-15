@@ -59,9 +59,16 @@ const userController = {
     },
 
     processLogin: function (req, res) {
-        console.log('--------------------------INSTANCIA DE LOGUEO--------------------------');
-        //  Pido buscar en la db si hay coincidencia
-        db.Users.findOne({ where: { email: req.body.email } })
+        let errors = validationResult(req);
+
+        console.log(errors);
+
+        if (errors.isEmpty()) {
+
+            console.log('--------------------------INSTANCIA DE LOGUEO--------------------------');
+
+            //  Pido buscar en la db si hay coincidencia
+            db.Users.findOne({ where: { email: req.body.email } })
             .then(user => {
                 //  De ser nulo el valor (no hay coincidencia) retorno un console.log que diga que esta mal
                 if (user) {
@@ -70,22 +77,23 @@ const userController = {
                     if (bcrypt.compareSync(req.body.password, user.password)) {
                         req.session.user = user;
                         console.log('- La password esta bien.');
-
-                        
-                        
                         console.log('-----------------------------------------------------------------------');
                         res.redirect('/');
                     } else {
-                        res.send('La password esta mal.');
+                        res.render('users/login', {errordb: 'La contraseña esta mal'});
                         console.log('- La password esta mal.')
                         console.log('-----------------------------------------------------------------------');
                     }
                 } else {
-                    res.send('El email esta mal.');
+                    res.render('users/login', {errordb: 'El mail esta mal'});
                     console.log('- El email esta mal');
                     console.log('-----------------------------------------------------------------------');
                 }
             })
+        }else{
+            console.log(errors.mapped);
+            res.render('users/login', { errors: errors.mapped(), data: req.body });
+        }
     },
 
     profile: function (req, res) {
