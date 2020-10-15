@@ -25,24 +25,33 @@ const userController = {
 
     store: function (req, res, next) {
 
-        //NO FUNCIONA CUANDO NO SELECCIONAS UNA FOTO
-        let avatarOK = '../public/img/user_default/default.png';
-        if (req.files[0].filename != undefined) {
-            avatarOK = req.files[0].filename;
-        }
+        let errors = validationResult(req);
 
-        db.Users.create({
-            avatar: avatarOK,
-            username: req.body.username,
-            name: req.body.name,
-            surname: req.body.surname,
-            email: req.body.email,
-            password: bcrypt.hashSync(req.body.password, 10),
-            category_user_id: 1
-        })
-            .then(user => {
-                res.redirect('/');
+        console.log(errors);
+
+        if (errors.isEmpty()) {
+            
+            
+            let avatarOK = '../public/img/user_default/default.png';
+
+            db.Users.create({
+                avatar: avatarOK,
+                username: req.body.username,
+                name: req.body.name,
+                surname: req.body.surname,
+                email: req.body.email,
+                password: bcrypt.hashSync(req.body.password, 10),
+                category_user_id: 1
             })
+                .then(user => {
+                    res.redirect('/');
+            })
+        }
+        else{
+            
+            console.log(errors.mapped);
+            res.render('users/register', { errors: errors.mapped(), data: req.body });
+        }
     },
 
     login: function (req, res) {

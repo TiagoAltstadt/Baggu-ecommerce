@@ -77,6 +77,17 @@ ul {
     list-style-type: none;
 }
 
+.is-danger{
+    border: 2px solid red;
+    border-radius: 4px;
+}
+
+.feedback{
+    background-color: red;
+    opacity: 0.8;
+    border-radius: 4px;
+}
+
 
 /*------------------------------------------------------------Transicion de presentacion----------------------------------------------------------------------*/
 

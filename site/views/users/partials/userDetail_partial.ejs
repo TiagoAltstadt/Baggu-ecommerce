@@ -35,8 +35,7 @@
 
 
             <% if((locals.loggedUser.id == id) || (locals.loggedUser.category_user_id == 2)){%>
-            <form action="/users/<%= id %>/delete?_method=PUT" method="POST"><button type="submit">Borrar
-                    Usuario</button></form>
+            <form action="/users/<%= id %>/delete?_method=PUT" method="POST"><button type="submit">Borrar Usuario</button></form>
             <a href="/users/<%= id %>/edit"><button type="submit">Editar</button></a>
             <% } %>
             
