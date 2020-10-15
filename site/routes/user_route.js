@@ -9,6 +9,8 @@ const loggedOut_lock = require('../middlewares/loggedOut_lock');
 const loggedIn_lock = require('../middlewares/loggedIn_lock');
 const god_lock = require('../middlewares/god_lock');
 
+//----Express-validator----
+const validate = require('../middlewares/validators/validator');
 
 //----Controlador de Usuarios----
 const userController = require('../controllers/userController.js');
@@ -32,7 +34,7 @@ var upload = multer({ storage: storage });
 router.get('/', loggedOut_lock, god_lock, userController.list);
 
 router.get('/register', loggedIn_lock, userController.register);
-router.post('/register', loggedIn_lock, upload.any(), userController.store);
+router.post('/register', loggedIn_lock, upload.any(), validate.createForm, userController.store);
 
 router.get('/login', loggedIn_lock, userController.login);
 router.post('/login', loggedIn_lock, [check('email').isEmail().withMessage('Email Invalido.'), check('password').isLength({ min: 8 }).withMessage('La contraseña debe tener minimo 8 caracteres.')], userController.processLogin);
