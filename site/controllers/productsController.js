@@ -18,10 +18,8 @@ const productsController = {
             .then(function(products){
                 db.Brands.findAll()
                 .then(function(brands){
-                    db.Images.findAll()
-                    .then(function(images){
-                res.render('products/products', {products, brands, images});
-                    })
+                res.render('products/products', {products, brands});
+                    
                 })
             })
         },
@@ -40,17 +38,20 @@ const productsController = {
             .then(function(categories){
                 db.Brands.findAll()
                 .then(function(brands){
-                    db.Images.findAll()
-                    .then(function(images){
-                    res.render('products/create_product', {categories, brands, images});
-                    })
+                    res.render('products/create_product', {categories, brands});
+                    
                 })
             })
         },
 
     store: (req,res, next) => {
+        let photoDefault = '../public/img/logos/Nuevo Logo.png'; // Como hacer para que un producto pueda cargarse
+        if (req.files[0].filename != undefined) {                // sin imagen y que use una imagen default, tambien
+            photoDefault = req.files[0].filename;                // como hacer para que multer respete nombre de 
+        }                                                        // imagen original y no le cree una nueva
+
         db.Products.create({
-                image: req.files[0].image, //no funciona que viaje imagen a base de datos//
+                image: photoDefault,
                 name: req.body.name,
                 description: req.body.description,
                 price: req.body.price,
@@ -64,17 +65,16 @@ const productsController = {
             let productEdit = db.Products.findByPk(req.params.id);
             let categoriesEdit = db.Categories.findAll();
             let brandsEdit = db.Brands.findAll();
-            let imagesEdit = db.Images.findAll();
 
-            Promise.all([productEdit, categoriesEdit, brandsEdit, imagesEdit])
-                .then(function([products, categories, brands, images]){
-                    res.render("products/edit_products", {products, categories, brands, images});
+            Promise.all([productEdit, categoriesEdit, brandsEdit])
+                .then(function([products, categories, brands]){
+                    res.render("products/edit_products", {products, categories, brands});
                 })
         },
 
     update: (req, res, next) => {
         db.Products.update({
-                //image: req.files[0].image, //no funciona que viaje imagen a base de datos//
+                image: req.files[0].filename,
                 name: req.body.name,
                 description: req.body.description,
                 price: req.body.price,
@@ -94,10 +94,8 @@ const productsController = {
                 .then(function(products){
                 db.Brands.findAll()
                     .then(function(brands){
-                    db.Images.findAll()
-                        .then(function(images){
-                            res.render("products/detail_products", { products, brands, images });
-                        })
+                            res.render("products/detail_products", { products, brands });
+                        
                     })
                 })    
             },

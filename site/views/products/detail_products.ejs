@@ -8,24 +8,13 @@
     <main>
         
         <%- include('../partials/header/header.ejs') %>
-
-        <%#- include('../partials/detail_partial.ejs', {  id: products.id ,category: products.category, titulo: products.name, image: products.image, type: products.type, description: products.description, price: products.price }) %> 
          
         <!-- Tipo de producto -->
         <div class="tipo_producto"><p><%= products.name %></p></div>
 
         <section class="producto_container">
- 
-            <% bodyImages = []; 
-                for( let i = 0; i < images.length; i++ ) { 
-                     if(images[i].product_id == products.id){ 
-                         bodyImages.push({name: images[i].name});};}; %>
-            <div class="imagen_detalle"><img class="product_image" src="/fileProducts/<%= bodyImages[0].name %>" alt="Imagen de Producto"></div>
+            <div class="imagen_detalle"><img class="product_image" src="/fileProducts/<%= products.image %>" alt="Imagen de Producto"></div>
             
-            <% for( let i = 0; i < bodyImages.length; i++ ) { %>
-            <div class="imagen_detalle"><img class="product_image" src="/fileProducts/<%= bodyImages[i].name %>" alt="Imagen de Producto"></div>
-            <% } %>
-
              <!--Descripcion del producto-->
             <div class="descripcion_detalle">
                  <p class="texto_detalle"><%= products.description %></p>

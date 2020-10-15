@@ -53,3 +53,64 @@ CREATE TABLE `baggu`.`users` (
 					!--<label for="myfile">Select a file:</label>->
 					<input type="file" id="fotoProducto" name="fotoProducto">
 				</div> -->
+
+
+-------------------------------Codigo en model Product.js-------------------
+
+;
+
+        Products.hasMany(models.Images, {
+            as: "images",
+            foreignKey: "product_id"
+        })
+
+-------------------------------Codigo Controller Product--------------------
+list: 
+
+                    db.Images.findAll()
+                    .then(function(images){
+                res.render('products/products', {products, brands, images});
+
+----------------------------Codigo Product.ejs----------------------------
+
+                        bodyImages = [];
+                    for( let i = 0; i < images.length; i++ ) { 
+                        if(images[i].product_id == bodyProducts.id){
+                            bodyImages.push({name: images[i].name});};}
+
+	<img class="product_image" src="/fileProducts/<%= bodyImages[0].name %>" alt="Imagen" width="100%" height="50%">
+
+-------------------------------Codigo Controller Product--------------------
+create: 
+
+                    db.Images.findAll()
+                    .then(function(images){
+                    res.render('products/create_product', {categories, brands, images});
+
+detail:
+					db.Images.findAll()
+                        .then(function(images){
+                            res.render("products/detail_products", { products, brands, images });
+                        })
+
+----------------------------Codigo detail_products.ejs----------------------------
+
+ 				<% bodyImages = []; 
+                for( let i = 0; i < images.length; i++ ) { 
+                     if(images[i].product_id == products.id){ 
+                         bodyImages.push({name: images[i].name});};}; %>
+            <div class="imagen_detalle"><img class="product_image" src="/fileProducts/<%= bodyImages[0].name %>" alt="Imagen de Producto"></div>
+            
+            <% for( let i = 0; i < bodyImages.length; i++ ) { %>
+            <div class="imagen_detalle"><img class="product_image" src="/fileProducts/<%= bodyImages[i].name %>" alt="Imagen de Producto"></div>
+            <% } %>
+
+----------------------------Codigo Controller Product----------------------------
+edit:
+			let imagesEdit = db.Images.findAll();
+
+            Promise.all([productEdit, categoriesEdit, brandsEdit, imagesEdit])
+                .then(function([products, categories, brands, images]){
+                    res.render("products/edit_products", {products, categories, brands, images});
+                })
+				
