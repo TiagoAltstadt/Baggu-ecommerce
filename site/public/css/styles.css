@@ -146,8 +146,7 @@ HOME
 /*------------------------------------------------------------Dedicado a Index.ejs----------------------------------------------------------------------*/
 
 
-/*Container Principal del Carrousel*/
-
+/*  Container Principal del Carrousel*/
 .boxContainerCarrousel {
     display: flex;
     flex-wrap: wrap;
@@ -157,23 +156,14 @@ HOME
     height: 15vh;
     border: 1px grey;
     border-style: ridge;
+    box-shadow: 5px 5px 8px #888888;
 }
 
 /* 3 columnas de Carrousel*/
-
-.carrousel1 {
-    display: none;
-    width: 33%;
-    flex-grow: 1;
-}
-
-.carrousel2 {
-    display: flex;
-    width: 33%;
-    flex-grow: 1;
-}
-
-.carrousel3 {
+.carrousel1,
+.carrousel2,
+.carrousel3
+ {
     display: none;
     width: 33%;
     flex-grow: 1;
@@ -185,31 +175,16 @@ HOME
 }
 
 
-/*Media Query a Laptop*/
-
-@media (min-width: 769px) and (orientation: landscape) {
-    .carrousel1,
-    .carrousel3 {
-        display: flex;
-    }
-    .carrousel2 {
-        justify-content: center;
-    }
-}
-
-;
 
 /* Container principal de grupos productos*/
-
 .containerMainProducts {
     flex-direction: column;
     width: 100%;
     height: 300%;
+
 }
 
-
 /* 3 Columnas de Grupo Productos*/
-
 .boxProduct1,
 .boxProduct2,
 .boxProduct3 {
@@ -219,44 +194,18 @@ HOME
     height: 20vh;
     margin: 20px auto;
     justify-content: center;
+    box-shadow: 5px 5px 8px #888888;
 }
 
-h2.titleIndex {
-    color: white;
-}
+h2.titleIndex { color: white;   }
 
-.boxProduct1 {
-    background-color: var(--color-primero);
-}
+.boxProduct1 {  background-color: var(--color-primero); }
 
-.boxProduct2 {
-    background-color: var(--color-segundo);
-}
+.boxProduct2 {  background-color: var(--color-segundo); }
 
-.boxProduct3 {
-    background-color: var(--color-tercero);
-}
-
-
-/*Media Query a Laptop*/
-
-@media (min-width: 769px) and (orientation: landscape) {
-    .containerMainProducts {
-        flex-direction: row;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-    .boxProduct1,
-    .boxProduct2,
-    .boxProduct3 {
-        width: 30%;
-    }
-}
-
+.boxProduct3 {  background-color: var(--color-tercero); }
 
 /*Contenedor Titulo de Grupo Productos*/
-
 .titleBox {
     display: flex;
     width: 100%;
@@ -266,31 +215,26 @@ h2.titleIndex {
     align-items: center;
 }
 
-
 /*Titulos Grupo Productos*/
-
-h2 {
+.titleBox h2 {
     font-size: 2rem;
-    /* color: whitesmoke;  NO SE HACE ESTO */
+    font-family: sans-serif;
 }
-
 
 /*Contenedor Imagen Grupo Productos*/
-
 .imageBox {
     display: flex;
-    width: 100%;
-    height: 60%;
-    justify-content: center;
+    width: 30vw;
+    height: 10vh;
+    justify-content: left;
+    margin-left: 2vw;
 }
 
-
 /*Estilos Imagenes Grupo Productos*/
-
 .imgMainProduct1,
 .imgMainProduct2,
 .imgMainProduct3 {
-    width: 90vw;
+    width: 100%;
     height: 100%;
     border-radius: 5px;
 }
@@ -298,10 +242,33 @@ h2 {
 .imgMainProduct1:hover,
 .imgMainProduct2:hover,
 .imgMainProduct3:hover {
-    width: 105%;
-    border: 2px solid grey;
+    width: 95vw,
+    
 }
 
+.promo_index{
+    width: 30vw;
+}
+
+/*Media Query a Laptop*/
+
+@media (min-width: 500px) {
+    
+    .imageBox {
+        display: flex;
+        width: 20vw;
+        height: 60%;
+        justify-content: left;
+        margin-left: 2vw;
+    }
+    .imgMainProduct1,
+.imgMainProduct2,
+.imgMainProduct3 {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+};
 
 /*------------------------------------------------------------Dedicado a Acerca-de / Empresa----------------------------------------------------------------------*/
 
