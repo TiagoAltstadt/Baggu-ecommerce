@@ -61,36 +61,60 @@ const userController = {
     processLogin: function (req, res) {
         let errors = validationResult(req);
 
-        console.log(errors);
+        if(errors){
+            console.log(errors);
+        }else{
+            console.log('- No se detectaron errores.');
+        }
 
         if (errors.isEmpty()) {
 
-            console.log('--------------------------INSTANCIA DE LOGUEO--------------------------');
+            console.log('\n\n\n\n--------------------------INSTANCIA DE LOGUEO--------------------------');
 
             //  Pido buscar en la db si hay coincidencia
             db.Users.findOne({ where: { email: req.body.email } })
+            
             .then(user => {
-                //  De ser nulo el valor (no hay coincidencia) retorno un console.log que diga que esta mal
+            
+                //  Si existe usuario
                 if (user) {
-                    console.log('- El Email esta bien.');
-                    //   Corroboro la password 
+                    console.log('- El Email esta bien. (' + user.email +')');
+
+                    //   Si coincide password
                     if (bcrypt.compareSync(req.body.password, user.password)) {
                         req.session.user = user;
+
                         console.log('- La password esta bien.');
-                        console.log('-----------------------------------------------------------------------');
+                        console.log('---------------------------------------------');
+                        console.log('\n\n\n\n');
+                        
                         res.redirect('/');
-                    } else {
-                        res.render('users/login', {errordb: 'La contraseña esta mal'});
+                    } 
+                    //  No coincide password
+                    else {
+                        res.render('users/login', {
+                            errors: { password: { msg: 'La Contraseña esta mal.'}},
+                            user: req.body
+                        });
                         console.log('- La password esta mal.')
-                        console.log('-----------------------------------------------------------------------');
+                        console.log('---------------------------------------------');
+                        console.log('\n\n\n\n');
+                        
                     }
-                } else {
-                    res.render('users/login', {errordb: 'El mail esta mal'});
+                }   //No existe usuario
+                else {
+                    res.render('users/login', {
+                        errors: { email: { msg: 'El mail esta mal.'}},
+                        user: req.body
+                    });
                     console.log('- El email esta mal');
-                    console.log('-----------------------------------------------------------------------');
+                    console.log('---------------------------------------------');
+                    console.log('\n\n\n\n');
+                    
                 }
             })
-        }else{
+        }
+        else{
             console.log(errors.mapped);
             res.render('users/login', { errors: errors.mapped(), data: req.body });
         }
