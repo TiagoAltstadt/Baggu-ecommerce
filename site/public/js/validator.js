@@ -1,4 +1,3 @@
-const validator = require("../../middlewares/validators/validator");
 
 window.addEventListener('load', function() {
 
@@ -16,12 +15,29 @@ window.addEventListener('load', function() {
         let feedback = '';
 
         if(validator.isEmpty(email.value, {ignore_whitespace: true})){ //deberia ignorar el whitespace? es un mail, no tiene espacios...
-            feedback = 'El email no puede estar vacio';
+            feedback = '(Front) El email no puede estar vacio';
         }else if(!validator.isEmail(email.value)){
-            feedback = 'Email invalido';
+            feedback = '(Front) Email invalido';
         }
         handleFeedback(email, feedback);
     };
+
+
+    let handleFeedback = function (element, feedback) {
+        let feedbackElement = element.parentElement.nextElementSibling; //Esto no se bien que hace asi que tengo que estdiarlo...
+
+        if (feedback) {
+            element.classList.add('is-danger');
+            feedbackElement.classList.add('is-danger');
+            errors[element.name] = feedback;
+        } else {
+            element.classList.remove('is-danger');
+            feedbackElement.classList.remove('is-danger');
+            delete errors[element.name];
+        }
+        feedbackElement.innerText = feedback;
+    }
+
 
     email.addEventListener('blur', validateEmail);
 

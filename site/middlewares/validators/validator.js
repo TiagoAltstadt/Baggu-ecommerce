@@ -3,27 +3,27 @@ const { check } = require('express-validator');
 module.exports = {
     createForm: [
         check('username')
-            .notEmpty().withMessage('Debes agregar un nombre de usuario.').bail()
-            .isLength({ min: 5 }).withMessage('El nombre de usuario debe tener al menos 5 caracteres.'), 
+            .notEmpty().withMessage('(Back)Debes agregar un nombre de usuario.').bail()
+            .isLength({ min: 5 }).withMessage('(Back)El nombre de usuario debe tener al menos 5 caracteres.'), 
         check('name')
-            .notEmpty().withMessage('Debes agregar un nombre.').bail()
-            .isLength({ min: 5 }).withMessage('El nombre debe tener al menos 5 caracteres.'), 
+            .notEmpty().withMessage('(Back)Debes agregar un nombre.').bail()
+            .isLength({ min: 5 }).withMessage('(Back)El nombre debe tener al menos 5 caracteres.'), 
         check('surname')
-            .notEmpty().withMessage('Debes agregar un apellido.').bail()
-            .isLength({ min: 5 }).withMessage('El apellido debe tener al menos 5 caracteres.'), 
+            .notEmpty().withMessage('(Back)Debes agregar un apellido.').bail()
+            .isLength({ min: 5 }).withMessage('(Back)El apellido debe tener al menos 5 caracteres.'), 
         check('email')
-            .notEmpty().withMessage('Debes completar el campo de email').bail()
-            .isLength({ min: 5 }).withMessage('El email debe tener al menos 5 caracteres').isEmail().withMessage('Email invalido.'),
+            .notEmpty().withMessage('(Back)Debes completar el campo de email').bail()
+            .isLength({ min: 5 }).withMessage('(Back)El email debe tener al menos 5 caracteres').isEmail().withMessage('(Back)Email invalido.'),
         check('password')
-            .notEmpty().withMessage('Debes completar el campo de contraseña').bail()
-            .isLength({ min: 5 }).withMessage('La contraseña debe tener al menos 5 caracteres'),
+            .notEmpty().withMessage('(Back)Debes completar el campo de contraseña').bail()
+            .isLength({ min: 5 }).withMessage('(Back)La contraseña debe tener al menos 5 caracteres'),
     ],
     loginForm: [
         check('email')
-            .notEmpty().withMessage('Debes completar el campo de email').bail()
-            .isEmail().withMessage('Email invalido.'),
+            .notEmpty().withMessage('(Back)Debes completar el campo de email').bail()
+            .isEmail().withMessage('(Back)Email invalido.'),
         check('password')
-            .notEmpty().withMessage('Debes completar el campo de contraseña').bail()
-            .isLength({ min: 5 }).withMessage('La contraseña debe tener al menos 5 caracteres.'),
+            .notEmpty().withMessage('(Back)Debes completar el campo de contraseña').bail()
+            .isLength({ min: 5 }).withMessage('(Back)La contraseña debe tener al menos 5 caracteres.'),
     ]
 }
