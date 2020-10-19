@@ -34,7 +34,7 @@ var upload = multer({ storage: storage });
 router.get('/', loggedOut_lock, god_lock, userController.list);
 
 router.get('/register', loggedIn_lock, userController.register);
-router.post('/register', loggedIn_lock, upload.any(), validate.createForm, userController.store);
+router.post('/register', loggedIn_lock, upload.any(), /*validate.createForm,*/ userController.store);
 
 router.get('/login', loggedIn_lock, userController.login);
 router.post('/login', loggedIn_lock,validate.loginForm, userController.processLogin);

@@ -857,6 +857,7 @@ PARTIALS
     box-shadow: black 100px;
     width: 100%;
     margin: 5% 5%;
+    box-shadow: 5px 5px 8px #888888;
 }
 
 .product_image_container {
@@ -1101,6 +1102,7 @@ PRODUCTS
     flex-wrap: wrap;
     align-self: center;
     justify-content: center;
+    
 }
 
 .products_subcontainer {
@@ -1108,6 +1110,7 @@ PRODUCTS
     flex-wrap: wrap;
     margin: 2% 2%;
     padding: 0px;
+    
 }
 
 @media all and (min-width: 426px) {
