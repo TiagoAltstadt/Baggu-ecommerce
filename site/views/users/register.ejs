@@ -3,6 +3,8 @@
 	
 	<!--Head-->
 	<%- include('../partials/head.ejs', {title: "Baggu: Register"}) %>
+	<script src="/js/validator.min.js"></script> <!--Scrip de Express Validator-->
+	<script src="/js/validationRegister.js"></script>
 
     <body>
 		
@@ -12,7 +14,7 @@
 
 			<% locals.errors && console.log(errors); %>
 			<!--Form Register-->
-			<form class="formulario_register" enctype="multipart/form-data" action="/users/register" method="POST"> 
+			<form class="formulario_register" id="formRegister" enctype="multipart/form-data" action="/users/register" method="POST"> 
 				
 					<div class="titulo_register">
 						<h1>Registrarse</h1>
@@ -23,34 +25,49 @@
 						<li>
 							<label for="name">
 								<span>Nombre</span>
-								<input class="<%= locals.errors && errors.name ? 'is-danger' : '' %>" value="<%= locals.data ? data.name : '' %>" type="text" name="name" id="name">
-								<p class="feedback <%= locals.errors && errors.name ? 'is-danger' : '' %>"> <%= locals.errors && errors.name ? errors.name.msg : '' %> </p>
+								<input class="<%= locals.errors && errors.name ? 'is-danger' : '' %>" 
+										value="<%= locals.data ? data.name : '' %>" type="text" name="name" id="name">
+								
+								<p class="feedback <%= locals.errors && errors.name ? 'is-danger' : '' %>"> 
+										<%= locals.errors && errors.name ? errors.name.msg : '' %> </p>
 							</label></li>
 						<li>
 							<label for="surname">
 								<span>Surname</span>
-								<input class="<%= locals.errors && errors.surname ? 'is-danger' : '' %>" value="<%= locals.data ? data.surname : '' %>" type="text" name="surname" id="surname">
-								<p class="feedback <%= locals.errors && errors.surname ? 'is-danger' : '' %>"> <%= locals.errors && errors.surname ? errors.surname.msg : '' %> </p>
+								<input class="<%= locals.errors && errors.surname ? 'is-danger' : '' %>" 
+										value="<%= locals.data ? data.surname : '' %>" type="text" name="surname" id="surname">
+								
+								<p class="feedback <%= locals.errors && errors.surname ? 'is-danger' : '' %>"> 
+										<%= locals.errors && errors.surname ? errors.surname.msg : '' %> </p>
 							</label></li>
 						<li>
 							<label for="username">
 								<span>User</span>
-								<input class="<%= locals.errors && errors.username ? 'is-danger' : '' %>" value="<%= locals.data ? data.username : '' %>" type="text" name="username" id="usuario">
-								<p class="feedback <%= locals.errors && errors.username ? 'is-danger' : '' %>"> <%= locals.errors && errors.username ? errors.username.msg : '' %> </p>
+								<input class="<%= locals.errors && errors.username ? 'is-danger' : '' %>" 
+										value="<%= locals.data ? data.username : '' %>" type="text" name="username" id="username">
+								
+								<p class="feedback <%= locals.errors && errors.username ? 'is-danger' : '' %>"> 
+										<%= locals.errors && errors.username ? errors.username.msg : '' %> </p>
 							</label>
 						</li>
 						<li>
 							<label for="email">
 								<span>Email</span>
-								<input class="<%= locals.errors && errors.email ? 'is-danger' : '' %>" value="<%= locals.data ? data.email : '' %>" type="email" name="email" id="email" autocomplete="off">
-								<p class="feedback <%= locals.errors && errors.email ? 'is-danger' : '' %>"> <%= locals.errors && errors.email ? errors.email.msg : '' %> </p>
+								<input class="<%= locals.errors && errors.email ? 'is-danger' : '' %>" 
+										value="<%= locals.data ? data.email : '' %>" type="email" name="email" id="email" autocomplete="off">
+								
+								<p class="feedback <%= locals.errors && errors.email ? 'is-danger' : '' %>"> 
+										<%= locals.errors && errors.email ? errors.email.msg : '' %> </p>
 							</label>
 						</li>
 						<li>
 							<label for="password">
 								<span>Password</span>
-								<input class="<%= locals.errors && errors.password ? 'is-danger' : '' %>" value="<%= locals.data ? data.password : '' %>" type="password" id="password" name="password">
-								<p class="feedback <%= locals.errors && errors.password ? 'is-danger' : '' %>"> <%= locals.errors && errors.password ? errors.password.msg : '' %> </p>
+								<input class="<%= locals.errors && errors.password ? 'is-danger' : '' %>" 
+										value="<%= locals.data ? data.password : '' %>" type="password" id="password" name="password">
+								
+								<p class="feedback <%= locals.errors && errors.password ? 'is-danger' : '' %>"> 
+										<%= locals.errors && errors.password ? errors.password.msg : '' %> </p>
 							</label>
 						</li>
 						

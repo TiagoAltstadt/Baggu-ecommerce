@@ -2,6 +2,7 @@
 <html lang="en">
 
     <%- include('../partials/head.ejs', {title: "Baggu: Detalle"}) %>
+    <script src="/js/buttonCart.js"></script>
 
 <body class="bc_detalle">
 
@@ -30,7 +31,16 @@
                 
                  <!-- Precio -->
                 <div class="precio_detalle"><i class="fas fa-dollar-sign"></i><%= products.price %></div></div>
- 
+                            
+                 <!-- Boton Unidades a Carrito -->
+                <div class="comprar_detalle">
+                    <p>Añadir a Carrito:</p>
+                    <button id="buttonAddCart" type="submit">+</button> 
+                    <button id="buttonLessCart" type="submit">-</button> 
+                    <input class="inputCart" type="number" name="addCart" value="0"><p>Unidad</p> 
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+
                  <!-- Comprar -->
                 <div class="comprar_detalle">
                     <button type="submit">Comprar</button>  
