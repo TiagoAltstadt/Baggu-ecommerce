@@ -33,7 +33,6 @@
 				<div class="subCampoLogin">
 					<label for="email"> Email:</label>
 					<input class="emailPlace" type="text" id="email" name="email" placeholder="Nombre">
-					<p class="feedback"></p> <!--Feedback para mensaje del Front-->
 					<p class="feedback <%= locals.errors && errors.email ? 'is-danger' : '' %>"> 
 						<%= locals.errors && errors.email ? errors.email.msg : '' %></p> <!--Feedback para mensaje del Back-->
 					
@@ -41,7 +40,6 @@
 				<div class="subCampoLogin">
 					<label for="password">Contraseña:</label>
 					<input type="password" id="password" name="password" placeholder="Contraseña">
-					<p class="feedback"></p> <!--Feedback para mensaje del Front-->
 					<p class="feedback <%= locals.errors && errors.password ? 'is-danger' : '' %>"> 
 						<%= locals.errors && errors.password ? errors.password.msg : '' %></p> <!--Feedback para mensaje del Back-->
 					

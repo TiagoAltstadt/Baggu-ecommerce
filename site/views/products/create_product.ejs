@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
     <%- include('../partials/head.ejs', {title: "Baggu: Creación productos"}) %>
+	<script src="/js/validator.min.js"></script> <!--Scrip de Express Validator-->
+	<script src="/js/validationCreateProduct.js"></script>
 
     <body>
 		<%- include('../partials/header/header.ejs') %>
 
-		<form method="POST" action="/products/create" enctype="multipart/form-data" class="formularioRegiaster">
+		<form method="POST" action="/products/create" enctype="multipart/form-data" class="formularioRegiaster" id="formRegisterProduct">
 			
 			<div class="logoPrincipal">
 				<h2>Creación de productos</h2>
@@ -15,16 +17,19 @@
 				<label for="name">
 					<span> Nombre del Producto</span>
 					<input type="text" name="name" id="name">
+					<p class="feedback"></p>
 				</label>
 				<br>
 				<div class="fotoRegister">
 					<label for="image">Seleccionar una Imagen</label>
 					<input type="file" id="image" name="image"> 
+					<p class="feedback"></p>
 				</div>
 				<label for="description">
 					<span> Cambiar descripcion del Producto</span>
 					<br>
 					<textarea name="description" id="description" cols="60" rows="5"></textarea>
+					<p class="feedback"></p>
 				</label>
 				<br>
 				<label for="category">
@@ -53,6 +58,7 @@
 				<label for="price">
 					<span> Precio del Producto</span>
 					<input type="text" name="price" id="price">
+					<p class="feedback"></p>
 				</label>
 				<br>
 			</div>
