@@ -27,22 +27,21 @@ const userController = {
 
         let errors = validationResult(req);
 
-        console.log(errors);
-
         if (errors.isEmpty()) {
             
-            
-            let avatarOK = '../public/img/user_default/default.png';
-
-            db.Users.create({
-                avatar: avatarOK,
+            let newUser = {
+                avatar: 'default.png',
                 username: req.body.username,
                 name: req.body.name,
                 surname: req.body.surname,
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password, 10),
                 category_user_id: 1
-            })
+            }
+            if (req.files.length){
+                newUser.avatar = req.files[0].filename;
+            } 
+            db.Users.create(newUser)
                 .then(user => {
                     res.redirect('/');
             })
@@ -145,15 +144,17 @@ const userController = {
 
     update: function (req, res) {
 
-        db.Users.update({
-            avatar: req.body.avatar,
+        let updatedUser = {
             username: req.body.username,
             name: req.body.name,
             surname: req.body.surname,
             email: req.body.email,
-            password: bcrypt.hashSync(req.body.password, 10),
             category: 1,
-        }, { where: { id: req.params.id } })
+        }
+        if (req.files.length){
+            updatedUser.avatar = req.files[0].filename;
+        } 
+        db.Users.update(updatedUser, { where: { id: req.params.id } })
             .then(userUpdated => {
                 res.redirect('/users');
             })

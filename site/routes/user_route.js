@@ -43,7 +43,7 @@ router.put('/logout', userController.logout);
 router.get('/:id', loggedOut_lock, userController.profile);
 
 router.get('/:id/edit', loggedOut_lock, userController.edit);
-router.put('/:id/edit', loggedOut_lock, userController.update);
+router.put('/:id/edit', loggedOut_lock, upload.any(), userController.update);
 
 router.put('/:id/delete', loggedOut_lock, userController.delete);
 
