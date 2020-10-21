@@ -38,10 +38,10 @@
         <!--Profile pic-->
         <div class="header_profile">
             <% if (locals.loggedUser){ %>
-            <img src="/fileUsers/<%= locals.loggedUser.avatar %>" alt="LogoL" id="header_profile" onclick="profile()"
+            <img src="/fileUsers/<%= locals.loggedUser.avatar %>" alt="Avatar" id="header_profile" onclick="profile()"
                 id="profile">
             <% } else { %>
-            <img src="/img/user_default/default.png" alt="LogoL" id="header_profile" onclick="profile()" id="profile">
+            <img src="/fileUsers/default.png" alt="Avatar" id="header_profile" onclick="profile()" id="profile">
             <% } %>
         </div>
     </div>
