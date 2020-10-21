@@ -1,10 +1,11 @@
 
+
 window.addEventListener("load", function(){
 
     //Variable para capturar todos los errores
     let errors = {};
     //Variable para capturar eventos en el form
-    let form = document.getElementById("formRegisterProduct");
+    let form = document.getElementById("formEditProduct");
 
     //Validacion del campo nombre
     let name = document.getElementById("name");   // Se captura id del campo
@@ -54,31 +55,30 @@ window.addEventListener("load", function(){
     description.addEventListener("blur", descriptionValidation)  // Se utiliza el callback en el evento
 
 
-    //Validacion del campo Imagen
+   //Validacion del campo Imagen
 
-    let image = document.getElementById("image");
-    let imageValidation = function(){
-        let feedback = "";
-        let imageValue = image.value;
-        let imageExtension = imageValue.substring(imageValue.lastIndexOf('.'), imageValue.length);
-        if ( imageExtension !== '.jpg' && imageExtension !== '.jpeg' && imageExtension !== '.png' && imageExtension !== '.gif' ){
-            feedback = "Solo se permite formato .gif, .png, .jpg y .jpeg";
-        }
-        if(feedback) {
-            image.classList.add("is-danger")
-            errors.image = feedback;
-        }else{
-            image.classList.remove("is-danger")
-            delete errors.image
-        }
-            image.nextElementSibling.innerText = feedback;
+   let image = document.getElementById("image");
+   let imageValidation = function(){
+       let feedback = "";
+       let imageValue = image.value;
+       let imageExtension = imageValue.substring(imageValue.lastIndexOf('.'), imageValue.length);
+       if ( imageExtension !== '.jpg' && imageExtension !== '.jpeg' && imageExtension !== '.png' && imageExtension !== '.gif' ){
+           feedback = "Solo se permite formato .gif, .png, .jpg y .jpeg";
+       }
+       if(feedback) {
+           image.classList.add("is-danger")
+           errors.image = feedback;
+       }else{
+           image.classList.remove("is-danger")
+           delete errors.image
+       }
+           image.nextElementSibling.innerText = feedback;
 
-        console.log(imageExtension);
-    };
-    
-    image.addEventListener("change", imageValidation)
-    
-            
+       console.log(imageExtension);
+   };
+   
+   image.addEventListener("change", imageValidation)
+
 
     //Validacion del campo Precio
     let price = document.getElementById("price");  // Se captura id del campo

@@ -12,7 +12,7 @@ INSERT INTO users (avatar, username, name, surname, email, password, category_us
 INSERT INTO users (avatar, username, name, surname, email, password, category_user_id) VALUES ('Maria.jpg', 'maripo84', 'Maria', 'Impellizzieri', 'mimellizzieri@hotmail.com', 'ymuaMtV', 1);
 INSERT INTO users (avatar, username, name, surname, email, password, category_user_id) VALUES ('Lauraine.jpg', 'ljoa2020', 'Lauraine', 'Joannidi', 'ljoannidi2@gmail.com', 'N6GR931wS', 1);
 INSERT INTO users (avatar, username, name, surname, email, password, category_user_id) VALUES ('Elyn.jpg', 'eheather3', 'Elyn', 'Heather', 'eheather3@hotmail.com', 'HwBY6ObVYAX', 1);
-INSERT INTO users (avatar, username, name, surname, email, password, category_user_id) VALUES ('Tiago.jpg', 'Goia', 'Tiago', 'Altstadt', ' tiagoaltstadt@gmail.com', '$2a$10$2.PFWUUCjM6c.QtM0ByTAOu84wVrw.SLGPtGy/VikStpzRApgDGgu', 2);
+INSERT INTO users (avatar, username, name, surname, email, password, category_user_id) VALUES ('Tiago.jpg', 'Goia', 'Tiago', 'Altstadt', 'tiagoaltstadt@gmail.com', '$2a$10$2.PFWUUCjM6c.QtM0ByTAOu84wVrw.SLGPtGy/VikStpzRApgDGgu', 2);
 INSERT INTO users (avatar, username, name, surname, email, password, category_user_id) VALUES ('Marcelo.jpg', 'marceg', 'Marcelo', 'Giaccaglia', 'marcelogiaccaglia@hotmail.com', '$2a$10$2.PFWUUCjM6c.QtM0ByTAOu84wVrw.SLGPtGy/VikStpzRApgDGgu', 2);
 
 

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 	<%- include('../partials/head.ejs', {title: "Baggu: Edición productos"}) %>
+	<script src="/js/validator.min.js"></script> <!--Scrip de Express Validator-->
+	<script src="/js/validationEditProduct.js"></script>
 
     <body>
 		<%- include('../partials/header/header.ejs') %>
 
-		<form action="/products/<%= products.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="formularioRegiaster">
+		<form action="/products/<%= products.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="formularioRegiaster" id="formEditProduct">
 			
 			<div class="logoPrincipal">
 				<h2>Edicion de productos</h2>
@@ -15,17 +17,20 @@
 				<label for="name">
 					<span> Cambiar Nombre del Producto</span>
 					<input type="text" name="name" id="name" value="<%= products.name %>">
+					<p class="feedback"></p>
 				</label>
 				<br>
 				<div class="fotoRegister">
 					<label for="image">Cambiar una Imagen</label>
-					<input type="text" id="image" name="image" value="<%= products.image %>">
+					<p>Imagen Anterior: <%= products.image %></p>
 					<input type="file" id="image" name="image" value="<%= products.image %>"> 
-				<</div>>
+					<p class="feedback"></p>
+				</div>
 				<label for="description">
 					<span> Cambiar descripcion del Producto</span>
 					<br>
 					<textarea name="description" id="description" cols="60" rows="5"><%= products.description %></textarea>
+					<p class="feedback"></p>
 				</label>
 				<br>
 				<label for="category">
@@ -64,6 +69,7 @@
 				<label for="price">
 					<span> Cambiar Precio del Producto</span>
 					<input type="text" name="price" id="price" value="<%= products.price %>">
+					<p class="feedback"></p>
 				</label>
 				<br>
 			</div>
