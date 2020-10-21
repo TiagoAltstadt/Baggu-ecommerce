@@ -1,3 +1,4 @@
+console.log("en validationRegister js");
 
 window.addEventListener("load", function(){
     
@@ -5,7 +6,56 @@ window.addEventListener("load", function(){
  //Variable para capturar todos los errores
  let errors = {};
  //Variable para capturar eventos en el form
- let form = document.getElementById("formRegister");
+ let form = document.getElementById("formEditUser");
+
+
+ //Validacion del campo Imagen
+ let avatar = document.getElementById("avatar");
+ let avatarValidation = function(){
+     let feedback = "";
+     let avatarValue = avatar.value;
+     let avatarExtension = avatarValue.substring(avatarValue.lastIndexOf('.'), avatarValue.length);
+     if ( avatarExtension !== '.jpg' && avatarExtension !== '.jpeg' && avatarExtension !== '.png' && avatarExtension !== '.gif' ){
+         feedback = "Solo se permite formato .gif, .png, .jpg y .jpeg";
+     }
+     if(feedback) {
+         avatar.classList.add("is-danger")
+         errors.avatar = feedback;
+     }else{
+         avatar.classList.remove("is-danger")
+         delete errors.avatar
+     }
+         avatar.nextElementSibling.innerText = feedback;
+
+     console.log(avatarExtension);
+ };
+ 
+ avatar.addEventListener("change", avatarValidation)
+
+
+ //Validacion del campo Usuario
+ let username = document.getElementById("username");   // Se captura id del campo
+ let usernameValidation =  function(){              // Se crea un callback
+     let feedback = "";
+
+     if(validator.isEmpty(username.value, { ignore_whitespace:true })) {
+         feedback = "El campo no puede estar vacio";
+     } else if (!validator.isLength(username.value, { min: 5})){
+        feedback = "El usuario no puede ser menor de 5 caracteres";
+    }
+     if(feedback) {
+         username.classList.add("is-danger")
+         errors.username = feedback;
+     }else{
+         username.classList.remove("is-danger")
+         delete errors.username
+     }
+         username.nextElementSibling.innerText = feedback;
+        
+ };
+
+ username.addEventListener("blur", usernameValidation )  // Se utiliza el callback en el evento
+
 
  //Validacion del campo nombre
  let name = document.getElementById("name");   // Se captura id del campo
@@ -55,54 +105,6 @@ window.addEventListener("load", function(){
  surname.addEventListener("blur", surnameValidation )  // Se utiliza el callback en el evento
 
 
- //Validacion del campo Imagen
-
- let avatar = document.getElementById("avatar");
- let avatarValidation = function(){
-     let feedback = "";
-     let avatarValue = avatar.value;
-     let avatarExtension = avatarValue.substring(avatarValue.lastIndexOf('.'), avatarValue.length);
-     if ( avatarExtension !== '.jpg' && avatarExtension !== '.jpeg' && avatarExtension !== '.png' && avatarExtension !== '.gif' ){
-         feedback = "Solo se permite formato .gif, .png, .jpg y .jpeg";
-     }
-     if(feedback) {
-         avatar.classList.add("is-danger")
-         errors.avatar = feedback;
-     }else{
-         avatar.classList.remove("is-danger")
-         delete errors.avatar
-     }
-         avatar.nextElementSibling.innerText = feedback;
-
- };
- 
- avatar.addEventListener("change", avatarValidation)
-
-
- //Validacion del campo Usuario
- let username = document.getElementById("username");   // Se captura id del campo
- let usernameValidation =  function(){              // Se crea un callback
-     let feedback = "";
-
-     if(validator.isEmpty(username.value, { ignore_whitespace:true })) {
-         feedback = "El campo no puede estar vacio";
-     } else if (!validator.isLength(username.value, { min: 5})){
-        feedback = "El usuario no puede ser menor de 5 caracteres";
-    }
-     if(feedback) {
-         username.classList.add("is-danger")
-         errors.username = feedback;
-     }else{
-         username.classList.remove("is-danger")
-         delete errors.username
-     }
-         username.nextElementSibling.innerText = feedback;
-        
- };
-
- username.addEventListener("blur", usernameValidation )  // Se utiliza el callback en el evento
-
-
  //Validacion del campo email
  let email = document.getElementById("email");   // Se captura id del campo
  let emailValidation =  function(){              // Se crea un callback
@@ -130,37 +132,37 @@ window.addEventListener("load", function(){
 
 
  //Validacion del campo password
- let password = document.getElementById("password");  // Se captura id del campo
- let passwordValidation = function(){                 // Se crea un callback
-     let feedback = "";
+ //let password = document.getElementById("password");  // Se captura id del campo
+ //let passwordValidation = function(){                 // Se crea un callback
+   //  let feedback = "";
 
-     if(validator.isEmpty(password.value, { ignore_whitespace:true })) {
-         feedback = "El campo no puede estar vacio";
-     } else if (!validator.isLength(password.value, { min: 8})){
-         feedback = "La contraseña no puede ser menor de 8 caracteres";
-     }
-     if(feedback) {
-         password.classList.add("is-danger")
-         errors.password = feedback;
-     }else{
-         password.classList.remove("is-danger")
-         delete errors.password
-     }
-         password.nextElementSibling.innerText = feedback;
+     //if(validator.isEmpty(password.value, { ignore_whitespace:true })) {
+      //   feedback = "El campo no puede estar vacio";
+     //} else if (!validator.isLength(password.value, { min: 8})){
+       //  feedback = "La contraseña no puede ser menor de 8 caracteres";
+     //}
+     //if(feedback) {
+       //  password.classList.add("is-danger")
+         //errors.password = feedback;
+     //}else{
+       //  password.classList.remove("is-danger")
+         //delete errors.password
+     //}
+       //  password.nextElementSibling.innerText = feedback;
      
- };
+ //};
 
- password.addEventListener("blur", passwordValidation)  // Se utiliza el callback en el evento
+ //password.addEventListener("blur", passwordValidation)  // Se utiliza el callback en el evento
 
 
     // Bloqueo del Submit si existen errores
     form.addEventListener("submit", function(event){
-     nameValidation();
-     surnameValidation();
      avatarValidation();
      usernameValidation();
+     nameValidation();
+     surnameValidation();
      emailValidation();
-     passwordValidation();
+     //passwordValidation();
         if(Object.keys(errors).length){
         event.preventDefault();
         } 

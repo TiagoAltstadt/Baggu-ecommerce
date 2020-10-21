@@ -39,6 +39,14 @@
 										<%= locals.errors && errors.surname ? errors.surname.msg : '' %> </p>
 							</label></li>
 						<li>
+							<div>
+								<label for="avatar">
+									<input type="file" id="avatar" name="avatar" placeholder="Elegi una fotod en tu PC">
+									<p class="feedback"></p>
+								</label>
+							</div>
+						</li>
+						<li>
 							<label for="username">
 								<span>Usuario</span>
 								<input class="<%= locals.errors && errors.username ? 'is-danger' : '' %>" 

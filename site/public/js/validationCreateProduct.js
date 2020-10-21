@@ -72,8 +72,6 @@ window.addEventListener("load", function(){
             delete errors.image
         }
             image.nextElementSibling.innerText = feedback;
-
-        console.log(imageExtension);
     };
     
     image.addEventListener("change", imageValidation)
