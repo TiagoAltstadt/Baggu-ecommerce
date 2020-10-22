@@ -1,6 +1,6 @@
 //----File System----
 const fs = require('fs');
-//----Phat------
+//----Path------
 const path = require("path");
 //----Data Base----
 let db = require('../database/models');

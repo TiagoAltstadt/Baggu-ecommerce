@@ -1,21 +1,18 @@
 const { validationResult } = require('express-validator');
 //----File System----
 const fs = require('fs');
-
 //----Data Base----
 let db = require('../database/models');
-
 //----Bcrypt----
 const bcrypt = require('bcryptjs');
-
 
 const userController = {
 
     list: function (req, res) {
         db.Users.findAll()
-            .then(function (users) {
-                res.render('../views/users/list_user.ejs', { users: users });
-            })
+        .then(function (users) {
+            res.render('../views/users/list_user.ejs', { users: users });
+        })
     },
 
     register: function (req, res) {
@@ -24,11 +21,8 @@ const userController = {
     },
 
     store: function (req, res, next) {
-
         let errors = validationResult(req);
-
         if (errors.isEmpty()) {
-            
             let newUser = {
                 avatar: 'default.png',
                 username: req.body.username,
@@ -47,7 +41,6 @@ const userController = {
             })
         }
         else{
-            
             console.log(errors.mapped);
             res.render('users/register', { errors: errors.mapped(), data: req.body });
         }
@@ -59,13 +52,11 @@ const userController = {
 
     processLogin: function (req, res) {
         let errors = validationResult(req);
-
         if(errors){
             console.log(errors);
         }else{
             console.log('- No se detectaron errores.');
         }
-
         if (errors.isEmpty()) {
 
             console.log('\n\n\n\n--------------------------INSTANCIA DE LOGUEO--------------------------');

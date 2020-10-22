@@ -31,12 +31,14 @@ const routeHome = require('./routes/home_route');
 const routeProducts = require('./routes/products_route');
 const routeUser = require('./routes/user_route');
 const route404 = require('./routes/404_route');
+const apiProductsRouter = require('./routes/api/products');
 
 //crear ruta '/'
 app.use('/', routeHome);
 
 //crear ruta '/productos', '/carrito'
 app.use('/products', routeProducts);
+app.use('/api/products', apiProductsRouter ); 
 
 //crear ruta '/list', '/register' '/login' '/search' '/user'
 app.use('/users' , routeUser);
