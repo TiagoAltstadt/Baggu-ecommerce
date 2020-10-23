@@ -4,6 +4,8 @@ const app = express();
 const methodOverride = require("method-override");
 const session = require('express-session');
 const auth = require('./middlewares/auth');
+
+//----Cors----
 const cors = require('cors');
 app.use(cors()); // cross origin
 
