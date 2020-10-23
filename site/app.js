@@ -49,7 +49,7 @@ app.use('/api/users', apiUsersRouter);
 app.get('*', route404);
 
 //----Configuracion de puerto y msje de inicio----
-app.listen(3000, ()  => {
+app.listen(3001, ()  => {
     console.clear();
     console.log("------------------------------------------------------");
     console.log("| Servidor escuchando en el puerto 3000.             |");
