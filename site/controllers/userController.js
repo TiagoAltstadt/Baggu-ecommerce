@@ -72,12 +72,15 @@ const userController = {
 
                     //   Si coincide password
                     if (bcrypt.compareSync(req.body.password, user.password)) {
+                        delete user.password;
                         req.session.user = user;
 
                         console.log('- La password esta bien.');
                         console.log('---------------------------------------------');
                         console.log('\n\n\n\n');
-                        
+                        if(req.body.remember){
+                            res.cookie('remember', user.email, {maxAge: 1000 * 60})
+                        }
                         res.redirect('/');
                     } 
                     //  No coincide password

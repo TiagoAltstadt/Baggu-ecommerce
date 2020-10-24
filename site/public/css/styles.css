@@ -1449,9 +1449,7 @@ button {
 
 /* Checkbox */
 
-[type="checkbox"] {
-    display: none;
-}
+
 
 .animado {
     margin-top: 3rem;

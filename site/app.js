@@ -4,12 +4,11 @@ const app = express();
 const methodOverride = require("method-override");
 const session = require('express-session');
 const auth = require('./middlewares/auth');
+const cookieParser = require('cookie-parser');
 
-//----Cors----
+// Cors
 const cors = require('cors');
 app.use(cors()); // cross origin
-
-
 
 // Motor de vistas
 app.use(express.static(__dirname + "/public"));
@@ -20,14 +19,14 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(methodOverride("_method"));
 
-// Sesiones 
+// Sesiones y cookies
 app.use(session({
-    secret: "Secret", 
-    resave: true,
-    saveUninitialized: true
+    secret: 'secreto', 
+    resave: false, //no guarda denuevo si no hay cambios
+    saveUninitialized: true // guarda sesiones aunque no hayan datos
 }));
+app.use(cookieParser());
 app.use(auth);
-
 
 
 
