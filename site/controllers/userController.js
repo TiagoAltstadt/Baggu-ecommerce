@@ -42,7 +42,7 @@ const userController = {
         }
         else{
             console.log(errors.mapped);
-            res.render('users/register', { errors: errors.mapped(), data: req.body });
+            res.render('users/register', { errors: errors.mapped(), data: req.body, repeated: repeated });
         }
     },
 
@@ -153,8 +153,9 @@ const userController = {
     },
     delete: function (req, res) {
 
-        // borrar producto
+        // borrar usuario
         db.Users.destroy({ where: { id: req.params.id } });
+        req.session.user = null;
 
         res.redirect('/users');
     },

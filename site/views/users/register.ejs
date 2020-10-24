@@ -61,7 +61,8 @@
 								<input class="<%= locals.errors && errors.email ? 'is-danger' : '' %>" 
 										value="<%= locals.data ? data.email : '' %>" type="email" name="email" id="email" autocomplete="off">
 								<p class="feedback <%= locals.errors && errors.email ? 'is-danger' : '' %>"> 
-										<%= locals.errors && errors.email ? errors.email.msg : '' %> </p>
+										<%= locals.errors && errors.email ? errors.email.msg : '' %> 
+								</p>
 							</label>
 						</li>
 						<li>
