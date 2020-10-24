@@ -60,9 +60,10 @@ window.addEventListener("load", function(){
  let avatar = document.getElementById("avatar");
  let avatarValidation = function(){
      let feedback = "";
+     console.log(avatar.value);
      let avatarValue = avatar.value;
      let avatarExtension = avatarValue.substring(avatarValue.lastIndexOf('.'), avatarValue.length);
-     if ( avatarExtension !== '.jpg' && avatarExtension !== '.jpeg' && avatarExtension !== '.png' && avatarExtension !== '.gif' ){
+     if ( avatarExtension !== '.jpg' && avatarExtension !== '.jpeg' && avatarExtension !== '.png' && avatarExtension !== '.gif' && avatarExtension !== '' ){
          feedback = "Solo se permite formato .gif, .png, .jpg y .jpeg";
      }
      if(feedback) {
