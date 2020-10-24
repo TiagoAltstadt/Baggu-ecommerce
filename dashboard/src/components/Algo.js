@@ -12,17 +12,17 @@ class Algo extends Component{
         
     }
     componentDidMount(){
-        console.log('Me monte!');
+        
         this.apiCall('http://localhost:3001/api/users', this.showAlgo )
     }
     showAlgo = (data) => {
         console.log(data);
     }
     componentDidUpdate(){
-        console.log('Me actualice!');
+        
     }
     render(){
-        console.log('Estoy renderizando!');
+        
         return(
             <div>
 

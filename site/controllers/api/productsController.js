@@ -18,6 +18,7 @@ const productsController = {
                         meta: {
                             status: 200,
                             total: products.length,
+                            
                             url: '/api/products'
                         },
                         data: {products, brands}
