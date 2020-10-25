@@ -41,7 +41,7 @@ class Users extends Component {
                                 title={ metric.title }
                                 value={ metric.value } 
                                 iconClass={metric.iconClass} 
-                                key={'metric-${index}'} 
+                                key={`metric-${index}`} 
                             />	
                         )
                     :
