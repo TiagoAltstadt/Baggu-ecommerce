@@ -60,7 +60,6 @@ window.addEventListener("load", function(){
  let avatar = document.getElementById("avatar");
  let avatarValidation = function(){
      let feedback = "";
-     console.log(avatar.value);
      let avatarValue = avatar.value;
      let avatarExtension = avatarValue.substring(avatarValue.lastIndexOf('.'), avatarValue.length);
      if ( avatarExtension !== '.jpg' && avatarExtension !== '.jpeg' && avatarExtension !== '.png' && avatarExtension !== '.gif' && avatarExtension !== '' ){
@@ -75,10 +74,10 @@ window.addEventListener("load", function(){
      }
          avatar.nextElementSibling.innerText = feedback;
 
- };
+    };
  
- avatar.addEventListener("change", avatarValidation)
-
+    avatar.addEventListener("change", avatarValidation)
+   
 
  //Validacion del campo Usuario
  let username = document.getElementById("username");   // Se captura id del campo
