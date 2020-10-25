@@ -26,7 +26,9 @@ var upload = multer({storage: storage});
 
 //----Rutas----
 
-router.get('/', productsController.list);
+router.get('/descartables', productsController.list1);
+router.get('/papeleria', productsController.list2);
+router.get('/higiene', productsController.list3);
 
 router.get("/search", productsController.search);
 

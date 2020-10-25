@@ -26,6 +26,7 @@ INSERT INTO brands (name) VALUES ("Rolan");
 INSERT INTO brands (name) VALUES ("Propel");
 INSERT INTO brands (name) VALUES ("Work");
 INSERT INTO brands (name) VALUES ("Rolopack");
+INSERT INTO brands (name) VALUES ("Aticol");
 
 -- Insert de categoria --
 
@@ -46,4 +47,12 @@ INSERT INTO products (name, description, image, price, brand_id, category_id) VA
 INSERT INTO products (name, description, image, price, brand_id, category_id) VALUES ("Plato plastico - colores varios", "Plato plastico, presentacion en varios colores, tamaño 17 cm diametro, paquete x50 und.", "Plato_plastico_chico_1.jpg", 120, 7, 1);
 INSERT INTO products (name, description, image, price, brand_id, category_id) VALUES ("Sorbete Polipapel - motivos varios", "Sorbete Polipapel, colores y motivos varios, paquete x10 und.", "Sorbetes_polipapel_motivos_1.jpg", 30, 2, 1);
 
+INSERT INTO products (name, description, image, price, brand_id, category_id) VALUES ("Blonda Rectangular Blanca 31x38 cm", "Blonda Rectangular Blanca 31 X 38 cm Paquete x 100 (unid)", "Blonda_Rectangular_de_Papel.jpg", 150, 6, 2);
+INSERT INTO products (name, description, image, price, brand_id, category_id) VALUES ("Bobina Papel Sulfito 60cm", "Papel Blanco Sulfito Cristal Bobina 60cm x 1 (Kg)", "Bobina_Papel_Sulfito.jpg", 240, 6, 2);
+INSERT INTO products (name, description, image, price, brand_id, category_id) VALUES ("Molde de Papel - Budinera", "Molde *Budin* 280gr (185x50x50)mm x 100 (Und)", "Molde_Rectangular_Budinera.jpg", 800, 6, 2);
+INSERT INTO products (name, description, image, price, brand_id, category_id) VALUES ("Bolsa de Papel Kraft N°6", "Bolsa Papel Kraft De Primera *Nro 6* x 100 (unid)", "Bolsa_Papel.jpg", 340, 6, 2);
 
+INSERT INTO products (name, description, image, price, brand_id, category_id) VALUES ("Guantes Nitrilo Azul", "Caja de Guantes calidad Nitrilo color Azul x100 und.", "Guantes_Nitrilo.jpg", 1400, 4, 3);
+INSERT INTO products (name, description, image, price, brand_id, category_id) VALUES ("Alcohol en Gel x 5 lts.", "Bidon por 5 litros Alcohol en gel con glicerina", "Alcohol_Gel.jpg", 1800, 8, 3);
+INSERT INTO products (name, description, image, price, brand_id, category_id) VALUES ("Papel Higienico x300 mts", "Papel higienico x 300 mts doble hoja excelente calidad", "Papel_Higienico.jpg", 200, 3, 3);
+INSERT INTO products (name, description, image, price, brand_id, category_id) VALUES ("Bobina Papel Multiuso x 300 mts", "Bobina de papel multiuso, pack x 600 mts, calidad Elite", "Bobina_Papel_Multiuso.jpg", 1200, 3, 3);

@@ -13,16 +13,48 @@ const productJSON = JSON.parse(fs.readFileSync(datapath, {encoding: 'utf-8'}));
 
 
 const productsController = {
-    list: (req, res) => {
-        db.Products.findAll()
+    list1: (req, res) => {
+        db.Products.findAll({
+            where: {category_id: 1
+            }
+        })
             .then(function(products){
                 db.Brands.findAll()
                 .then(function(brands){
-                res.render('products/products', {products, brands});
+                res.render('products/descartables', {products, brands});
                     
                 })
             })
         },
+
+    
+    list2: (req, res) => {
+        db.Products.findAll({
+            where: {category_id: 2
+            }
+        })
+            .then(function(products){
+                db.Brands.findAll()
+                .then(function(brands){
+                res.render('products/papeleria', {products, brands});
+                            
+                })
+            })
+        },
+
+        list3: (req, res) => {
+            db.Products.findAll({
+                where: {category_id: 3
+                }
+            })
+                .then(function(products){
+                    db.Brands.findAll()
+                    .then(function(brands){
+                    res.render('products/higiene', {products, brands});
+                                
+                    })
+                })
+            },
 
     search: (req, res) => {
         let result = {};  
