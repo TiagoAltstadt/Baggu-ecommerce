@@ -150,7 +150,12 @@ const userController = {
         } 
         db.Users.update(updatedUser, { where: { id: req.params.id } })
             .then(userUpdated => {
-                res.redirect('/users');
+                db.Users.findOne({where: {email: updatedUser.email}})
+                .then(aux =>{
+                    req.session.user = aux;
+                    console.log(userUpdated);
+                    res.redirect('/users');
+                })
             })
             .catch(error => console.log(error));
     },
