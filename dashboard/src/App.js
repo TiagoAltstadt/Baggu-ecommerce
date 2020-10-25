@@ -45,6 +45,7 @@ class App extends Component{
 						</div>
 						
 						<TableContainer />
+						
 					</div>
 				</div>
 				<footer className="sticky-footer bg-white">

@@ -1,5 +1,5 @@
 import React from 'react';
-import Table from "./Table";
+// import Table from "./Table";
 
 function TableContainer(props) {
     return ( 
@@ -12,7 +12,7 @@ function TableContainer(props) {
             <div className="col-lg-12 mb-4">
                 <div className="card shadow mb-4">
                     <div className="card-body">
-                        <Table />
+                        {/* <Table /> */}
                     </div>
                 </div>	
             </div>
