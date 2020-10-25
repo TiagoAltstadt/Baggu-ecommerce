@@ -130,9 +130,10 @@ const userController = {
     },
 
     edit: function (req, res) {
+
         db.Users.findOne({ where: { id: req.params.id } })
             .then(function (user) {
-                res.render('./users/edicion_users.ejs', { user: user, data: req.params.id });
+                res.render('./users/edicion_users.ejs', {user, data: req.params.id });
             })
     },
 

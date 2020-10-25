@@ -10,56 +10,62 @@
     <!--Header-->
     <%- include('../partials/header/header.ejs') %>
 
-    <main class="main_edicion_users">
+    <main >
 
-        <h3 class="title_edicion_users">Editar Producto</h3>
+        <section class="formContainer">
+            <h3 class="title_edicion_users">Editar Usuario</h3>
+    
+            <form action="/users/<%= data %>/edit?_method=PUT" enctype="multipart/form-data" method="POST" class="form_edit_users" id="formEditUser">
+    
+                <div class="avatar_container_UDP">
+                    <img class="avatar_UDP " src="/fileUsers/<%= user.avatar %>" alt="avatar">
+                </div>
 
-        <form action="/users/<%= data %>/edit?_method=PUT" enctype="multipart/form-data" method="POST" class="form_edit_users" id="formEditUser">
-
-            <div class="form_edit_OPT">
-                <label for="avatar">
-                    <input type="file" id="avatar" name="avatar" placeholder="Elegi una fotod en tu PC">
-                    <p class="feedback"></p>
-                </label>
-            </div>
-
-            <div class="form_edit_userOPT">
-                <label for="username"> Usuario:
-                    <input type="text" name="username" id="username" value="<%= user.username %>" >
-                    <p class="feedback"></p>
-                </label>
-            </div>
-
-            <div class="form_edit_userOPT">
-                <label for="name"> Nombre:
-                    <input type="text" name="name" id="name" value="<%= user.name %>">
-                    <p class="feedback"></p>
-                </label>
-            </div>
-
-            <div class="form_edit_userOPT">
-                <label for="surname"> Apellido:
-                    <input type="text" name="surname" id="surname" value="<%= user.surname %>"> 
-                    <p class="feedback"></p>
-                </label>
-            </div>
-
-            <div class="form_edit_userOPT">
-                <label for="email"> Email:
-                    <input type="email" name="email" id="email" value="<%= user.email %>">
-                    <p class="feedback"></p>
-                </label>
-            </div>
-
-            <!-- <div class="form_edit_userOPT">
-                <label for="password"> Contraseña:
-                    <input type="password" name="password" id="password">
-                    <p class="feedback"></p>
-                </label>
-            </div> -->
-
-            <button type="submit" class="button_edicion_users"> Enviar </button>
-        </form>
+                <div class="form_edit_OPT">
+                    <label for="avatar">
+                        <input type="file" id="avatar" name="avatar" placeholder="Elegi una fotod en tu PC">
+                        <p class="feedback"></p>
+                    </label>
+                </div>
+    
+                <div class="form_edit_userOPT">
+                    <label for="username"> Usuario:
+                        <input type="text" name="username" id="username" value="<%= user.username %>" >
+                        <p class="feedback"></p>
+                    </label>
+                </div>
+    
+                <div class="form_edit_userOPT">
+                    <label for="name"> Nombre:
+                        <input type="text" name="name" id="name" value="<%= user.name %>">
+                        <p class="feedback"></p>
+                    </label>
+                </div>
+    
+                <div class="form_edit_userOPT">
+                    <label for="surname"> Apellido:
+                        <input type="text" name="surname" id="surname" value="<%= user.surname %>"> 
+                        <p class="feedback"></p>
+                    </label>
+                </div>
+    
+                <div class="form_edit_userOPT">
+                    <label for="email"> Email:
+                        <input type="email" name="email" id="email" value="<%= user.email %>">
+                        <p class="feedback"></p>
+                    </label>
+                </div>
+    
+                <!-- <div class="form_edit_userOPT">
+                    <label for="password"> Contraseña:
+                        <input type="password" name="password" id="password">
+                        <p class="feedback"></p>
+                    </label>
+                </div> -->
+    
+                <button type="submit" class="button_edicion_users"> Enviar </button>
+            </form>
+        </section>
 
     </main>
 

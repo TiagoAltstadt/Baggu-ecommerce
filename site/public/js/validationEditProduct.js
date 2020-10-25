@@ -62,7 +62,7 @@ window.addEventListener("load", function(){
        let feedback = "";
        let imageValue = image.value;
        let imageExtension = imageValue.substring(imageValue.lastIndexOf('.'), imageValue.length);
-       if ( imageExtension !== '.jpg' && imageExtension !== '.jpeg' && imageExtension !== '.png' && imageExtension !== '.gif' ){
+       if ( imageExtension !== '.jpg' && imageExtension !== '.jpeg' && imageExtension !== '.png' && imageExtension !== '.gif' && imageExtension !== '' ){
            feedback = "Solo se permite formato .gif, .png, .jpg y .jpeg";
        }
        if(feedback) {

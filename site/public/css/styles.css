@@ -64,7 +64,7 @@ body {
     font-size: 1.6rem;
     line-height: 2;
 }
-
+/*
 h1 {
     font-size: 4.8rem;
 }
@@ -81,7 +81,7 @@ h3 {
 h4 {
     font-size: 2.8rem;
 }
-
+*/
 a {
     text-decoration: none;
 }
@@ -891,23 +891,31 @@ PARTIALS
 
 /*------------------------------------------------------------Dedicado a userDetail_partial.ejs----------------------------------------------------------------------*/
 
-.individual_UDP {
-    margin: 2vw auto;
+.formContainer{
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
+    flex-wrap: wrap;
+    margin: 1rem auto;
     background-color: var(--color-cuarto);
     border-radius: var(--border-radius);
+    padding: 5%;
 }
 
 .avatar_container_UDP {
-    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 1rem auto;
 }
 
 .avatar_UDP {
     width: 20vw;
-    margin: 1vh auto;
     box-shadow: 5px 5px;
+    margin: auto;
+}
+
+.individual_UDP ul{
+    margin: auto;
 }
 
 .info_UDP {
@@ -1380,7 +1388,9 @@ USERS
     background-color: var(--color-cuarto);
     margin: auto;
 }
-
+.titulo_register {
+    font-size: xx-small;
+}
 .formulario_register {
     display: flex;
     flex-wrap: wrap;
@@ -1416,19 +1426,12 @@ li:before {
 
 /*------------------------------------------------------------Dedicado a Login.ejs----------------------------------------------------------------------*/
 
-
-/*
-	Paleta de Colores para Login - Registro - Carrito **** #826754 
-*/
-
-
 /*General*/
-
 .cuentaLogin {
-    background-color: #add8e6;
-    margin-bottom: 5rem;
+    background-color: var(--color-cuarto);
+    margin: 1vh auto;
+    border-radius: var(--border-radius);
 }
-
 
 /*Titulo*/
 
@@ -1438,15 +1441,13 @@ li:before {
     justify-content: center;
     align-items: center;
     align-content: center;
-    margin-bottom: 10rem;
     border-bottom: 2px solid black;
-    width: 95%;
+    
     margin-right: auto;
     margin-left: auto;
 }
 
 .tituloLogin i {
-    margin-right: 1rem;
     font-size: 3.2rem;
 }
 
@@ -1455,6 +1456,7 @@ li:before {
 
 .campoLogin {
     padding: 2rem;
+    
 }
 
 .subCampoLogin {
@@ -1557,6 +1559,9 @@ button {
 /**Pantallas grandes**/
 
 @media only screen and (min-width: 768px) {
+    .cuentaLogin{
+        width: 80vw;
+    }
     /*Formulario*/
     .subCampoLogin {
         width: 70%;
@@ -1577,14 +1582,15 @@ button {
 }
 
 @media only screen and (min-width: 1024px) {
+    .campoLogin{
+        font-size: 25px;
+    }
     /*General*/
     .cuentaLogin {
         width: 75%;
         margin-left: auto;
         margin-right: auto;
         margin-top: 3rem;
-        border-radius: 6rem;
-        border: 2px dashed black;
     }
     /*Titulo*/
     .tituloLogin {
@@ -1605,21 +1611,27 @@ button {
 
 /*------------------------------------------------------------Dedicado a edicion_users.ejs----------------------------------------------------------------------*/
 
-.main_edicion_users {
+
+.formContainer{
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
+    margin: 1rem auto;
     background-color: var(--color-cuarto);
     border-radius: var(--border-radius);
     padding: 5%;
 }
 
 .title_edicion_users {
-    margin: 12px auto;
+    margin: 0% auto;
+    height: fit-content;
     border-bottom: var(--color-tercero) dotted 1px;
 }
 
-.form_edit_userOPT{
+.form_edit_users{
     margin: 0%;
+    margin: auto;
+    
 }
 
 .button_edicion_users {
