@@ -44,20 +44,21 @@ const productsController = {
             })
         },
 
-    store: (req,res, next) => {
-        let photoDefault = '../public/img/logos/Nuevo Logo.png'; // Como hacer para que un producto pueda cargarse
-        if (req.files[0].filename != undefined) {                // sin imagen y que use una imagen default, tambien
-            photoDefault = req.files[0].filename;                // como hacer para que multer respete nombre de 
-        }                                                        // imagen original y no le cree una nueva
+    store: (req,res, next) => {                                                      
 
-        db.Products.create({
-                image: photoDefault,
-                name: req.body.name,
-                description: req.body.description,
-                price: req.body.price,
-                brand_id: req.body.brand,
-                category_id: req.body.category
-        });
+        let newProduct = {
+            image: "defaultProduct.jpg",
+            name: req.body.name,
+            description: req.body.description,
+            price: req.body.price,
+            brand_id: req.body.brand,
+            category_id: req.body.category
+        }
+        if (req.files.length){
+            newProduct.image = req.files[0].filename;
+        } 
+        
+        db.Products.create(newProduct);
             res.redirect('/products');
         },
 
@@ -73,14 +74,18 @@ const productsController = {
         },
 
     update: (req, res, next) => {
-        db.Products.update({
-                image: req.files[0].filename,
-                name: req.body.name,
-                description: req.body.description,
-                price: req.body.price,
-                brand_id: req.body.brand,
-                category_id: req.body.category
-        }, {
+
+        let updateProducts = {
+            name: req.body.name,
+            description: req.body.description,
+            price: req.body.price,
+            brand_id: req.body.brand,
+            category_id: req.body.category
+        }
+        if (req.files.length){
+            updateProducts.avatar = req.files[0].filename;
+        } 
+        db.Products.update(updateProducts, {
             where: {
                 id: req.params.id }
         });

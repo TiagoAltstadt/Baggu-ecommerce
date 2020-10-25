@@ -62,7 +62,11 @@ window.addEventListener("load", function(){
        let feedback = "";
        let imageValue = image.value;
        let imageExtension = imageValue.substring(imageValue.lastIndexOf('.'), imageValue.length);
+<<<<<<< HEAD
        if ( imageExtension !== '.jpg' && imageExtension !== '.jpeg' && imageExtension !== '.png' && imageExtension !== '.gif' && imageExtension !== '' ){
+=======
+       if ( imageExtension !== '.jpg' && imageExtension !== '.jpeg' && imageExtension !== '.png' && imageExtension !== '.gif' && avatarExtension !== ''){
+>>>>>>> 82d680fed2e1ae82390e5e559dff485b379088b4
            feedback = "Solo se permite formato .gif, .png, .jpg y .jpeg";
        }
        if(feedback) {

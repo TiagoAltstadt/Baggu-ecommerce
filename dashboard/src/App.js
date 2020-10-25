@@ -1,7 +1,5 @@
 import React, {Component, component} from 'react';
 import Sidebar from "./components/sidebar/Sidebar";
-
-import KeyMetric from "./components/KeyMetric";
 import Navbar from "./components/Navbar"
 import User from './components/User';
 import Product from './components/Product';

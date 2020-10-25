@@ -42,13 +42,9 @@ Crear un bread Crum o seguimiento del camino o de las rutas
 Mejorar estructura en:
 
 -unificar lenguaje todo ingles
--en carpeta css borramos bootstrap? ------------------------------------(Proceder a borrar)
--carpeta font??? --------------------------------------------------------(Proceder a Borrar)
--carpeta js?? tenemos idea q es? ----------------------------------------(Es bootstrap, Proceder a borrar)
--en Views/partial borrar header1? ----------------------------------------(Proceder a borrar)
--en product route, por que variable path esta en Multer
+-bootstrap en head.ejs - 
+-Ver de borrar o que hacer con el archivo new.ejs y con search.ejs de user
 -no utilizar stock por la dificultad
--que son los script al fondo por ejemplo en edicion_products?--------------(Es bootstrap, proceder a borrar)
 -Como hariamos carrito?
 
 
@@ -60,8 +56,6 @@ Sprint 1
 (Carpeta Wireframes) ● Home ● Detalle de producto ● Carrito de compras ● Formulario de registro ● Formulario de login
 (Carpeta Desing) ● Logo ● Colores ● Tipografías
 
-Sprint 2
--Ver si se puede implementar Daily pero retroactivo o en momentos anteriores
 
 Sprint 3
 -Archivo retro.md y archivo Daily.md

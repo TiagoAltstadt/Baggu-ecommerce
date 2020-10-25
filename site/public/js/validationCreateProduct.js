@@ -57,11 +57,15 @@ window.addEventListener("load", function(){
     //Validacion del campo Imagen
 
     let image = document.getElementById("image");
+    
     let imageValidation = function(){
         let feedback = "";
         let imageValue = image.value;
+        if(imageValue == ""){
+            return imageValue;
+        }else{
         let imageExtension = imageValue.substring(imageValue.lastIndexOf('.'), imageValue.length);
-        if ( imageExtension !== '.jpg' && imageExtension !== '.jpeg' && imageExtension !== '.png' && imageExtension !== '.gif' ){
+        if ( imageExtension !== '.jpg' && imageExtension !== '.jpeg' && imageExtension !== '.png' && imageExtension !== '.gif' && avatarExtension !== '' ){
             feedback = "Solo se permite formato .gif, .png, .jpg y .jpeg";
         }
         if(feedback) {
@@ -75,7 +79,7 @@ window.addEventListener("load", function(){
     };
     
     image.addEventListener("change", imageValidation)
-    
+    };
             
 
     //Validacion del campo Precio
