@@ -22,20 +22,33 @@ https://coolors.co/00916e-5386e4-525998-141e29-826754
 */
 
 html {
+    font-family: 'Montserrat', sans-serif;
+
     /*	reset para rems -62.5% =10px de 16... esta cuenta es para hacer que un rem valga 10px	*/
-    font-size: 62.5%;
-    box-sizing: border-box;
+        font-size: 62.5%;
+        box-sizing: border-box;
+
     /*	Template de colores	*/
-    --color-primero: #5386E4;
-    --color-segundo: #00916E;
-    --color-tercero: #525998;
-    --color-cuarto: #add8e6;
-    --color-quinto: whitesmoke;
-    --color-sexto: #141E29;
+        --color-primero: #5386E4;
+        --color-segundo: #00916E;
+        --color-tercero: #525998;
+        --color-cuarto: #add8e6;
+        --color-quinto: whitesmoke;
+        --color-sexto: #141E29;
+
+    /* Tamaños de dispositivos */
+        --phoneS: 320px;       
+        --phoneM: 375px;            
+        --phoneL: 425px;         
+        --tablet: 768px;       
+        --laptop: 1024px;         
+        --tv: 2560px;       
+        
     /*	Estandar de bordes 	*/
-    --border-radius: 12px;
+        --border-radius: 12px;
+
     /*	Para que se mueva suaaaave...	*/
-    scroll-behavior: smooth;
+        scroll-behavior: smooth;
 }
 
 *,
@@ -155,6 +168,8 @@ HOME
     border: 1px grey;
     border-style: ridge;
     box-shadow: 5px 5px 8px #888888;
+    background-image: url('../img/sale\ blue.jpg');
+    background-size: cover;
 }
 
 /* 3 columnas de Carrousel*/
@@ -597,7 +612,6 @@ PARTIALS
     width: 50%;
     box-shadow: 5px 5px;
 }
-
 .profile_mainInfo {
     display: block;
     box-sizing: border-box;
@@ -605,18 +619,25 @@ PARTIALS
     margin: auto;
     background-color: rgba(219, 216, 219, 0.4);
     border-radius: 4px;
+    font-size: small;
 }
-
 .header_popUp ul {
     background-color: rgba(219, 216, 219, 0.4);
     border-radius: 4px;
 }
-
+.header_popUp ul li{font-size: small;}
 .profile_name {
     width: fit-content;
     margin: auto;
 }
 
+@media all and (min-width: 375px){
+    .profile_mainInfo {font-size: medium;}
+    .header_popUp ul li{font-size: medium;}
+}
+@media all and (min-width: 768px){
+    .header_popUp {width: 30vw;}
+}
 
 /*  Header burguer  */
 
@@ -647,7 +668,56 @@ PARTIALS
 
 .header_burguer_popUp ul li {
     margin: 15px 0%;
+    font-size: small;
 }
+
+@media all and (min-width: 375px){
+    .header_burguer_popUp{
+        width: 45vw
+    }
+    .header_burguer_popUp ul{
+        width: 40vw;
+    }
+    .header_burguer_popUp ul li{
+        font-size: medium;
+    }
+}
+@media all and (min-width: 425px){
+    .header_burguer_popUp{
+        width: 40vw
+    }
+    .header_burguer_popUp ul{
+        width: 35vw;
+    }
+    .header_burguer_popUp ul li{
+        font-size: medium;
+    }
+}
+@media all and (min-width: 768px){
+    .header_burguer_popUp{
+        width: 30vw
+    }
+    .header_burguer_popUp ul{
+        width: 25vw;
+    }
+    .header_burguer_popUp ul li{
+        font-size: medium;
+    }
+}
+@media all and (min-width: 1023px){
+    .header_burguer_popUp{
+        width: 20w
+    }
+    .header_burguer_popUp ul{
+        width: 25vw;
+    }
+    .header_burguer_popUp ul li{
+        font-size: medium;
+    }
+}
+
+
+
 
 
 /*------------------------------------------------------------Dedicado a Footer----------------------------------------------------------------------*/
