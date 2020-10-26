@@ -206,14 +206,14 @@ HOME
 .boxProduct3 {
     display: flex;
     flex-direction: column;
-    width: 95vw;
-    height: 20vh;
-    margin: 20px auto;
+    width: 100vw;
+    height: 22.5vh;
     justify-content: center;
     box-shadow: 5px 5px 8px #888888;
 }
 
-h2.titleIndex { color: black; font-weight: lighter;   }
+h1.titleIndex { color: black; font-weight: lighter;font-size: 50px; font-family: 'Staatliches', cursive; line-height: 50px; text-align: center; }
+h1.titleIndex:hover{font-size: 60px;}
 
 .boxProduct1 {  background-color: var(--color-primero); }
 .boxProduct1:hover{ background-image: url('../img/index/bottlesBG.jpg'); background-size: contain;}
@@ -291,6 +291,7 @@ h2.titleIndex { color: black; font-weight: lighter;   }
     border-radius: 5px;
 }
 };
+
 
 /*------------------------------------------------------------Dedicado a Acerca-de / Empresa----------------------------------------------------------------------*/
 
