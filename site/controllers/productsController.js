@@ -91,7 +91,7 @@ const productsController = {
         } 
         
         db.Products.create(newProduct);
-            res.redirect('/products');
+            res.redirect('/');
         },
 
     edit: (req, res) => {
@@ -121,7 +121,7 @@ const productsController = {
             where: {
                 id: req.params.id }
         });
-            res.redirect('/products');
+            res.redirect('/');
         },
 
     detail: (req, res) => {
@@ -148,7 +148,7 @@ const productsController = {
                 }
             })
     
-            res.redirect('/products');
+            res.redirect('/');
         }
 }
 
