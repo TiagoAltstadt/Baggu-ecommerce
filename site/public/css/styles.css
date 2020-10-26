@@ -56,6 +56,7 @@ html {
 body {
     position: relative;
     left: 0vw;
+    margin: 0%;
     font-size: 1.6rem;
     line-height: 2;
 }
@@ -1200,7 +1201,7 @@ PRODUCTS
     left: 0;
     right: 0;
     z-index: 3;
-    margin: auto 10%;
+  
 }
 
 .products_container {
