@@ -100,6 +100,7 @@ ul {
 }
 
 
+
 /*------------------------------------------------------------Transicion de presentacion----------------------------------------------------------------------*/
 
 
@@ -107,12 +108,18 @@ ul {
 
 .bro {
     position: fixed;
+    top: 0vh;
+    left: 0vw;
     text-align: center;
     line-height: 100vh;
-    width: 100%;
-    background-color: var(--color-primero);
+    width: 100vw;
+    background-image: url('../img/logos/logoLandscape.png');
+    background-color: whitesmoke;
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
     font-size: larger;
-    animation: fade 5s ease forwards;
+    animation: fade 2s ease forwards;
 }
 
 @keyframes fade {
@@ -210,13 +217,19 @@ HOME
     box-shadow: 5px 5px 8px #888888;
 }
 
-h2.titleIndex { color: white;   }
+h2.titleIndex { color: black; font-weight: lighter;   }
 
 .boxProduct1 {  background-color: var(--color-primero); }
+.boxProduct1:hover{ background-image: url('../img/index/bottlesBG.jpg'); background-size: contain;}
+
 
 .boxProduct2 {  background-color: var(--color-segundo); }
+.boxProduct2:hover{ background-image: url('../img/index/paperBG.jpg'); background-size: contain;}
+
 
 .boxProduct3 {  background-color: var(--color-tercero); }
+.boxProduct3:hover{ background-image: url('../img/index/higieneBG.jpg'); background-size: contain;}
+
 
 /*Contenedor Titulo de Grupo Productos*/
 .titleBox {
@@ -500,6 +513,7 @@ PARTIALS
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    
 }
 
 .header_subcontainer1 {
@@ -541,6 +555,27 @@ PARTIALS
     box-sizing: border-box;
     height: 50px;
 }
+.header_logo:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 1s;
+  
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
 
 #header_logo {
     width: 130px;
