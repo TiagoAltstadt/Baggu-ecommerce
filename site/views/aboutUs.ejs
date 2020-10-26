@@ -1,18 +1,12 @@
 <!DOCTYPE html> <!--Version HTML 5--> 
 <html lang="en"><!--Contenido de programacion en ingles-->
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baggu: Empresa</title>
-    <link rel="shortcut icon" type="image/png" href="../media/photo5177449313322772614.jpg">
-    <link rel="stylesheet" href="/css/styles.css"> <!--Hoja de estilos en carpeta public-->
-</head>
 
+<%- include('./partials/head.ejs', {title: "Baggu: Empresa"}) %>
 <body>
     
     <%- include('./partials/header/header.ejs') %>
 
-    <main>
+    <main class="aboutUs">
         <h1 class="titleEmpresa">Empresa</h1>
         <section>
             <article class="empresa">
@@ -20,8 +14,8 @@
                     <img src="img/visionImg.jpg" alt="imagen mision" width="400px" height="300px">
                 </div>
                 <div class="boxTextEmpresa">
-                    <h3>Visión</h3>
-                    <p>
+                    <h3 class="aboutUs">Visión</h3>
+                    <p class="aboutUs">
                         El propósito de BAGGU es anticiparse en los negocios,
                         generando ideas y soluciones que creen valor para 
                         clientes del rubro gastronómico, productivo y de 
@@ -34,8 +28,8 @@
                     <img src="img/misionImg.jpg" alt="imagen mision" width="400px" height="300px">
                 </div>
                 <div class="boxTextEmpresa">
-                    <h3>Misión</h3>
-                    <p>
+                    <h3 class="aboutUs">Misión</h3>
+                    <p class="aboutUs">
                        BAGGU es un equipo profesional, 
                        orientado a conocer, asesorar y fidelizar 
                        a los clientes en la experiencia de compra 

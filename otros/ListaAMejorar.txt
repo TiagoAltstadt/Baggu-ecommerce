@@ -68,23 +68,13 @@ Sprint 4
 Sprint 5
 -Archivo retro.md y archivo Daily.md
 -Objetivo: 
-● Permita el flujo de registro, login y logout de usuarios
-● Permita recordar al usuario para que pueda ingresar sin volverse a logear
+
 ● Tenga rutas accesibles sólo por huéspedes (visitantes sin login)
 ● Tenga rutas accesible sólo por usuarios (que hicieron login)
--Formulario de registro Usuarios:
-● Deberá permitir la subida de una imagen de perfil (con Multer )
-● Deberá encriptar la contraseña ingresada por el usuario (con bcrypt.js )
-● Deberá guardar los datos enviados en el archivo JSON de usuarios
+
 -Login de Usuarios (Midelware, Session, cookies)
 ● Incluya los campos de email y password
-● Verifique la información enviada por el usuario y según el caso:
-        ○ Redireccione a la home o a la página de perfil en caso de éxito y muestre
-                   los datos del usuario en algún lugar del sitio, como el header.
-        ○ Redireccione nuevamente al login en caso de error
-● (Checkbox para recordar usiario) Utilizar cookies para guardar esa información en el navegador
-● Implementar un middleware de aplicación que busque la cookie y logee al
-    usuario en caso de que exista y sus datos sean correctos.
+
 -(Rutas de huéspedes y de usuarios)
     ● Rutas accesibles por cualquiera → sin cambios
     ● Rutas accesibles sólo sin login → Redirigen al perfil

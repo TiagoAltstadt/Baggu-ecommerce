@@ -54,9 +54,8 @@ html {
 }
 
 body {
-    position: relative;
-    left: 0vw;
-    margin: 0%;
+    overflow-x: hidden;
+    width: 100%;
     font-size: 1.6rem;
     line-height: 2;
 }
@@ -272,22 +271,46 @@ h1.titleIndex:hover{font-size: 60px;}
 
 /*------------------------------------------------------------Dedicado a Acerca-de / Empresa----------------------------------------------------------------------*/
 
+main.aboutUs {
+    display: flex;
+}
+
 h1.titleEmpresa {
     text-align: center;
+    position: relative;
+    right: 2px;
+    border-bottom: solid var(--color-tercero) 1px;
+    box-shadow: 0px 5px 0px -1px #EFEFEF;
 }
 
 article.empresa {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
+    position: relative;
+    right: 2px;
+    
+}
+
+h3.aboutUs {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+}
+
+p.aboutUs {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.7rem;
+    padding-right: 20px;
 }
 
 div.boxImgEmpresa {
     padding: 10px;
+    
 }
 
 div.boxTextEmpresa {
     padding: 10px;
+    
 }
 
 @media (min-width: 769px) and (orientation: landscape) {
@@ -737,15 +760,22 @@ PARTIALS
 
 /*contenedor padre*/
 
+footer {
+    display: flex;
+    width: 100%;
+    background-color: #141E29;
+    position: absolute;
+    right: 1px;
+}
+
 .containerFooter {
     position: relative;
     left: 0vw;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
 }
-
 
 /*3 contenedores*/
 
@@ -756,7 +786,7 @@ PARTIALS
     flex-grow: 1;
     flex-direction: column;
     justify-content: center;
-    background-color: #141E29;
+   
 }
 
 .footerBox2 {
@@ -765,7 +795,7 @@ PARTIALS
     width: 100%;
     height: 220px;
     flex-grow: 1;
-    background-color: #141E29;
+    
 }
 
 .footerBox3 {
@@ -775,7 +805,7 @@ PARTIALS
     align-items: center;
     width: 100%;
     height: 220px;
-    background-color: #141E29;
+    
 }
 
 
@@ -783,8 +813,8 @@ PARTIALS
 
 .contacto {
     color: white;
-    font-size: 1.25rem;
-    /* font-family: OpenSans-Light; */
+    font-size: 1.50rem;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
 }
 
