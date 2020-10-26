@@ -6,6 +6,9 @@ let db = require('../database/models');
 //----Bcrypt----
 const bcrypt = require('bcryptjs');
 
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
+
 const userController = {
 
     list: function (req, res) {
@@ -122,16 +125,16 @@ const userController = {
     },
 
     search: function (req, res) {
-        let aux = req.params.id;
-        db.Users.findByPk(aux)
-            .then(function (user) {
-                res.render('usersResults.ejs', { usersResults: user });
+    db.Users.findAll({where:{name: { [Op.like]: '%'+req.query.search+'%' } }})
+            .then(function (users) {
+                console.log(users);
+                res.render('../views/users/list_user.ejs', { users });
             })
     },
 
     edit: function (req, res) {
 
-        db.Users.findOne({ where: { id: req.params.id } })
+        db.Users.findOne({ where: { id: req.query.search } })
             .then(function (user) {
                 res.render('./users/edicion_users.ejs', {user, data: req.params.id });
             })

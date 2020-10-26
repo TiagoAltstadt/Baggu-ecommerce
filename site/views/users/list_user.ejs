@@ -10,6 +10,13 @@
         <%- include('../partials/header/header.ejs') %>
 
             <main>
+    
+                <form action="/users/search" method="GET">
+                    <label for="search">Buscar por nombre
+                        <input type="text" name="search" id="search">
+                    </label>      
+                    <input type="submit" value="search" id="search">
+                </form>
 
                 <h1 class="title_list">Users List</h1>
 
@@ -44,12 +51,6 @@
                             <% })} %> %>
 
                 </section>
-
-                <h2>Search</h2>
-                <form action="/search" method="GET">
-                    <input type="text" name="search">
-                    <input type="submit" value="search">
-                </form>
 
             </main>
 

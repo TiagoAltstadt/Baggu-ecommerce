@@ -8,7 +8,7 @@ router.get('/', homeController.index);
 
 router.get('/contact', homeController.contact);
 
-router.get('/aboutUs', homeController.aboutUs);
+router.get('/acerca-de', homeController.aboutUs);
 
 router.get('/new', homeController.new);
 

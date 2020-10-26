@@ -40,6 +40,8 @@ router.get('/login', loggedIn_lock, userController.login);
 router.post('/login', loggedIn_lock,validate.loginForm, userController.processLogin);
 router.put('/logout', userController.logout);
 
+router.get('/search', loggedOut_lock, userController.search); //SIN TERMINAR
+
 router.get('/:id', loggedOut_lock, userController.profile);
 
 router.get('/:id/edit', loggedOut_lock, userController.edit);
@@ -49,7 +51,6 @@ router.put('/:id/delete', loggedOut_lock, userController.delete);
 
 
 
-router.get('/search', loggedOut_lock, userController.search); //SIN TERMINAR
 
 //----Export----
 module.exports = router;
