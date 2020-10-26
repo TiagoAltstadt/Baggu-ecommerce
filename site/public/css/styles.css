@@ -160,37 +160,14 @@ HOME
 /*------------------------------------------------------------Dedicado a Index.ejs----------------------------------------------------------------------*/
 
 
-/*  Container Principal del Carrousel*/
-.boxContainerCarrousel {
-    display: flex;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    width: 95vw;
-    margin: 2vw auto;
-    height: 15vh;
-    border: 1px grey;
-    border-style: ridge;
+.carousel{
+    margin: 1vh 2vw;
     box-shadow: 5px 5px 8px #888888;
-    background-image: url('../img/sale\ blue.jpg');
-    background-size: cover;
 }
 
-/* 3 columnas de Carrousel*/
-.carrousel1,
-.carrousel2,
-.carrousel3
- {
-    display: none;
-    width: 33%;
-    flex-grow: 1;
+.imageCarousel {
+    height: 20vh;
 }
-
-.imgCarrousel {
-    width: 100%;
-    height: 14vh;
-}
-
-
 
 /* Container principal de grupos productos*/
 .containerMainProducts {
