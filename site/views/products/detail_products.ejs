@@ -13,7 +13,8 @@
         <!-- Tipo de producto -->
         <div class="tipo_producto"><p><%= products.name %></p></div>
 
-        <section class="producto_container">
+        <div class="producto_container">
+        <section>
             <div class="imagen_detalle"><img class="product_image" src="/fileProducts/<%= products.image %>" alt="Imagen de Producto"></div>
             
              <!--Descripcion del producto-->
@@ -48,7 +49,7 @@
                 </div>
                 
                 
-                <% if(locals.loggedUser.category_user_id == 2){%>
+                <% if(locals.loggedUser && locals.loggedUser.category_user_id == 2){%>
                     <!-- Editar -->
                     <div class="comprar_detalle">
                         <a href="/products/<%= products.id %>/edit">  
@@ -67,7 +68,7 @@
  
             </div>
         </section>
-
+    </div>
         <%- include('../partials/footer.ejs') %>
         
     </main>

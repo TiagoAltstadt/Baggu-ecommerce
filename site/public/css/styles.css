@@ -1092,7 +1092,7 @@ footer {
     display: block;
     box-sizing: border-box;
     margin: 3%;
-    background-color: var(--color-primero);
+    background-color: var(--color-sexto);
     color: white;
     font-size: 25px;
     text-align: center;
@@ -1106,12 +1106,14 @@ footer {
     flex-wrap: wrap;
     flex-direction: column;
     margin: 3%;
+    border: red solid 2 px;
 }
 
 .imagen_detalle {
     display: flex;
     flex-wrap: wrap;
     height: 30vh;
+    border:violet solid 2 px;
 }
 
 .img_detalle {
@@ -1119,6 +1121,7 @@ footer {
     box-sizing: border-box;
     width: 280px;
     margin: 12px auto;
+    border: green solid 2 px;
 }
 
 @media all and (min-width: 768px) {
