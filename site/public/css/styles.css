@@ -21,6 +21,62 @@ https://coolors.co/00916e-5386e4-525998-141e29-826754
 -para Footer- Contacto- Empresa **** #141E29 
 */
 
+
+/*------------------------------------------------------------Dedicado a detail_product.ejs----------------------------------------------------------------------*/
+
+.container_product_detail{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: var(--color-sexto);
+    width: 95vw;
+    margin: 1rem auto;
+}
+.title_product_detail{
+    font-size: larger;
+    color: white;
+    width: fit-content;
+    margin: 1rem auto;
+}.title_product_detail_text{}
+
+.image_detail{
+    width: 30vw;
+    margin: 1rem auto;
+}.image_detail_file{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.description_detail{
+    color: white;
+    width: fit-content;
+    margin: 1rem auto;
+}.description_detail_text{}
+
+.brand_detail{
+    color: white;
+    width: fit-content;
+    margin: 1rem auto;
+}.brand_detail_text{}
+
+.summary_detail{
+    margin: auto;
+    width: 80vw;
+    background-color: lightgray;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+.price_detail{
+    color: green;
+    font-weight: bolder;
+    font-size: 24px;
+}.price_detail_text{}
+
+.button_detail{
+    width: fit-content;
+    margin: 1rem auto;
+}
+
 html {
     /*font-family: 'Montserrat', sans-serif;*/
     font-family: 'Nunito', sans-serif;

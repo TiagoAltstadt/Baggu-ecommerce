@@ -4,75 +4,84 @@
     <%- include('../partials/head.ejs', {title: "Baggu: Detalle"}) %>
     <script src="/js/buttonCart.js"></script>
 
-<body class="bc_detalle">
+    <body class="bc_detalle">
 
-    <main>
-        
-        <%- include('../partials/header/header.ejs') %>
-         
-        <!-- Tipo de producto -->
-        <div class="tipo_producto"><p><%= products.name %></p></div>
-
-        <div class="producto_container">
-        <section>
-            <div class="imagen_detalle"><img class="product_image" src="/fileProducts/<%= products.image %>" alt="Imagen de Producto"></div>
+        <main>
             
-             <!--Descripcion del producto-->
-            <div class="descripcion_detalle">
-                 <p class="texto_detalle"><%= products.description %></p>
-            </div>
-            <% bodyBrans = {};
-                for( let i = 0; i < brands.length; i++ ) { 
-                    if(brands[i].id == products.brand_id){
-                        bodyBrans = {name: brands[i].name};};}%>
-            <div class="product_title"><p>Marca: <%= bodyBrans.name %> </p> </div>
+            <%- include('../partials/header/header.ejs') %>
+            
+           <section class="container_product_detail">
 
-             <!--Resumen-->
-            <div class="resumen_detalle">
-                
-                 <!-- Precio -->
-                <div class="precio_detalle"><i class="fas fa-dollar-sign"></i><%= products.price %></div></div>
-                            
-                 <!-- Boton Unidades a Carrito -->
-                <div class="comprar_detalle">
-                    <p>Añadir a Carrito:</p>
-                    <button id="buttonAddCart" type="submit">+</button> 
-                    <button id="buttonLessCart" type="submit">-</button> 
-                    <input class="inputCart" type="number" name="addCart" value="0"><p>Unidad</p> 
-                    <i class="fas fa-shopping-cart"></i>
+                <!--titulo-->
+                <div class="title_product_detail">
+                    <h2 class="title_product_detail_text"><%= products.name %></h2>
                 </div>
 
-                 <!-- Comprar -->
-                <div class="comprar_detalle">
-                    <button type="submit">Comprar</button>  
-                    <i class="fas fa-shopping-cart"></i>
+                <!--imagen-->
+                <div class="image_detail">
+                    <img class="image_detail_file" src="/fileProducts/<%= products.image %>" alt="Imagen de Producto">
                 </div>
-                
-                
-                <% if(locals.loggedUser && locals.loggedUser.category_user_id == 2){%>
-                    <!-- Editar -->
-                    <div class="comprar_detalle">
-                        <a href="/products/<%= products.id %>/edit">  
-                            <button type="submit">Editar</button> 
-                        </a>
-                        <i class="fas fa-share-alt"></i>
-                    </div>
-                    <!--delete-->
-                    <div>
-                        <form action="/products/<%= products.id %>?_method=DELETE" method="POST">
-                             <button type="submit">Borrar</button>
-                        </form>
-                    </div>
-                <% } %>
- 
- 
-            </div>
-        </section>
-    </div>
-        <%- include('../partials/footer.ejs') %>
-        
-    </main>
 
-</body>
+                <!--descripcion-->
+                <div class="description_detail">
+                    <p class="description_detail_text"><h3>Descripcion:</h3> <%= products.description %></p>
+                </div>
+
+                <% bodyBrans = {}; 
+                    for( let i = 0; i < brands.length; i++ ) { 
+                        if(brands[i].id == products.brand_id){
+                            bodyBrans = {name: brands[i].name};
+                        };
+                    }
+                %>
+
+                <!--brand-->
+                <div class="brand_detail">
+                    <h3>Marca:</h3>
+                    <p class="brand_detail_text"><%= bodyBrans.name %></p>
+                </div>
+
+                <!--resumen-->
+                <div class="summary_detail">
+                    <!--precio-->
+                    <div class="price_detail">
+                        <p class="price_detail_text">
+                            <i class="fas fa-dollar-sign"></i><h3>Precio: </h3><%= products.price %>
+                        </p>
+                    </div>
+                    
+                    <!--comprar-->
+                    <div class="button_detail">
+                        <button type="submit">Comprar</button>  
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+
+                    <% if(locals.loggedUser && locals.loggedUser.category_user_id == 2){%>
+
+                        <!-- Editar -->
+                        <div class="button_detail">
+                            <a href="/products/<%= products.id %>/edit">  
+                                <button type="submit">Editar</button> 
+                            </a>
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+
+                        <!--delete-->
+                        <div class="button_detail">
+                            <form action="/products/<%= products.id %>?_method=DELETE" method="POST">
+                                <button type="submit">Borrar</button>
+                            </form>
+                        </div>
+                    <% } %>
+
+                </div>
+
+           </section>
+
+            <%- include('../partials/footer.ejs') %>
+            
+        </main>
+
+    </body>
 
 </html>
