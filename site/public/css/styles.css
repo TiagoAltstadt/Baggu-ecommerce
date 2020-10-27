@@ -721,9 +721,15 @@ PARTIALS
     padding-top: 1vh;
     padding-left: 2vw;
     overflow: auto;
-    background-color: #fff;
-    background-image: url("/img/backgrounds/paper_background.jpg");
+    background-color: var(--color-sexto);
     z-index: 1;
+    box-shadow: inset 0px 0px 66px -26px #FFFFFF;
+}
+
+.textMenuBur {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 .header_burguer_popUp ul {
@@ -773,13 +779,13 @@ PARTIALS
 }
 @media all and (min-width: 1023px){
     .header_burguer_popUp{
-        width: 20w
+        width: 25vw
     }
     .header_burguer_popUp ul{
-        width: 25vw;
+        width: 20vw;
     }
     .header_burguer_popUp ul li{
-        font-size: medium;
+        font-size: 2.2rem;
     }
 }
 
