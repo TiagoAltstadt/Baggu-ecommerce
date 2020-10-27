@@ -31,3 +31,8 @@ En el dia de la fecha realizamos una reunion para comenetar sobre avances en el 
 12-10-2020 (Sprint 7)
 
 En el dia de la fecha realizamos una reunion para opinar sobre los avances logrados, Tiago logro solucionar problemas de login e usuarios y estuvo realizando mejoras en las vistas del proyecto, Marcelo estuvo implementando y creando la informacion de la base de datos, hacieno funcionar la misma con sequelize y mejorando las vistas de cada uno de los puntos del CRUD para productos
+
+----------------------------------------------------------------------------
+27-10-2020 (Sprint 9)
+
+Durante las dos ultimas semanas del curso donde se dedico puramente al proyecto las reuniones como asi la comunicacion fue muy fluida, existieron reuniones de 3 o mas veces por semana para lograr los objetivos pactados

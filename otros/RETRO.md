@@ -91,3 +91,21 @@ No pedir ayuda y generar atrasos en el proyecto
 
 Que dejar de hacer?
 No volver a cometer errores del inicio del proyecto
+
+-------------------------------------------------------------------------
+27-10-2020 (Sprint 8)
+
+Que comenzar hacer?
+En la recta final de este proyecto, la respuesta a esta pregunta es iniciar siempre organizados como grupo y no dejar de aprender
+
+Que hacer mas?
+Seguir aprendiendo y si se puede en grupo mejor ya que es aun mas enriquecedor
+
+Que continuar haciendo?
+Trabajo en equipo, aprendizaje continuo y mucha pasion
+
+Que hacer menos?
+Evitar conductas unipersonales
+
+Que dejar de hacer?
+Pensar que uno solo puede hacer todo y bien
