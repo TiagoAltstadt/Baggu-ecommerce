@@ -127,7 +127,6 @@ const userController = {
     search: function (req, res) {
     db.Users.findAll({where:{name: { [Op.like]: '%'+req.query.search+'%' } }})
             .then(function (users) {
-                console.log(users);
                 res.render('../views/users/list_user.ejs', { users });
             })
     },

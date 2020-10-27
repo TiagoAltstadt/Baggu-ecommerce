@@ -5,6 +5,8 @@ const path = require("path");
 //----Data Base----
 let db = require('../database/models');
 
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
 
 //------Se lee la base de datos products.json, se lo parcea para su utilizacion------
 const datapath = path.join(__dirname, "/../data/products.json") ;
@@ -57,14 +59,17 @@ const productsController = {
             },
 
     search: (req, res) => {
-        let result = {};  
-        if(req.query.search){
-            result = productJSON.filter(group => group.name.toLowerCase().includes(req.query.search.toLowerCase()));    
-        };
-        
-        res.render("products/search", {result});
-        },
 
+        db.Products.findAll({where: {name: { [Op.like]: '%'+req.query.search+'%' }}})
+            .then(function(products){
+                db.Brands.findAll()
+                    .then(function(brands){
+                        console.log(products);
+                        res.render('products/higiene.ejs', {products, brands})
+                    })
+            })
+            
+        },
     create: (req, res) => {
         db.Categories.findAll()
             .then(function(categories){
