@@ -160,20 +160,23 @@ HOME
 
 
 .carousel{
-    margin: 1vh 2vw;
+    margin: 20px 30px;
     box-shadow: 5px 5px 8px #888888;
+    position: relative;
+    right: 6px;
 }
 
 .imageCarousel {
-    height: 20vh;
+    height: 40vh;
 }
 
 /* Container principal de grupos productos*/
 .containerMainProducts {
+    display: flex;
     flex-direction: column;
-    width: 100%;
+    align-items: center;
+    width: 100vw;
     height: 300%;
-
 }
 
 /* 3 Columnas de Grupo Productos*/
@@ -182,25 +185,87 @@ HOME
 .boxProduct3 {
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 92vw;
     height: 22.5vh;
     justify-content: center;
     box-shadow: 5px 5px 8px #888888;
+    border-radius: 5px;
+    margin: 7px;
+    position: relative;
+    right: 8px;
 }
 
-h1.titleIndex { color: black; font-weight: lighter;font-size: 50px; font-family: 'Staatliches', cursive; line-height: 50px; text-align: center; }
-h1.titleIndex:hover{font-size: 60px;}
+a.titleIndex1 { 
+    font-weight: lighter;
+    font-size: 40px; 
+    font-family: 'Staatliches', cursive; 
+    line-height: 50px; 
+    text-align: center; 
+    text-decoration: unset;
+    text-decoration-line: none;
+    -webkit-text-fill-color: whitesmoke;
+    -webkit-text-stroke: 2px var(--color-primero);
+} 
+a.titleIndex2 { 
+    font-weight: lighter;
+    font-size: 40px; 
+    font-family: 'Staatliches', cursive; 
+    line-height: 50px; 
+    text-align: center; 
+    text-decoration: unset;
+    text-decoration-line: none;
+    -webkit-text-fill-color: whitesmoke;
+    -webkit-text-stroke: 2px var(--color-segundo);
+} 
+a.titleIndex3 { 
+    font-weight: lighter;
+    font-size: 40px; 
+    font-family: 'Staatliches', cursive; 
+    line-height: 50px; 
+    text-align: center; 
+    text-decoration: unset;
+    text-decoration-line: none;
+    -webkit-text-fill-color: whitesmoke;
+    -webkit-text-stroke: 2px var(--color-tercero);
+}
+
+a.titleIndex1:hover{
+    font-size: 40px;
+    color: whitesmoke;
+    text-decoration-line: none;
+}
+a.titleIndex2:hover{
+    font-size: 40px;
+    color: var(--color-segundo);
+    text-decoration-line: none;
+}
+a.titleIndex3:hover{
+    font-size: 40px;
+    color: var(--color-tercero);
+    text-decoration-line: none;
+}
+
 
 .boxProduct1 {  background-color: var(--color-primero); }
-.boxProduct1:hover{ background-image: url('../img/index/bottlesBG.jpg'); background-size: contain;}
+.boxProduct1:hover{ 
+    background-image: url('../img/index/Vaso_colores.jpg'); 
+    background-size: contain;
+    border: solid #F0F7EE 1px;
+}
 
 
 .boxProduct2 {  background-color: var(--color-segundo); }
-.boxProduct2:hover{ background-image: url('../img/index/paperBG.jpg'); background-size: contain;}
+.boxProduct2:hover{ 
+    background-image: url('../img/index/paperBG.jpg'); 
+    background-size: contain;
+}
 
 
 .boxProduct3 {  background-color: var(--color-tercero); }
-.boxProduct3:hover{ background-image: url('../img/index/higieneBG.jpg'); background-size: contain;}
+.boxProduct3:hover{ 
+    background-image: url('../img/index/Higiene_limpieza.jpg'); 
+    background-size: contain;
+}
 
 
 /*Contenedor Titulo de Grupo Productos*/
@@ -213,40 +278,6 @@ h1.titleIndex:hover{font-size: 60px;}
     align-items: center;
 }
 
-/*Titulos Grupo Productos*/
-.titleBox h2 {
-    font-size: 2rem;
-    /* font-family: sans-serif; */
-}
-
-/*Contenedor Imagen Grupo Productos*/
-.imageBox {
-    display: flex;
-    width: 30vw;
-    height: 10vh;
-    justify-content: left;
-    margin-left: 2vw;
-}
-
-/*Estilos Imagenes Grupo Productos*/
-.imgMainProduct1,
-.imgMainProduct2,
-.imgMainProduct3 {
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-}
-
-.imgMainProduct1:hover,
-.imgMainProduct2:hover,
-.imgMainProduct3:hover {
-    width: 95vw,
-    
-}
-
-.promo_index{
-    width: 30vw;
-}
 
 /*Media Query a Laptop*/
 
@@ -259,13 +290,14 @@ h1.titleIndex:hover{font-size: 60px;}
         justify-content: left;
         margin-left: 2vw;
     }
+
     .imgMainProduct1,
-.imgMainProduct2,
-.imgMainProduct3 {
+    .imgMainProduct2,
+    .imgMainProduct3 {
     width: 100%;
     height: 100%;
     border-radius: 5px;
-}
+    }
 };
 
 
@@ -506,11 +538,14 @@ PARTIALS
 /*------------------------------------------------------------Dedicado a header.ejs-------------------------------------------------------------*/
 
 .header_container {
-    width: 100vw;
+    width: 95%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    
+    position: relative;
+    left: 30px;
+    border-bottom:grey solid 1px;
+    box-shadow: 0px 5px 2px -3px #CCAF6E;
 }
 
 .header_subcontainer1 {
@@ -519,7 +554,7 @@ PARTIALS
     flex-direction: row;
     height: 50%;
     justify-content: space-between;
-    padding: 0%;
+    padding: 10px;
 }
 
 .header_button {
@@ -550,7 +585,7 @@ PARTIALS
 .header_logo {
     display: block;
     box-sizing: border-box;
-    height: 50px;
+    height: 60px;
 }
 .header_logo:hover {
     /* Start the shake animation and make the animation last for 0.5 seconds */
@@ -581,7 +616,8 @@ PARTIALS
 .header_profile {
     height: 50px;
     margin-right: 30px;
-    margin-top: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 #header_profile {
@@ -594,25 +630,28 @@ PARTIALS
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
+    padding: 10px;
 }
 
 .header_search {
     display: block;
     box-sizing: border-box;
     margin: 0% auto;
-    width: 90%;
+    width: 80%;
     align-items: center;
 }
 
-.header_form {
-    border-bottom: #555 1px solid;
-}
+
 
 .header_searchBox {
     width: 100%;
     margin: 0%;
+    height: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    border: grey solid 1px;
+    border-radius: 5px;
 }
-
 
 /*  Pop-up Perfil   */
 
@@ -766,6 +805,7 @@ footer {
     background-color: #141E29;
     position: absolute;
     right: 1px;
+    margin-top: 30px;
 }
 
 .containerFooter {
@@ -780,7 +820,7 @@ footer {
 /*3 contenedores*/
 
 .footerBox1 {
-    padding: 15px;
+    padding: 50px;
     width: 100%;
     height: 220px;
     flex-grow: 1;
@@ -813,7 +853,7 @@ footer {
 
 .contacto {
     color: white;
-    font-size: 1.50rem;
+    font-size: 1.20rem;
     font-family: 'Roboto', sans-serif;
     text-align: center;
 }
