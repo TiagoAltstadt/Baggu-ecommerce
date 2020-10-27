@@ -15,18 +15,18 @@
 
     <!--Options-->
     <ul>
-        <a href="/users/<%= locals.loggedUser.id %>">
+        <a class="option" href="/users/<%= locals.loggedUser.id %>">
             <li class="option">Perfil</li>
         </a>
-        <a href="/users/<%= locals.loggedUser.id %>/edit">
+        <a class="option"href="/users/<%= locals.loggedUser.id %>/edit">
             <li class="option">Editar perfil</li>
         </a>
 
         <% if (locals.loggedUser.category_user_id == 2){ %>
-            <a href="/users">
+            <a class="option" href="/users">
                 <li class="option">Usuarios</li>
             </a>
-            <a href="/products/create">
+            <a class="option" href="/products/create">
                 <li class="option">Crear producto</li>
             </a>
         <% } %>

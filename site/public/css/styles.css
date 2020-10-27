@@ -163,7 +163,7 @@ HOME
 }
 
 .imageCarousel {
-    height: 40vh;
+    height: 50vh;
 }
 
 /* Container principal de grupos productos*/
@@ -173,6 +173,7 @@ HOME
     align-items: center;
     width: 100vw;
     height: 300%;
+    margin-top: 15px;
 }
 
 /* 3 Columnas de Grupo Productos*/
@@ -226,17 +227,17 @@ a.titleIndex3 {
 }
 
 a.titleIndex1:hover{
-    font-size: 40px;
+    font-size: 45px;
     color: whitesmoke;
     text-decoration-line: none;
 }
 a.titleIndex2:hover{
-    font-size: 40px;
+    font-size: 45px;
     color: var(--color-segundo);
     text-decoration-line: none;
 }
 a.titleIndex3:hover{
-    font-size: 40px;
+    font-size: 45px;
     color: var(--color-tercero);
     text-decoration-line: none;
 }
@@ -333,11 +334,11 @@ p.aboutUs {
 
 div.boxImgEmpresa {
     padding: 10px;
-    
 }
 
 div.boxTextEmpresa {
     padding: 10px;
+    margin-right: 20px;
     
 }
 
@@ -345,8 +346,33 @@ div.boxTextEmpresa {
     article.empresa {
         flex-direction: row;
     }
+
+    div.boxImgEmpresa {
+        padding: 10px;
+        margin-left: 20px;
+    }
 }
 
+/*------------------------------------------------------------Dedicado a Contacto / Empresa----------------------------------------------------------------------*/
+
+
+
+h3.info {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+}
+
+div.info {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.7rem;
+    padding-right: 20px;
+}
+
+a.Infolink {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.7rem;
+    padding-right: 20px;
+}
 
 /************Login y registro*********/
 
@@ -659,7 +685,7 @@ PARTIALS
     flex-wrap: wrap;
     position: fixed;
     justify-items: center;
-    background-color: white;
+    background-color: var(--color-sexto);
     right: -47.5vw;
     top: 16vh;
     width: 45vw;
@@ -668,7 +694,8 @@ PARTIALS
     z-index: 100;
     border: black solid 1px;
     border-radius: 4px;
-    background-image: url("/img/backgrounds/paper_background.jpg");
+    box-shadow: inset 0px 0px 66px -26px #FFFFFF;
+    
 }
 
 .profile_popUpAvatar {
@@ -687,15 +714,25 @@ PARTIALS
     background-color: rgba(219, 216, 219, 0.4);
     border-radius: 4px;
     font-size: small;
+    color: white;
+    text-align: center;
 }
 .header_popUp ul {
     background-color: rgba(219, 216, 219, 0.4);
     border-radius: 4px;
 }
+
+li.option {
+    text-decoration: unset;
+    text-decoration-line: none;
+    color: white;
+}
+
 .header_popUp ul li{font-size: small;}
 .profile_name {
     width: fit-content;
     margin: auto;
+    color: white;
 }
 
 @media all and (min-width: 375px){
