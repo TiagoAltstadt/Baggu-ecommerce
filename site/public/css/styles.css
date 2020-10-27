@@ -31,7 +31,9 @@ https://coolors.co/00916e-5386e4-525998-141e29-826754
     background-color: var(--color-sexto);
     width: 95vw;
     margin: 1rem auto;
+    font-size: 20px;
 }
+
 .title_product_detail{
     font-size: larger;
     color: white;
@@ -67,6 +69,11 @@ https://coolors.co/00916e-5386e4-525998-141e29-826754
     margin-bottom: 1rem;
 }
 .price_detail{
+    background-color: whitesmoke;
+    padding: auto 5px;
+    box-shadow: 5px 5px black;
+    width: fit-content;
+    margin: auto;
     color: green;
     font-weight: bolder;
     font-size: 24px;
@@ -1028,11 +1035,20 @@ footer {
 }
 
 .individual_UDP ul{
+    font-size: 20px;
+    width: fit-content;
     margin: auto;
+}
+.individual_UDP ul li{
+    margin: 0.5rem auto;
 }
 
 .info_UDP {
     margin: auto;
+}
+.button_profile{
+    width: fit-content;
+    margin: 0.5rem auto;
 }
 
 

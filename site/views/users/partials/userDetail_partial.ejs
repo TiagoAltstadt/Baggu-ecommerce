@@ -36,12 +36,12 @@
 
 
             <% if((locals.loggedUser.id == id) || (locals.loggedUser.category_user_id == 2)){%>
-            <form action="/users/<%= id %>/delete?_method=PUT" method="POST"><button type="submit">Borrar Usuario</button></form>
-            <a href="/users/<%= id %>/edit"><button type="submit">Editar</button></a>
+            <form action="/users/<%= id %>/delete?_method=PUT" method="POST"><button class="button_profile" type="submit">Borrar Usuario</button></form>
+            <a href="/users/<%= id %>/edit"><button class="button_profile" type="submit">Editar</button></a>
             <% } %>
             
             <% if(locals.loggedUser.id == id){%>
-            <form action="/users/logout?_method=PUT" method="POST"><button type="submit">Cerrar Sesion</button></form>
+            <form action="/users/logout?_method=PUT" method="POST"><button class="button_profile" type="submit">Cerrar Sesion</button></form>
             <% } %>
 
         </ul>
