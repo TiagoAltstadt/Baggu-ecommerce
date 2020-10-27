@@ -307,8 +307,7 @@ main.aboutUs {
 h1.titleEmpresa {
     text-align: center;
     position: relative;
-    right: 2px;
-    border-bottom: solid var(--color-tercero) 1px;
+    margin: 1rem auto;
     box-shadow: 0px 5px 0px -1px #EFEFEF;
 }
 
@@ -317,7 +316,10 @@ article.empresa {
     flex-wrap: nowrap;
     flex-direction: column;
     position: relative;
-    right: 2px;
+    width: 95vw;
+    margin: 2rem auto;
+    background-color: lightgray;
+    box-shadow: 5px 5px 8px #888888;
     
 }
 
@@ -481,69 +483,6 @@ a.Infolink {
 }
 
 
-/*------------------------------------------------------------Dedicado a new.ejs-------------------------------------------------------------*/
-
-.body_new {
-    margin: 0%;
-    padding: 0%;
-    width: 100%;
-}
-
-.section_new {
-    display: flex;
-    flex-direction: row;
-}
-
-.descartables_new {
-    display: block;
-    box-sizing: border-box;
-    width: 50vw;
-    height: 86vh;
-    background-color: #4dd0e1;
-}
-
-.descartables_new:hover {
-    background-color: lightblue;
-}
-
-.papeleria_new {
-    display: block;
-    box-sizing: border-box;
-    width: 50vw;
-    height: 86vh;
-    background-color: orange;
-}
-
-.papeleria_new:hover {
-    background-color: lightcoral;
-}
-
-.higiene_new {
-    position: absolute;
-    left: 0.39%;
-    bottom: -8vh;
-    background-color: red;
-    clip-path: polygon(50% 50%, 0 100%, 100% 100%);
-    width: 100vw;
-    height: 100vh;
-}
-
-.higiene_new:hover {
-    border-bottom: 40vh solid lightpink;
-}
-
-.promo_new {
-    position: absolute;
-    left: 31%;
-    bottom: 25vh;
-    height: 300px;
-    width: 728px;
-    background-color: #555;
-}
-
-.promo_new:hover {
-    background-color: gold;
-}
 
 
 /*
