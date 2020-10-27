@@ -22,12 +22,12 @@
             <li class="option">Editar perfil</li>
         </a>
 
-        <a href="https://weirdorconfusing.com/">
-            <li class="option">Boton magico</li>
-        </a>
         <% if (locals.loggedUser.category_user_id == 2){ %>
             <a href="/users">
                 <li class="option">Usuarios</li>
+            </a>
+            <a href="/products/create">
+                <li class="option">Crear producto</li>
             </a>
         <% } %>
 

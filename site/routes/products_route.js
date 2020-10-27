@@ -38,15 +38,15 @@ router.get("/search", productsController.search);
 
 router.get('/cart',loggedOut_lock, productsController.cart);
 
-router.get  ('/create', productsController.create);
+router.get  ('/create', god_lock, productsController.create);
 router.post ('/create', upload.any(), productsController.store);
 
 router.get('/:id', productsController.detail);
 
-router.get('/:id/edit', productsController.edit);
+router.get('/:id/edit',god_lock , productsController.edit);
 router.put('/:id', upload.any(), productsController.update);
 
-router.delete('/:id', productsController.delete);
+router.delete('/:id', productsController.delete);   
 
 
 //----Export----
