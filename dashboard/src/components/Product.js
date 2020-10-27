@@ -24,7 +24,7 @@ class Product extends Component {
                         {
 							color:"success", 
 							title:"Products value amount", 
-							value:12393021 + ' $', 
+							value:products.meta.totalPasta, 
 							iconClass:"fa-clipboard-list"
 						},
 					]

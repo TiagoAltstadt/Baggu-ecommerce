@@ -1,4 +1,6 @@
 //----File System----
+const { setupMaster } = require('cluster');
+const { count } = require('console');
 const fs = require('fs');
 //----Phat------
 const path = require("path");
@@ -10,15 +12,20 @@ const productsController = {
         db.Products.findAll()
             .then(function(products){
                 db.Brands.findAll()
-                .then(function(brands){
+                .then(async function(brands){
                     for (let i=0; i<products.length; i++){
-                        products[i].setDataValue('endpoint', '/api/products/'+products[i].id ) 
+                        products[i].setDataValue('endpoint', '/api/products/'+products[i].id )
                     }
+                   let aux = await db.sequelize.query("select sum(price) as price  FROM `products` ");
+                   let auxOK = aux[0][0].price;
+
+                   console.log(typeof(parseInt(auxOK)));
                     let respuesta = {
                         meta: {
                             status: 200,
                             total: products.length,
-                            url: '/api/products'
+                            url: '/api/products',
+                            totalPasta: parseInt(auxOK)
                         },
                         data: {products, brands}
                     };
