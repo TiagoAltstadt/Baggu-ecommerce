@@ -46,21 +46,24 @@
                     <button type="submit">Comprar</button>  
                     <i class="fas fa-shopping-cart"></i>
                 </div>
+                
+                
+                <% if(locals.loggedUser.category_user_id == 2){%>
+                    <!-- Editar -->
+                    <div class="comprar_detalle">
+                        <a href="/products/<%= products.id %>/edit">  
+                            <button type="submit">Editar</button> 
+                        </a>
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <!--delete-->
+                    <div>
+                        <form action="/products/<%= products.id %>?_method=DELETE" method="POST">
+                             <button type="submit">Borrar</button>
+                        </form>
+                    </div>
+                <% } %>
  
-                 <!-- Editar -->
-                <div class="comprar_detalle">
-                    <a href="/products/<%= products.id %>/edit">  
-                        <button type="submit">Editar</button> 
-                    </a>
-                    <i class="fas fa-share-alt"></i>
-                </div>
- 
-                 <!--delete-->
-                <div>
-                    <form action="/products/<%= products.id %>?_method=DELETE" method="POST">
-                         <button type="submit">Borrar</button>
-                    </form>
-                </div>
  
             </div>
         </section>

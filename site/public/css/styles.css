@@ -704,13 +704,13 @@ PARTIALS
     margin: auto;
     margin-bottom: 5px;
     width: 50%;
-    box-shadow: 5px 5px;
+    box-shadow: 5px 5px gold;
 }
 .profile_mainInfo {
     display: block;
     box-sizing: border-box;
     width: 80%;
-    margin: auto;
+    margin: 1rem auto;
     background-color: rgba(219, 216, 219, 0.4);
     border-radius: 4px;
     font-size: small;
