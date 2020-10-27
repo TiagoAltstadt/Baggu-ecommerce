@@ -20,17 +20,16 @@
                         if(brands[i].id == bodyProducts.brandId){
                             bodyBrans = {name: brands[i].name};};}%>
                     <section class="product_container">
-                        <a href="<%= bodyProducts.id %>" class="product_image_container">
+                        <a href="<%= bodyProducts.id %>">
                             <div class="background_color"></div>  <%#---para que es esto?? --%>
-                            <div class="product_content">
+                            <div  class="product_image_container">
                                 <%#-- if(bodyProducts.image == undefined){%>
                                     <%#-- <img class="product_image" src="/img/logos/Nuevo Logo.png" alt="Imagen Default" width="100%" height="50%">%>
                                 <%#-- }else{%>
                                 <img class="product_image" src="/fileProducts/<%= bodyProducts.image %>" alt="Imagen" width="100%" height="50%">
                                 <%#-- }%>
                                 <div class="product_title"> <%= bodyProducts.name %> </div>
-                                <div class="product_title"><p>Marca: <%= bodyBrans.name %> </p> </div>
-                                <div class="product_description"> <%= bodyProducts.description %> </div>
+                                <div class="product_brand"><p>Marca: <%= bodyBrans.name %> </p> </div>
                                 <div class="product_price">Precio: $ <%= bodyProducts.price %>  </div>
                                 <div class="product_options">
                                     <i class="fas fa-share product_icon"></i>
