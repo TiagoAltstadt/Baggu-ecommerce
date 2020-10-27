@@ -38,14 +38,7 @@ html {
         --color-quinto: whitesmoke;
         --color-sexto: #141E29;
 
-    /* Tamaños de dispositivos */
-        --phoneS: 320px;       
-        --phoneM: 375px;            
-        --phoneL: 425px;         
-        --tablet: 768px;       
-        --laptop: 1024px;         
-        --tv: 2560px;       
-        
+
     /*	Estandar de bordes 	*/
         --border-radius: 12px;
 
@@ -77,6 +70,9 @@ h4 {
     font-size: 2.8rem;
 }
 */
+
+  
+
 a {
     text-decoration: none;
 }
@@ -1719,6 +1715,20 @@ button {
 
 
 /*------------------------------------------------------------Dedicado a list_user.ejs----------------------------------------------------------------------*/
+
+#searchUser{
+    padding: 1rem;
+    background-color: var(--color-cuarto);
+    border-radius: var(--border-radius);
+    width: fit-content;
+    margin: 1rem auto;
+}
+
+#title_list{
+    width: fit-content;
+    margin: 1rem auto;
+    
+}
 
 .section_user_list {
     display: flex;

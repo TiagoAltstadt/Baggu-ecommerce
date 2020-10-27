@@ -23,6 +23,10 @@ var storage = multer.diskStorage({
 });
 var upload = multer({storage: storage});
 
+//----Lock Midleware----
+const loggedOut_lock = require('../middlewares/loggedOut_lock');
+const loggedIn_lock = require('../middlewares/loggedIn_lock');
+const god_lock = require('../middlewares/god_lock');
 
 //----Rutas----
 
@@ -32,7 +36,7 @@ router.get('/higiene', productsController.list3);
 
 router.get("/search", productsController.search);
 
-router.get('/cart', productsController.cart);
+router.get('/cart',loggedOut_lock, productsController.cart);
 
 router.get  ('/create', productsController.create);
 router.post ('/create', upload.any(), productsController.store);
