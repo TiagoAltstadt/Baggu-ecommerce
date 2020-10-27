@@ -64,7 +64,6 @@ const productsController = {
             .then(function(products){
                 db.Brands.findAll()
                     .then(function(brands){
-                        console.log(products);
                         res.render('products/higiene.ejs', {products, brands})
                     })
             })
