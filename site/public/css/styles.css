@@ -22,67 +22,7 @@ https://coolors.co/00916e-5386e4-525998-141e29-826754
 */
 
 
-/*------------------------------------------------------------Dedicado a detail_product.ejs----------------------------------------------------------------------*/
 
-.container_product_detail{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    background-color: var(--color-sexto);
-    width: 95vw;
-    margin: 1rem auto;
-    font-size: 20px;
-}
-
-.title_product_detail{
-    font-size: larger;
-    color: white;
-    width: fit-content;
-    margin: 1rem auto;
-}.title_product_detail_text{}
-
-.image_detail{
-    width: 30vw;
-    margin: 1rem auto;
-}.image_detail_file{
-    width: 100%;
-    border-radius: 10px;
-}
-
-.description_detail{
-    color: white;
-    width: fit-content;
-    margin: 1rem auto;
-}.description_detail_text{}
-
-.brand_detail{
-    color: white;
-    width: fit-content;
-    margin: 1rem auto;
-}.brand_detail_text{}
-
-.summary_detail{
-    margin: auto;
-    width: 80vw;
-    background-color: lightgray;
-    border-radius: 5px;
-    margin-bottom: 1rem;
-}
-.price_detail{
-    background-color: whitesmoke;
-    padding: auto 5px;
-    box-shadow: 5px 5px black;
-    width: fit-content;
-    margin: auto;
-    color: green;
-    font-weight: bolder;
-    font-size: 24px;
-}.price_detail_text{}
-
-.button_detail{
-    width: fit-content;
-    margin: 1rem auto;
-}
 
 html {
     /*font-family: 'Montserrat', sans-serif;*/
@@ -1342,6 +1282,67 @@ PRODUCTS
     }
 }
 
+/*------------------------------------------------------------Dedicado a detail_product.ejs----------------------------------------------------------------------*/
+
+.container_product_detail{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: var(--color-sexto);
+    width: 95vw;
+    margin: 1rem auto;
+    font-size: 20px;
+}
+
+.title_product_detail{
+    font-size: larger;
+    color: white;
+    width: fit-content;
+    margin: 1rem auto;
+}.title_product_detail_text{}
+
+.image_detail{
+    width: 30vw;
+    margin: 1rem auto;
+}.image_detail_file{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.description_detail{
+    color: white;
+    width: fit-content;
+    margin: 1rem auto;
+}.description_detail_text{}
+
+.brand_detail{
+    color: white;
+    width: fit-content;
+    margin: 1rem auto;
+}.brand_detail_text{}
+
+.summary_detail{
+    margin: auto;
+    width: 80vw;
+    background-color: lightgray;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+.price_detail{
+    background-color: whitesmoke;
+    padding: auto 5px;
+    box-shadow: 5px 5px black;
+    width: fit-content;
+    margin: auto;
+    color: green;
+    font-weight: bolder;
+    font-size: 24px;
+}.price_detail_text{}
+
+.button_detail{
+    width: fit-content;
+    margin: 1rem auto;
+}
 
 /*------------------------------------------------------------Dedicado a carrito.ejs----------------------------------------------------------------------*/
 
@@ -1522,238 +1523,7 @@ USERS
 */
 
 
-/*------------------------------------------------------------Dedicado a Register.ejs----------------------------------------------------------------------*/
-
-.main_register {
-    display: flex;
-    flex-wrap: wrap;
-    border-radius: var(--border-radius);
-    background-color: var(--color-cuarto);
-    margin: auto;
-}
-.titulo_register {
-    font-size: xx-small;
-}
-.formulario_register {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    margin: auto;
-    padding: 2%;
-}
-
-.titulo_register {
-    display: block;
-    box-sizing: border-box;
-    justify-content: center;
-    margin: auto;
-}
-
-
-/*	con esta pavada podes cambiar los puntitos del ul por emojis! https://emojipedia.org/	pero hay que setear el list_style_type a none	*/
-
-li:before {
-    content: '\1F374';
-    margin-left: -20px;
-    margin-right: 10px;
-}
-
-.ul_register {
-    list-style-type: none;
-}
-
-.submit_register {
-    margin: auto;
-}
-
-
-/*------------------------------------------------------------Dedicado a Login.ejs----------------------------------------------------------------------*/
-
-/*General*/
-.cuentaLogin {
-    background-color: var(--color-cuarto);
-    margin: 1vh auto;
-    border-radius: var(--border-radius);
-}
-
-/*Titulo*/
-
-.tituloLogin {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    border-bottom: 2px solid black;
-    
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.tituloLogin i {
-    font-size: 3.2rem;
-}
-
-
-/*Formulario*/
-
-.campoLogin {
-    padding: 2rem;
-    
-}
-
-.subCampoLogin {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 2rem;
-}
-
-.subCampoLogin input {
-    border-radius: 10px;
-    -webkit-box-shadow: 9px 9px 5px -7px rgba(219, 216, 219, 1);
-    -moz-box-shadow: 9px 9px 5px -7px rgba(219, 216, 219, 1);
-    box-shadow: 9px 9px 5px -7px rgba(219, 216, 219, 1);
-}
-
-.subCampoLogin input:hover {
-    background-color: #dbd8db;
-    -webkit-box-shadow: 9px 13px 9px -7px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 9px 13px 9px -7px rgba(0, 0, 0, 0.75);
-    box-shadow: 9px 13px 9px -7px rgba(0, 0, 0, 0.75);
-}
-
-.subCampoLogin label {
-    font-weight: bold;
-}
-
-
-/*Botones*/
-
-.botonLogin {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 2rem;
-    align-items: center;
-    align-content: center;
-}
-
-.botonLogin button {
-    margin-right: 1rem;
-    border: 0;
-    background-color: #826754;
-    font-size: 2rem;
-}
-
-.botonLogin button:hover {
-    font-weight: bold;
-}
-
-.botonLogin button:hover~i {
-    color: white;
-}
-
-.botonLogin i {
-    font-size: 3.2rem;
-}
-
-button {
-    outline: none;
-}
-
-
-/* Checkbox */
-
-
-
-.animado {
-    margin-top: 3rem;
-    margin-left: 1.2rem;
-}
-
-.animado label {
-    padding-left: 2rem;
-    position: relative;
-}
-
-.animado label:before {
-    content: '';
-    border: solid 1px black;
-    border-radius: 5px;
-    width: 2.3rem;
-    height: 2.3rem;
-    position: absolute;
-    left: -10px;
-    transition: all 0.2s;
-    transform: rotate(0deg);
-}
-
-[type="checkbox"]:checked+label:before {
-    border-color: white;
-    color: black;
-    content: '\f00c';
-    /* font-family: "Font Awesome 5 Free"; */
-    transform: rotate(360deg);
-    padding-left: .3rem;
-    font-size: smaller;
-}
-
-
-/**Pantallas grandes**/
-
-@media only screen and (min-width: 768px) {
-    .cuentaLogin{
-        width: 80vw;
-    }
-    /*Formulario*/
-    .subCampoLogin {
-        width: 70%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .recordarmeLogin {
-        width: 70%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    /*Botones*/
-    .botonLogin {
-        width: 70%;
-        margin-right: auto;
-        margin-left: auto;
-    }
-}
-
-@media only screen and (min-width: 1024px) {
-    .campoLogin{
-        font-size: 25px;
-    }
-    /*General*/
-    .cuentaLogin {
-        width: 75%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 3rem;
-    }
-    /*Titulo*/
-    .tituloLogin {
-        margin-bottom: 7rem;
-    }
-    /*Formulario*/
-    .subCampoLogin:first-child {
-        margin-bottom: 4rem;
-    }
-    .subCampoLogin {
-        width: 50%;
-    }
-    .recordarmeLogin {
-        width: 50%;
-    }
-}
-
-
 /*------------------------------------------------------------Dedicado a edicion_users.ejs----------------------------------------------------------------------*/
-
 
 .formContainer{
     display: flex;
@@ -1780,7 +1550,6 @@ button {
 .button_edicion_users {
     margin: auto;
 }
-
 
 /*------------------------------------------------------------Dedicado a list_user.ejs----------------------------------------------------------------------*/
 
@@ -1848,4 +1617,47 @@ div.otrosDatos {
     font-size: 1.3rem;
     box-shadow: 5px 5px 9px -1px #000000;
 
+}
+
+/*------------------------------------------------------------Dedicado a forms----------------------------------------------------------------------*/
+
+.formX{ 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 2rem auto;
+    width: 50vw;
+    border-radius: 5px;
+    background-color: var(--color-cuarto);
+    box-shadow: 5px 5px 8px 5px #888888;
+}
+
+.formX_title h1{
+    width: fit-content;
+    margin: 0px auto;
+    font-size: xx-large;
+}
+
+.formX_form{
+    font-size: medium;
+    width: fit-content;
+    margin: 1rem auto;
+}
+.formX_form ul li{
+    font-weight: bold;
+}
+
+.formX_form div{
+    width: fit-content;
+    margin: 1rem auto;
+}
+
+li:before {
+    content: '\1F374';
+    margin-left: -20px;
+    margin-right: 10px;
+}
+
+.ul_register {
+    list-style-type: none;
 }
