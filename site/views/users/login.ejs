@@ -13,25 +13,25 @@
 
         <main>
 
-			<section class="formX">
-
-				<!--Titulo-->
-				<div class="formX_title">
-					<h1>Iniciar sesion</h1>	
-				</div>
-				
+			<section >
 				<!--Formulario Login-->
 				<form action="/users/login" method="POST" class="formX_form" id="formLogin">
+
+					<!--Titulo-->
+					<div class="formX_title">
+						<h1>Iniciar sesion</h1>	
+					</div>
+
 					<ul>
 						<li>
-							<label for="email"> Email:</label>
-							<input class="emailPlace" type="text" id="email" name="email" placeholder="Nombre">
+							<label for="email"> Email:</label><br>
+							<input class="inputbox" type="text" id="email" name="email" placeholder="Nombre">
 							<p class="feedback <%= locals.errors && errors.email ? 'is-danger' : '' %>"> 
 								<%= locals.errors && errors.email ? errors.email.msg : '' %>
 							</p> <!--Feedback para mensaje del Back-->
 						</li>
 						<li>
-							<label for="password">Contraseña:</label>
+							<label for="password">Contraseña:</label><br>
 							<input type="password" id="password" name="password" placeholder="Contraseña">
 							<p class="feedback <%= locals.errors && errors.password ? 'is-danger' : '' %>"> 
 								<%= locals.errors && errors.password ? errors.password.msg : '' %>

@@ -1621,30 +1621,38 @@ div.otrosDatos {
 
 /*------------------------------------------------------------Dedicado a forms----------------------------------------------------------------------*/
 
-.formX{ 
+.formX_title h1{
+    display: block;
+    box-sizing: border-box;
+    width: fit-content;
+    margin: 0px auto;
+    font-size: x-large;
+}
+
+.formX_form{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    align-items: center;
     margin: 2rem auto;
     width: 50vw;
     border-radius: 5px;
     background-color: var(--color-cuarto);
     box-shadow: 5px 5px 8px 5px #888888;
-}
-
-.formX_title h1{
-    width: fit-content;
-    margin: 0px auto;
-    font-size: xx-large;
-}
-
-.formX_form{
     font-size: medium;
-    width: fit-content;
-    margin: 1rem auto;
 }
-.formX_form ul li{
+
+.formX_form ul {
     font-weight: bold;
+    width: fit-content;
+}
+
+.formX_form ul li{
+    width: fit-content;
+}
+
+.formX_form ul li input{
+    width: 30vw;
 }
 
 .formX_form div{
@@ -1658,6 +1666,3 @@ li:before {
     margin-right: 10px;
 }
 
-.ul_register {
-    list-style-type: none;
-}
