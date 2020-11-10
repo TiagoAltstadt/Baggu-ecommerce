@@ -28,8 +28,6 @@ app.use(session({
 app.use(cookieParser());
 app.use(auth);
 
-
-
 //----Rutas----
 const routeHome = require('./routes/home_route');
 const routeProducts = require('./routes/products_route');

@@ -74,13 +74,13 @@ CREATE TABLE `products` (
 
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `avatar` varchar(200) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
-  `username` varchar(100) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
+  `username` varchar(50) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
   `name` varchar(50) COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `surname` varchar(50) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `email` varchar(250) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `password` varchar(300) COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `email` varchar(100) COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `password` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `category_user_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email_UNIQUE` (`email`),
