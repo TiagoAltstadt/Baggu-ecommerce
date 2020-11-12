@@ -22,8 +22,9 @@ Nombre: | Descripcon: | Tipo de empresa:
 [Planeta Descartable](https://www.planetadescartable.com.ar/) | - N/A | Informacional
 
 ## **Como correr nuestro proyecto?**
-- Hacer un clone del proyecto
-- Crear un archivo en 'site/database/config' llamado config.js a partir de config.js.example
+- [Hace click aca](https://baggu.dhalumnos.com/)
+- Clone nuestro proyecto (git clone https://github.com/TiagoAltstadt/grupo_3_Baggu)
+- Crear un archivo en 'site/database/config' llamado config.js a partir de config.js.example, si estas en windows cambia password "root" por null
 - Iniciar mamp o xampp o similar
 - En workbench: 
     - Correr el script en 'site/database/baggu.sql' (estructura de la base de datos)
