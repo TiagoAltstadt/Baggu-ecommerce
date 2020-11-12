@@ -4,13 +4,11 @@ let express = require('express');
 let path = require('path');
 //----Multer----
 const multer = require('multer');
-
 //--Metodo Router----
 let router = express.Router();
 
 //----Controlador de Productos----
 const productsController = require('../controllers/productsController');
-
 
 //---Funcionamiento de Multer----
 var storage = multer.diskStorage({

@@ -27,7 +27,7 @@ const productsController = {
                     
                 })
             })
-        },
+    },
 
     
     list2: (req, res) => {
