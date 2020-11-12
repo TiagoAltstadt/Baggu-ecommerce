@@ -1,12 +1,23 @@
-<!DOCTYPE html> <!--Version HTML 5--> 
-<html lang="en"><!--Contenido de programacion en ingles-->
-
+<!DOCTYPE html>
+<!--Version HTML 5-->
+<html lang="en">
+<!--Contenido de programacion en ingles-->
+<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 <%- include('./partials/head.ejs', {title: "Baggu: Empresa"}) %>
+
 <body>
-    
+
     <%- include('./partials/header/header.ejs') %>
 
     <main class="aboutUs">
+        <section class="badge">
+            <div class="LI-profile-badge" data-version="v1" data-size="medium" data-locale="es_ES" data-type="vertical" data-theme="dark" data-vanity="tiago-altstadt">
+                <a class="LI-simple-link" href='https://ar.linkedin.com/in/tiago-altstadt?trk=profile-badge'>
+                    Tiago Altstadt
+                </a>
+            </div>
+        </section>
+
         <h1 class="titleEmpresa">Empresa</h1>
         <section>
             <article class="empresa">
@@ -17,8 +28,8 @@
                     <h3 class="aboutUs">Visión</h3>
                     <p class="aboutUs">
                         El propósito de BAGGU es anticiparse en los negocios,
-                        generando ideas y soluciones que creen valor para 
-                        clientes del rubro gastronómico, productivo y de 
+                        generando ideas y soluciones que creen valor para
+                        clientes del rubro gastronómico, productivo y de
                         servicio.
                     </p>
                 </div>
@@ -30,22 +41,23 @@
                 <div class="boxTextEmpresa">
                     <h3 class="aboutUs">Misión</h3>
                     <p class="aboutUs">
-                       BAGGU es un equipo profesional, 
-                       orientado a conocer, asesorar y fidelizar 
-                       a los clientes en la experiencia de compra 
-                       e insumos alimenticios, descartables e 
-                       higiene, diferenciandosé por la calidad, 
-                       el mix de productos, la eficiencia y la 
-                       generación de soluciones de servicios integrales.
+                        BAGGU es un equipo profesional,
+                        orientado a conocer, asesorar y fidelizar
+                        a los clientes en la experiencia de compra
+                        e insumos alimenticios, descartables e
+                        higiene, diferenciandosé por la calidad,
+                        el mix de productos, la eficiencia y la
+                        generación de soluciones de servicios integrales.
                     </p>
                 </div>
             </article>
-            
+
         </section>
-        
+
     </main>
-    
+
     <%- include('./partials/footer.ejs') %>
 
 </body>
+
 </html>

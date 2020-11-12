@@ -285,6 +285,15 @@ a.titleIndex3:hover{
 
 main.aboutUs {
     display: flex;
+    flex-direction: column;
+}
+
+.badge{
+    display: block;
+    box-sizing: border-box;
+    margin: 1rem auto;
+    width: 100%;
+    
 }
 
 h1.titleEmpresa {
