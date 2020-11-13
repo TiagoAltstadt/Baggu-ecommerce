@@ -1,33 +1,8 @@
+<script src="/js/headerScripts.js"></script>	
+
 <section class="header_container">
 
-
-    <!--    Script  METER EN OTRO LADO  -->
-    <script>
-        function sidebar_open() {
-            document.getElementById("mySidebar").style.left = "0vw";
-        }
-
-        function sidebar_close() {
-            document.getElementById("mySidebar").style.left = "-50vw";
-        }
-
-        function profile() {
-            if (document.getElementById("profile").style.right == "3.55vw") {
-                document.getElementById("profile").style.right = "-50vw";
-            } else {
-                document.getElementById("profile").style.right = "3.55vw";
-            }
-        }
-
-        function welcome() {
-            if (locals.loggeduser){
-                document.onload('welcome').style.top = "50vw";
-            }
-        }
-    </script>
-
     <!--    Header  -->
-
     <div class="header_subcontainer1">
         <!--Menu-->
         <button class="header_button" onclick="sidebar_open()">☰</button>
@@ -38,10 +13,9 @@
         <!--Profile pic-->
         <div class="header_profile">
             <% if (locals.loggedUser){ %>
-            <img src="/fileUsers/<%= locals.loggedUser.avatar %>" alt="Avatar" id="header_profile" onclick="profile()"
-                id="profile">
+            <img src="/fileUsers/<%= locals.loggedUser.avatar %>" alt="Avatar" id="header_profile" onclick="profile()" >
             <% } else { %>
-            <img src="/fileUsers/default.png" alt="Avatar" id="header_profile" onclick="profile()" id="profile">
+            <img src="/fileUsers/default.png" alt="Avatar" id="header_profile" onclick="profile()" >
             <% } %>
         </div>
     </div>

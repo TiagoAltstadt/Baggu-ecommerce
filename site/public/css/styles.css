@@ -146,7 +146,7 @@ HOME
 }
 
 .imageCarousel {
-    height: 50vh;
+    width: 100%;
 }
 
 /* Container principal de grupos productos*/
@@ -617,15 +617,13 @@ PARTIALS
     position: fixed;
     justify-items: center;
     background-color: var(--color-sexto);
-    right: -47.5vw;
-    top: 16vh;
+    right: -45.0vw;
+    top: 0vh;
     width: 45vw;
-    height: fit-content;
+    height: 100vh;
     padding: 2%;
     z-index: 100;
-    border: black solid 1px;
-    border-radius: 4px;
-    box-shadow: inset 0px 0px 66px -26px #FFFFFF;
+    background-color: rgb(167, 167, 167);
     
 }
 
@@ -634,7 +632,6 @@ PARTIALS
     box-sizing: border-box;
     margin: auto;
     margin-bottom: 5px;
-    width: 50%;
     box-shadow: 5px 5px gold;
 }
 .profile_mainInfo {
@@ -671,7 +668,59 @@ li.option {
     .header_popUp ul li{font-size: medium;}
 }
 @media all and (min-width: 768px){
-    .header_popUp {width: 30vw;}
+
+    .header_popUp {
+        transition-duration: .25s;
+        flex-direction: column;
+        flex-wrap: wrap;
+        position: fixed;
+        justify-items: center;
+        background-color: var(--color-sexto);
+        right: -45.0vw;
+        top: 0vh;
+        width: 30vw;
+        height: 100vh;
+        padding: 2%;
+        z-index: 100;
+        background-color: rgb(167, 167, 167);
+        
+    }
+    
+    .profile_popUpAvatar {
+        display: block;
+        box-sizing: border-box;
+        margin: auto;
+        margin-bottom: 5px;
+        box-shadow: 5px 5px gold;
+    }
+    .profile_mainInfo {
+        display: block;
+        box-sizing: border-box;
+        width: 80%;
+        margin: 1rem auto;
+        background-color: rgba(219, 216, 219, 0.4);
+        border-radius: 4px;
+        font-size: small;
+        color: white;
+        text-align: center;
+    }
+    .header_popUp ul {
+        background-color: rgba(219, 216, 219, 0.4);
+        border-radius: 4px;
+    }
+
+    li.option {
+        text-decoration: unset;
+        text-decoration-line: none;
+        color: white;
+    }
+
+    .header_popUp ul li{font-size: small;}
+    .profile_name {
+        width: fit-content;
+        margin: auto;
+        color: white;
+    }
 }
 
 /*  Header burguer  */
@@ -689,20 +738,20 @@ li.option {
     padding-top: 1vh;
     padding-left: 2vw;
     overflow: auto;
-    background-color: var(--color-sexto);
+    background-color: rgba(194, 194, 194, 1);
     z-index: 1;
-    box-shadow: inset 0px 0px 66px -26px #FFFFFF;
+    
 }
 
 .textMenuBur {
-    color: white;
+    color: black;
     font-family: 'Roboto', sans-serif;
 
 }
 
 .header_burguer_popUp ul {
     margin: 0%;
-    background-color: rgba(219, 216, 219, 0.4);
+    background-color: rgba(153, 153, 153, 0.4);
     border-radius: 6px;
     width: 40vw;
 }
@@ -983,32 +1032,47 @@ footer {
 
 /*------------------------------------------------------------Dedicado a product_partial.ejs----------------------------------------------------------------------*/
 
-.product_container {
+.product_containerDescartable {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 100%;
-    margin: 5% 5%;
+    margin: 1rem auto;
     box-shadow: 5px 5px 8px #888888;
-    background-color: lightslategrey;
+    background-color: var(--color-primero);
 }
+.product_containerHigiene {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 1rem auto;
+    box-shadow: 5px 5px 8px #888888;
+    background-color: var(--color-tercero);
+}
+.product_containerPapeleria {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 1rem auto;
+    box-shadow: 5px 5px 8px #888888;
+    background-color: var(--color-segundo);
+}
+
 
 .product_image_container {
     display: block;
     box-sizing: border-box;
-    width: 80%;
-    height: 80%;
+    width: 50vw;
     margin: 1vh auto;
     
 }
 
 .product_image {
-    border-radius: 6px;
     display: block;
     box-sizing: border-box;
-    width: 100%;
-    height: 250px;
     align-self: center;
+    margin: 0pc auto;
+    border-radius: 6px;
+    width: 15vw;
 }
 
 .product_title {
