@@ -4,7 +4,7 @@
   "description": "## **E-Commerce: Baggu :dragon:** - La **tematica del sitio** de este grupo es _venta de productos gastronomicos descartables_, apuntando al rubro gastronomico en general, ya sean restaurantes, bares, cafes, etc. La idea es construir un sitio en donde el usuario pueda consultar productos, precios, contactos y demas. Pero a su vez que se sienta comodo y disfrute de una interfaz limpia e intuitiva.",
   "main": "app.js",
   "dependencies": {
-    "axios": "^0.20.0",
+    "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
     "bootstrap": "^4.5.3",
     "cookie-parser": "^1.4.5",
